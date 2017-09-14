@@ -20,7 +20,7 @@
 </div>
 
 <script type="text/javascript" src="//mallmaverick.cdn.speedyrails.net/javascripts/mapsvg/raphael.js"></script>
-<!--<script src="//codecloud.cdn.speedyrails.net/sites/59bac7db6e6f644f22ba0000/text/javascript/1505412796000/kartograph.min.js"></script>-->
+<script src="//codecloud.cdn.speedyrails.net/sites/59bac7db6e6f644f22ba0000/text/javascript/1505412796000/kartograph.min.js"></script>
 <script type="text/javascript" src="//mallmaverick.cdn.speedyrails.net/javascripts/mapsvg/jquery.mousewheel.js"></script>
 <script type="text/javascript" src="//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/005/107/original/mallmaverick_svgmap.js?1412885524"></script>
 <script>
