@@ -48,24 +48,24 @@
                 regions[val.svgmap_region] = obj
             }
         });
-        $('#store_select_container').change(function(e){
-            drop_pin($(this).val())
-        })
-        init_map(regions, 2500, 2000)
+        // $('#store_select_container').change(function(e){
+        //     drop_pin($(this).val())
+        // })
+        // init_map(regions, 2500, 2000)
         
-        $('.map_pin_a').click(function(e){
-            e.preventDefault();
-            var id = $(this).attr('data-value')
-            map_pin(id)
-        })
+        // $('.map_pin_a').click(function(e){
+        //     e.preventDefault();
+        //     var id = $(this).attr('data-value')
+        //     map_pin(id)
+        // })
         
-        function map_pin(value){
-            map.marksHide();
-            value = value.split('/')
-            if (value[0] != null){
-                drop_pin(value[0], map);    
-            }
-        }
+        // function map_pin(value){
+        //     map.marksHide();
+        //     value = value.split('/')
+        //     if (value[0] != null){
+        //         drop_pin(value[0], map);    
+        //     }
+        // }
     }
     
     function init_map(reg, h, w){
