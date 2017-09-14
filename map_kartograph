@@ -51,6 +51,9 @@
         
         
         var map = kartograph.map('#map');
+        map.loadMap('mymap.svg', function() {
+        // do something with your map, add layers etc.
+    });
         // $('#store_select_container').change(function(e){
         //     drop_pin($(this).val())
         // })
