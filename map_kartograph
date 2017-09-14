@@ -70,7 +70,7 @@
     
     function init_map(reg, h, w){
         map = $('#mapsvg').mapSvg({
-            source: getSVGMapURL(),
+            source: "/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416",
             colors: {stroke: '#aaa', hover: '#ffbe1d'},
             disableAll: true,
             height:h,
