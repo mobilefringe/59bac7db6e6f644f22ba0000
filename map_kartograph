@@ -53,6 +53,12 @@
         var map = kartograph.map('#map');
         map.loadMap("//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416", function() {
         // do something with your map, add layers etc.
+        map.addLayer('mylayer', {
+    styles: {
+        fill: '#cdd',
+        'stroke-width': 0.5
+    }
+});
     });
         // $('#store_select_container').change(function(e){
         //     drop_pin($(this).val())
