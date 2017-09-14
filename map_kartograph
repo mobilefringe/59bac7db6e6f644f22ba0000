@@ -68,7 +68,7 @@
         }
     }
     
-function init_map(reg, h, w){
+    function init_map(reg, h, w){
     map = $('#mapsvg').mapSvg({
         source: getSVGMapURL(),
         colors: {stroke: '#aaa', hover: '#ffbe1d'},
