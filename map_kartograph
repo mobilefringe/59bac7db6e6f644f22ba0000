@@ -48,6 +48,9 @@
                 regions[val.svgmap_region] = obj
             }
         });
+        
+        
+        var map = kartograph.map('#map');
         // $('#store_select_container').change(function(e){
         //     drop_pin($(this).val())
         // })
