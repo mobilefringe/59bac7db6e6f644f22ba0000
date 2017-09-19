@@ -1,7 +1,7 @@
 
 <div id="contentDiv" class="openseadragon1"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.3.1/openseadragon.min.js"></script>
-<script src="//s3.amazonaws.com/kodekloud/sites/59bac7db6e6f644f22ba0000/text/javascript/1505846633000/openseadragon-svg-overlay.js"></script>
+<script src="//s3.amazonaws.com/kodekloud/sites/59bac7db6e6f644f22ba0000/text/javascript/1505847108000/openseadragon-svg-overlay.js"></script>
 <style type="text/css">
 
             html,
