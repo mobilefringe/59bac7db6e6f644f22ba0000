@@ -1,0 +1,114 @@
+
+<style>
+   
+    #map {
+        /*position: absolute;*/
+        height: 100%;
+        width: 100%;
+        background-color: #fffff0;
+        overflow:hidden;
+    }
+    .leaflet-tile.leaflet-tile-loaded {
+        width:100%!important;
+        transform: initial!important;
+        
+    }
+</style>
+    <!-- Base libraries-->
+    <script src="http://www.sumbera.com/gist/js/leaflet/svg/scaled/d3-3.5.5.min.js"></script>
+    <script src="http://www.sumbera.com/gist/js/leaflet/svg/scaled/leaflet.js"></script>
+    <script src="http://assets.codecloudapp.com/sites/59bac7db6e6f644f22ba0000/text/javascript/1505852644000/L.SvgScaleOverlay.js"></script>
+    <script src="http://www.sumbera.com/gist/data.js" charset="utf-8"></script>
+    <div id="map">
+    </div>
+    <div id="tooltip" style="width:500px; height:250px;">
+     </div>
+
+
+    <script>
+        
+      
+            var lmap = new  L.map('map').setView([0.00, 14.44], 9)
+                        .addLayer(L.tileLayer("//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416"));
+            var circles;
+            var svgOverlay = L.SvgScaleOverlay();
+            var radius = 3;
+ 
+           
+            //------------------------------------------------------------
+            svgOverlay.onInitData = function () {
+                if (!circles) {
+                    var g = d3.select(this._g);
+                    circles = g.selectAll("circle")
+                                    .data(data)
+                                    .enter().append('circle');
+                    // -- opacity based on grouping optimization in point data
+                    circles.style("fill-opacity", 0.8);
+                    circles.style("fill", "rgba(255,116,116, 0.5)")
+                }
+                
+                
+                circles.each(function (d) {
+                    var elem = d3.select(this);
+                    var point = lmap.project(L.latLng(new L.LatLng(d[0], d[1])))._subtract(lmap.getPixelOrigin());
+                    //var point = lmap.latLngToLayerPoint(new L.LatLng(d.geometry.coordinates[1], d.geometry.coordinates[0]));
+                    elem.attr('cx', point.x)
+                    elem.attr('cy', point.y)
+                    elem.attr('r', radius)
+                })
+            };
+            svgOverlay.onScaleChange = function (scaleDiff) {
+                if (scaleDiff > 0.5) {
+                    var newRadius = radius * 1 / scaleDiff;
+                    var currentRadius = d3.select('circle').attr("r");
+                    if (currentRadius != newRadius) {
+                        d3.selectAll("circle").attr('r', newRadius);
+                    }
+                }
+            }
+            lmap.addLayer(svgOverlay);
+            /***********************/
+            
+       show_content();
+    </script>
+    
+    
+<!--    /*<style>*/-->
+<!--/*    #map { */-->
+<!--/*        height: 400px; */-->
+<!--/*    }*/-->
+<!--/*</style>*/-->
+<!--/*<div class="header_banner stores_banner">*/-->
+<!--/*    <div class="main_container">*/-->
+<!--/*        <h4 class="header_banner_heading">Center Map</h4>*/-->
+<!--/*    </div>*/-->
+<!--/*</div>*/-->
+<!--/*<div class="main_container mobile_padding">*/-->
+<!--/*    <div class="details_row">*/-->
+<!--/*       <div id="map"></div>*/-->
+<!--/*    </div>*/-->
+<!--/*</div>*/-->
+
+
+<!--/*<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />*/-->
+<!--/*<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>*/-->
+
+<!--/*<script>*/-->
+    
+<!--/*    $(document).ready(function(e) {*/-->
+<!--/*      init(e);  */-->
+<!--      // create the map-->
+<!--/*        var map = L.map('map', {*/-->
+<!--/*            center: [50, 50],*/-->
+<!--/*            zoom: 13*/-->
+<!--/*        });*/-->
+        
+<!--        // create the image-->
+<!--/*        var imageUrl = '//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416',*/-->
+<!--/*            imageBounds = [[0, 0], [100, 100]];*/-->
+        
+<!--/*        L.imageOverlay(imageUrl, imageBounds).addTo(map);*/-->
+<!--/*        show_content();*/-->
+<!--/*    })*/-->
+    
+<!--/*</script>*/-->
