@@ -23,7 +23,7 @@
         
       
             var lmap = new  L.map('map').setView([50.00, 14.44], 9)
-                        .addLayer(L.tileLayer("http://{s}.sm.mapstack.stamen.com/(toner-lite,$fff[difference],$fff[@23],$fff[hsl-saturation@20])/{z}/{x}/{y}.png"));
+                        .addLayer(L.tileLayer("//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416"));
             var circles;
             var svgOverlay = L.SvgScaleOverlay();
             var radius = 3;
