@@ -37,7 +37,15 @@
 /*    })*/
     
 /*</script>*/
-
+<style>
+   
+    #map {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: #333;
+    }
+</style>
     <!-- Base libraries-->
     <script src="http://www.sumbera.com/gist/js/leaflet/svg/scaled/d3-3.5.5.min.js"></script>
     <script src="http://www.sumbera.com/gist/js/leaflet/svg/scaled/leaflet.js"></script>
