@@ -1,0 +1,234 @@
+<div class="header_banner events_banner">
+    <div class="main_container">
+        <h4 class="header_banner_heading">Events & Promotions</h4>
+    </div>
+</div>
+
+<div class="main_container mobile_padding">
+    <!--<div class="popup_home hidden_now">-->
+    <!--    <div class="popup_content">-->
+    <!--        <h3 tyle="font-line:9px; text-align:center;" class="popup_header" >-->
+    <!--            Stay updated with new events and promotions.<br/>-->
+    <!--            Decide what notifications you want to receive!-->
+    <!--        </h3>-->
+    <!--        <div class="checkbox" id="notif_checkbox">-->
+    <!--            <lable><input type="checkbox" value="" id="both_option" >Both </lable>-->
+    <!--            <div>-->
+    <!--                <label><input type="checkbox" value="" id="promo_option">Promotions</label>-->
+    <!--           </div><div>-->
+    <!--                <label><input type="checkbox" value="" id="event_option">Events </label>-->
+    <!--            </div> -->
+    <!--        </div>-->
+    <!--        <p style="font-line:9px; text-align:center;" class="popup_json"> Please allow notifications, when prompted! </p>-->
+    <!--        <div id="allowPush"  role="button" disabled="disabled">Get Notificaions</div>-->
+    <!--        <div id="disablePush"  role="button" disabled="disabled" class="hidden_now">Unsubscribe</div>-->
+    <!--    </div>-->
+    <!--    <i class="fa fa-remove close_popup" style="background-color:#6cc6cc;color:#fff;"></i>-->
+    <!--</div>-->
+    <div class="details_row">
+        <div class="details_col_3 hidden_phone">
+            <div class="details_header accordion_header receiveNotification receiveNotificationHeader hidden_now" role="button" style="text-align: center;">
+                Receive notifications from us!
+            </div>
+                <a href="/events-and-promotions">
+                <img src="//codecloud.cdn.speedyrails.net/sites/58332abd6e6f646f31040000/image/jpeg/1483737556000/dph_440x1200_side_events.jpg" /></a>
+        </div>
+        <div class="details_col_9">
+            <div class="visible_phone receiveNotificationHeader">
+                <div class="details_header accordion_header receiveNotification" role="button">
+                    Receive notifications from us!
+                </div>
+            </div>
+            <h5 id="events_header" class="details_header accordion_header" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                Events
+                <i class="fa fa-chevron-up pull-right"></i>
+            </h5>
+            <div id="collapse1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading3">
+                <div class="store_desc" id="events_container">
+                    <div class="store_desc" id="no_events">
+                        Currently we have no Events, but check back soon!
+                        <hr class="promo_separator" />
+                    </div>
+                    <script id="event_template" type="x-tmpl-mustache/text">
+                        <div class="promo_row">
+                            <div class="promo_col_3" style="{{promo_image}}">
+                                <img src="{{event_image_url_abs}}" alt="Promotion" class=""/>
+                            </div>
+                            <div class="promo_col_9" style="{{full_width}}">
+                                <p class="colored_link"><a href="/events/{{slug}}">{{name}}</a></p>
+                                <h3 class="publish_date">{{dates}} </h3>
+                                <div class="details_desc">{{description_short}}</div>
+                                <a href="/events/{{slug}}" class="read_more"><Read More</a>
+                            </div>
+                        </div>
+                        <hr class ="promo_separator"/>
+                    </script>
+                </div>
+            </div>
+            <h5 id="promotions_header" class="details_header accordian_header" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-exanded="false" aria-controles="collapse3">
+                Promotions
+                <i class="fa fa-chevron-up pull-right"></i>
+            </h5>
+            <div id="collapse3" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading3">
+                <div class="store_desc" id="no_promotions">
+                    Currently we have no Promotions, but check back soon!
+                    <hr class="promo_separator" />
+                </div>
+                <div class="store_desc" id="promos_container">
+                    <script id="promos_template" type="x-tmpl-mustache/text">
+                        <div class="promo_row">
+                            <div class="promo_col_3" style="{{promo_image}}">
+                                <img src="{{promo_image_url_abs}}" alt="Promotion" class="full_width"/>
+                            </div>
+                            <div class="promo_col_9" style="{{full_width}}">
+                                <p class="colored_link"><a href="/promotions/{{slug}}">{{name}}</a></p>
+                                <h3 class-"publish_date"><a href="/stores/{{store+detail_btn}}"><span class="promo_parent"> {{store_name}} </a> </span><br class="visible_phone" />{{dates}</h3>
+                                <div class="details_desc">{{description_short}}</div>
+                                    <a href="/promotions/{{slug}}" class="read_more">Read More</a>
+                                </div>
+                            </div>
+                        <hr class="promo_separator"/>
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>            
+
+<script>
+    $(document).ready(function(e){
+        init(e);
+        loadMallDataCached(renderPage);
+        display_notification();
+    })
+    
+    function renderPage(){
+        var events = getEventsList().sortBy(function(o){ return o.start_date });
+        var published_events = [];
+        $.each(events,function(key,val){
+            today = moment();
+            webDate = moment(val.show_on_web_date);
+            if(today>=webDate) {
+                published_events.push(val);
+            }
+        });
+        if(published_events.length > 0) {
+            renderEvents("#events_container","#events_template",published_events);
+            $('#no_events').hide();
+        }
+        else
+        {
+            $("#events_header").click();
+            $("#events_header").find('i').toggleClass("fa-chevron-down fa-chevron-up");
+        }
+        
+        var promos = getPromotionsList().sortBy(function(o){return o.start_date});
+        var published_promos = [];
+        $.each(promos, function (key,val) {
+            today= moment();
+            webDate= moment(val.show_on_web_date);
+            if(today >= webDate) {
+                published_promos.push(val);
+            }
+        });
+        if(published_promos.length > 0) {
+            renderPromotions('#promos_container', '#promos_template', published_promos);
+            $("#no_promos").hide();
+        }
+        else
+        {
+             $("#promos_header").click();
+            $("#promos_header").find('i').toggleClass("fa-chevron-down fa-chevron-up");
+        }
+        
+        //push notification settings 
+        $(".receiveNotification").click(function (){
+            // subscriptionExist();
+            $('<div class="modal-backdrop custom_backdrop"></div>').appendTo(document.body);
+            $('.popup_home').show();
+            
+            if(window.subscribed_to_event) {
+                console.log("hello from event");
+                $("#event_option").prop("checked", true);
+                $('#event_option').prop("disabled", true);
+                $("#event_option").change();
+            }
+            if(window.subscribed_to_promo) {
+                console.log("hello from promo");
+                $("#promo_option").prop("checked", true);
+                $('#promo_option').prop("disabled", true);
+                $("#promo_option").change();
+                
+            }
+       });
+       
+       $("#allowPush").click(function (){
+            $("#allowPush").hide();
+            // $(".checkbox").hide();
+            // $("#disablePush").show();
+            //check what type of push they wanted 
+            if($('#both_option').is(':checked'))
+            {
+                activatePushButton("promotion","event","");
+            }
+            else if ($('#promo_option').is(':checked')){
+                activatePushButton("promotion","","");
+            }
+            else {
+                activatePushButton("event","","");
+            }
+            
+        });
+        $("#disablePush").click(function (){
+            // $(".checkbox").hide();
+            if($('#both_option').is(':checked'))
+            {
+                unsubscribeUser("promotion","event","");
+            }
+            else if ($('#promo_option').is(':checked')){
+                unsubscribeUser("promotion","","");
+            }
+            else {
+                unsubscribeUser("event","","");
+            }
+            // unsubscribeUser();
+            $("#allowPush").show();
+            $("#disablePush").hide();
+            
+        });
+        $('.close_popup, .custom_backdrop').click(function(){
+            $(".modal-backdrop").remove();
+            $(".allow_notif_custom").remove();
+		    $(".popup_home").hide();
+		    $("#receiveNotification").hide();
+         });
+         $("#both_option").change(function() {
+             if ($('#both_option').is(':checked')) {
+                 $('#promo_option').prop("disabled", true);
+                 $('#event_option').prop("disabled", true);
+                 $('#promo_option').prop("checked", true);
+                 $('#event_option').prop("checked", true);
+             }
+             else {
+                 $('#promo_option').prop("disabled", false);
+                 $('#event_option').prop("disabled", false);
+                 $('#promo_option').prop("checked", false);
+                 $('#event_option').prop("checked", false);
+             }
+            
+         });
+        $('#promo_option').change(function () {
+             if ($('#promo_option').is(':checked') && $('#event_option').is(':checked') ) {
+                $("#both_option").prop("checked", true);
+                $("#both_option").change();
+             }
+        });
+        $('#event_option').change(function () {
+             if ($('#promo_option').is(':checked') && $('#event_option').is(':checked') ) {
+                $("#both_option").prop("checked", true);
+                $("#both_option").change();
+             }
+        })
+        show_content();
+    }
+</script>
