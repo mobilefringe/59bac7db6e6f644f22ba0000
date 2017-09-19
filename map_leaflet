@@ -63,7 +63,7 @@
             lmap.addLayer(svgOverlay);
             /***********************/
             
-       
+       show_content();
     </script>
     
     
