@@ -23,7 +23,7 @@
    $(document).ready(function(e) {
         init(e); 
         $('#mall-map').vectorMap({
-            map: 'mall',
+            map: '//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416',
             backgroundColor: 'transparent',
             markers: [{
               coords: [60, 110],
