@@ -14,7 +14,7 @@
     </div>
 </div>
 
-<script type="text/javascript" src="//mallmaverick.cdn.speedyrails.net/javascripts/mapsvg/jquery.mousewheel.js"></script>
+
 <link rel="stylesheet" href="http://assets.codecloudapp.com/sites/59bac7db6e6f644f22ba0000/text/css/1465739824000/jquery-jvectormap-2.0.3.css" />
 <script src="http://assets.codecloudapp.com/sites/59bac7db6e6f644f22ba0000/text/css/1465739824000/jquery-jvectormap-2.0.3.css"></script>
 
@@ -22,7 +22,7 @@
     
    $(document).ready(function(e) {
         init(e); 
-        $('#map').vectorMap({
+        $('#mall-map').vectorMap({
             map: 'mall',
             backgroundColor: 'transparent',
             markers: [{
