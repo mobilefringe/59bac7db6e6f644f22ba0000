@@ -5,7 +5,7 @@
         /*position: absolute;*/
         height: 100%;
         width: 100%;
-        background-color: #ff0;
+        background-color: #fffff0;
         overflow:hidden;
     }
     .leaflet-tile.leaflet-tile-loaded {
