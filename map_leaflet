@@ -39,6 +39,7 @@
         
         L.imageOverlay(imageUrl, imageBounds).addTo(map);
       show_content();
+      console.log("hello");
     })
     
 </script>
