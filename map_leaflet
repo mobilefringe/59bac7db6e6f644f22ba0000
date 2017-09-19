@@ -10,6 +10,7 @@
     }
     .leaflet-tile.leaflet-tile-loaded {
         width:100%!important;
+            transform: initial;
         
     }
 </style>
