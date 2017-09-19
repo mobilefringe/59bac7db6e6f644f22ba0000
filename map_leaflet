@@ -3,8 +3,27 @@
         height: 400px; 
     }
 </style>
+<div class="header_banner stores_banner">
+    <div class="main_container">
+        <h4 class="header_banner_heading">Center Map</h4>
+    </div>
+</div>
+<div class="main_container mobile_padding">
+    <div class="details_row">
+        <div class="details_col_3">
+            <p class='colored_link'>Find Store</p>
+            <div id="stores_container">
+                <script id="stores_template" type="x-tmpl-mustache/text">
+                    <h5 class="stores_map"><a class="map_pin_a" href="#" data-value='{{svgmap_region}}/{{slug}}'>{{name}}</a></h5>
+                </script>
+            </div>
+        </div>
+        <div class="details_col_9">
+            <div class="" id="mapsvg"></div>
+        </div>
+    </div>
+</div>
 
-<div id="map"></div>
 
 <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
 <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
