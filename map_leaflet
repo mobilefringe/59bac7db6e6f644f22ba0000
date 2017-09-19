@@ -15,7 +15,7 @@
     <script src="http://www.sumbera.com/gist/data.js" charset="utf-8"></script>
     <div id="map">
     </div>
-    <div id="tooltip" style="width:230px; height:100px;">
+    <div id="tooltip" style="width:500px; height:250px;">
      </div>
 
 
