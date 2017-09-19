@@ -11,11 +11,8 @@
 <div class="main_container mobile_padding">
     <div class="details_row">
         <div class="details_col_3">
-            <p class='colored_link'>Find Store</p>
             <div id="stores_container">
-                <script id="stores_template" type="x-tmpl-mustache/text">
-                    <h5 class="stores_map"><a class="map_pin_a" href="#" data-value='{{svgmap_region}}/{{slug}}'>{{name}}</a></h5>
-                </script>
+            
             </div>
         </div>
         <div class="details_col_9">
