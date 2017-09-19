@@ -27,9 +27,9 @@
     <!--</div>-->
     <div class="details_row">
         <div class="details_col_3 hidden_phone">
-            <div class="details_header accordion_header receiveNotification receiveNotificationHeader hidden_now" role="button" style="text-align: center;">
-                Receive notifications from us!
-            </div>
+            <!--<div class="details_header accordion_header receiveNotification receiveNotificationHeader hidden_now" role="button" style="text-align: center;">-->
+            <!--    Receive notifications from us!-->
+            <!--</div>-->
                 <a href="/events-and-promotions">
                 <img src="//codecloud.cdn.speedyrails.net/sites/58332abd6e6f646f31040000/image/jpeg/1483737556000/dph_440x1200_side_events.jpg" /></a>
         </div>
