@@ -131,40 +131,40 @@
         
         
         //push notification settings 
-        $("#getStoreNotification").click(function (){
-            // subscriptionExist();
-            $('<div class="modal-backdrop custom_backdrop"></div>').appendTo(document.body);
-            $('.popup_home').show();
-            console.log("-.-", store_details.id, window.subscribed_store_ids);
-            console.log("stores",$.inArray(parseInt(store_details.id), window.subscribed_store_ids) ,window.subscribed_store_ids.length);
-            if ( window.subscribed_store_ids.length > 0 && $.inArray(parseInt(store_details.id), window.subscribed_store_ids) > -1){
+    //     $("#getStoreNotification").click(function (){
+    //         // subscriptionExist();
+    //         $('<div class="modal-backdrop custom_backdrop"></div>').appendTo(document.body);
+    //         $('.popup_home').show();
+    //         console.log("-.-", store_details.id, window.subscribed_store_ids);
+    //         console.log("stores",$.inArray(parseInt(store_details.id), window.subscribed_store_ids) ,window.subscribed_store_ids.length);
+    //         if ( window.subscribed_store_ids.length > 0 && $.inArray(parseInt(store_details.id), window.subscribed_store_ids) > -1){
                 
-                alreadySubscribedStatus();
-            }
-            else {
-                console.log("default");
-                defaultSubscribedStatus();
-            }
-        });
+    //             alreadySubscribedStatus();
+    //         }
+    //         else {
+    //             console.log("default");
+    //             defaultSubscribedStatus();
+    //         }
+    //     });
        
-        $("#allowPush").click(function (){
-            $("#allowPush").hide();
+    //     $("#allowPush").click(function (){
+    //         $("#allowPush").hide();
             
-            //check what type of push they wanted 
-            activatePushButton("store","",store_details);
-        });
-        $("#disablePush").click(function (){
-            unsubscribeUser("store","",store_details);
-            $("#allowPush").show();
-            $("#disablePush").hide();
+    //         //check what type of push they wanted 
+    //         activatePushButton("store","",store_details);
+    //     });
+    //     $("#disablePush").click(function (){
+    //         unsubscribeUser("store","",store_details);
+    //         $("#allowPush").show();
+    //         $("#disablePush").hide();
             
-        });
-        $('.close_popup, .custom_backdrop').click(function(){
-            $(".modal-backdrop").remove();
-            $(".allow_notif_custom").remove();
-		    $(".popup_home").hide();
-		    $("#receiveNotification").hide();
-         });
+    //     });
+    //     $('.close_popup, .custom_backdrop').click(function(){
+    //         $(".modal-backdrop").remove();
+    //         $(".allow_notif_custom").remove();
+		  //  $(".popup_home").hide();
+		  //  $("#receiveNotification").hide();
+    //      });
          
         if (hour_ids.length > 0){
             var hours = getHoursForIds(hour_ids);
