@@ -29,7 +29,7 @@
         });
         
         // create the image
-        var imageUrl = 'http://blackicemedia.com/presentations/2013-02-hires/img/awesome_tiger.svg',
+        var imageUrl = '//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416',
             imageBounds = [[40.712216, -74.22655], [40.773941, -74.12544]];
         
         L.imageOverlay(imageUrl, imageBounds).addTo(map);
