@@ -5,6 +5,6 @@
     var viewer = OpenSeadragon({
         id: "openseadragon1",
         prefixUrl: "/openseadragon/images/",
-        tileSources: "/path/to/my/image.dzi"
+        tileSources: "//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416"
     });
 </script>
