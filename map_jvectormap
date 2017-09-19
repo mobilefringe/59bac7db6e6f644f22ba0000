@@ -10,7 +10,7 @@
 </div>
 <div class="main_container mobile_padding">
     <div class="details_row">
-       <div id="map"></div>
+       <div id="mall-map"></div>
     </div>
 </div>
 
