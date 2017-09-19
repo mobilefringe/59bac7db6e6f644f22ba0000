@@ -142,93 +142,93 @@
         }
         
         //push notification settings 
-        $(".receiveNotification").click(function (){
-            // subscriptionExist();
-            $('<div class="modal-backdrop custom_backdrop"></div>').appendTo(document.body);
-            $('.popup_home').show();
+    //     $(".receiveNotification").click(function (){
+    //         // subscriptionExist();
+    //         $('<div class="modal-backdrop custom_backdrop"></div>').appendTo(document.body);
+    //         $('.popup_home').show();
             
-            if(window.subscribed_to_event) {
-                console.log("hello from event");
-                $("#event_option").prop("checked", true);
-                $('#event_option').prop("disabled", true);
-                $("#event_option").change();
-            }
-            if(window.subscribed_to_promo) {
-                console.log("hello from promo");
-                $("#promo_option").prop("checked", true);
-                $('#promo_option').prop("disabled", true);
-                $("#promo_option").change();
+    //         if(window.subscribed_to_event) {
+    //             console.log("hello from event");
+    //             $("#event_option").prop("checked", true);
+    //             $('#event_option').prop("disabled", true);
+    //             $("#event_option").change();
+    //         }
+    //         if(window.subscribed_to_promo) {
+    //             console.log("hello from promo");
+    //             $("#promo_option").prop("checked", true);
+    //             $('#promo_option').prop("disabled", true);
+    //             $("#promo_option").change();
                 
-            }
-       });
+    //         }
+    //   });
        
-       $("#allowPush").click(function (){
-            $("#allowPush").hide();
-            // $(".checkbox").hide();
-            // $("#disablePush").show();
-            //check what type of push they wanted 
-            if($('#both_option').is(':checked'))
-            {
-                activatePushButton("promotion","event","");
-            }
-            else if ($('#promo_option').is(':checked')){
-                activatePushButton("promotion","","");
-            }
-            else {
-                activatePushButton("event","","");
-            }
+    //   $("#allowPush").click(function (){
+    //         $("#allowPush").hide();
+    //         // $(".checkbox").hide();
+    //         // $("#disablePush").show();
+    //         //check what type of push they wanted 
+    //         if($('#both_option').is(':checked'))
+    //         {
+    //             activatePushButton("promotion","event","");
+    //         }
+    //         else if ($('#promo_option').is(':checked')){
+    //             activatePushButton("promotion","","");
+    //         }
+    //         else {
+    //             activatePushButton("event","","");
+    //         }
             
-        });
-        $("#disablePush").click(function (){
-            // $(".checkbox").hide();
-            if($('#both_option').is(':checked'))
-            {
-                unsubscribeUser("promotion","event","");
-            }
-            else if ($('#promo_option').is(':checked')){
-                unsubscribeUser("promotion","","");
-            }
-            else {
-                unsubscribeUser("event","","");
-            }
-            // unsubscribeUser();
-            $("#allowPush").show();
-            $("#disablePush").hide();
+    //     });
+    //     $("#disablePush").click(function (){
+    //         // $(".checkbox").hide();
+    //         if($('#both_option').is(':checked'))
+    //         {
+    //             unsubscribeUser("promotion","event","");
+    //         }
+    //         else if ($('#promo_option').is(':checked')){
+    //             unsubscribeUser("promotion","","");
+    //         }
+    //         else {
+    //             unsubscribeUser("event","","");
+    //         }
+    //         // unsubscribeUser();
+    //         $("#allowPush").show();
+    //         $("#disablePush").hide();
             
-        });
-        $('.close_popup, .custom_backdrop').click(function(){
-            $(".modal-backdrop").remove();
-            $(".allow_notif_custom").remove();
-		    $(".popup_home").hide();
-		    $("#receiveNotification").hide();
-         });
-         $("#both_option").change(function() {
-             if ($('#both_option').is(':checked')) {
-                 $('#promo_option').prop("disabled", true);
-                 $('#event_option').prop("disabled", true);
-                 $('#promo_option').prop("checked", true);
-                 $('#event_option').prop("checked", true);
-             }
-             else {
-                 $('#promo_option').prop("disabled", false);
-                 $('#event_option').prop("disabled", false);
-                 $('#promo_option').prop("checked", false);
-                 $('#event_option').prop("checked", false);
-             }
+    //     });
+    //     $('.close_popup, .custom_backdrop').click(function(){
+    //         $(".modal-backdrop").remove();
+    //         $(".allow_notif_custom").remove();
+		  //  $(".popup_home").hide();
+		  //  $("#receiveNotification").hide();
+    //      });
+    //      $("#both_option").change(function() {
+    //          if ($('#both_option').is(':checked')) {
+    //              $('#promo_option').prop("disabled", true);
+    //              $('#event_option').prop("disabled", true);
+    //              $('#promo_option').prop("checked", true);
+    //              $('#event_option').prop("checked", true);
+    //          }
+    //          else {
+    //              $('#promo_option').prop("disabled", false);
+    //              $('#event_option').prop("disabled", false);
+    //              $('#promo_option').prop("checked", false);
+    //              $('#event_option').prop("checked", false);
+    //          }
             
-         });
-        $('#promo_option').change(function () {
-             if ($('#promo_option').is(':checked') && $('#event_option').is(':checked') ) {
-                $("#both_option").prop("checked", true);
-                $("#both_option").change();
-             }
-        });
-        $('#event_option').change(function () {
-             if ($('#promo_option').is(':checked') && $('#event_option').is(':checked') ) {
-                $("#both_option").prop("checked", true);
-                $("#both_option").change();
-             }
-        })
+    //      });
+    //     $('#promo_option').change(function () {
+    //          if ($('#promo_option').is(':checked') && $('#event_option').is(':checked') ) {
+    //             $("#both_option").prop("checked", true);
+    //             $("#both_option").change();
+    //          }
+    //     });
+    //     $('#event_option').change(function () {
+    //          if ($('#promo_option').is(':checked') && $('#event_option').is(':checked') ) {
+    //             $("#both_option").prop("checked", true);
+    //             $("#both_option").change();
+    //          }
+    //     })
         show_content();
     }
 </script>
