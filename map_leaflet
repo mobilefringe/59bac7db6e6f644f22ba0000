@@ -37,6 +37,8 @@
     L.imageOverlay(imageUrl, imageBounds).addTo(map);
     $(document).ready(function() {
       init(e);  
+      
+      show_content();
     })
-    show_content();
+    
 </script>
