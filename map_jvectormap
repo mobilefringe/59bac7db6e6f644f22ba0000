@@ -22,7 +22,7 @@
     
    $(document).ready(function(e) {
         init(e); 
-        $('#mall-map').vectorMap({
+        $('#map').vectorMap({
             map: 'mall',
             backgroundColor: 'transparent',
             markers: [{
