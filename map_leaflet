@@ -25,7 +25,7 @@
       // create the map
         var map = L.map('map', {
             center: [50, 50],
-            zoom: 1
+            zoom: 13
         });
         
         // create the image
