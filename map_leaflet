@@ -35,6 +35,8 @@
         imageBounds = [[40.712216, -74.22655], [40.773941, -74.12544]];
     
     L.imageOverlay(imageUrl, imageBounds).addTo(map);
-    
+    $(document).ready(function() {
+      init(e);  
+    })
     show_content();
 </script>
