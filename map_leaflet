@@ -28,7 +28,7 @@
     <script>
         
       
-            var lmap = new  L.map('map').setView([50.00, 14.44], 9)
+            var lmap = new  L.map('map').setView([0.00, 14.44], 9)
                         .addLayer(L.tileLayer("//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416"));
             var circles;
             var svgOverlay = L.SvgScaleOverlay();
