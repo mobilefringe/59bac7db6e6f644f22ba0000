@@ -24,7 +24,7 @@
    $(document).ready(function(e) {
         init(e); 
         $('#mall-map').vectorMap({
-            map: 'mall',
+            map: 'us-ny-newyork_mill'
             backgroundColor: 'transparent',
             markers: [{
               coords: [60, 110],
