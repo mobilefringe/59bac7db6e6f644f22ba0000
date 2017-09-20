@@ -63,8 +63,8 @@ map.fitBounds(bounds);
         var kruegerZ = xy( 13.4,  56.5);
         var deneb    = xy(218.7,   8.3);
         
-        L.marker(     sol).addTo(map).bindPopup(      'Sol');
-        L.marker(   mizar).addTo(map).bindPopup(    'Mizar');
+        L.marker(sol).addTo(map).bindPopup(      'Sol');
+        L.marker(mizar).addTo(map).bindPopup(    'Mizar');
             
        show_content();
     </script>
