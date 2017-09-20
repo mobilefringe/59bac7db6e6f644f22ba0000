@@ -24,10 +24,10 @@
     <script src="http://assets.codecloudapp.com/sites/59bac7db6e6f644f22ba0000/text/javascript/1505852644000/L.SvgScaleOverlay.js"></script>
     <script src="http://www.sumbera.com/gist/data.js" charset="utf-8"></script>
     <div class="map_container">
-        
+        <div id="map">
     </div>
-    <div id="map">
     </div>
+    
     <div id="tooltip" style="width:500px; height:250px;">
      </div>
 
