@@ -65,9 +65,7 @@
             
             L.marker(sol).addTo(map).bindPopup(      'Sol');
             L.marker(mizar).addTo(map).bindPopup(    'Mizar');
+            show_content();
         });
-        
-            
-       show_content();
     </script>
     
