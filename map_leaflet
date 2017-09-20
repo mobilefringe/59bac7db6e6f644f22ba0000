@@ -28,7 +28,8 @@
     <script>
         
         var map = L.map('map', {
-            crs: L.CRS.Simple
+            crs: L.CRS.Simple,
+            center: [51.505, -0.09]
         });
         var bounds =[[-26.5,-25], [1021.5,1023]];// [[0,0], [500,500]];
 var image = L.imageOverlay('//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416', bounds).addTo(map);
