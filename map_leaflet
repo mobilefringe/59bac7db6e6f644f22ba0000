@@ -26,7 +26,10 @@
     <script src="http://www.sumbera.com/gist/data.js" charset="utf-8"></script>
     <div class="map_container">
         <div id="map">
-        <svg  id="map" ></svg>
+        <svg width="300px" height="300px" 
+            xmlns="http://www.w3.org/2000/svg">
+            <text x="10" y="50" font-size="30">My SVG</text>
+         </svg>
         </div>
     </div>
     
