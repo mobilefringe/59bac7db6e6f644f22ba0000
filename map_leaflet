@@ -114,10 +114,5 @@
 
 
             lmap.addLayer(svgOverlay);
-            /***********************/
-
-            
-
-       
     </script>
     
