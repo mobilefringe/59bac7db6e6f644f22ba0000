@@ -1,18 +1,18 @@
 
 <style>
-   .map_container {
-       height: 1000px;
-        width: 1000px;
-        margin:auto;
-   }
-    #map {
+   /*.map_container {*/
+   /*    height: 1000px;*/
+   /*     width: 1000px;*/
+   /*     margin:auto;*/
+   /*}*/
+   /* #map {*/
         /*position: absolute;*/
-        height: 100%;
-        width: 100%;
-        margin:auto;
-        background-color: #fffff0;
-        overflow:hidden;
-    }
+   /*     height: 100%;*/
+   /*     width: 100%;*/
+   /*     margin:auto;*/
+   /*     background-color: #fffff0;*/
+   /*     overflow:hidden;*/
+   /* }*/
     
 </style>
     <!-- Base libraries-->
