@@ -1,8 +1,8 @@
 
 <style>
    .map_container {
-       height: 1000px;
-        width: 1000px;
+       height: 500px;
+        width: 500px;
         margin:auto;
    }
     #map {
