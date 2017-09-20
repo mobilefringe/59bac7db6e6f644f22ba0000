@@ -26,9 +26,9 @@
     <script src="http://www.sumbera.com/gist/data.js" charset="utf-8"></script>
     <div class="map_container">
         <div id="map">
-            <object type="image/svg+xml" data="//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg">
-          Your browser does not support SVG
-        </object>
+        <!--    <object type="image/svg+xml" data="//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg">-->
+        <!--  Your browser does not support SVG-->
+        <!--</object>-->
         </div>
        
          <object type="image/svg+xml" data="//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg" id="map">
