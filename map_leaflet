@@ -26,11 +26,12 @@
     <script src="http://www.sumbera.com/gist/data.js" charset="utf-8"></script>
     <div class="map_container">
         <div id="map">
+        
+        </div>
         <svg width="300px" height="300px" 
             xmlns="//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416">
             <text x="10" y="50" font-size="30">My SVG</text>
          </svg>
-        </div>
     </div>
     
     <div id="tooltip" style="width:500px; height:250px;">
