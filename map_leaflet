@@ -60,7 +60,7 @@
 
       <!-- Bootstrap Slider -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/bootstrap-slider.js"></script>
-      <link href="./Libraries/bootstrap-slider-master/dist/css/bootstrap-slider.min.css" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/css/bootstrap-slider.css" rel="stylesheet">
 
 
       <!-- D3 Resources -->
