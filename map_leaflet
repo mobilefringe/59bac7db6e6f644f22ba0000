@@ -52,7 +52,13 @@
 var image = L.imageOverlay('//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416', bounds).addTo(map);
 map.fitBounds(bounds);
 
-          
+         var xy = function(x, y) {
+    if (L.Util.isArray(x)) {    // When doing xy([x, y]);
+        return yx(x[1], x[0]);
+    }
+    return yx(y, x);  // When doing xy(x, y);
+};
+
             
        show_content();
     </script>
