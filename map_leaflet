@@ -53,11 +53,11 @@ var image = L.imageOverlay('//mallmaverick.cdn.speedyrails.net/system/properties
 map.fitBounds(bounds);
 
          var xy = function(x, y) {
-    if (L.Util.isArray(x)) {    // When doing xy([x, y]);
-        return yx(x[1], x[0]);
-    }
-    return yx(y, x);  // When doing xy(x, y);
-};
+            if (L.Util.isArray(x)) {    // When doing xy([x, y]);
+                return yx(x[1], x[0]);
+            }
+            return yx(y, x);  // When doing xy(x, y);
+        };
 
             
        show_content();
