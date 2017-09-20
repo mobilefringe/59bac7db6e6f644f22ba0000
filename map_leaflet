@@ -26,7 +26,9 @@
     <script src="http://www.sumbera.com/gist/data.js" charset="utf-8"></script>
     <div class="map_container">
         <!--<div id="map">-->
-        
+            <object type="image/svg+xml" data="//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg" id="map">
+          Your browser does not support SVG
+        </object>
         <!--</div>-->
        
          <object type="image/svg+xml" data="//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg" id="map">
@@ -44,9 +46,9 @@
             crs: L.CRS.Simple,
             // center: [500, 500]
         });
-//         var bounds =[[0,0], [1500,1500]];// [[0,0], [500,500]];
-// var image = L.imageOverlay('//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416', bounds).addTo(map);
-// map.fitBounds(bounds);
+        var bounds =[[0,0], [1500,1500]];// [[0,0], [500,500]];
+var image = L.imageOverlay('//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416', bounds).addTo(map);
+map.fitBounds(bounds);
 
           
             
