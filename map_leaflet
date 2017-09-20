@@ -59,7 +59,7 @@
 
 
       <!-- Bootstrap Slider -->
-      <!--<script src="./Libraries/bootstrap-slider-master/bootstrap-slider.js"></script>-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/bootstrap-slider.js"></script>
       <!--<link href="./Libraries/bootstrap-slider-master/dist/css/bootstrap-slider.min.css" rel="stylesheet">-->
 
 
