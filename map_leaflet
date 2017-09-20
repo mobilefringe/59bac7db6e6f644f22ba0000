@@ -46,7 +46,62 @@
             
 <!--       show_content();-->
 <!--    </script>-->
-    
+       <!-- JQuery -->
+      <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./Libraries/bootstrap-3.3.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="./Libraries/bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/starter-template/starter-template.css" rel="stylesheet">
+
+
+
+      <!-- Bootstrap Slider -->
+      <!--<script src="./Libraries/bootstrap-slider-master/bootstrap-slider.js"></script>-->
+      <!--<link href="./Libraries/bootstrap-slider-master/dist/css/bootstrap-slider.min.css" rel="stylesheet">-->
+
+
+      <!-- D3 Resources -->
+      <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+      <script src="http://d3js.org/queue.v1.min.js"></script>
+
+	<!-- Leaflet resources -->
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+
+
+
+      <!-- Additional style elements for displaying the legend -->
+    <style>
+      .legend {
+          text-align: left;
+          line-height: 18px;
+          color: #000000;
+      }
+
+      .info {
+          padding: 8px 8px;
+          background: white;
+          background: rgba(255,255,255,1);
+          box-shadow: 0 0 15px rgba(0,0,0,0.2);
+          border-radius: 5px;
+      }
+
+      .info h4 {
+          margin: 0 0 5px;
+          color: #777;
+      }
+
+      .legend i {
+          width: 18px;
+          height: 18px;
+          float: left;
+          margin-right: 8px;
+          opacity: 1;
+      }
+    </style>
      <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
