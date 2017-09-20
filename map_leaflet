@@ -13,7 +13,11 @@
         background-color: #fffff0;
         overflow:hidden;
     }
-    
+    /*.leaflet-tile.leaflet-tile-loaded {*/
+    /*    width:100%!important;*/
+    /*    transform: initial!important;*/
+        
+    /*}*/
 </style>
     <!-- Base libraries-->
     <script src="http://www.sumbera.com/gist/js/leaflet/svg/scaled/d3-3.5.5.min.js"></script>
