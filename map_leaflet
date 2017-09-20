@@ -25,9 +25,9 @@
     <script src="http://assets.codecloudapp.com/sites/59bac7db6e6f644f22ba0000/text/javascript/1505852644000/L.SvgScaleOverlay.js"></script>
     <script src="http://www.sumbera.com/gist/data.js" charset="utf-8"></script>
     <div class="map_container">
-        <div id="map">
+        <!--<div id="map">-->
         
-        </div>
+        <!--</div>-->
        
          <object type="image/svg+xml" data="//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg" id="map">
   Your browser does not support SVG
