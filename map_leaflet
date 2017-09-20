@@ -28,10 +28,7 @@
         <div id="map">
         
         </div>
-        <svg width="300px" height="300px" 
-            xmlns="">
-            <text x="10" y="50" font-size="30">My SVG</text>
-         </svg>
+       
          <object type="image/svg+xml" data="//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg">
   Your browser does not support SVG
 </object>
