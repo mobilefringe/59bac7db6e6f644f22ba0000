@@ -44,8 +44,8 @@
         $(document).ready(function(){
             var map = L.map('map', {
             crs: L.CRS.Simple,
-            zoom:0,
-            minZoom : 0,
+            zoom:1,
+            minZoom : 1,
             maxZooom: 10
             // center: [500, 500]
             });
