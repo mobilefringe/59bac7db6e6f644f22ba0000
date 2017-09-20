@@ -43,7 +43,7 @@
     <script>
         $(document).ready(function(){
             
-        })
+        });
         var map = L.map('map', {
             crs: L.CRS.Simple,
             minZoom : 1,
