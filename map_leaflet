@@ -1,6 +1,8 @@
 
 <style>
-   
+   .map_container {
+       
+   }
     #map {
         /*position: absolute;*/
         height: 1000px;
