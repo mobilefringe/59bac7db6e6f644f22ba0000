@@ -6,7 +6,7 @@
         /*height: 100%;*/
         /*width: 100%;*/
         background-color: #fffff0;
-        /*overflow:hidden;*/
+        overflow:hidden;
     }
     /*.leaflet-tile.leaflet-tile-loaded {*/
     /*    width:100%!important;*/
