@@ -37,10 +37,10 @@
 <!--    <script>-->
 <!--        $(document).ready(function(){-->
 <!--            var map = L.map('map', {-->
-            crs: L.CRS.Simple//,
-            // zoom:1,
-            // minZoom : 1,
-            // maxZooom: 10
+            <!--crs: L.CRS.Simple//,-->
+            <!--// zoom:1,-->
+            <!--// minZoom : 1,-->
+            <!--// maxZooom: 10-->
 <!--            });-->
             var bounds =[[13,13], [500,500]];// [[0,0], [500,500]];
 <!--            var image = L.imageOverlay('//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416', bounds).addTo(map);-->
