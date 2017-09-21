@@ -83,7 +83,7 @@
     
     function fnLoadMaps(){
         
-        map = new L.Map("map", {center: [37.8, -96.9], zoom: 4})
+    map = new L.Map("map", {center: [37.8, -96.9], zoom: 4})
     .addLayer(new L.TileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"));
         
         L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
