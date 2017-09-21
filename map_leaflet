@@ -70,6 +70,7 @@
         
         $('.custom_backdrop').remove();
         $('.yield').fadeIn();
+        loadMallDataCached(renderPage);
     });
 </script>
 <!--<style>-->
