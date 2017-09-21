@@ -96,7 +96,7 @@
         //Import the plane
         d3.xml("https://dl.dropboxusercontent.com/u/37482768/maps_central.svg", "image/svg+xml", function(svgImg) {
             
-           document.body.appendChild(svgImg.documentElement);		
+          map.getPanes().overlayPane.appendChild(svgImg.documentElement);
            
         });
 }
