@@ -75,9 +75,9 @@
         // var kruegerZ = xy( 13.4,  56.5);
         // var deneb    = xy(218.7,   8.3);
         
-        L.marker(sol, {icon:smallIcon}).addTo(map).bindPopup(      'Sol');
-        L.marker(mizar,{icon:smallIcon}).addTo(map).bindPopup(    'Mizar');
-        L.marker(store,{icon:smallIcon}).addTo(map).bindPopup(    'Store');
+        L.marker(sol, {icon:smallIcon}).addTo(map).bindPopup('Sol');
+        L.marker(mizar,{icon:smallIcon}).addTo(map).bindPopup('Mizar');
+        L.marker(store,{icon:smallIcon}).addTo(map).bindPopup('Store');
         
        
         
