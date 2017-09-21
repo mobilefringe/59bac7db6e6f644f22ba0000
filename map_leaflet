@@ -31,7 +31,7 @@
 <script>
     $(document).ready(function(e){
         init(e);
-        function rendrAll(){
+        function renderAll(){
         var map = L.map('map', {
             crs: L.CRS.Simple//,
             // zoom:1,
