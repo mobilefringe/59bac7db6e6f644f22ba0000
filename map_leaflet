@@ -77,7 +77,7 @@
         
         L.marker(sol, {icon:smallIcon}).addTo(map).bindPopup(      'Sol');
         L.marker(mizar,{icon:smallIcon}).addTo(map).bindPopup(    'Mizar');
-        L.marker(store,{icon:smallIcon}).addTo(map).bindPopup(    'Mizar');
+        L.marker(store,{icon:smallIcon}).addTo(map).bindPopup(    'Store');
         
        
         
