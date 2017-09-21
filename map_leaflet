@@ -74,11 +74,11 @@
 <style>
     html, body, #mapsWrapper { width:100%; height:400px; margin:0; padding:0; }
 </style>
-    <div id="mapsWrapper"></div>
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-     <script src="http://www.sumbera.com/gist/js/leaflet/svg/scaled/leaflet.js"></script>
-     <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" rel="stylesheet">
-    <script>
+<div id="mapsWrapper"></div>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+ <script src="http://www.sumbera.com/gist/js/leaflet/svg/scaled/leaflet.js"></script>
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" rel="stylesheet">
+<script>
     $(document).ready(function () {
         
    
@@ -94,12 +94,7 @@
         var svg = d3.select(map.getPanes().overlayPane).append("svg"),
             g = svg.append("g").attr("class", "leaflet-zoom-hide");
         
-        //Import the plane
-        // d3.xml("//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416", "image/svg+xml", function(svgImg) {
-            
-        //   map.getPanes().overlayPane.appendChild(svgImg.documentElement);
-           
-        // });
+       
         d3.xml("//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416").mimeType("image/svg+xml").get(function(error, svgImg) {
           if (error) throw error;
           map.getPanes().overlayPane.appendChild(svgImg.documentElement);
