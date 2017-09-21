@@ -47,10 +47,10 @@
 <!--            map.fitBounds(bounds);-->
 <!--            var yx = L.latLng;-->
 <!--             var xy = function(x, y) {-->
-                if (L.Util.isArray(x)) {    // When doing xy([x, y]);
+                <!--if (L.Util.isArray(x)) {    // When doing xy([x, y]);-->
 <!--                    return yx(x[1], x[0]);-->
 <!--                }-->
-                return yx(y, x);  // When doing xy(x, y);
+                <!--return yx(y, x);  // When doing xy(x, y);-->
 <!--            };-->
 <!--            var smallIcon = new L.Icon({-->
 <!--                iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-icon.png',-->
