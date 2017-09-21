@@ -71,4 +71,4 @@
 <!--            show_content();-->
 <!--        });-->
 <!--    </script>-->
-    
+    <div id="mapsWrapper"></div>
