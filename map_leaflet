@@ -80,8 +80,7 @@
  <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" rel="stylesheet">
 <script>
     $(document).ready(function () {
-        
-   
+
     // initialize the map
     var map;
     
