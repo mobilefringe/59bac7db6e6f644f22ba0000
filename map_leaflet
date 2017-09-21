@@ -62,6 +62,10 @@
         
         L.marker(sol, {icon:smallIcon}).addTo(map).bindPopup(      'Sol');
         L.marker(mizar,{icon:smallIcon}).addTo(map).bindPopup(    'Mizar');
+        
+        var stores = getStoresList();
+        console.log(stores);
+        
         $('.custom_backdrop').remove();
         $('.yield').fadeIn();
     });
