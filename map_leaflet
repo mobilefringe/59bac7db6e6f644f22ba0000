@@ -97,7 +97,7 @@
             g = svg.append("g").attr("class", "leaflet-zoom-hide");
         
         //Import the plane
-        d3.xml("https://dl.dropboxusercontent.com/u/37482768/maps_central.svg", "image/svg+xml", function(svgImg) {
+        d3.xml("//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416", "image/svg+xml", function(svgImg) {
             
           map.getPanes().overlayPane.appendChild(svgImg.documentElement);
            
