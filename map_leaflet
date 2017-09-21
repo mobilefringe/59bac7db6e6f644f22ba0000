@@ -78,7 +78,7 @@
     <script>
     $(document).ready(function () {
         
-    }
+   
     // initialize the map
     var map;
     
@@ -112,4 +112,5 @@
         });
         }
         show_content();
+    }
     </script>
