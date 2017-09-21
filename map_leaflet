@@ -112,5 +112,5 @@
         });
         }
         show_content();
-    }
+    });
     </script>
