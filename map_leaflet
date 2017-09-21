@@ -71,6 +71,9 @@
 <!--            show_content();-->
 <!--        });-->
 <!--    </script>-->
+<style>
+    html, body, #mapsWrapper { width:100%; height:400px; margin:0; padding:0; }
+</style>
     <div id="mapsWrapper"></div>
     <script src="https://d3js.org/d3.v4.min.js"></script>
      <script src="http://www.sumbera.com/gist/js/leaflet/svg/scaled/leaflet.js"></script>
