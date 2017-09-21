@@ -90,7 +90,7 @@
         
         map = new L.Map("mapsWrapper", {
             crs: L.CRS.Simple,
-            zoom:0
+            zoom:0,
             center:[0,0]
         });
         // Add an SVG element to Leaflet’s overlay pane
