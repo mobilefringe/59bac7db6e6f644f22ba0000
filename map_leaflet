@@ -103,6 +103,10 @@
           map.getPanes().overlayPane.appendChild(svgImg.documentElement);
            
         });
+        d3.xml("//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416").mimeType("image/svg+xml").get(function(error, xml) {
+  if (error) throw error;
+  …
+});
 }
         show_content();
     </script>
