@@ -2,7 +2,7 @@
 <style>
    .map_container {
        height: 90%;
-        width: 90%;;
+        width: 90%;
         margin:auto;
    }
     #map {
