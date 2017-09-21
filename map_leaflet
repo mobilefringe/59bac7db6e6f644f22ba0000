@@ -89,7 +89,7 @@
     function fnLoadMaps(){
         
         map = new L.Map("mapsWrapper", {
-            <!--crs: L.CRS.Simple});
+            crs: L.CRS.Simple});
         // Add an SVG element to Leaflet’s overlay pane
         var svg = d3.select(map.getPanes().overlayPane).append("svg"),
             g = svg.append("g").attr("class", "leaflet-zoom-hide");
