@@ -57,6 +57,10 @@
             shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
             shadowSize:  [0,0]
         });
+        
+         var stores = getStoresList();
+        console.log(stores);
+        
         var sol      =xy( 13.4,  56.5);
         var mizar    = xy( 41.6, 130.1);
         var store    = xy( 41.6, 130.1);
@@ -66,8 +70,7 @@
         L.marker(sol, {icon:smallIcon}).addTo(map).bindPopup(      'Sol');
         L.marker(mizar,{icon:smallIcon}).addTo(map).bindPopup(    'Mizar');
         
-        var stores = getStoresList();
-        console.log(stores);
+       
         
         $('.custom_backdrop').remove();
         $('.yield').fadeIn();
