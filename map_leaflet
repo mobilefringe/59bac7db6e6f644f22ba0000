@@ -68,7 +68,8 @@
             
             L.marker(sol, {icon:smallIcon}).addTo(map).bindPopup(      'Sol');
             L.marker(mizar,{icon:smallIcon}).addTo(map).bindPopup(    'Mizar');
-            show_content();
+            $('.custom_backdrop').remove();-->
+<!--    $('.yield').fadeIn();-->
         });
     </script>
 <!--<style>-->
