@@ -46,7 +46,7 @@
             crs: L.CRS.Simple,
             zoom:1,
             minZoom : 1,
-            maxZooom: 10
+            maxZooom: 10,
             center: [50, 50]
             });
             var bounds =[[0,0], [100,100]];// [[0,0], [500,500]];
