@@ -29,7 +29,9 @@
 
 
 <script>
-    $(document).ready(function(){
+    $(document).ready(function(e){
+        init(e);
+        
         var map = L.map('map', {
             crs: L.CRS.Simple//,
             // zoom:1,
