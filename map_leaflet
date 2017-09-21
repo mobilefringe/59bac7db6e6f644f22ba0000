@@ -58,7 +58,7 @@
             shadowSize:  [0,0]
         });
         
-         var stores = getStoresList();
+        var stores = getStoresList();
         console.log(stores);
         
         var sol      =xy( 13.4,  56.5);
