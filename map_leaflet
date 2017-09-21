@@ -57,7 +57,15 @@
             shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
             shadowSize:  [0,0]
         });
-        
+         var smallIcon = new L.Icon({
+            iconUrl: 'http://assets.codecloudapp.com/sites/59bac7db6e6f644f22ba0000/image/png/1496327260000/823841_message_512x512.png',
+            iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-icon-2x.png',
+            iconSize:    [25, 41],
+            iconAnchor:  [12, 41],
+            popupAnchor: [1, -34],
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+            shadowSize:  [0,0]
+        });
         var stores = getStoresList();
         console.log(stores);
         
