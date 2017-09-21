@@ -73,5 +73,32 @@
 <!--    </script>-->
     <div id="mapsWrapper"></div>
     <script>
+    // initialize the map
+var map;
+
+fnLoadMaps();
+
+function fnLoadMaps(){
+    
+    map = L.map('mapsWrapper').setView([15.433809, 100.755076], 5);
+    
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+        maxZoom: 20,
+        id: 'jarfang.6d337a5b',
+        accessToken: 'pk.eyJ1IjoiamFyZmFuZyIsImEiOiJhOWM5NzY4MTQ5MWU4MmVhZmMzNDlmZDk2ODk5YTNjOSJ9.3hGolcSbt9X8BJdlgqajDg'
+    }).addTo(map);
+    
+    // Add an SVG element to Leaflet’s overlay pane
+    var svg = d3.select(map.getPanes().overlayPane).append("svg"),
+        g = svg.append("g").attr("class", "leaflet-zoom-hide");
+    
+    //Import the plane
+    d3.xml("https://dl.dropboxusercontent.com/u/37482768/maps_central.svg", "image/svg+xml", function(svgImg) {
+        
+       document.body.appendChild(svgImg.documentElement);		
+       
+    });
+}
         show_content();
     </script>
