@@ -79,7 +79,13 @@
         L.marker(mizar,{icon:smallIcon}).addTo(map).bindPopup('Mizar');
         L.marker(store,{icon:smallerIcon}).addTo(map).bindPopup('Store');
         
-       
+       map.on('click', function(e) {        
+            var popLocation= e.latlng;
+            var popup = L.popup()
+            .setLatLng(popLocation)
+            .setContent('<p>Hello world!<br />This is a nice popup.</p>')
+            .openOn(map);        
+        });
         
         $('.custom_backdrop').remove();
         $('.yield').fadeIn();
