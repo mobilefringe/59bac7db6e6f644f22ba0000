@@ -43,8 +43,8 @@
           minZoom: 20,
           crs: L.CRS.Simple
         }).setView([0, 0], 20);
-        var southWest = map.unproject([0, 3500], map.getMaxZoom());
-        var northEast = map.unproject([2000, 0], map.getMaxZoom());
+        var southWest = map.unproject([0, 2000], map.getMaxZoom());
+        var northEast = map.unproject([3500, 0], map.getMaxZoom());
         map.setMaxBounds(new L.LatLngBounds(southWest, northEast));
         var bounds =[[-226.953125,154],[938.046875,-199]]//[[89,219], [843,730]];// [[0,0], [500,500]];
         var image = L.imageOverlay('//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416', bounds).addTo(map);
