@@ -80,7 +80,7 @@
         L.marker(store,{icon:smallerIcon}).addTo(map).bindPopup('Store');
         
        map.on('click', function(e) {       
-           console.log("hey");
+           console.log("hey", e.latlng);
             var popLocation= e.latlng;
             var popup = L.popup()
             .setLatLng(popLocation)
