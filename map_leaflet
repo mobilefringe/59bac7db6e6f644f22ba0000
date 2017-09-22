@@ -33,7 +33,7 @@
         init(e);
         function renderAll(){
         var map = L.map('map', {
-            crs: L.CRS.Simple//,
+            crs: L.CRS.Simple,
             // zoom:1,
             // minZoom : 1,
             maxZooom: 10
