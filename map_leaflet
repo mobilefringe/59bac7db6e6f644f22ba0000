@@ -79,7 +79,8 @@
         L.marker(mizar,{icon:smallIcon}).addTo(map).bindPopup('Mizar');
         L.marker(store,{icon:smallerIcon}).addTo(map).bindPopup('Store');
         
-       map.on('click', function(e) {        
+       map.on('click', function(e) {       
+           console.log("hey");
             var popLocation= e.latlng;
             var popup = L.popup()
             .setLatLng(popLocation)
