@@ -32,12 +32,17 @@
     $(document).ready(function(e){
         init(e);
         function renderAll(){
+        // var map = L.map('map', {
+        //     crs: L.CRS.Simple//,
+        //     // zoom:1,
+        //     // minZoom : 1,
+        //     // maxZooom: 10
+        // });
         var map = L.map('map', {
-            crs: L.CRS.Simple//,
-            // zoom:1,
-            // minZoom : 1,
-            // maxZooom: 10
-        });
+  maxZoom: 20,
+  minZoom: 20,
+  crs: L.CRS.Simple
+}).setView([0, 0], 20);
         var bounds =[[-226.953125,154],[938.046875,-199]]//[[89,219], [843,730]];// [[0,0], [500,500]];
         var image = L.imageOverlay('//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416', bounds).addTo(map);
         map.fitBounds(bounds);
