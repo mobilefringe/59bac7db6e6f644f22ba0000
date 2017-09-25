@@ -155,10 +155,10 @@
 			                                  + -topLeft[1] + ")");
 
 			// initialize the path data	
-			d3_features.attr("d", path)
-				.style("fill-opacity", 0.7)
-				.attr('fill','blue');
-		    } 
+// 			d3_features.attr("d", path)
+// 				.style("fill-opacity", 0.7)
+// 				.attr('fill','blue');
+// 		    } 
 
 		// Use Leaflet to implement a D3 geometric transformation.
 		function projectPoint(x, y) {
