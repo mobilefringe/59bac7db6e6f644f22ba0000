@@ -27,8 +27,8 @@
                 max_zoom:15,
                 center:[50,50]
             });
-             mapLink = 
-            '<a href="http://openstreetmap.org">OpenStreetMap</a>';
+            //  mapLink = 
+            // '<a href="http://openstreetmap.org">OpenStreetMap</a>';
         L.tileLayer("http://{s}.sm.mapstack.stamen.com/(toner-lite,$fff[difference],$fff[@23],$fff[hsl-saturation@20])/{z}/{x}/{y}.png").addTo(map);
             // Add an SVG element to Leaflet’s overlay pane
             svg = d3.select(map.getPanes().overlayPane).append("svg");
