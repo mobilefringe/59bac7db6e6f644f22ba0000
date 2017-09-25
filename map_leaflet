@@ -125,7 +125,7 @@
             // Add an SVG element to Leaflet’s overlay pane
             var svg = d3.select(map.getPanes().overlayPane).append("svg");
                 // g = svg.append("g").attr("class", "leaflet-zoom-hide");
-            console.log (svg.bounds());
+            // console.log (svg.bounds());
             
        
             d3.xml("//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416").mimeType("image/svg+xml").get(function(error, svgImg) {
