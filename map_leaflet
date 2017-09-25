@@ -51,6 +51,7 @@
 		function reset() {
         
 			bounds = map.getBounds();
+			console.log(bounds);
 			var topLeft = bounds[0],
 				bottomRight = bounds[1];
 			svg .attr("width", bottomRight[0] - topLeft[0])
