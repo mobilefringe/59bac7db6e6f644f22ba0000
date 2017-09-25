@@ -39,16 +39,16 @@
               console.log(svgImg.documentElement);
               console.log(svgImg.documentElement.width,svgImg.documentElement.height);
               map.getPanes().overlayPane.appendChild(svgImg.documentElement);
-              reset();
+              
             });
             // var store    = xy( stores[0].x_coordinate,stores[0].y_coordinate);
         }
-        ;
+        reset();;
         console.log(map.on("viewreset", reset));
 		
 		// fit the SVG element to leaflet's map layer
 		function reset() {
-        
+            
 			bounds =[[316,151],[885,478]]// path.bounds(geoShape);
 
 			var topLeft = bounds[0],
