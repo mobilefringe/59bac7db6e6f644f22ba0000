@@ -53,7 +53,8 @@
             var translate_scale=$(".leaflet-proxy.leaflet-zoom-animated").css( "transform");
             // var translate, scale=translate_scale.split(' ')[1];
             console.log(translate_scale);
-            $(".leaflet-pane.leaflet-overlay-pane").css("")
+            $(".leaflet-pane.leaflet-overlay-pane").attr("transform", "translate(" + -topLeft[0] + "," 
+			                                  + -topLeft[1] + ")");
 			bounds =[[316,151],[885,478]]// path.bounds(geoShape);
 
 			var topLeft = bounds[0],
