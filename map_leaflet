@@ -135,20 +135,20 @@
             });
             // var store    = xy( stores[0].x_coordinate,stores[0].y_coordinate);
              function mouseenter() {
-        d3.select(this).style('fill-opacity', 1);
-
-        var props = d3.select(this).data()[0].properties;
-        var t = props['amenity']
-        	.split('/')
-        	.map(function(v) {
-            return v.charAt(0).toUpperCase() + v.slice(1);
-          })
-        	.join('/');
-        var n = props['name'];
-        hoverType.html('<label>Type</label><p>&nbsp;' + t + '</p>');
-        hoverName.html(
-          n !== null ? '<label>Name</label><p>&nbsp;' + n + '</p>' : ''
-        );
+            d3.select(this).style('fill-opacity', 1);
+    
+            var props = d3.select(this).data()[0].properties;
+            var t = props['amenity']
+            	.split('/')
+            	.map(function(v) {
+                return v.charAt(0).toUpperCase() + v.slice(1);
+              })
+            	.join('/');
+            var n = props['name'];
+            hoverType.html('<label>Type</label><p>&nbsp;' + t + '</p>');
+            hoverName.html(
+              n !== null ? '<label>Name</label><p>&nbsp;' + n + '</p>' : ''
+            );
 
       }
 
