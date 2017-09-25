@@ -212,7 +212,8 @@ var svg = d3.select(map.getPanes().overlayPane).append("svg"),
         var point = map.latLngToLayerPoint(new L.LatLng(y, x));
         this.stream.point(point.x, point.y);
       }
-
+$('.custom_backdrop').remove();
+       $('.yield').fadeIn();
   })
     
 </script> 
