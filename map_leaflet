@@ -141,7 +141,7 @@
 		// fit the SVG element to leaflet's map layer
 		function reset() {
         
-			bounds =// path.bounds(geoShape);
+			bounds =[[],[]];// path.bounds(geoShape);
 
 			var topLeft = bounds[0],
 				bottomRight = bounds[1];
