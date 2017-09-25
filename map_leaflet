@@ -135,6 +135,9 @@
             });
             // var store    = xy( stores[0].x_coordinate,stores[0].y_coordinate);
         }
+        map.on("viewreset", reset);
+
+		reset();
         $('.custom_backdrop').remove();
         $('.yield').fadeIn();
     });
