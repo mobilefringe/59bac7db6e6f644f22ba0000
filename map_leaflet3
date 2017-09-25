@@ -97,13 +97,13 @@
                 }
                 
                 
-                circles.each(function (d) {
-                    var elem = d3.select(this);
-                    var point = lmap.project(L.latLng(new L.LatLng(d[0], d[1])))._subtract(lmap.getPixelOrigin());
-                    //var point = lmap.latLngToLayerPoint(new L.LatLng(d.geometry.coordinates[1], d.geometry.coordinates[0]));
-                    elem.attr('cx', point.x)
-                    elem.attr('cy', point.y)
-                    elem.attr('r', radius)
+                // circles.each(function (d) {
+                //     var elem = d3.select(this);
+                //     var point = lmap.project(L.latLng(new L.LatLng(d[0], d[1])))._subtract(lmap.getPixelOrigin());
+                //     //var point = lmap.latLngToLayerPoint(new L.LatLng(d.geometry.coordinates[1], d.geometry.coordinates[0]));
+                //     elem.attr('cx', point.x)
+                //     elem.attr('cy', point.y)
+                //     elem.attr('r', radius)
                 })
             };
 
