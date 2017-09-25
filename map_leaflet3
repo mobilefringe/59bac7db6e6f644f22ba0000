@@ -104,7 +104,7 @@
                 //     elem.attr('cx', point.x)
                 //     elem.attr('cy', point.y)
                 //     elem.attr('r', radius)
-                })
+                // })
             };
 
             svgOverlay.onScaleChange = function (scaleDiff) {
