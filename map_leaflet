@@ -37,7 +37,7 @@
               if (error) throw error;
               svgImg_doc = svgImg.documentElement;
               console.log(svgImg.documentElement);
-              console.log(svgImg.documentElement.width,svgImg.documentElement.height);
+            //   console.log(svgImg.documentElement.width,svgImg.documentElement.height);
               map.getPanes().overlayPane.appendChild(svgImg.documentElement);
               
             });
