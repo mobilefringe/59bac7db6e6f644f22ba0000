@@ -131,6 +131,7 @@
             d3.xml("//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416").mimeType("image/svg+xml").get(function(error, svgImg) {
               if (error) throw error;
               console.log(svgImg.documentElement);
+              console.log(svgImg.documentElement.getBoundingClientRect());
               map.getPanes().overlayPane.appendChild(svgImg.documentElement);
             });
             // var store    = xy( stores[0].x_coordinate,stores[0].y_coordinate);
@@ -140,7 +141,7 @@
 		reset();
 		// fit the SVG element to leaflet's map layer
 		function reset() {
-        console.log(svg.getBoundingClientRect());
+        
 			bounds =[[100,1200],[100,1150]]// path.bounds(geoShape);
 
 			var topLeft = bounds[0],
