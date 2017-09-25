@@ -67,7 +67,7 @@
             shadowSize:  [0,0]
         });
         var stores = getStoresList();
-        console.log(stores);
+        // console.log(stores);
         
         var sol      =xy( 13.4,  56.5);
         var mizar    = xy( 41.6, 130.1);
