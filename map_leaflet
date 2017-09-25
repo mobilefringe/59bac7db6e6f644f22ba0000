@@ -129,7 +129,7 @@
           map.getPanes().overlayPane.appendChild(svgImg.documentElement);
         });
         }
-       $('.custom_backdrop').remove();
-    $('.yield').fadeIn();
+        $('.custom_backdrop').remove();
+        $('.yield').fadeIn();
     });
     </script>
