@@ -2,8 +2,8 @@
 <style>
     html, body, #mapsWrapper { width:90%; height:400px; margin:auto; padding:0; }
     svg {
-        width:500px;
-        height:700px;
+        width:900px;
+        height:400px;
     }
 </style>
 <div id="mapsWrapper"></div>
