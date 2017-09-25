@@ -14,7 +14,7 @@
 <!--<script>-->
 <!--    $(document).ready(function () {-->
 
-        // initialize the map
+        <!--// initialize the map-->
 <!--        var map;-->
 <!--        var svgImg_doc;-->
 <!--        fnLoadMaps();-->
@@ -29,10 +29,10 @@
 <!--                center:[50,50]-->
 <!--            });-->
 <!--        L.tileLayer("http://{s}.sm.mapstack.stamen.com/(toner-lite,$fff[difference],$fff[@23],$fff[hsl-saturation@20])/{z}/{x}/{y}.png").addTo(map);-->
-            // Add an SVG element to Leaflet’s overlay pane
+            <!--// Add an SVG element to Leaflet’s overlay pane-->
 <!--            svg = d3.select(map.getPanes().overlayPane).append("svg");-->
 <!--                g = svg.append("g").attr("class", "leaflet-zoom-hide");-->
-            // console.log (svg.bounds());
+            <!--// console.log (svg.bounds());-->
             
        
 <!--            d3.xml("//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416").mimeType("image/svg+xml").get(function(error, svgImg) {-->
@@ -43,7 +43,7 @@
 <!--              map.getPanes().overlayPane.appendChild(svgImg.documentElement);-->
               
 <!--            });-->
-            // var store    = xy( stores[0].x_coordinate,stores[0].y_coordinate);
+            <!--// var store    = xy( stores[0].x_coordinate,stores[0].y_coordinate);-->
 <!--        }-->
      
 <!--        $('.custom_backdrop').remove();-->
