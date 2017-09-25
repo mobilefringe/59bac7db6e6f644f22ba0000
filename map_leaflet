@@ -177,7 +177,7 @@ var svg = d3.select(map.getPanes().overlayPane).append("svg"),
     g = svg.append("g").attr("class", "leaflet-zoom-hide");
     
  d3.xml("//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416").mimeType("image/svg+xml").get(function(error, collection) {
-  
+  console.log(collection);
       var transform = d3.geo.transform({point: projectPoint}),
           path = d3.geo.path().projection(transform);
       
