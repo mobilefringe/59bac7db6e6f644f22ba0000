@@ -131,7 +131,7 @@
             d3.xml("//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416").mimeType("image/svg+xml").get(function(error, svgImg) {
               if (error) throw error;
               console.log(svgImg.documentElement);
-              map.getPanes().overlayPane.appendChild(svgImg.documentElement);
+              map.getPanes().overlayPane.appendChild(svgImg.documentElement).call(zoom);;
             });
             // var store    = xy( stores[0].x_coordinate,stores[0].y_coordinate);
         }
