@@ -119,9 +119,8 @@
                 crs: L.CRS.Simple,
                 zoom:-10,
                 min_zoom:0,
-                max_zoom:15
-                // ,
-                // center:[50,50]
+                max_zoom:15,
+                center:[50,50]
             });
             // Add an SVG element to Leaflet’s overlay pane
             svg = d3.select(map.getPanes().overlayPane).append("svg");
