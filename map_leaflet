@@ -5,7 +5,7 @@
 <!--        margin:auto;-->
 <!--   }-->
 <!--    #map {-->
-        /*position: absolute;*/
+        <!--/*position: absolute;*/-->
 <!--        height: 100%;-->
 <!--        width: 100%;-->
 <!--        margin:auto;-->
@@ -34,19 +34,19 @@
 <!--        function renderAll(){-->
 <!--        var map = L.map('map', {-->
 <!--            crs: L.CRS.Simple,-->
-            // zoom:1,
+            <!--// zoom:1,-->
 <!--            minZoom : 1,-->
 <!--            maxZooom: 5-->
 <!--        });-->
-        var bounds =[[-226.953125,154],[938.046875,-199]]//[[89,219], [843,730]];// [[0,0], [500,500]];
+        <!--var bounds =[[-226.953125,154],[938.046875,-199]]//[[89,219], [843,730]];// [[0,0], [500,500]];-->
 <!--        var image = L.imageOverlay('//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416', bounds).addTo(map);-->
 <!--        map.fitBounds(bounds);-->
 <!--        var yx = L.latLng;-->
 <!--        var xy = function(x, y) {-->
-            if (L.Util.isArray(x)) {    // When doing xy([x, y]);
+            <!--if (L.Util.isArray(x)) {    // When doing xy([x, y]);-->
 <!--                return yx(x[1], x[0]);-->
 <!--            }-->
-            return yx(y, x);  // When doing xy(x, y);
+            <!--return yx(y, x);  // When doing xy(x, y);-->
 <!--        };-->
 <!--        var smallIcon = new L.Icon({-->
 <!--            iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-icon.png',-->
