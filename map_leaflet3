@@ -87,9 +87,9 @@
             svgOverlay.onInitData = function () {
                 if (!circles) {
                     var g = d3.select(this._g);
-                    circles = g.selectAll("circle")
-                                    .data(data)
-                                    .enter().append('circle');
+                    // circles = g.selectAll("circle")
+                    //                 .data(data)
+                    //                 .enter().append('circle');
                     // -- opacity based on grouping optimization in point data
                     circles.style("fill-opacity", 0.8);
                     circles.style("fill", "rgba(255,116,116, 0.5)")
