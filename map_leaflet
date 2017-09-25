@@ -132,9 +132,10 @@
               if (error) throw error;
               console.log(svgImg.documentElement);
               map.getPanes().overlayPane.appendChild(svgImg.documentElement);
+               svgImg.documentElement.on('mouseenter', mouseenter);
+			svgImg.documentElement.on('mouseleave', mouseleave);
             });
-             zones.on('mouseenter', mouseenter);
-			zones.on('mouseleave', mouseleave);
+           
             // var store    = xy( stores[0].x_coordinate,stores[0].y_coordinate);
              function mouseenter() {
                  console.log(this);
