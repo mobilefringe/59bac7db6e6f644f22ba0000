@@ -51,15 +51,12 @@
 <!--    });-->
 <!--    </script>-->
 <style>
-        body {
-            margin: 0px;
-        }
-        #map {
-            position: relative;
-            height: 100%;
-            width: 100%;
-            background-color: #333;
-        }
+      <style>
+    html, body, #mapsWrapper { width:90%; height:400px; margin:auto; padding:0; }
+    svg {
+        width:900px;
+        height:400px;
+    }
     </style>
 <div id="map">
     </div>
