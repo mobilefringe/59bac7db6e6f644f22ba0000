@@ -110,7 +110,7 @@
 
         // initialize the map
         var map;
-        
+        var svgImg;
         fnLoadMaps();
         var svg;
         function fnLoadMaps(){
