@@ -118,7 +118,8 @@
 
             lmap.addLayer(svgOverlay);
             /***********************/
-
+  $('.custom_backdrop').remove();
+     $('.yield').fadeIn();
             
 
        
