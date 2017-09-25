@@ -124,7 +124,7 @@
             });
             // Add an SVG element to Leaflet’s overlay pane
             var svg = d3.select(map.getPanes().overlayPane).append("svg");
-                // g = svg.append("g").attr("class", "leaflet-zoom-hide");
+                g = svg.append("g").attr("class", "leaflet-zoom-hide");
             // console.log (svg.bounds());
             
        
