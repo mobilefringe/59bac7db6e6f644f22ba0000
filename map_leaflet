@@ -50,7 +50,7 @@
 		// fit the SVG element to leaflet's map layer
 		function reset() {
             console.log($(".leaflet-proxy.leaflet-zoom-animated").attr("style"));
-            var translate_scale=$(".leaflet-proxy.leaflet-zoom-animated").attr("style").split(':')[0];
+            var translate_scale=$(".leaflet-proxy.leaflet-zoom-animated").attr("style").split(':')[1];
             
             // $(".leaflet-pane.leaflet-overlay-pane").css("")
 			bounds =[[316,151],[885,478]]// path.bounds(geoShape);
