@@ -11,45 +11,45 @@
 <script src="https://d3js.org/d3.v4.min.js"></script>
  <script src="http://www.sumbera.com/gist/js/leaflet/svg/scaled/leaflet.js"></script>
  <script src="//s3.amazonaws.com/kodekloud/sites/59bac7db6e6f644f22ba0000/text/javascript/1505852644000/L.SvgScaleOverlay.js"></script>
-// <script>
-//     $(document).ready(function () {
+<script>
+    $(document).ready(function () {
 
-//         // initialize the map
-//         var map;
-//         var svgImg_doc;
-//         fnLoadMaps();
-//         var svg;
-//         function fnLoadMaps(){
+        // initialize the map
+        var map;
+        var svgImg_doc;
+        fnLoadMaps();
+        var svg;
+        function fnLoadMaps(){
         
-//             map = new L.Map("mapsWrapper", {
-//                 crs: L.CRS.Simple,
-//                 zoom:-10,
-//                 min_zoom:0,
-//                 max_zoom:15,
-//                 center:[50,50]
-//             });
-//         L.tileLayer("http://{s}.sm.mapstack.stamen.com/(toner-lite,$fff[difference],$fff[@23],$fff[hsl-saturation@20])/{z}/{x}/{y}.png").addTo(map);
-//             // Add an SVG element to Leaflet’s overlay pane
-//             svg = d3.select(map.getPanes().overlayPane).append("svg");
-//                 g = svg.append("g").attr("class", "leaflet-zoom-hide");
-//             // console.log (svg.bounds());
+            map = new L.Map("mapsWrapper", {
+                crs: L.CRS.Simple,
+                zoom:-10,
+                min_zoom:0,
+                max_zoom:15,
+                center:[50,50]
+            });
+        L.tileLayer("http://{s}.sm.mapstack.stamen.com/(toner-lite,$fff[difference],$fff[@23],$fff[hsl-saturation@20])/{z}/{x}/{y}.png").addTo(map);
+            // Add an SVG element to Leaflet’s overlay pane
+            svg = d3.select(map.getPanes().overlayPane).append("svg");
+                g = svg.append("g").attr("class", "leaflet-zoom-hide");
+            // console.log (svg.bounds());
             
        
-//             d3.xml("//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416").mimeType("image/svg+xml").get(function(error, svgImg) {
-//               if (error) throw error;
-//               svgImg_doc = svgImg.documentElement;
-//               console.log(svgImg.documentElement);
-//             //   console.log(svgImg.documentElement.width,svgImg.documentElement.height);
-//               map.getPanes().overlayPane.appendChild(svgImg.documentElement);
+            d3.xml("//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416").mimeType("image/svg+xml").get(function(error, svgImg) {
+              if (error) throw error;
+              svgImg_doc = svgImg.documentElement;
+              console.log(svgImg.documentElement);
+            //   console.log(svgImg.documentElement.width,svgImg.documentElement.height);
+              map.getPanes().overlayPane.appendChild(svgImg.documentElement);
               
-//             });
-//             // var store    = xy( stores[0].x_coordinate,stores[0].y_coordinate);
-//         }
+            });
+            // var store    = xy( stores[0].x_coordinate,stores[0].y_coordinate);
+        }
      
-//         $('.custom_backdrop').remove();
-//         $('.yield').fadeIn();
-//     });
-//     </script>
+        $('.custom_backdrop').remove();
+        $('.yield').fadeIn();
+    });
+    </script>
 <div id="map">
     </div>
     <div id="tooltip" style="width:230px; height:100px;">
