@@ -104,24 +104,24 @@
 <script>
     $(document).ready(function () {
 
-    // initialize the map
-    var map;
-    
-    fnLoadMaps();
-    
-    function fnLoadMaps(){
+        // initialize the map
+        var map;
         
-        map = new L.Map("mapsWrapper", {
-            crs: L.CRS.Simple,
-            zoom:-10,
-            min_zoom:0,
-            max_zoom:15,
-            center:[50,50]
-        });
-        // Add an SVG element to Leaflet’s overlay pane
-        var svg = d3.select(map.getPanes().overlayPane).append("svg"),
-            g = svg.append("g").attr("class", "leaflet-zoom-hide");
+        fnLoadMaps();
         
+        function fnLoadMaps(){
+        
+            map = new L.Map("mapsWrapper", {
+                crs: L.CRS.Simple,
+                zoom:-10,
+                min_zoom:0,
+                max_zoom:15,
+                center:[50,50]
+            });
+            // Add an SVG element to Leaflet’s overlay pane
+            var svg = d3.select(map.getPanes().overlayPane).append("svg"),
+                g = svg.append("g").attr("class", "leaflet-zoom-hide");
+            
        
             d3.xml("//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416").mimeType("image/svg+xml").get(function(error, svgImg) {
               if (error) throw error;
