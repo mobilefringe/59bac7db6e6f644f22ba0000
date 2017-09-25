@@ -50,6 +50,7 @@
 		// fit the SVG element to leaflet's map layer
 		function reset() {
             console.log($(".leaflet-proxy.leaflet-zoom-animated").attr("style"));
+            $(".leaflet-pane.leaflet-overlay-pane")
 			bounds =[[316,151],[885,478]]// path.bounds(geoShape);
 
 			var topLeft = bounds[0],
