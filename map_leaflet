@@ -150,11 +150,11 @@
               n !== null ? '<label>Name</label><p>&nbsp;' + n + '</p>' : ''
             );
 
-      }
-
-      function mouseleave() {
-        d3.select(this).style('fill-opacity', 0.1);
-      }
+          }
+    
+          function mouseleave() {
+            d3.select(this).style('fill-opacity', 0.1);
+          }
         }
         $('.custom_backdrop').remove();
         $('.yield').fadeIn();
