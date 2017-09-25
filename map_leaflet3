@@ -114,6 +114,7 @@
               console.log(svgImg.documentElement);
             //   console.log(svgImg.documentElement.width,svgImg.documentElement.height);
               lmap.getPanes().overlayPane.appendChild(svgImg.documentElement);
+              (g.append(svgImg.documentElement));
               
             });
                 
