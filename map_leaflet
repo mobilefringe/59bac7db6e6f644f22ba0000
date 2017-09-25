@@ -94,42 +94,42 @@
 <!--        loadMallDataCached(renderAll);-->
 <!--    });-->
 <!--</script>-->
-<!--<style>-->
-<!--    html, body, #mapsWrapper { width:100%; height:400px; margin:0; padding:0; }-->
-<!--</style>-->
-<!--<div id="mapsWrapper"></div>-->
-<!--<script src="https://d3js.org/d3.v4.min.js"></script>-->
-<!-- <script src="http://www.sumbera.com/gist/js/leaflet/svg/scaled/leaflet.js"></script>-->
-<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" rel="stylesheet">-->
-<!--<script>-->
-<!--    $(document).ready(function () {-->
+<style>
+    html, body, #mapsWrapper { width:100%; height:400px; margin:0; padding:0; }
+</style>
+<div id="mapsWrapper"></div>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+ <script src="http://www.sumbera.com/gist/js/leaflet/svg/scaled/leaflet.js"></script>
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" rel="stylesheet">
+<script>
+    $(document).ready(function () {
 
-    <!--// initialize the map-->
-<!--    var map;-->
+    // initialize the map
+    var map;
     
-<!--    fnLoadMaps();-->
+    fnLoadMaps();
     
-<!--    function fnLoadMaps(){-->
+    function fnLoadMaps(){
         
-<!--        map = new L.Map("mapsWrapper", {-->
-<!--            crs: L.CRS.Simple,-->
-<!--            zoom:-10,-->
-<!--            min_zoom:0,-->
-<!--            max_zoom:15,-->
-<!--            center:[50,50]-->
-<!--        });-->
-        <!--// Add an SVG element to Leaflet’s overlay pane-->
-<!--        var svg = d3.select(map.getPanes().overlayPane).append("svg"),-->
-<!--            g = svg.append("g").attr("class", "leaflet-zoom-hide");-->
+        map = new L.Map("mapsWrapper", {
+            crs: L.CRS.Simple,
+            zoom:-10,
+            min_zoom:0,
+            max_zoom:15,
+            center:[50,50]
+        });
+        // Add an SVG element to Leaflet’s overlay pane
+        var svg = d3.select(map.getPanes().overlayPane).append("svg"),
+            g = svg.append("g").attr("class", "leaflet-zoom-hide");
         
        
-<!--        d3.xml("//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416").mimeType("image/svg+xml").get(function(error, svgImg) {-->
-<!--          if (error) throw error;-->
-<!--          console.log(svgImg.documentElement);-->
-<!--          map.getPanes().overlayPane.appendChild(svgImg.documentElement);-->
-<!--        });-->
-<!--        }-->
-<!--       $('.custom_backdrop').remove();-->
-<!--    $('.yield').fadeIn();-->
-<!--    });-->
-<!--    </script>-->
+        d3.xml("//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416").mimeType("image/svg+xml").get(function(error, svgImg) {
+          if (error) throw error;
+          console.log(svgImg.documentElement);
+          map.getPanes().overlayPane.appendChild(svgImg.documentElement);
+        });
+        }
+       $('.custom_backdrop').remove();
+    $('.yield').fadeIn();
+    });
+    </script>
