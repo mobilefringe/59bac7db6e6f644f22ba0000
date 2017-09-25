@@ -95,7 +95,7 @@
 <!--    });-->
 <!--</script>-->
 <style>
-    html, body, #mapsWrapper { width:90%; height:400px; margin:0; padding:0; }
+    html, body, #mapsWrapper { width:90%; height:400px; margin:auto; padding:0; }
     svg {
         width:500px;
         height:700px;
