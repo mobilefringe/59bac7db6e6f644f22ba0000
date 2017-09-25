@@ -91,7 +91,7 @@
               svgImg_doc = svgImg.documentElement;
               console.log(svgImg.documentElement);
             //   console.log(svgImg.documentElement.width,svgImg.documentElement.height);
-              map.getPanes().overlayPane.appendChild(svgImg.documentElement);
+              lmap.getPanes().overlayPane.appendChild(svgImg.documentElement);
               
             });
             };
