@@ -56,6 +56,7 @@
         width:900px;
         height:400px;
     }
+    </style>
 <div id="map">
     </div>
     <div id="tooltip" style="width:230px; height:100px;">
