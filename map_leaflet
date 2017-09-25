@@ -182,7 +182,7 @@ var svg = d3.select(map.getPanes().overlayPane).append("svg"),
           path = d3.geo.path().projection(transform);
       
      d3_features = g.selectAll("path")
-        .data(collection.features)
+        .data(collection.g)
         .enter().append("path");
 
       map.on("viewreset", reset);
