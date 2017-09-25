@@ -192,7 +192,7 @@ var svg = d3.select(map.getPanes().overlayPane).append("svg"),
     function reset() {
         
           bounds = path.bounds(collection);
-        console.log(bounds)l
+        console.log(bounds);
           var topLeft = bounds[0],
               bottomRight = bounds[1];
 
