@@ -50,6 +50,17 @@
 <!--        $('.yield').fadeIn();-->
 <!--    });-->
 <!--    </script>-->
+<style>
+        body {
+            margin: 0px;
+        }
+        #map {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: #333;
+        }
+    </style>
 <div id="map">
     </div>
     <div id="tooltip" style="width:230px; height:100px;">
