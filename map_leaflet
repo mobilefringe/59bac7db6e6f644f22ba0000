@@ -51,7 +51,7 @@
 		function reset() {
             
             var translate_scale=$(".leaflet-proxy.leaflet-zoom-animated").attr("style").split(':')[1];
-            var translate, scale=translate_scale.split(' ')[1];
+            var translate, scale=translate_scale.split(' ');
             console.log(translate_scale);
             // $(".leaflet-pane.leaflet-overlay-pane").css("")
 			bounds =[[316,151],[885,478]]// path.bounds(geoShape);
