@@ -41,9 +41,10 @@
             //   console.log(svgImg.documentElement.width,svgImg.documentElement.height);
               map.getPanes().overlayPane.appendChild(svgImg.documentElement);
               
-		reset();
             });
             // var store    = xy( stores[0].x_coordinate,stores[0].y_coordinate);
+            
+		reset();
         }
         map.on("viewreset", reset);
 		// fit the SVG element to leaflet's map layer
