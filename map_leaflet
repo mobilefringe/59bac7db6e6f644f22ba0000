@@ -50,7 +50,7 @@
 		// fit the SVG element to leaflet's map layer
 		function reset() {
         
-			bounds = [map.getBounds()._northEast,map.getBounds()._southWest];
+			bounds = [[map.getBounds()._northEast,map.getBounds()._northEast],[map.getBounds()._southWest,map.getBounds()._southWest]];
 			console.log(bounds);
 			var topLeft = bounds[0],
 				bottomRight = bounds[1];
