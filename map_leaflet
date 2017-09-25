@@ -131,34 +131,9 @@
             d3.xml("//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416").mimeType("image/svg+xml").get(function(error, svgImg) {
               if (error) throw error;
               console.log(svgImg.documentElement);
-              map.getPanes().overlayPane.appendChild(svgImg.documentElement);
-               svgImg.documentElement.on('mouseenter', mouseenter);
-			svgImg.documentElement.on('mouseleave', mouseleave);
+              map.getPanes().overlayPane.appendChild(svgImg.documentElement).call(zoom);;
             });
-           
             // var store    = xy( stores[0].x_coordinate,stores[0].y_coordinate);
-             function mouseenter() {
-                 console.log(this);
-            d3.select(this).style('fill-opacity', 1);
-    
-            var props = d3.select(this).data()[0].properties;
-            var t = props['amenity']
-            	.split('/')
-            	.map(function(v) {
-                return v.charAt(0).toUpperCase() + v.slice(1);
-              })
-            	.join('/');
-            var n = props['name'];
-            hoverType.html('<label>Type</label><p>&nbsp;' + t + '</p>');
-            hoverName.html(
-              n !== null ? '<label>Name</label><p>&nbsp;' + n + '</p>' : ''
-            );
-
-          }
-    
-          function mouseleave() {
-            d3.select(this).style('fill-opacity', 0.1);
-          }
         }
         $('.custom_backdrop').remove();
         $('.yield').fadeIn();
