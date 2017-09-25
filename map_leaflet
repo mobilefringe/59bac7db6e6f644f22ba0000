@@ -50,7 +50,7 @@
 		// fit the SVG element to leaflet's map layer
 		function reset() {
             
-            var translate_scale=$(".leaflet-proxy.leaflet-zoom-animated").css( "transform");
+            var translate_scale=$(".leaflet-tile-container.leaflet-zoom-animated").css( "transform");
             // var translate, scale=translate_scale.split(' ')[1];
             console.log(translate_scale);
             // $(".leaflet-pane.leaflet-overlay-pane svg").css({"transform": translate_scale})
