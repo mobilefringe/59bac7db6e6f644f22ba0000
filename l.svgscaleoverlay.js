@@ -54,13 +54,14 @@ L.SVGScaleOverlay = L.Class.extend({
         console.log("in initSvgContainer");
         // this._svg;
         // this._map ;
-        console.log("brooo", this._svg);
         var xmlns = "http://www.w3.org/2000/svg";
         this._svg = document.createElementNS(xmlns, "svg");
         this._g = document.createElementNS(xmlns, "g");
         if (!this.isLeafletVersion1()) {
             L.DomUtil.addClass(this._g, 'leaflet-zoom-hide');
         }
+        
+        console.log("brooo", this._svg);
         d3.xml(svg_url).mimeType("image/svg+xml").get(function(error, svgImg) {
             if (error) throw error;
               svgImg_doc = svgImg.documentElement;
