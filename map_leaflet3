@@ -91,7 +91,7 @@
                   this.svgOverlay._svg =  $('.'+ overlayClass +' svg')[0];
                   this.svgOverlay._g = [];
                   $('.'+ overlayClass +' svg').children().each (function (key,val){
-                      console.log(val);
+                      console.log(this);
                       this.svgOverlay._g.push(val);
                   });
                 //   this.svgOverlay._g =  $('.'+ overlayClass +' svg #signs')[0];
