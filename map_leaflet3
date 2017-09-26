@@ -17,8 +17,8 @@
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" rel="stylesheet">
 <script src="https://d3js.org/d3.v4.min.js"></script>
- <script src="http://www.sumbera.com/gist/js/leaflet/svg/scaled/leaflet.js"></script>
- <script src="//s3.amazonaws.com/kodekloud/sites/59bac7db6e6f644f22ba0000/text/javascript/1505852644000/L.SvgScaleOverlay.js"></script>
+<script src="http://www.sumbera.com/gist/js/leaflet/svg/scaled/leaflet.js"></script>
+<script src="../l.svgscaleoverlay.js" type="text/javascript"></script>
  <script src="http://www.sumbera.com/gist/data.js" charset="utf-8"></script>
 
     <script>
