@@ -58,7 +58,7 @@ L.SVGScaleOverlay = L.Class.extend({
               svgImg_doc = svgImg.documentElement;
               console.log(svgImg.documentElement);
             
-             map.getPanes().overlayPane.appendChild(svgImg.documentElement);
+             this._map.getPanes().overlayPane.appendChild(svgImg.documentElement);
               
         });
         var xmlns = "http://www.w3.org/2000/svg";
