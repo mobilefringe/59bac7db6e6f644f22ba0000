@@ -28,7 +28,7 @@
      <script>
         
       
-            var lmap = new L.Map("mapsWrapper", {
+            var lmap = new L.Map("map", {
                 crs: L.CRS.Simple,
                 zoom:-10,
                 min_zoom:0,
