@@ -52,9 +52,7 @@
         map.on("viewreset", reset);
 		// fit the SVG element to leaflet's map layer
 		function reset() {
-             var e = map.getZoomScale(t.zoom)
-              , i = this._map._latLngToNewLayerPoint(this._bounds.getNorthWest(), t.zoom, t.center);
-            o.DomUtil.setTransform(this._image, i, e)
+        
 			bounds = [[map.getBounds()._northEast.lat,map.getBounds()._northEast.lng],[map.getBounds()._southWest.lat,map.getBounds()._southWest.lng]];
 			
 			var topLeft = bounds[0],
