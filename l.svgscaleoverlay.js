@@ -128,7 +128,7 @@ L.SVGScaleOverlay = L.Class.extend({
     animateSvgZoom: function (e) {
         var scale = this._map.getZoomScale(e.zoom, this._lastZoom),
 		    offset = this._map._latLngToNewLayerPoint(this._lastTopLeftlatLng, e.zoom, e.center);
-        console.log("zoom");
+        console.log("animateSvgZoom");
         L.DomUtil.setTransform(this._svg, offset, scale);
     },
 
