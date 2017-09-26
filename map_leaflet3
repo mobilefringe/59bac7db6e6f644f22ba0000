@@ -92,7 +92,7 @@
                 //   this.svgOverlay._g[];
                   $('.'+ overlayClass +' svg g').each (function (val){
                       console.log(val);
-                  }
+                  )}
                   this.svgOverlay._g =  $('.'+ overlayClass +' svg #signs')[0];
                   
                    console.log(this);
