@@ -62,7 +62,7 @@ L.SVGScaleOverlay = L.Class.extend({
             //  document.appendChild(svgImg.documentElement);
                this.svgOverlay._map.getPanes().overlayPane.appendChild(svgImg.documentElement);
             //   this._svg.addClass('leaflet-zoom-hide');
-            overlayClass=this.svgOverlay._map.getPanes().overlayPane.className.replace(/ /g, '.');;
+            overlayClass=this.svgOverlay._map.getPanes().overlayPane.className.replace(/ /g, '.');
             overlayClass
               this._svg =  $('.'+ overlayClass +' svg')
               this._g =  $('.'+ overlayClass +' svg g')
