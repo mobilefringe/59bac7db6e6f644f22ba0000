@@ -114,7 +114,12 @@ L.SVGScaleOverlay = L.Class.extend({
            
         this._shift._multiplyBy(scaleDelta)._add(delta);
         this._g.setAttribute("transform", "translate(" + this._shift.x + "," + this._shift.y + ") scale(" + scaleDiff + ")"); // --we use viewBox instead
+        if($.isArray(this._g)){
+            $.each([ 52, 97 ], function( index, value ) {
+              alert( index + ": " + value );
+            });
 
+        }
     },
 
     animateSvgZoom: function (e) {
