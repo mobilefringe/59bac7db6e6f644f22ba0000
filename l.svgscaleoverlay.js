@@ -66,18 +66,18 @@ L.SVGScaleOverlay = L.Class.extend({
         });
         // var xmlns = "http://www.w3.org/2000/svg";
         // this._svg = document.createElementNS(xmlns, "svg");
-        this._g = this._svg.g;
+        // this._g = this._svg.g;
         
-        if (!this.isLeafletVersion1()) {
-            L.DomUtil.addClass(this._g, 'leaflet-zoom-hide');
-        }
+        // if (!this.isLeafletVersion1()) {
+        //     L.DomUtil.addClass(this._g, 'leaflet-zoom-hide');
+        // }
         var size = this._map.getSize();
         this._svgSize = size;
         this._svg.setAttribute('width', size.x);
         this._svg.setAttribute('height', size.y);
        
         console.log(this._map.getSize());
-        this._svg.appendChild(this._g);
+        // this._svg.appendChild(this._g);
 
            
 
