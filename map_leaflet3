@@ -36,7 +36,7 @@
             var svgOverlay = L.SvgScaleOverlay({svg_url:"//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416"});
             var radius = 3;
     
-           
+            console.log();
             //------------------------------------------------------------
             svgOverlay.onInitData = function () {
                 if (!circles) {
@@ -61,7 +61,7 @@
                 })
                 
             };
-
+            console.log();
             svgOverlay.onScaleChange = function (scaleDiff) {
                 if (scaleDiff > 0.5) {
                     var newRadius = radius * 1 / scaleDiff;
@@ -74,7 +74,7 @@
 
             }
 
-
+            console.log();
             lmap.addLayer(svgOverlay);
             /***********************/
         $('.custom_backdrop').remove();
