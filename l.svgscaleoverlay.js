@@ -84,7 +84,7 @@ L.SVGScaleOverlay = L.Class.extend({
 
     },
     initAfterSVGLoad : function () {
-      var size = this._map.getSize();
+        var size = this._map.getSize();
         this._svgSize = size;
         this._svg.setAttribute('width', size.x);
         this._svg.setAttribute('height', size.y);
