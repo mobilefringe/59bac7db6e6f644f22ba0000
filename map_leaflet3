@@ -93,7 +93,7 @@
                   
                    console.log(this._svg);
                
-            lmap.addLayer(svgOverlay);
+                lmap.addLayer(svgOverlay);
                 });
             // svgOverlay.initSvgContainer = function (){
                 
