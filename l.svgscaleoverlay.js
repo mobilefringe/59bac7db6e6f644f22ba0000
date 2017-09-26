@@ -113,7 +113,7 @@ L.SVGScaleOverlay = L.Class.extend({
            
            
         this._shift._multiplyBy(scaleDelta)._add(delta);
-        
+        var shift= this._shift;
         if($.isArray(this._g)){
             $.each(this._g, function( index, value ) {
                 console.log("hrllo",this);
