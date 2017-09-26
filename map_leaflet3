@@ -89,7 +89,8 @@
                 overlayClass=lmap.getPanes().overlayPane.className.replace(/ /g, '.');
                 // overlayClass
                   this.svgOverlay._svg =  $('.'+ overlayClass +' svg')[0];
-                  this.svgOverlay._g[0] =  $('.'+ overlayClass +' svg #signs')[0];
+                  this.svgOverlay._g[];
+                  this.svgOverlay._g =  $('.'+ overlayClass +' svg #signs')[0];
                   
                    console.log(this);
                
