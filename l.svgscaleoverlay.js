@@ -25,7 +25,7 @@ L.Map.prototype.getZoomScale = function (toZoom, fromZoom) {
 
 
 L.SVGScaleOverlay = L.Class.extend({
-    options: {
+    var options: {
         pane: 'overlayPane',
         nonBubblingEvents: [],  // Array of events that should not be bubbled to DOM parents (like the map)
         // how much to extend the clip area around the map view (relative to its size)
