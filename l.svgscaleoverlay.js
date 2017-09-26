@@ -53,6 +53,7 @@ L.SVGScaleOverlay = L.Class.extend({
     initSvgContainer: function () {
         console.log("in initSvgContainer");
         this._svg;
+        this._map = this.svgOverlay._map;
         d3.xml(svg_url).mimeType("image/svg+xml").get(function(error, svgImg) {
             if (error) throw error;
               svgImg_doc = svgImg.documentElement;
