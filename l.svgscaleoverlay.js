@@ -124,6 +124,7 @@ L.SVGScaleOverlay = L.Class.extend({
         else {
             this._g.setAttribute("transform", "translate(" + this._shift.x + "," + this._shift.y + ") scale(" + scaleDiff + ")"); // --we use viewBox instead
         }
+        console.log("moveEnd");
     },
 
     animateSvgZoom: function (e) {
