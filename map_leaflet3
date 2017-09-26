@@ -33,7 +33,7 @@
 
             var circles;
 
-            var svgOverlay = L.SvgScaleOverlay();
+            var svgOverlay = L.SvgScaleOverlay({svg_url:"//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416"});
             var radius = 3;
  
            
