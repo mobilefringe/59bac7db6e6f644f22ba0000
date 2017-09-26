@@ -37,6 +37,7 @@ L.SVGScaleOverlay = L.Class.extend({
         return L.Layer ? true : false;
     },
     initialize: function (options) {
+        console.log("options are: ", options)
         L.setOptions(this, options);
         L.stamp(this);
     },
