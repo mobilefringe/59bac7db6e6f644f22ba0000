@@ -117,7 +117,7 @@ L.SVGScaleOverlay = L.Class.extend({
         if($.isArray(this._g)){
             $.each(this._g, function( index, value ) {
                 console.log("hrllo",this);
-             value.setAttribute("transform", "translate(" + this.svgOverlay._shift.x + "," + this.svgOverlay._shift.y + ") scale(" + scaleDiff + ")"); // --we use viewBox instead
+             value.setAttribute("transform", "translate(" + shift.x + "," + shift.y + ") scale(" + scaleDiff + ")"); // --we use viewBox instead
             });
 
         }
