@@ -62,7 +62,7 @@ L.SVGScaleOverlay = L.Class.extend({
             //  document.appendChild(svgImg.documentElement);
                this._svg  = this.svgOverlay._map.getPanes().overlayPane.appendChild(svgImg.documentElement);
             //   this._svg.addClass('leaflet-zoom-hide');
-               console.log(this.svgOverlay._map.getPanes().overlayPane.class);
+               console.log(this.svgOverlay._map.getPanes().overlayPane);
         });
         var xmlns = "http://www.w3.org/2000/svg";
         this._svg = document.createElementNS(xmlns, "svg");
