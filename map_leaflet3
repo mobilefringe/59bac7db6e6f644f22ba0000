@@ -28,8 +28,15 @@
      <script>
         
       
-            var lmap = new  L.map('map').setView([50.00, 14.44], 9)
-                        .addLayer(L.tileLayer("http://{s}.sm.mapstack.stamen.com/(toner-lite,$fff[difference],$fff[@23],$fff[hsl-saturation@20])/{z}/{x}/{y}.png"));
+            var lmap = new L.Map("mapsWrapper", {
+                crs: L.CRS.Simple,
+                zoom:-10,
+                min_zoom:0,
+                max_zoom:15,
+                center:[50,50]
+            });
+            // new  L.map('map').setView([50.00, 14.44], 9)
+            //             .addLayer(L.tileLayer("http://{s}.sm.mapstack.stamen.com/(toner-lite,$fff[difference],$fff[@23],$fff[hsl-saturation@20])/{z}/{x}/{y}.png"));
 
             var circles;
 
