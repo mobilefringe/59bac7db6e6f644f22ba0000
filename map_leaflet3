@@ -97,7 +97,7 @@
             }
 
             // console.log();
-            lmap.addLayer(svgOverlay);
+            // lmap.addLayer(svgOverlay);
             console.log("this is 5");
             /***********************/
         $('.custom_backdrop').remove();
