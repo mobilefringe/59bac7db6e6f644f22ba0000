@@ -84,9 +84,9 @@
                 
                 //  document.appendChild(svgImg.documentElement);
                 // this._map =  this.svgOverlay._map;
-                map.getPanes().overlayPane.appendChild(svgImg.documentElement);
+                lmap.getPanes().overlayPane.appendChild(svgImg.documentElement);
                 //   this._svg.addClass('leaflet-zoom-hide');
-                overlayClass=map.getPanes().overlayPane.className.replace(/ /g, '.');
+                overlayClass=lmap.getPanes().overlayPane.className.replace(/ /g, '.');
                 // overlayClass
                   this._svg =  $('.'+ overlayClass +' svg')[0];
                   this._g =  $('.'+ overlayClass +' svg g');
