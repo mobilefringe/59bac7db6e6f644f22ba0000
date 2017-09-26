@@ -47,7 +47,7 @@
                     // -- opacity based on grouping optimization in point data
                     circles.style("fill-opacity", 0.8);
                     circles.style("fill", "rgba(255,116,116, 0.5)")
-
+                    console.log("in onInitData 1");
                 }
                 
                 
@@ -59,7 +59,7 @@
                     elem.attr('cy', point.y)
                     elem.attr('r', radius)
                 })
-                console.log("in onInitData");
+                console.log("in onInitData 2");
             };
             console.log("this is second");
             svgOverlay.onScaleChange = function (scaleDiff) {
