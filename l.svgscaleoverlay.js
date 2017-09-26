@@ -48,7 +48,7 @@ L.SVGScaleOverlay = L.Class.extend({
         return scale;
     },
 
-    initSvgContainer: function (svg_url) {
+    initSvgContainer: function () {
 
         var xmlns = "http://www.w3.org/2000/svg";
         this._svg = document.createElementNS(xmlns, "svg");
@@ -142,7 +142,7 @@ L.SVGScaleOverlay = L.Class.extend({
 
         // --onAdd leaflet 1.0
         if (!this._svg) {
-            this.initSvgContainer(svg_url);
+            this.initSvgContainer();
 
             if (this._zoomAnimated) {
                 //L.DomUtil.addClass(this._svg, 'leaflet-zoom-animated');
