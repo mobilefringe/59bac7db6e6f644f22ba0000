@@ -130,7 +130,7 @@ L.SVGScaleOverlay = L.Class.extend({
         return events;
     },
     /* from Layer , extension  to get it worked on lf 1.0, this is not called on ,1. versions */
-    _layerAdd: function (e) { console.log("map is:" , e);this.onAdd(e.target); },
+    _layerAdd: function (e) { this.onAdd(e.target); },
 
     /*end Layer */
     onAdd: function (map) {
