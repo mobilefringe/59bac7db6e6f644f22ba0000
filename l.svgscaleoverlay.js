@@ -69,9 +69,9 @@ L.SVGScaleOverlay = L.Class.extend({
               
                console.log(this._svg);
         });
-        var xmlns = "http://www.w3.org/2000/svg";
-        this._svg = document.createElementNS(xmlns, "svg");
-        console.log("2",this._svg);
+        // var xmlns = "http://www.w3.org/2000/svg";
+        // this._svg = document.createElementNS(xmlns, "svg");
+        // console.log("2",this._svg);
         // this._g = this._svg.g;
         
         // if (!this.isLeafletVersion1()) {
