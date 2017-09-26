@@ -38,7 +38,7 @@
     
             console.log("this is one");
             //------------------------------------------------------------
-            svgOverlay.onInitData = function () {
+            svgOverlay.onInitData = function (svgUrl) {
                 if (!circles) {
                     var g = d3.select(this._g);
                     circles = g.selectAll("circle")
