@@ -65,6 +65,8 @@ L.SVGScaleOverlay = L.Class.extend({
             overlayClass=this.svgOverlay._map.getPanes().overlayPane.className;
               this._svg =  $('.'+ overlayClass +' svg')
               this._g =  $('.'+ overlayClass +' svg g')
+              
+               console.log(this._svg);
         });
         var xmlns = "http://www.w3.org/2000/svg";
         this._svg = document.createElementNS(xmlns, "svg");
