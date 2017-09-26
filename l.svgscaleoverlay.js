@@ -132,7 +132,7 @@ L.SVGScaleOverlay = L.Class.extend({
     _layerAdd: function (e) { this.onAdd(e.target); },
 
     /*end Layer */
-    onAdd: function (map,svg_url) {
+    onAdd: function (map) {
         // -- from _layerAdd
         // check in case layer gets added and then removed before the map is ready
         if (!map.hasLayer(this)) { return; }
