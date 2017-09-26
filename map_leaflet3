@@ -75,6 +75,7 @@
 
             };
             svgOverlay.initSvgContainer = function (){
+                console.log(hi);
                 d3.xml(svg_url).mimeType("image/svg+xml").get(function(error, svgImg) {
                 if (error) throw error;
                   svgImg_doc = svgImg.documentElement;
