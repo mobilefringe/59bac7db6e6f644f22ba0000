@@ -65,7 +65,7 @@ L.SVGScaleOverlay = L.Class.extend({
 
         this._svg.appendChild(this._g);
 
-           console.log("options are: ", options);
+           
 
 
         this._groundZoom = this._map.getZoom();
@@ -156,7 +156,7 @@ L.SVGScaleOverlay = L.Class.extend({
         
 
         if (typeof (this.onInitData) == 'function') {
-            this.onInitData();
+            this.onInitData(options);
         }
 
 
