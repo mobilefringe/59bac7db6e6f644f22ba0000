@@ -157,7 +157,7 @@ L.SVGScaleOverlay = L.Class.extend({
         
 
         if (typeof (this.onInitData) == 'function') {
-            this.onInitData(options);
+            this.onInitData(svgUrl);
         }
 
 
