@@ -120,6 +120,7 @@
               svgImg_doc = svgImg.documentElement;
               console.log(svgImg.documentElement);
               lmap.getPanes().overlayPane.appendChild(svgImg.documentElement);
+                });
             };
 
             svgOverlay.onScaleChange = function (scaleDiff) {
