@@ -54,24 +54,7 @@ L.SVGScaleOverlay = L.Class.extend({
         console.log("in initSvgContainer");
         this._svg;
         this._map ;
-        d3.xml(svg_url).mimeType("image/svg+xml").get(function(error, svgImg) {
-            if (error) throw error;
-              svgImg_doc = svgImg.documentElement;
-            //   console.log(svgImg.documentElement);
-            //   console.log(svgImg);
-            
-            //  document.appendChild(svgImg.documentElement);
-            this._map =  this.svgOverlay._map;
-            this.svgOverlay._map.getPanes().overlayPane.appendChild(svgImg.documentElement);
-            //   this._svg.addClass('leaflet-zoom-hide');
-            overlayClass=this.svgOverlay._map.getPanes().overlayPane.className.replace(/ /g, '.');
-            // overlayClass
-              this._svg =  $('.'+ overlayClass +' svg')[0];
-              this._g =  $('.'+ overlayClass +' svg g');
-              
-               console.log(this._svg);
-               
-        });
+        
         // var xmlns = "http://www.w3.org/2000/svg";
         // this._svg = document.createElementNS(xmlns, "svg");
         // console.log("2",this._svg);
