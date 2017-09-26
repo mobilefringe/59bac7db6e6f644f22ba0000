@@ -52,9 +52,19 @@ L.SVGScaleOverlay = L.Class.extend({
 
     initSvgContainer: function () {
         console.log("in initSvgContainer");
+        
+         d3.xml("//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416").mimeType("image/svg+xml").get(function(error, svgImg) {
+              if (error) throw error;
+              svgImg_doc = svgImg.documentElement;
+              console.log(svgImg.documentElement);
+            //   console.log(svgImg.documentElement.width,svgImg.documentElement.height);
+              map.getPanes().overlayPane.appendChild(svgImg.documentElement);
+              
+            });
         var xmlns = "http://www.w3.org/2000/svg";
         this._svg = document.createElementNS(xmlns, "svg");
         this._g = document.createElementNS(xmlns, "g");
+        
         if (!this.isLeafletVersion1()) {
             L.DomUtil.addClass(this._g, 'leaflet-zoom-hide');
         }
