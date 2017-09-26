@@ -23,7 +23,7 @@ L.Map.prototype.getZoomScale = function (toZoom, fromZoom) {
     return crs.scale(toZoom) / crs.scale(fromZoom);
 };
 
-var svg_url = ""
+var svg_url = "";
 
 L.SVGScaleOverlay = L.Class.extend({
     options: {
