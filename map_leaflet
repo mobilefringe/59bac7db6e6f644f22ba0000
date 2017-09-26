@@ -44,7 +44,7 @@
             });
              svg = d3.select(map.getPanes().overlayPane);
              console.log(svg._groups[0]);
-            //   g = svg.append("g").attr("class", "leaflet-zoom-hide");
+              g = svg.append("g").attr("class", "leaflet-zoom-hide");
             // var store    = xy( stores[0].x_coordinate,stores[0].y_coordinate);
             
 		reset();
