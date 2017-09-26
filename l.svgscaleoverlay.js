@@ -61,8 +61,11 @@ L.SVGScaleOverlay = L.Class.extend({
             
             //  document.appendChild(svgImg.documentElement);
                this._svg  = this.svgOverlay._map.getPanes().overlayPane.appendChild(svgImg.documentElement);
-            //   console.log(svg);
-            this._g = this._svg.g;
+               console.log(svg);
+        });
+        // var xmlns = "http://www.w3.org/2000/svg";
+        // this._svg = document.createElementNS(xmlns, "svg");
+        this._g = this._svg.g;
         
         if (!this.isLeafletVersion1()) {
             L.DomUtil.addClass(this._g, 'leaflet-zoom-hide');
@@ -85,10 +88,6 @@ L.SVGScaleOverlay = L.Class.extend({
 
         var bounds = this._map.getBounds();
         this._lastTopLeftlatLng = new L.LatLng(bounds.getNorth(), bounds.getWest()); ////this._initialTopLeft     = this._map.layerPointToLatLng(this._lastLeftLayerPoint);
-        });
-        // var xmlns = "http://www.w3.org/2000/svg";
-        // this._svg = document.createElementNS(xmlns, "svg");
-        
 
     },
 
