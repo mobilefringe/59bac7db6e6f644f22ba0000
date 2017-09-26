@@ -91,7 +91,7 @@
                   this._svg =  $('.'+ overlayClass +' svg')[0];
                   this._g =  $('.'+ overlayClass +' svg g');
                   
-                   console.log(this._svg);
+                   console.log(this);
                
                 lmap.addLayer(svgOverlay);
                 });
