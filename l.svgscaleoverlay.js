@@ -39,7 +39,7 @@ L.SVGScaleOverlay = L.Class.extend({
     },
     initialize: function (options) {
         svg_url = options.svg_url;
-        console.log("options are: ", options);
+        console.log("options are: ", svg_url);
         L.setOptions(this, options);
         L.stamp(this);
     },
