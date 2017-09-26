@@ -66,7 +66,7 @@ L.SVGScaleOverlay = L.Class.extend({
             if (error) throw error;
             console.log("brooo 2", this.svgOverlay._svg);
               svgImg_doc = svgImg.documentElement;
-              this.svgOverlay.._g.append(svgImg.documentElement);
+              this.svgOverlay._g.append(svgImg.documentElement);
         });
         var size = this._map.getSize();
         this._svgSize = size;
