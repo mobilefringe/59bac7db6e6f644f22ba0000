@@ -61,6 +61,24 @@ L.SVGScaleOverlay = L.Class.extend({
         if (!this.isLeafletVersion1()) {
             L.DomUtil.addClass(this._g, 'leaflet-zoom-hide');
         }
+        d3.xml(svg_url).mimeType("image/svg+xml").get(function(error, svgImg) {
+            if (error) throw error;
+              svgImg_doc = svgImg.documentElement;
+            //   console.log(svgImg.documentElement);
+            //   console.log(svgImg);
+            
+            //  document.appendChild(svgImg.documentElement);
+            // this._map =  this.svgOverlay._map;
+            lmap.getPanes().overlayPane.appendChild(svgImg.documentElement);
+            //   this._svg.addClass('leaflet-zoom-hide');
+            overlayClass=lmap.getPanes().overlayPane.className.replace(/ /g, '.');
+            // overlayClass
+              this.svgOverlay._svg =  $('.'+ overlayClass +' svg')[0];
+              this.svgOverlay._g =  $('.'+ overlayClass +' svg #signs')[0];
+              
+               console.log(this);
+               
+        });
         var size = this._map.getSize();
         this._svgSize = size;
         this._svg.setAttribute('width', size.x);
