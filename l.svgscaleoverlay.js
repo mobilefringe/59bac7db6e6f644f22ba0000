@@ -48,7 +48,7 @@ L.SVGScaleOverlay = L.Class.extend({
         return scale;
     },
 
-    initSvgContainer: function () {
+    initSvgContainer: function (svg_url) {
 
         var xmlns = "http://www.w3.org/2000/svg";
         this._svg = document.createElementNS(xmlns, "svg");
