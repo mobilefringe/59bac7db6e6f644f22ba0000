@@ -69,16 +69,7 @@ L.SVGScaleOverlay = L.Class.extend({
               this._g =  $('.'+ overlayClass +' svg g')
               
                console.log(this._svg);
-        });
-        // var xmlns = "http://www.w3.org/2000/svg";
-        // this._svg = document.createElementNS(xmlns, "svg");
-        // console.log("2",this._svg);
-        // this._g = this._svg.g;
-        
-        // if (!this.isLeafletVersion1()) {
-        //     L.DomUtil.addClass(this._g, 'leaflet-zoom-hide');
-        // }
-        var size = this._map.getSize();
+               var size = this._map.getSize();
         this._svgSize = size;
         this._svg.setAttribute('width', size.x);
         this._svg.setAttribute('height', size.y);
@@ -96,6 +87,16 @@ L.SVGScaleOverlay = L.Class.extend({
 
         var bounds = this._map.getBounds();
         this._lastTopLeftlatLng = new L.LatLng(bounds.getNorth(), bounds.getWest()); ////this._initialTopLeft     = this._map.layerPointToLatLng(this._lastLeftLayerPoint);
+        });
+        // var xmlns = "http://www.w3.org/2000/svg";
+        // this._svg = document.createElementNS(xmlns, "svg");
+        // console.log("2",this._svg);
+        // this._g = this._svg.g;
+        
+        // if (!this.isLeafletVersion1()) {
+        //     L.DomUtil.addClass(this._g, 'leaflet-zoom-hide');
+        // }
+        
 
     },
 
