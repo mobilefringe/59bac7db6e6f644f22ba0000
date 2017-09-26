@@ -65,9 +65,9 @@ L.SVGScaleOverlay = L.Class.extend({
         // }
         
         var size = this._map.getSize();
-            this._svgSize = size;
-            this._svg.setAttribute('width', size.x);
-            this._svg.setAttribute('height', size.y);
+        this._svgSize = size;
+        this._svg.setAttribute('width', size.x);
+        this._svg.setAttribute('height', size.y);
        
         // console.log(this._map.getSize());
         // this._svg.appendChild(this._g);
@@ -157,6 +157,26 @@ L.SVGScaleOverlay = L.Class.extend({
                 //L.DomUtil.addClass(this._svg, 'leaflet-zoom-animated');
                 L.DomUtil.addClass(this._svg, 'leaflet-zoom-hide');
             }
+        }
+        else {
+            var size = this._map.getSize();
+        this._svgSize = size;
+        this._svg.setAttribute('width', size.x);
+        this._svg.setAttribute('height', size.y);
+       
+        // console.log(this._map.getSize());
+        // this._svg.appendChild(this._g);
+
+           
+
+
+        this._groundZoom = this._map.getZoom();
+
+        this._shift = new L.Point(0, 0);
+        this._lastZoom = this._map.getZoom();
+
+        var bounds = this._map.getBounds();
+        this._lastTopLeftlatLng = new L.LatLng(bounds.getNorth(), bounds.getWest()); ////this._initialTopLeft     = this._map.layerPointToLatLng(this._lastLeftLayerPoint);
         }
 
         var pane = this._map.getPanes().overlayPane;
