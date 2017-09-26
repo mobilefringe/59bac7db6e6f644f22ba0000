@@ -57,7 +57,7 @@ L.SVGScaleOverlay = L.Class.extend({
             if (error) throw error;
               svgImg_doc = svgImg.documentElement;
               console.log(svgImg.documentElement);
-              console.log(this._map.getSize());
+              console.log(this._map);
             
              this._map.getPanes().overlayPane.appendChild(svgImg.documentElement);
               
@@ -74,7 +74,7 @@ L.SVGScaleOverlay = L.Class.extend({
         this._svg.setAttribute('width', size.x);
         this._svg.setAttribute('height', size.y);
        
-
+        cosole.log(this._map.getSize())
         this._svg.appendChild(this._g);
 
            
