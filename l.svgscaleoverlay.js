@@ -59,7 +59,7 @@ L.SVGScaleOverlay = L.Class.extend({
               console.log(svgImg.documentElement);
               console.log(this);
             
-             document.appendChild(svgImg.documentElement);
+            //  document.appendChild(svgImg.documentElement);
               
         });
         var xmlns = "http://www.w3.org/2000/svg";
