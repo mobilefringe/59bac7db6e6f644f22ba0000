@@ -70,25 +70,7 @@ L.SVGScaleOverlay = L.Class.extend({
               this._g =  $('.'+ overlayClass +' svg g');
               
                console.log(this._svg);
-               var size = this._map.getSize();
-        this._svgSize = size;
-        this._svg.setAttribute('width', size.x);
-        this._svg.setAttribute('height', size.y);
-       
-        // console.log(this._map.getSize());
-        // this._svg.appendChild(this._g);
-
-           
-
-
-        this._groundZoom = this._map.getZoom();
-
-        this._shift = new L.Point(0, 0);
-        this._lastZoom = this._map.getZoom();
-
-        var bounds = this._map.getBounds();
-        this._lastTopLeftlatLng = new L.LatLng(bounds.getNorth(), bounds.getWest()); ////this._initialTopLeft     = this._map.layerPointToLatLng(this._lastLeftLayerPoint);
-        });
+               
         // var xmlns = "http://www.w3.org/2000/svg";
         // this._svg = document.createElementNS(xmlns, "svg");
         // console.log("2",this._svg);
@@ -100,6 +82,9 @@ L.SVGScaleOverlay = L.Class.extend({
         
 
     },
+    initAfterSVGLoad () {
+        
+    }
 
     resize: function (e) {
         var size = this._map.getSize();
