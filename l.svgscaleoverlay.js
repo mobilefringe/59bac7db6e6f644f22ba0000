@@ -177,6 +177,7 @@ L.SVGScaleOverlay = L.Class.extend({
     
             var bounds = this._map.getBounds();
             this._lastTopLeftlatLng = new L.LatLng(bounds.getNorth(), bounds.getWest()); ////this._initialTopLeft     = this._map.layerPointToLatLng(this._lastLeftLayerPoint);
+            console.log("brooo",this);
         }
 
         var pane = this._map.getPanes().overlayPane;
