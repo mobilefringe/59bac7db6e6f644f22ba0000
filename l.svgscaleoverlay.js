@@ -163,7 +163,7 @@ L.SVGScaleOverlay = L.Class.extend({
 
         this._map = map;
         this._zoomAnimated = map._zoomAnimated;
-        console.log(this._svg);
+        console.log("onADD",this._svg);
         // --onAdd leaflet 1.0
         if (!this._svg) {
             this.initSvgContainer();
