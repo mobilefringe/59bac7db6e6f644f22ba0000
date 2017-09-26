@@ -64,8 +64,8 @@ L.SVGScaleOverlay = L.Class.extend({
                console.log(svg);
         });
         var xmlns = "http://www.w3.org/2000/svg";
-        this._svg = document.createElementNS(xmlns, "svg");
-        this._g = document.createElementNS(xmlns, "g");
+        // this._svg = document.createElementNS(xmlns, "svg");
+        this._g = this._svg.g;
         
         if (!this.isLeafletVersion1()) {
             L.DomUtil.addClass(this._g, 'leaflet-zoom-hide');
