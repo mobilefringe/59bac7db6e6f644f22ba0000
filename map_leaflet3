@@ -61,7 +61,7 @@
                 })
                 
             };
-            console.log();
+            console.log("this is second");
             svgOverlay.onScaleChange = function (scaleDiff) {
                 if (scaleDiff > 0.5) {
                     var newRadius = radius * 1 / scaleDiff;
