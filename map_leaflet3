@@ -55,13 +55,7 @@
                     elem.attr('r', radius)
                 })
                  var g = d3.select(this._g);
-                  d3.xml("//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416").mimeType("image/svg+xml").get(function(error, svgImg) {
-              if (error) throw error;
-              svgImg_doc = svgImg.documentElement;
-              console.log(svgImg.documentElement);
-            //   console.log(svgImg.documentElement.width,svgImg.documentElement.height);
-              lmap.getPanes().overlayPane.appendChild(svgImg.documentElement);
-              console.log(g.push(svgImg.documentElement));
+                  
               
             });
                 
@@ -121,6 +115,11 @@
                     elem.attr('cy', point.y)
                     elem.attr('r', radius)
                 })
+                d3.xml("//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416").mimeType("image/svg+xml").get(function(error, svgImg) {
+              if (error) throw error;
+              svgImg_doc = svgImg.documentElement;
+              console.log(svgImg.documentElement);
+              lmap.getPanes().overlayPane.appendChild(svgImg.documentElement);
             };
 
             svgOverlay.onScaleChange = function (scaleDiff) {
