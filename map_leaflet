@@ -24,7 +24,7 @@
                 crs: L.CRS.Simple,
                 zoom:-10,
                 min_zoom:0,
-                max_zoom:15,
+                max_zoom:5,
                 center:[50,50]
             });
         L.tileLayer("http://{s}.sm.mapstack.stamen.com/(toner-lite,$fff[difference],$fff[@23],$fff[hsl-saturation@20])/{z}/{x}/{y}.png").addTo(map);
