@@ -63,17 +63,17 @@
                 console.log("in onInitData 2");
             };
             console.log("this is second");
-            svgOverlay.onScaleChange = function (scaleDiff) {
-                if (scaleDiff > 0.5) {
-                    var newRadius = radius * 1 / scaleDiff;
+            // svgOverlay.onScaleChange = function (scaleDiff) {
+            //     if (scaleDiff > 0.5) {
+            //         var newRadius = radius * 1 / scaleDiff;
 
-                    var currentRadius = d3.select('circle').attr("r");
-                    if (currentRadius != newRadius) {
-                        d3.selectAll("circle").attr('r', newRadius);
-                    }
-                }
+            //         var currentRadius = d3.select('circle').attr("r");
+            //         if (currentRadius != newRadius) {
+            //             d3.selectAll("circle").attr('r', newRadius);
+            //         }
+            //     }
 
-            };
+            // };
             this._svg 
             console.log("hi");
             d3.xml(svg_url).mimeType("image/svg+xml").get(function(error, svgImg) {
