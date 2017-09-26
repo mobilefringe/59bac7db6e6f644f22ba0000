@@ -130,10 +130,10 @@ L.SVGScaleOverlay = L.Class.extend({
         return events;
     },
     /* from Layer , extension  to get it worked on lf 1.0, this is not called on ,1. versions */
-    _layerAdd: function (e) { this.onAdd(e.target,options); },
+    _layerAdd: function (e) { this.onAdd(e.target); },
 
     /*end Layer */
-    onAdd: function (map,options) {
+    onAdd: function (map) {
         // -- from _layerAdd
         // check in case layer gets added and then removed before the map is ready
         if (!map.hasLayer(this)) { return; }
@@ -156,7 +156,7 @@ L.SVGScaleOverlay = L.Class.extend({
         
 
         if (typeof (this.onInitData) == 'function') {
-            this.onInitData(options);
+            this.onInitData();
         }
 
 
