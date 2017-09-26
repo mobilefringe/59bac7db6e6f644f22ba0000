@@ -52,7 +52,7 @@ L.SVGScaleOverlay = L.Class.extend({
 
     initSvgContainer: function () {
         console.log("in initSvgContainer");
-        this._svg ;
+        
         d3.xml(svg_url).mimeType("image/svg+xml").get(function(error, svgImg) {
             if (error) throw error;
               svgImg_doc = svgImg.documentElement;
@@ -61,7 +61,7 @@ L.SVGScaleOverlay = L.Class.extend({
             
             //  document.appendChild(svgImg.documentElement);
                this._svg  = this.svgOverlay._map.getPanes().overlayPane.appendChild(svgImg.documentElement);
-            //   console.log(svg);
+               console.log(svg);
         });
         // var xmlns = "http://www.w3.org/2000/svg";
         // this._svg = document.createElementNS(xmlns, "svg");
