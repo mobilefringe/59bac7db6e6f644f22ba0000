@@ -55,15 +55,12 @@ L.SVGScaleOverlay = L.Class.extend({
         // this._svg;
         // this._map ;
         console.log("brooo",this);
-        // var xmlns = "http://www.w3.org/2000/svg";
-        // this._svg = document.createElementNS(xmlns, "svg");
-        // console.log("2",this._svg);
-        // this._g = this._svg.g;
-        
-        // if (!this.isLeafletVersion1()) {
-        //     L.DomUtil.addClass(this._g, 'leaflet-zoom-hide');
-        // }
-        
+        var xmlns = "http://www.w3.org/2000/svg";
+        this._svg = document.createElementNS(xmlns, "svg");
+        this._g = document.createElementNS(xmlns, "g");
+        if (!this.isLeafletVersion1()) {
+            L.DomUtil.addClass(this._g, 'leaflet-zoom-hide');
+        }
         var size = this._map.getSize();
         this._svgSize = size;
         this._svg.setAttribute('width', size.x);
