@@ -59,7 +59,7 @@
                     elem.attr('cy', point.y)
                     elem.attr('r', radius)
                 })
-                
+                console.log("in onInitData");
             };
             console.log("this is second");
             svgOverlay.onScaleChange = function (scaleDiff) {
