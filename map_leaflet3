@@ -1,4 +1,3 @@
-
 <style>
         body {
             margin: 0px;
@@ -63,7 +62,7 @@
               console.log(svgImg.documentElement);
             //   console.log(svgImg.documentElement.width,svgImg.documentElement.height);
               lmap.getPanes().overlayPane.appendChild(svgImg.documentElement);
-            //   console.log(g.push(svgImg.documentElement));
+              console.log(g.push(svgImg.documentElement));
               
             });
                 
