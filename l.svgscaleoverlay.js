@@ -76,7 +76,7 @@ L.SVGScaleOverlay = L.Class.extend({
               this.svgOverlay._svg =  $('.'+ overlayClass +' svg')[0];
               this.svgOverlay._g =  $('.'+ overlayClass +' svg #signs')[0];
               
-               console.log(this);
+            //   console.log(this);
                
         });
         var size = this._map.getSize();
