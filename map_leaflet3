@@ -76,30 +76,30 @@
             };
             this._svg 
             console.log("hi");
-            d3.xml(svg_url).mimeType("image/svg+xml").get(function(error, svgImg) {
-                if (error) throw error;
-                  svgImg_doc = svgImg.documentElement;
-                //   console.log(svgImg.documentElement);
-                //   console.log(svgImg);
+            // d3.xml(svg_url).mimeType("image/svg+xml").get(function(error, svgImg) {
+            //     if (error) throw error;
+            //       svgImg_doc = svgImg.documentElement;
+            //     //   console.log(svgImg.documentElement);
+            //     //   console.log(svgImg);
                 
-                //  document.appendChild(svgImg.documentElement);
-                // this._map =  this.svgOverlay._map;
-                lmap.getPanes().overlayPane.appendChild(svgImg.documentElement);
-                //   this._svg.addClass('leaflet-zoom-hide');
-                overlayClass=lmap.getPanes().overlayPane.className.replace(/ /g, '.');
-                // overlayClass
-                  this.svgOverlay._svg =  $('.'+ overlayClass +' svg')[0];
-                  this.svgOverlay._g =  $('.'+ overlayClass +' svg #signs')[0];
+            //     //  document.appendChild(svgImg.documentElement);
+            //     // this._map =  this.svgOverlay._map;
+            //     lmap.getPanes().overlayPane.appendChild(svgImg.documentElement);
+            //     //   this._svg.addClass('leaflet-zoom-hide');
+            //     overlayClass=lmap.getPanes().overlayPane.className.replace(/ /g, '.');
+            //     // overlayClass
+            //       this.svgOverlay._svg =  $('.'+ overlayClass +' svg')[0];
+            //       this.svgOverlay._g =  $('.'+ overlayClass +' svg #signs')[0];
                   
-                   console.log(this);
+            //       console.log(this);
                
-                lmap.addLayer(svgOverlay);
-                });
+            //     lmap.addLayer(svgOverlay);
+            //     });
             // svgOverlay.initSvgContainer = function (){
                 
                 
             // }
-
+ lmap.addLayer(svgOverlay);
             // console.log();
             console.log("this is 5");
             /***********************/
