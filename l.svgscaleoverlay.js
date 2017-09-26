@@ -57,7 +57,7 @@ L.SVGScaleOverlay = L.Class.extend({
             if (error) throw error;
               svgImg_doc = svgImg.documentElement;
               console.log(svgImg.documentElement);
-              console.log(this);
+              console.log(this.svgOverlay);
             
             //  document.appendChild(svgImg.documentElement);
               
