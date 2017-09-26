@@ -90,10 +90,12 @@
                 // overlayClass
                   this.svgOverlay._svg =  $('.'+ overlayClass +' svg')[0];
                   this.svgOverlay._g = [];
+                  temp_g = []
                   console.log(this);
                   $('.'+ overlayClass +' svg').children().each (function (key,val){
                       console.log(val);
-                      this.svgOverlay._g.push(val);
+                    //   this.svgOverlay._g.push(val);
+                    temp_g.push(val);
                   });
                 //   this.svgOverlay._g =  $('.'+ overlayClass +' svg #signs')[0];
                   
