@@ -67,10 +67,10 @@
     
             // if (this.options.zoomDraw) { this.draw() }
             // this._enableLeafletRounding();
-			bounds = [[map.getBounds().getNorth(),map.getBounds().getWest()],[map.getBounds().getSouth(),map.getBounds().getEast()]];
+			bounds = [[map.getBounds()._northEast.lat,map.getBounds()._northEast.lng],[map.getBounds()._southWest.lat,map.getBounds()._southWest.lng]];
 			
-			var topLeft = projectPoint(bounds[0][0],bounds[0][1]),
-				bottomRight = projectPoint(bounds[1][0],bounds[1][1]);
+			var topLeft = bounds[0],
+				bottomRight = bounds[1];
 			svg .attr("width", bottomRight[0] - topLeft[0])
 				.attr("height", bottomRight[1] - topLeft[1])
 				.style("left", topLeft[0] + "px")
