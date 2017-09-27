@@ -55,40 +55,11 @@
             svgUrl = "//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416"
             //------------------------------------------------------------
             svgOverlay.onInitData = function (svgUrl) {
-                // if (!circles) {
-                //     var g = d3.select(this._g);
-                //     circles = g.selectAll("circle")
-                //                     .data(data)
-                //                     .enter().append('circle');
-                //     // -- opacity based on grouping optimization in point data
-                //     circles.style("fill-opacity", 0.8);
-                //     circles.style("fill", "rgba(255,116,116, 0.5)")
-                //     console.log("in onInitData 1");
-                // }
-                
-                
-                // circles.each(function (d) {
-                //     var elem = d3.select(this);
-                //     var point = lmap.project(L.latLng(new L.LatLng(d[0], d[1])))._subtract(lmap.getPixelOrigin());
-                //     //var point = lmap.latLngToLayerPoint(new L.LatLng(d.geometry.coordinates[1], d.geometry.coordinates[0]));
-                //     elem.attr('cx', point.x)
-                //     elem.attr('cy', point.y)
-                //     elem.attr('r', radius)
-                // })
+               
                 console.log("in onInitData 2");
             };
             console.log("this is second");
-            // svgOverlay.onScaleChange = function (scaleDiff) {
-            //     if (scaleDiff > 0.5) {
-            //         var newRadius = radius * 1 / scaleDiff;
-
-            //         var currentRadius = d3.select('circle').attr("r");
-            //         if (currentRadius != newRadius) {
-            //             d3.selectAll("circle").attr('r', newRadius);
-            //         }
-            //     }
-
-            // };
+            
         this._svg 
         console.log("hi");
         d3.xml(svg_url).mimeType("image/svg+xml").get(function(error, svgImg) {
