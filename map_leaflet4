@@ -3,8 +3,7 @@
         body { height: 100%; margin: 0; padding: 0 }
         #map-canvas { height: 100% }
     </style>
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css'
-    	rel='stylesheet' type='text/css'/>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css'	rel='stylesheet' type='text/css'/>
 <div id="map">
     </div>
     <div id="tooltip" style="width:230px; height:100px;">
