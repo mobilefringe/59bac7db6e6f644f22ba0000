@@ -71,7 +71,7 @@
             temp_g.push(val);
           });
         //   this.svgOverlay._g =  $('.'+ overlayClass +' svg #signs')[0];
-          this.svgOverlay._g = temp_g;
+          this._g = temp_g;
            console.log(this.map);
        
         countriesOverlay.addTo(map)
