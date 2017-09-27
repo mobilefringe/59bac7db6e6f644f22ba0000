@@ -42,7 +42,7 @@
         this._scale = 1;
 console.log(this);
 var _layer = this;
-        Create projection object
+        // Create projection object
         this.projection = {
             latLngToLayerPoint: function (latLng, zoom) {
                 zoom = _layer._undef(zoom) ? _layer._zoom : zoom;
