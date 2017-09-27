@@ -2,7 +2,7 @@
  * L.ImageOverlay is used to overlay images over the map (to specific geographical bounds).
  */
 
-L.ImageOverlay = L.Class.extend({
+L.svgOverlay = L.Class.extend({
 	includes: L.Mixin.Events,
 
 	options: {
