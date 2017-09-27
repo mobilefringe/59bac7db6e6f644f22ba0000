@@ -42,34 +42,34 @@
         this._scale = 1;
 
         // Create projection object
-        this.projection = {
-            latLngToLayerPoint: function (latLng, zoom) {
-                zoom = _layer._undef(zoom) ? _layer._zoom : zoom;
-                var projectedPoint = _layer.map.project(L.latLng(latLng), zoom)._round();
-                return projectedPoint._subtract(_layer._pixelOrigin);
-            },
-            layerPointToLatLng: function (point, zoom) {
-                zoom = _layer._undef(zoom) ? _layer._zoom : zoom;
-                var projectedPoint = L.point(point).add(_layer._pixelOrigin);
-                return _layer.map.unproject(projectedPoint, zoom);
-            },
-            unitsPerMeter: 256 * Math.pow(2, _layer._zoom) / 40075017,
-            map: _layer.map,
-            layer: _layer,
-            scale: 1
-        };
-        this.projection._projectPoint = function(x, y) {
-            var point = _layer.projection.latLngToLayerPoint(new L.LatLng(y, x));
-            this.stream.point(point.x, point.y);
-        };
-        this.projection.pathFromGeojson =
-            d3.geo.path().projection(d3.geo.transform({point: this.projection._projectPoint}));
+        // this.projection = {
+        //     latLngToLayerPoint: function (latLng, zoom) {
+        //         zoom = _layer._undef(zoom) ? _layer._zoom : zoom;
+        //         var projectedPoint = _layer.map.project(L.latLng(latLng), zoom)._round();
+        //         return projectedPoint._subtract(_layer._pixelOrigin);
+        //     },
+        //     layerPointToLatLng: function (point, zoom) {
+        //         zoom = _layer._undef(zoom) ? _layer._zoom : zoom;
+        //         var projectedPoint = L.point(point).add(_layer._pixelOrigin);
+        //         return _layer.map.unproject(projectedPoint, zoom);
+        //     },
+        //     unitsPerMeter: 256 * Math.pow(2, _layer._zoom) / 40075017,
+        //     map: _layer.map,
+        //     layer: _layer,
+        //     scale: 1
+        // };
+        // this.projection._projectPoint = function(x, y) {
+        //     var point = _layer.projection.latLngToLayerPoint(new L.LatLng(y, x));
+        //     this.stream.point(point.x, point.y);
+        // };
+        // this.projection.pathFromGeojson =
+        //     d3.geo.path().projection(d3.geo.transform({point: this.projection._projectPoint}));
 
-        // Compatibility with v.1
-        this.projection.latLngToLayerFloatPoint = this.projection.latLngToLayerPoint;
-        this.projection.getZoom = this.map.getZoom.bind(this.map);
-        this.projection.getBounds = this.map.getBounds.bind(this.map);
-        this.selection = this._rootGroup;
+        // // Compatibility with v.1
+        // this.projection.latLngToLayerFloatPoint = this.projection.latLngToLayerPoint;
+        // this.projection.getZoom = this.map.getZoom.bind(this.map);
+        // this.projection.getBounds = this.map.getBounds.bind(this.map);
+        // this.selection = this._rootGroup;
             d3.xml("//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416").mimeType("image/svg+xml").get(function(error, svgImg) {
               if (error) throw error;
               svgImg_doc = svgImg.documentElement;
