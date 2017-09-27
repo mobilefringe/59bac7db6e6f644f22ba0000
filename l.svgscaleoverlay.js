@@ -117,7 +117,7 @@ L.SVGScaleOverlay = L.Class.extend({
            
         this._shift._multiplyBy(scaleDelta)._add(delta);
         var shift= this._shift;
-        console.log(this._lastZoom,delta,this._lastTopLeftlatLng,var shift);
+        console.log(this._lastZoom,delta,this._lastTopLeftlatLng,shift);
         if($.isArray(this._g)){
             $.each(this._g, function( index, value ) {
              value.setAttribute("transform", "translate(" + shift.x + "," + shift.y + ") scale(" + scaleDiff + ")"); // --we use viewBox instead
