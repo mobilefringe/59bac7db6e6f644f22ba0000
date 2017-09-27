@@ -19,7 +19,7 @@
 <link href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.css' rel='stylesheet' type='text/css'/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet-src.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.min.js"></script>
-<script src="../L.D3SvgOverlay.js"></script>
+<script src="../l.d3svgoverlay.js"></script>
 <script>
     var map = L.map("map-canvas", {center: [46.81509864599243, 8.3221435546875], zoom: 2, max_zoom:5, min_zoom: 2});
     var tiles = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
