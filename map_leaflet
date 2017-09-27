@@ -76,7 +76,7 @@
 				.style("left", topLeft[0] + "px")
 				.style("top", topLeft[1] + "px");
 			g .attr("transform", "translate(" + -topLeft[0] + "," + -topLeft[1] + ")");
-			console.log(this._getTopLeftPoint);
+			console.log(this._getTopLeftPoint());
 			// initialize the path data	
 // 			d3_features.attr("d", path)
 // 				.style("fill-opacity", 0.7)
