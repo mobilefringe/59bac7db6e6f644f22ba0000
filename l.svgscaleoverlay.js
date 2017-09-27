@@ -91,33 +91,42 @@ L.SVGScaleOverlay = L.Class.extend({
         console.log("resize");
     },
     moveEnd: function (e) {
-        console.log(this._map.getBounds());
-        //  console.log(this._map.getZoomScale(this._map._zoom),this._map._zoom);
-        var bounds = this._map.getBounds();
-        var topLeftLatLng      = new L.LatLng(bounds.getNorth(), bounds.getWest());
-        var topLeftLayerPoint  = this._map.latLngToLayerPoint(topLeftLatLng);
-        var lastLeftLayerPoint = this._map.latLngToLayerPoint(this._lastTopLeftlatLng);
-        // console.log(topLeftLatLng,topLeftLayerPoint,lastLeftLayerPoint);
-        var zoom = this._map.getZoom();
-        var scaleDelta = this._map.getZoomScale(zoom, this._lastZoom);
-        var scaleDiff = this.getScaleDiff(zoom);
-        // console.log(zoom,scaleDelta,scaleDiff);
-        if (this._lastZoom != zoom) {
-            if (typeof (this.onScaleChange) == 'function') {
-                this.onScaleChange(scaleDiff);
-            }
-        }
-        this._lastZoom = zoom;
-        var delta = lastLeftLayerPoint.subtract(topLeftLayerPoint);
+        // console.log(this._map.getBounds());
+        // //  console.log(this._map.getZoomScale(this._map._zoom),this._map._zoom);
+        // var bounds = this._map.getBounds();
+        // var topLeftLatLng      = new L.LatLng(bounds.getNorth(), bounds.getWest());
+        // var topLeftLayerPoint  = this._map.latLngToLayerPoint(topLeftLatLng);
+        // var lastLeftLayerPoint = this._map.latLngToLayerPoint(this._lastTopLeftlatLng);
+        // // console.log(topLeftLatLng,topLeftLayerPoint,lastLeftLayerPoint);
+        // var zoom = this._map.getZoom();
+        // var scaleDelta = this._map.getZoomScale(zoom, this._lastZoom);
+        // var scaleDiff = this.getScaleDiff(zoom);
+        // // console.log(zoom,scaleDelta,scaleDiff);
+        // if (this._lastZoom != zoom) {
+        //     if (typeof (this.onScaleChange) == 'function') {
+        //         this.onScaleChange(scaleDiff);
+        //     }
+        // }
+        // this._lastZoom = zoom;
+        // var delta = lastLeftLayerPoint.subtract(topLeftLayerPoint);
 
-        this._lastTopLeftlatLng = topLeftLatLng;
-        L.DomUtil.setPosition(this._svg, topLeftLayerPoint);
+        // this._lastTopLeftlatLng = topLeftLatLng;
+        // L.DomUtil.setPosition(this._svg, topLeftLayerPoint);
         
            
            
-        this._shift._multiplyBy(scaleDelta)._add(delta);
+        // this._shift._multiplyBy(scaleDelta)._add(delta);
         
-        var shift= this._shift;
+        // var shift= this._shift;
+        
+        var image   = this._image,
+		    topLeft = this._map.latLngToLayerPoint(this._bounds.getNorthWest()),
+		    size = this._map.latLngToLayerPoint(this._bounds.getSouthEast())._subtract(topLeft);
+
+		L.DomUtil.setPosition(image, topLeft);
+
+		image.style.width  = size.x + 'px';
+		image.style.height = size.y + 'px';
         // console.log(this._lastZoom,delta,this._lastTopLeftlatLng,shift);
         if($.isArray(this._g)){
             $.each(this._g, function( index, value ) {
