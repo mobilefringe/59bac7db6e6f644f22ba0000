@@ -115,8 +115,8 @@ L.SVGScaleOverlay = L.Class.extend({
         
            
            
-        // this._shift._multiplyBy(scaleDelta)._add(delta);
-        // this._shift._add(delta);
+        this._shift._multiplyBy(scaleDelta)._add(delta);
+        
         var shift= this._shift;
         console.log(this._lastZoom,delta,this._lastTopLeftlatLng,shift);
         if($.isArray(this._g)){
