@@ -96,7 +96,7 @@
             this._zoomDiff = newZoom - map._zoom;
             this._scale = Math.pow(2, this._zoomDiff);
             this.projection.scale = this._scale;
-            this._shift = this.map.latLngToLayerPoint(this._wgsOrigin)
+            this._shift = map.latLngToLayerPoint(this._wgsOrigin)
                 ._subtract(this._wgsInitialShift.multiplyBy(this._scale));
     
             var shift = ["translate(", this._shift.x, ",", this._shift.y, ") "];
