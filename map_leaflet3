@@ -54,10 +54,10 @@
             console.log("this is one");
             svgUrl = "//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416"
             //------------------------------------------------------------
-            svgOverlay.onInitData = function (svgUrl) {
+            // svgOverlay.onInitData = function (svgUrl) {
                
-                console.log("in onInitData 2");
-            };
+            //     console.log("in onInitData 2");
+            // };
             console.log("this is second");
             
         this._svg 
