@@ -14,9 +14,9 @@
     }
 </style>
      <!--Base libraries-->
-    <script src="http://www.sumbera.com/gist/js/leaflet/svg/scaled/d3-3.5.5.min.js"></script>
-    <script src="http://www.sumbera.com/gist/js/leaflet/svg/scaled/leaflet.js"></script>
-    <script src="http://assets.codecloudapp.com/sites/59bac7db6e6f644f22ba0000/text/javascript/1505852644000/L.SvgScaleOverlay.js"></script>
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.css' rel='stylesheet' type='text/css'/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet-src.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.min.js"></script>
     <script src="../svgoverlay_sk.js"></script>
     <div class="map_container">
         <div id="map">
