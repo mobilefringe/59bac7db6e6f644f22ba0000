@@ -120,7 +120,7 @@ L.SVGScaleOverlay = L.Class.extend({
         
         // var shift= this._shift;
         
-        var image   = this.svgOverlay,
+        var image   = this._svg,
 		    topLeft = this._map.latLngToLayerPoint(this._bounds.getNorthWest()),
 		    size = this._map.latLngToLayerPoint(this._bounds.getSouthEast())._subtract(topLeft);
 
