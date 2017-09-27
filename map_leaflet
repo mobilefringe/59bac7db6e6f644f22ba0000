@@ -56,7 +56,7 @@
             console.log("map is",map);
             console.log(e);
             // this._disableLeafletRounding();
-            // var newZoom = this._undef(evt.zoom) ? this.map._zoom : evt.zoom; // "viewreset" event in Leaflet has not zoom/center parameters like zoomanim
+            // var newZoom = _undef(evt.zoom) ? this.map._zoom : evt.zoom; // "viewreset" event in Leaflet has not zoom/center parameters like zoomanim
             // this._zoomDiff = newZoom - this._zoom;
             // this._scale = Math.pow(2, this._zoomDiff);
             // this.projection.scale = this._scale;
