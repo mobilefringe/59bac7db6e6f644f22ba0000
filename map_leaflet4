@@ -49,7 +49,7 @@
         
     // });
     
-     d3.xml(svg_url).mimeType("image/svg+xml").get(function(error, svgImg) {
+     d3.xml(svgUrl).mimeType("image/svg+xml").get(function(error, svgImg) {
         if (error) throw error;
           svgImg_doc = svgImg.documentElement;
         //   console.log(svgImg.documentElement);
