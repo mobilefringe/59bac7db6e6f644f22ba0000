@@ -43,7 +43,7 @@
             map.addLayer(this._svg);
             this._rootGroup = d3.select(this._svg._rootGroup).classed("d3-overlay", true);
         }
-        this._rootGroup.classed("leaflet-zoom-hide", this.options.zoomHide);
+        this._rootGroup.classed("leaflet-zoom-hide", map.options.zoomHide);
         this.selection = this._rootGroup;   
              // Init shift/scale invariance helper values
         this._pixelOrigin = map.getPixelOrigin();
