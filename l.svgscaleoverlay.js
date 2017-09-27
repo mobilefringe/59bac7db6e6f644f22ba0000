@@ -101,7 +101,7 @@ L.SVGScaleOverlay = L.Class.extend({
         var zoom = this._map.getZoom();
         var scaleDelta = this._map.getZoomScale(zoom, this._lastZoom);
         var scaleDiff = this.getScaleDiff(zoom);
-        console.log(this);
+        console.log(zoom,scaleDelta,scaleDiff);
         if (this._lastZoom != zoom) {
             if (typeof (this.onScaleChange) == 'function') {
                 this.onScaleChange(scaleDiff);
