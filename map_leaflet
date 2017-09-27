@@ -53,6 +53,20 @@
 		// fit the SVG element to leaflet's map layer
 		function reset() {
             console.log(this);
+            this._disableLeafletRounding();
+            var newZoom = this._undef(evt.zoom) ? this.map._zoom : evt.zoom; // "viewreset" event in Leaflet has not zoom/center parameters like zoomanim
+            this._zoomDiff = newZoom - this._zoom;
+            this._scale = Math.pow(2, this._zoomDiff);
+            this.projection.scale = this._scale;
+            this._shift = this.map.latLngToLayerPoint(this._wgsOrigin)
+                ._subtract(this._wgsInitialShift.multiplyBy(this._scale));
+    
+            var shift = ["translate(", this._shift.x, ",", this._shift.y, ") "];
+            var scale = ["scale(", this._scale, ",", this._scale,") "];
+            this._rootGroup.attr("transform", shift.concat(scale).join(""));
+    
+            if (this.options.zoomDraw) { this.draw() }
+            this._enableLeafletRounding();
 			bounds = [[map.getBounds()._northEast.lat,map.getBounds()._northEast.lng],[map.getBounds()._southWest.lat,map.getBounds()._southWest.lng]];
 			
 			var topLeft = bounds[0],
