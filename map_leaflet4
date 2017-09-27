@@ -49,7 +49,7 @@
         
     // });
     
-    d3.xml("//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416").mimeType("image/svg+xml").get(function(error, svgImg) {
+    d3.xml("//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416").mimeType("image/svg+xml").get      (function(error, svgImg) {
               if (error) throw error;
               svgImg_doc = svgImg.documentElement;
               console.log(svgImg.documentElement);
