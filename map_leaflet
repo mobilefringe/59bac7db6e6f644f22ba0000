@@ -88,36 +88,7 @@
 			var point = map.latLngToLayerPoint(new L.LatLng(y, x));
 			this.stream.point(point.x, point.y);
 		}
-        // // reset();
-//         console.log(map.on("viewreset", reset));
-		
-// 		// fit the SVG element to leaflet's map layer
-// 		function reset() {
-            
-//             // var translate_scale=$(".leaflet-tile-container.leaflet-zoom-animated").css( "transform");
-//             // var translate, scale=translate_scale.split(' ')[1];
-//             console.log(map.getBounds());
-//             // $(".leaflet-pane.leaflet-overlay-pane svg").css({"transform": translate_scale})
-// 			bounds =[[316,151],[885,478]]// path.bounds(geoShape);
-
-// 			var topLeft = bounds[0],
-// 				bottomRight = bounds[1];
-//     // console.log("width", bottomRight[0] - topLeft[0]);
-//     // console.log("height", bottomRight[1] - topLeft[1]);
-// 			svg.attr("width", bottomRight[0] - topLeft[0])
-// 				.attr("height", bottomRight[1] - topLeft[1])
-// 				.style("left", topLeft[0] + "px")
-// 				.style("top", topLeft[1] + "px");
-
-// 			g.attr("transform", "translate(" + -topLeft[0] + "," 
-// 			                                  + -topLeft[1] + ")");
-
-// 			// initialize the path data	
-// // 			d3_features.attr("d", path)
-// // 				.style("fill-opacity", 0.7)
-// // 				.attr('fill','blue');
-// // 		    } 
-// }
+        function _undef (a){ return typeof a == "undefined" }
 	
         $('.custom_backdrop').remove();
         $('.yield').fadeIn();
