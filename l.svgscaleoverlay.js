@@ -91,8 +91,8 @@ L.SVGScaleOverlay = L.Class.extend({
         console.log("resize");
     },
     moveEnd: function (e) {
-        console.log(this);
-         console.log(this._map.getZoomScale(this._map._zoom),this._map._zoom);
+        // console.log(this);
+        //  console.log(this._map.getZoomScale(this._map._zoom),this._map._zoom);
         var bounds = this._map.getBounds();
         var topLeftLatLng      = new L.LatLng(bounds.getNorth(), bounds.getWest());
         var topLeftLayerPoint  = this._map.latLngToLayerPoint(topLeftLatLng);
