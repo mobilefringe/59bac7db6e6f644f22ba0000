@@ -57,7 +57,7 @@
         
         //  document.appendChild(svgImg.documentElement);
         // this._map =  this.svgOverlay._map;
-        lmap.getPanes().overlayPane.appendChild(svgImg.documentElement);
+        map.getPanes().overlayPane.appendChild(svgImg.documentElement);
         //   this._svg.addClass('leaflet-zoom-hide');
         overlayClass=lmap.getPanes().overlayPane.className.replace(/ /g, '.');
         // overlayClass
