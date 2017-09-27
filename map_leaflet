@@ -68,8 +68,8 @@ var _layer = this;
 
         // Compatibility with v.1
         this.projection.latLngToLayerFloatPoint = this.projection.latLngToLayerPoint;
-        this.projection.getZoom = this.map.getZoom.bind(this.map);
-        this.projection.getBounds = this.map.getBounds.bind(this.map);
+        this.projection.getZoom = map.getZoom.bind(this.map);
+        this.projection.getBounds = map.getBounds.bind(this.map);
         this.selection = this._rootGroup;
             d3.xml("//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416").mimeType("image/svg+xml").get(function(error, svgImg) {
               if (error) throw error;
