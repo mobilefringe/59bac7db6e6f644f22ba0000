@@ -13,7 +13,7 @@
         overflow:hidden;
     }
     .leaflet-map-pane{
-        position:relative!important;
+        position:relative;
     }
 </style>
      <!--Base libraries-->
