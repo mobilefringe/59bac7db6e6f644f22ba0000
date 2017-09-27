@@ -103,11 +103,7 @@
 // // 				.attr('fill','blue');
 // // 		    } 
 // }
-		// Use Leaflet to implement a D3 geometric transformation.
-		function projectPoint(x, y) {
-			var point = map.latLngToLayerPoint(new L.LatLng(y, x));
-			this.stream.point(point.x, point.y);
-		}
+	
         $('.custom_backdrop').remove();
         $('.yield').fadeIn();
     });
