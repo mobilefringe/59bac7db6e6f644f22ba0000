@@ -23,101 +23,30 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet-src.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.min.js"></script>
 <script src="//s3.amazonaws.com/kodekloud/sites/59bac7db6e6f644f22ba0000/text/javascript/1506522023000/L.D3SvgOverlay.js"></script>
-     <script>
-        
-      
-            var lmap = new L.Map("map", {
-                crs: L.CRS.Simple,
-                zoom:-10,
-                min_zoom:0,
-                max_zoom:15,
-                center:[50,50]
-            });
-            // new  L.map('map').setView([50.00, 14.44], 9)
-            //             .addLayer(L.tileLayer("http://{s}.sm.mapstack.stamen.com/(toner-lite,$fff[difference],$fff[@23],$fff[hsl-saturation@20])/{z}/{x}/{y}.png"));
+<script>
 
-            var circles;
 
-            var svgOverlay = L.SvgScaleOverlay({svg_url:"//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416"});
-            var radius = 3;
+    var lmap = new L.Map("map", {
+        crs: L.CRS.Simple,
+        zoom:-10,
+        min_zoom:0,
+        max_zoom:15,
+        center:[50,50]
+    });
+    var d3Overlay = L.d3SvgOverlay(function(selection, projection){
     
-            console.log("this is one");
-            svgUrl = "//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416"
-            //------------------------------------------------------------
-            svgOverlay.onInitData = function (svgUrl) {
-                // if (!circles) {
-                //     var g = d3.select(this._g);
-                //     circles = g.selectAll("circle")
-                //                     .data(data)
-                //                     .enter().append('circle');
-                //     // -- opacity based on grouping optimization in point data
-                //     circles.style("fill-opacity", 0.8);
-                //     circles.style("fill", "rgba(255,116,116, 0.5)")
-                //     console.log("in onInitData 1");
-                // }
-                
-                
-                // circles.each(function (d) {
-                //     var elem = d3.select(this);
-                //     var point = lmap.project(L.latLng(new L.LatLng(d[0], d[1])))._subtract(lmap.getPixelOrigin());
-                //     //var point = lmap.latLngToLayerPoint(new L.LatLng(d.geometry.coordinates[1], d.geometry.coordinates[0]));
-                //     elem.attr('cx', point.x)
-                //     elem.attr('cy', point.y)
-                //     elem.attr('r', radius)
-                // })
-                console.log("in onInitData 2");
-            };
-            console.log("this is second");
-            // svgOverlay.onScaleChange = function (scaleDiff) {
-            //     if (scaleDiff > 0.5) {
-            //         var newRadius = radius * 1 / scaleDiff;
+    var updateSelection = selection.selectAll('circle').data(dataset);
+        updateSelection.enter()
+        .append('circle')
+        ...
+        .attr("cx", function(d) { return projection.latLngToLayerPoint(d.latLng).x })
+        .attr("cy", function(d) { return projection.latLngToLayerPoint(d.latLng).y });
+        
+    }); 
+    console.log("this is 5");
+    $('.custom_backdrop').remove();
+    $('.yield').fadeIn();
+    
+    
 
-            //         var currentRadius = d3.select('circle').attr("r");
-            //         if (currentRadius != newRadius) {
-            //             d3.selectAll("circle").attr('r', newRadius);
-            //         }
-            //     }
-
-            // };
-            this._svg 
-            console.log("hi");
-            d3.xml(svg_url).mimeType("image/svg+xml").get(function(error, svgImg) {
-                if (error) throw error;
-                  svgImg_doc = svgImg.documentElement;
-                //   console.log(svgImg.documentElement);
-                //   console.log(svgImg);
-                
-                //  document.appendChild(svgImg.documentElement);
-                // this._map =  this.svgOverlay._map;
-                lmap.getPanes().overlayPane.appendChild(svgImg.documentElement);
-                //   this._svg.addClass('leaflet-zoom-hide');
-                overlayClass=lmap.getPanes().overlayPane.className.replace(/ /g, '.');
-                // overlayClass
-                  this.svgOverlay._svg =  $('.'+ overlayClass +' svg')[0];
-                //   this.svgOverlay._g = [];
-                  temp_g = []
-                  console.log(this);
-                  $('.'+ overlayClass +' svg').children().each (function (key,val){
-                      console.log(val);
-                    //   this.svgOverlay._g.push(val);
-                    temp_g.push(val);
-                  });
-                //   this.svgOverlay._g =  $('.'+ overlayClass +' svg #signs')[0];
-                  this.svgOverlay._g = temp_g;
-                   console.log(this.lmap);
-               
-                lmap.addLayer(svgOverlay);
-                });
-            // svgOverlay.initSvgContainer = function (){
-                
-                
-            // }
-
-            // console.log();
-            console.log("this is 5");
-        $('.custom_backdrop').remove();
-        $('.yield').fadeIn();
-            
-            
-
-    </script>
+</script>
