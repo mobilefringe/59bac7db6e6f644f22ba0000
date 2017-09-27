@@ -37,7 +37,7 @@
         this._pixelOrigin = map.getPixelOrigin();
         this._wgsOrigin = L.latLng([0, 0]);
         this._wgsInitialShift = this.map.latLngToLayerPoint(this._wgsOrigin);
-        this._zoom = this.map.getZoom();
+        this._zoom = map.getZoom();
         this._shift = L.point(0, 0);
         this._scale = 1;
 
