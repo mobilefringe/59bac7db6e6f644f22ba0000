@@ -57,7 +57,7 @@
               map.getPanes().overlayPane.appendChild(svgImg.documentElement);
               
             });
-    
+    countriesOverlay.addTo(map)
     $('.custom_backdrop').remove();
     $('.yield').fadeIn();
 </script>
