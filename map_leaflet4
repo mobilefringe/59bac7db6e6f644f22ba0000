@@ -21,7 +21,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.min.js"></script>
 <script src="//s3.amazonaws.com/kodekloud/sites/59bac7db6e6f644f22ba0000/text/javascript/1506522023000/L.D3SvgOverlay.js"></script>
 <script>
-    var map = L.map("map-canvas", {center: [46.81509864599243, 8.3221435546875], zoom: 2, maxzoom:5; minzoom: 2;});
+    var map = L.map("map-canvas", {center: [46.81509864599243, 8.3221435546875], zoom: 2, maxzoom:5, minzoom: 2});
     var tiles = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
     	attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
     });
