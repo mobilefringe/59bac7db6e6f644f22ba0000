@@ -67,7 +67,7 @@
     
             // if (this.options.zoomDraw) { this.draw() }
             // this._enableLeafletRounding();
-			bounds = [[map.getBounds()._northEast.lat,map.getBounds()._northEast.lng],[map.getBounds()._southWest.lat,map.getBounds()._southWest.lng]];
+			bounds = [[map.getBounds().getNorthWest()],[map.getBounds()._southWest.lat,map.getBounds()._southWest.lng]];
 			
 			var topLeft = bounds[0],
 				bottomRight = bounds[1];
