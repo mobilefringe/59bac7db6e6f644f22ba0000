@@ -32,7 +32,19 @@
             // svg = d3.select(map.getPanes().overlayPane).append("svg");
                 // g = svg.append("g").attr("class", "leaflet-zoom-hide");
             // console.log (svg.bounds());
-            
+         // SVG element
+        if (L.version < "1.0") {
+            map._initPathRoot();
+            this._svg = d3.select(map._panes.overlayPane)
+                .select("svg");
+            this._rootGroup = this._svg.append("g");
+        } else {
+            this._svg = L.svg();
+            map.addLayer(this._svg);
+            this._rootGroup = d3.select(this._svg._rootGroup).classed("d3-overlay", true);
+        }
+        this._rootGroup.classed("leaflet-zoom-hide", this.options.zoomHide);
+        this.selection = this._rootGroup;   
              // Init shift/scale invariance helper values
         this._pixelOrigin = map.getPixelOrigin();
         this._wgsOrigin = L.latLng([0, 0]);
