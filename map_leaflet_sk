@@ -12,6 +12,9 @@
         background-color: #fffff0;
         overflow:hidden;
     }
+    .leaflet-map-pane{
+        position:relative;
+    }
 </style>
      <!--Base libraries-->
     <link href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.css' rel='stylesheet' type='text/css'/>
