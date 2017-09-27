@@ -90,7 +90,7 @@ var _layer = this;
        
 		// fit the SVG element to leaflet's map layer
 		function reset(evt) {
-             console.log(_undef (evt))
+             console.log(_undef (evt.zoom))
             console.log("map is",map);
             console.log(evt);
             // this._disableLeafletRounding();
