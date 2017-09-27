@@ -17,7 +17,7 @@
     }
 </style>
      <!--Base libraries-->
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.css' rel='stylesheet' type='text/css'/>
+    <!--<link href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.css' rel='stylesheet' type='text/css'/>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet-src.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.min.js"></script>
      <script src="http://assets.codecloudapp.com/sites/59bac7db6e6f644f22ba0000/text/javascript/1505852644000/L.SvgScaleOverlay.js"></script>
