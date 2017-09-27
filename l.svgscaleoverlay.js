@@ -129,15 +129,15 @@ L.SVGScaleOverlay = L.Class.extend({
 		image.style.width  = size.x + 'px';
 		image.style.height = size.y + 'px';
         // console.log(this._lastZoom,delta,this._lastTopLeftlatLng,shift);
-        if($.isArray(this._g)){
-            $.each(this._g, function( index, value ) {
-             value.setAttribute("transform", "translate(" + shift.x + "," + shift.y + ") scale(" + scaleDiff + ")"); // --we use viewBox instead
-            });
+        // if($.isArray(this._g)){
+        //     $.each(this._g, function( index, value ) {
+        //      value.setAttribute("transform", "translate(" + shift.x + "," + shift.y + ") scale(" + scaleDiff + ")"); // --we use viewBox instead
+        //     });
 
-        }
-        else {
-            this._g.setAttribute("transform", "translate(" + this._shift.x + "," + this._shift.y + ") scale(" + scaleDiff + ")"); // --we use viewBox instead
-        }
+        // }
+        // else {
+        //     this._g.setAttribute("transform", "translate(" + this._shift.x + "," + this._shift.y + ") scale(" + scaleDiff + ")"); // --we use viewBox instead
+        // }
         console.log("moveEnd");
     },
 
