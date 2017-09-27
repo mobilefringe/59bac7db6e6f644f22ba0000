@@ -1,19 +1,10 @@
-<style>
-        /*body {*/
-        /*    margin: 0px;*/
-        /*}*/
-        /*#map {*/
-        /*    position: relative;*/
-        /*    height: 100%;*/
-        /*    width: 100%;*/
-        /*    background-color: #333;*/
-        /*}*/
-         html, body, #map { width:90%; height:400px; margin:auto; padding:0; }
-    svg {
-        width:900px;
-        height:400px;
-    }
+<style type="text/css">
+        html { height: 100% }
+        body { height: 100%; margin: 0; padding: 0 }
+        #map-canvas { height: 100% }
     </style>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css'
+    	rel='stylesheet' type='text/css'/>
 <div id="map">
     </div>
     <div id="tooltip" style="width:230px; height:100px;">
