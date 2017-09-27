@@ -97,11 +97,11 @@ L.SVGScaleOverlay = L.Class.extend({
         var topLeftLatLng      = new L.LatLng(bounds.getNorth(), bounds.getWest());
         var topLeftLayerPoint  = this._map.latLngToLayerPoint(topLeftLatLng);
         var lastLeftLayerPoint = this._map.latLngToLayerPoint(this._lastTopLeftlatLng);
-        console.log(topLeftLatLng,topLeftLayerPoint,lastLeftLayerPoint);
+        // console.log(topLeftLatLng,topLeftLayerPoint,lastLeftLayerPoint);
         var zoom = this._map.getZoom();
         var scaleDelta = this._map.getZoomScale(zoom, this._lastZoom);
         var scaleDiff = this.getScaleDiff(zoom);
-        console.log(zoom,scaleDelta,scaleDiff);
+        // console.log(zoom,scaleDelta,scaleDiff);
         if (this._lastZoom != zoom) {
             if (typeof (this.onScaleChange) == 'function') {
                 this.onScaleChange(scaleDiff);
@@ -118,7 +118,7 @@ L.SVGScaleOverlay = L.Class.extend({
         this._shift._multiplyBy(scaleDelta)._add(delta);
         
         var shift= this._shift;
-        console.log(this._lastZoom,delta,this._lastTopLeftlatLng,shift);
+        // console.log(this._lastZoom,delta,this._lastTopLeftlatLng,shift);
         if($.isArray(this._g)){
             $.each(this._g, function( index, value ) {
              value.setAttribute("transform", "translate(" + shift.x + "," + shift.y + ") scale(" + scaleDiff + ")"); // --we use viewBox instead
