@@ -49,15 +49,34 @@
         
     // });
     
-    d3.xml("//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416").mimeType("image/svg+xml").get      (function(error, svgImg) {
-              if (error) throw error;
-              svgImg_doc = svgImg.documentElement;
-              console.log(svgImg.documentElement);
-            //   console.log(svgImg.documentElement.width,svgImg.documentElement.height);
-              map.getPanes().overlayPane.appendChild(svgImg.documentElement);
-              
-            });
-    countriesOverlay.addTo(map)
+     d3.xml(svg_url).mimeType("image/svg+xml").get(function(error, svgImg) {
+                if (error) throw error;
+                  svgImg_doc = svgImg.documentElement;
+                //   console.log(svgImg.documentElement);
+                //   console.log(svgImg);
+                
+                //  document.appendChild(svgImg.documentElement);
+                // this._map =  this.svgOverlay._map;
+                lmap.getPanes().overlayPane.appendChild(svgImg.documentElement);
+                //   this._svg.addClass('leaflet-zoom-hide');
+                overlayClass=lmap.getPanes().overlayPane.className.replace(/ /g, '.');
+                // overlayClass
+                  this.svgOverlay._svg =  $('.'+ overlayClass +' svg')[0];
+                //   this.svgOverlay._g = [];
+                  temp_g = []
+                  console.log(this);
+                  $('.'+ overlayClass +' svg').children().each (function (key,val){
+                      console.log(val);
+                    //   this.svgOverlay._g.push(val);
+                    temp_g.push(val);
+                  });
+                //   this.svgOverlay._g =  $('.'+ overlayClass +' svg #signs')[0];
+                  this.svgOverlay._g = temp_g;
+                   console.log(this.lmap);
+               
+                countriesOverlay.addTo(map)
+                });
+    
     $('.custom_backdrop').remove();
     $('.yield').fadeIn();
 </script>
