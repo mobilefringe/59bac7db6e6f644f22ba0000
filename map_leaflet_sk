@@ -1,0 +1,124 @@
+
+<style>
+    html, body, #mapsWrapper { width:90%; height:400px; margin:auto; padding:0; }
+    svg {
+        width:900px;
+        height:400px;
+    }
+</style>
+<div id="mapsWrapper"></div>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" rel="stylesheet">
+ <script src="http://www.sumbera.com/gist/js/leaflet/svg/scaled/leaflet.js"></script>
+<script>
+    $(document).ready(function () {
+
+        // initialize the map
+        var map;
+        var svgImg_doc;
+        fnLoadMaps();
+        var svg;
+        function fnLoadMaps(){
+        
+            map = new L.Map("mapsWrapper", {
+                crs: L.CRS.Simple,
+                zoom:-10,
+                min_zoom:0,
+                max_zoom:15,
+                center:[50,50]
+            });
+        L.tileLayer("http://{s}.sm.mapstack.stamen.com/(toner-lite,$fff[difference],$fff[@23],$fff[hsl-saturation@20])/{z}/{x}/{y}.png").addTo(map);
+            // Add an SVG element to Leaflet’s overlay pane
+            // svg = d3.select(map.getPanes().overlayPane).append("svg");
+                // g = svg.append("g").attr("class", "leaflet-zoom-hide");
+            // console.log (svg.bounds());
+            
+       
+            d3.xml("//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416").mimeType("image/svg+xml").get(function(error, svgImg) {
+              if (error) throw error;
+              svgImg_doc = svgImg.documentElement;
+              console.log(svgImg.documentElement);
+            //   console.log(svgImg.documentElement.width,svgImg.documentElement.height);
+              map.getPanes().overlayPane.appendChild(svgImg.documentElement);
+              
+            });
+             svg = d3.select(map.getPanes().overlayPane);
+             console.log(svg._groups[0]);
+              g = svg.append("g").attr("class", "leaflet-zoom-hide");
+            // var store    = xy( stores[0].x_coordinate,stores[0].y_coordinate);
+            
+		reset();
+        }
+        map.on("viewreset", reset);
+		// fit the SVG element to leaflet's map layer
+		function reset(evt) {
+            console.log(this);
+            // this._disableLeafletRounding();
+            // var newZoom = this._undef(evt.zoom) ? this.map._zoom : evt.zoom; // "viewreset" event in Leaflet has not zoom/center parameters like zoomanim
+            // this._zoomDiff = newZoom - this._zoom;
+            // this._scale = Math.pow(2, this._zoomDiff);
+            // this.projection.scale = this._scale;
+            // this._shift = this.map.latLngToLayerPoint(this._wgsOrigin)
+            //     ._subtract(this._wgsInitialShift.multiplyBy(this._scale));
+    
+            // var shift = ["translate(", this._shift.x, ",", this._shift.y, ") "];
+            // var scale = ["scale(", this._scale, ",", this._scale,") "];
+            // this._rootGroup.attr("transform", shift.concat(scale).join(""));
+    
+            // if (this.options.zoomDraw) { this.draw() }
+            // this._enableLeafletRounding();
+			bounds = [[map.getBounds()._northEast.lat,map.getBounds()._northEast.lng],[map.getBounds()._southWest.lat,map.getBounds()._southWest.lng]];
+			
+			var topLeft = bounds[0],
+				bottomRight = bounds[1];
+			svg .attr("width", bottomRight[0] - topLeft[0])
+				.attr("height", bottomRight[1] - topLeft[1])
+				.style("left", topLeft[0] + "px")
+				.style("top", topLeft[1] + "px");
+			g .attr("transform", "translate(" + -topLeft[0] + "," + -topLeft[1] + ")");
+// 			console.log(bounds);
+			// initialize the path data	
+// 			d3_features.attr("d", path)
+// 				.style("fill-opacity", 0.7)
+// 				.attr('fill','blue');
+		} 
+		// Use Leaflet to implement a D3 geometric transformation.
+		function projectPoint(x, y) {
+			var point = map.latLngToLayerPoint(new L.LatLng(y, x));
+			this.stream.point(point.x, point.y);
+		}
+        // // reset();
+//         console.log(map.on("viewreset", reset));
+		
+// 		// fit the SVG element to leaflet's map layer
+// 		function reset() {
+            
+//             // var translate_scale=$(".leaflet-tile-container.leaflet-zoom-animated").css( "transform");
+//             // var translate, scale=translate_scale.split(' ')[1];
+//             console.log(map.getBounds());
+//             // $(".leaflet-pane.leaflet-overlay-pane svg").css({"transform": translate_scale})
+// 			bounds =[[316,151],[885,478]]// path.bounds(geoShape);
+
+// 			var topLeft = bounds[0],
+// 				bottomRight = bounds[1];
+//     // console.log("width", bottomRight[0] - topLeft[0]);
+//     // console.log("height", bottomRight[1] - topLeft[1]);
+// 			svg.attr("width", bottomRight[0] - topLeft[0])
+// 				.attr("height", bottomRight[1] - topLeft[1])
+// 				.style("left", topLeft[0] + "px")
+// 				.style("top", topLeft[1] + "px");
+
+// 			g.attr("transform", "translate(" + -topLeft[0] + "," 
+// 			                                  + -topLeft[1] + ")");
+
+// 			// initialize the path data	
+// // 			d3_features.attr("d", path)
+// // 				.style("fill-opacity", 0.7)
+// // 				.attr('fill','blue');
+// // 		    } 
+// }
+	
+        $('.custom_backdrop').remove();
+        $('.yield').fadeIn();
+    });
+    </script>
