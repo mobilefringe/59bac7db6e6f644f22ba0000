@@ -53,6 +53,7 @@
 		// fit the SVG element to leaflet's map layer
 		function reset(e) {
             console.log(this);
+            console.log(map);
             console.log(e);
             // this._disableLeafletRounding();
             // var newZoom = this._undef(evt.zoom) ? this.map._zoom : evt.zoom; // "viewreset" event in Leaflet has not zoom/center parameters like zoomanim
