@@ -2,6 +2,10 @@
         html { height: 100% }
         body { height: 100%; margin: 0; padding: 0 }
         #map-canvas { height: 100% }
+        svg {
+        width:900px;
+        height:400px;
+    }
     </style>
     <link href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css'	rel='stylesheet' type='text/css'/>
 <div id="map-canvas"></div>
@@ -34,7 +38,8 @@
     
     L.control.layers({"Geo Tiles": tiles}, {"Countries": countriesOverlay}).addTo(map);
     
-    d3.json("http://assets.codecloudapp.com/sites/59bac7db6e6f644f22ba0000/application/json/1506523132000/countries.geo.json", function(data) { countries = data.features; countriesOverlay.addTo(map) });
+    d3.json("http://assets.codecloudapp.com/sites/59bac7db6e6f644f22ba0000/application/json/1506523132000/countries.geo.json", function(data) { countries = data.features; 
+    countriesOverlay.addTo(map) });
     
     
     
