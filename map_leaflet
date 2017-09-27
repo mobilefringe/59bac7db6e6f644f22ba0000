@@ -40,7 +40,7 @@
         this._zoom = map.getZoom();
         this._shift = L.point(0, 0);
         this._scale = 1;
-
+console.log(this);
         // Create projection object
         // this.projection = {
         //     latLngToLayerPoint: function (latLng, zoom) {
@@ -88,7 +88,7 @@
         map.on("viewreset", reset);
 		// fit the SVG element to leaflet's map layer
 		function reset(evt) {
-            console.log(this);
+            
             console.log("map is",map);
             console.log(evt);
             // this._disableLeafletRounding();
