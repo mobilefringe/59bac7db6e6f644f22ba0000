@@ -69,7 +69,7 @@
             // this._enableLeafletRounding();
 			bounds = [[map.getBounds().getNorth(),map.getBounds().getWest()],[map.getBounds().getSouth(),map.getBounds().getEast()]];
 			
-			var topLeft = bounds[0],
+			var topLeft = projectPoint(bounds[0]),
 				bottomRight = bounds[1];
 			svg .attr("width", bottomRight[0] - topLeft[0])
 				.attr("height", bottomRight[1] - topLeft[1])
