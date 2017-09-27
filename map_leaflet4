@@ -42,6 +42,13 @@
     
     L.control.layers({"Geo Tiles": tiles}, {"Countries": countriesOverlay}).addTo(map);
     
+    d3.json("http://assets.codecloudapp.com/sites/59bac7db6e6f644f22ba0000/application/json/1506523132000/countries.geo.json", function(data) { 
+        console.log("hello",data);
+        countries = data.features; 
+        console.log(countriesOverlay.addTo(map));
+        
+    });
+    
     d3.xml("//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416").mimeType("image/svg+xml").get(function(error, svgImg) {
               if (error) throw error;
               svgImg_doc = svgImg.documentElement;
@@ -50,8 +57,6 @@
               map.getPanes().overlayPane.appendChild(svgImg.documentElement);
               
             });
-    
-    
     
     $('.custom_backdrop').remove();
     $('.yield').fadeIn();
