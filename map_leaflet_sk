@@ -31,7 +31,6 @@
 <script>
     $(document).ready(function(e){
         init(e);
-        function renderAll(){
         var map = L.map('map', {
             crs: L.CRS.Simple,
             // zoom:1,
@@ -90,7 +89,6 @@
         
         $('.custom_backdrop').remove();
         $('.yield').fadeIn();
-    }
-        loadMallDataCached(renderAll);
+ 
     });
 </script>
