@@ -43,6 +43,7 @@
         .attr("cy", function(d) { return projection.latLngToLayerPoint(d.latLng).y });
         
     }); 
+    d3Overlay.addTo(map);
     console.log("this is 5");
     $('.custom_backdrop').remove();
     $('.yield').fadeIn();
