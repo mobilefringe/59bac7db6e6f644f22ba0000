@@ -97,7 +97,7 @@ L.SVGScaleOverlay = L.Class.extend({
         var topLeftLatLng      = new L.LatLng(bounds.getNorth(), bounds.getWest());
         var topLeftLayerPoint  = this._map.latLngToLayerPoint(topLeftLatLng);
         var lastLeftLayerPoint = this._map.latLngToLayerPoint(this._lastTopLeftlatLng);
-        console.log(this);
+        console.log(topLeftLatLng,topLeftLayerPoint,lastLeftLayerPoint);
         var zoom = this._map.getZoom();
         var scaleDelta = this._map.getZoomScale(zoom, this._lastZoom);
         var scaleDiff = this.getScaleDiff(zoom);
