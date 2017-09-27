@@ -136,6 +136,6 @@ L.ImageOverlay = L.Class.extend({
 	}
 });
 
-L.imageOverlay = function (url, bounds, options) {
+L.svgOverlay = function (url, bounds, options) {
 	return new L.ImageOverlay(url, bounds, options);
 };
