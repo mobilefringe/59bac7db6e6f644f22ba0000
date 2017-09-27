@@ -19,7 +19,7 @@
         fnLoadMaps();
         var svg;
         function fnLoadMaps(){
-            
+        
             map = new L.Map("mapsWrapper", {
                 crs: L.CRS.Simple,
                 zoom:-10,
@@ -32,57 +32,8 @@
             // svg = d3.select(map.getPanes().overlayPane).append("svg");
                 // g = svg.append("g").attr("class", "leaflet-zoom-hide");
             // console.log (svg.bounds());
-         // SVG element
-        if (L.version < "1.0") {
-            map._initPathRoot();
-            this._svg = d3.select(map._panes.overlayPane)
-                .select("svg");
-            this._rootGroup = this._svg.append("g");
-        } else {
-            this._svg = L.svg();
-            map.addLayer(this._svg);
-            this._rootGroup = d3.select(this._svg._rootGroup).classed("d3-overlay", true);
-        }
-        this._rootGroup.classed("leaflet-zoom-hide", map.options.zoomHide);
-        this.selection = this._rootGroup;   
-             // Init shift/scale invariance helper values
-        this._pixelOrigin = map.getPixelOrigin();
-        this._wgsOrigin = L.latLng([0, 0]);
-        this._wgsInitialShift = map.latLngToLayerPoint(this._wgsOrigin);
-        this._zoom = map.getZoom();
-        this._shift = L.point(0, 0);
-        this._scale = 1;
-console.log(this);
-var _layer = this;
-        // Create projection object
-        this.projection = {
-            latLngToLayerPoint: function (latLng, zoom) {
-                zoom = _layer._undef(zoom) ? _layer._zoom : zoom;
-                var projectedPoint = _layer.map.project(L.latLng(latLng), zoom)._round();
-                return projectedPoint._subtract(_layer._pixelOrigin);
-            },
-            layerPointToLatLng: function (point, zoom) {
-                zoom = _layer._undef(zoom) ? _layer._zoom : zoom;
-                var projectedPoint = L.point(point).add(_layer._pixelOrigin);
-                return _layer.map.unproject(projectedPoint, zoom);
-            },
-            unitsPerMeter: 256 * Math.pow(2, _layer._zoom) / 40075017,
-            map: _layer.map,
-            layer: _layer,
-            scale: 1
-        };
-        this.projection._projectPoint = function(x, y) {
-            var point = _layer.projection.latLngToLayerPoint(new L.LatLng(y, x));
-            this.stream.point(point.x, point.y);
-        };
-        // this.projection.pathFromGeojson =
-        //     d3.geo.path().projection(d3.geo.transform({point: this.projection._projectPoint}));
-
-        // Compatibility with v.1
-        this.projection.latLngToLayerFloatPoint = this.projection.latLngToLayerPoint;
-        this.projection.getZoom = map.getZoom.bind(this.map);
-        this.projection.getBounds = map.getBounds.bind(this.map);
-        this.selection = this._rootGroup;
+            
+       
             d3.xml("//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416").mimeType("image/svg+xml").get(function(error, svgImg) {
               if (error) throw error;
               svgImg_doc = svgImg.documentElement;
@@ -99,29 +50,22 @@ var _layer = this;
 		reset();
         }
         map.on("viewreset", reset);
-       
 		// fit the SVG element to leaflet's map layer
 		function reset(evt) {
-            
-            console.log("map is",map);
-            console.log(evt);
-            var newZoom;
+            console.log(this);
             // this._disableLeafletRounding();
-            if(!_undef(evt)) {
-                newZoom = _undef(evt) && _undef(evt.zoom) ? map._zoom : evt.zoom; // "viewreset" event in Leaflet has not zoom/center parameters like zoomanim
-            }
-           
-            this._zoomDiff = newZoom - map._zoom;
-            this._scale = Math.pow(2, this._zoomDiff);
-            this.projection.scale = this._scale;
-            this._shift = map.latLngToLayerPoint(this._wgsOrigin)
-                ._subtract(this._wgsInitialShift.multiplyBy(this._scale));
+            // var newZoom = this._undef(evt.zoom) ? this.map._zoom : evt.zoom; // "viewreset" event in Leaflet has not zoom/center parameters like zoomanim
+            // this._zoomDiff = newZoom - this._zoom;
+            // this._scale = Math.pow(2, this._zoomDiff);
+            // this.projection.scale = this._scale;
+            // this._shift = this.map.latLngToLayerPoint(this._wgsOrigin)
+            //     ._subtract(this._wgsInitialShift.multiplyBy(this._scale));
     
-            var shift = ["translate(", this._shift.x, ",", this._shift.y, ") "];
-            var scale = ["scale(", this._scale, ",", this._scale,") "];
-            this._rootGroup.attr("transform", shift.concat(scale).join(""));
+            // var shift = ["translate(", this._shift.x, ",", this._shift.y, ") "];
+            // var scale = ["scale(", this._scale, ",", this._scale,") "];
+            // this._rootGroup.attr("transform", shift.concat(scale).join(""));
     
-            if (this.options.zoomDraw) { this.draw() }
+            // if (this.options.zoomDraw) { this.draw() }
             // this._enableLeafletRounding();
 			bounds = [[map.getBounds()._northEast.lat,map.getBounds()._northEast.lng],[map.getBounds()._southWest.lat,map.getBounds()._southWest.lng]];
 			
@@ -143,7 +87,36 @@ var _layer = this;
 			var point = map.latLngToLayerPoint(new L.LatLng(y, x));
 			this.stream.point(point.x, point.y);
 		}
-        function _undef (a){ return typeof a == "undefined" }
+        // // reset();
+//         console.log(map.on("viewreset", reset));
+		
+// 		// fit the SVG element to leaflet's map layer
+// 		function reset() {
+            
+//             // var translate_scale=$(".leaflet-tile-container.leaflet-zoom-animated").css( "transform");
+//             // var translate, scale=translate_scale.split(' ')[1];
+//             console.log(map.getBounds());
+//             // $(".leaflet-pane.leaflet-overlay-pane svg").css({"transform": translate_scale})
+// 			bounds =[[316,151],[885,478]]// path.bounds(geoShape);
+
+// 			var topLeft = bounds[0],
+// 				bottomRight = bounds[1];
+//     // console.log("width", bottomRight[0] - topLeft[0]);
+//     // console.log("height", bottomRight[1] - topLeft[1]);
+// 			svg.attr("width", bottomRight[0] - topLeft[0])
+// 				.attr("height", bottomRight[1] - topLeft[1])
+// 				.style("left", topLeft[0] + "px")
+// 				.style("top", topLeft[1] + "px");
+
+// 			g.attr("transform", "translate(" + -topLeft[0] + "," 
+// 			                                  + -topLeft[1] + ")");
+
+// 			// initialize the path data	
+// // 			d3_features.attr("d", path)
+// // 				.style("fill-opacity", 0.7)
+// // 				.attr('fill','blue');
+// // 		    } 
+// }
 	
         $('.custom_backdrop').remove();
         $('.yield').fadeIn();
