@@ -48,8 +48,8 @@
     });
     
     //marker dev
-    get_coords: function (v) {
-        var coords = _data.R.getById(v).getBBox();
-        return coords;
-    }
+    // get_coords: function (v) {
+    //     var coords = _data.R.getById(v).getBBox();
+    //     return coords;
+    // }
 </script>
