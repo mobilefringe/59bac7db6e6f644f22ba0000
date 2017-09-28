@@ -43,7 +43,7 @@
               
             });
              svg = d3.select(map.getPanes().overlayPane);
-             $(".leaflet-overlay-pane").attr("style", $(".leaflet-proxy.leaflet-zoom-animated").style());
+             $(".leaflet-overlay-pane").attr("style", $(".leaflet-proxy.leaflet-zoom-animated").attr("style"));
              console.log(svg._groups[0]);
             //   g = svg.append("g").attr("class", "leaflet-zoom-hide");
             //   g = svg.append("g").attr("class", "leaflet-zoom-animated");
