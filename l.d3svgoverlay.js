@@ -119,7 +119,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
             map.addLayer(this._svg);
             this._rootGroup = d3.select(this._svg._rootGroup).classed("d3-overlay", true);
         }
-         console.log("this.map.getPanes().overlayPane ",this.map.getPanes().overlayPane.children[0],this.map.getPanes().overlayPane.children[1]);
+        //  console.log("this.map.getPanes().overlayPane ",this.map.getPanes().overlayPane.children[0],this.map.getPanes().overlayPane.children[1]);
         this._rootGroup.classed("leaflet-zoom-hide", this.options.zoomHide);
         if(this.options.zoomHide) {
             $.each(this._svgGroups, function (key, val){
