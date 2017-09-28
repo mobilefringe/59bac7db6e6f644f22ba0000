@@ -48,9 +48,9 @@
                g = svg.append("g").attr("class", "leaflet-zoom-animated");
             // var store    = xy( stores[0].x_coordinate,stores[0].y_coordinate);
             
-		reset();
+// 		reset();
         }
-        map.on("viewreset", reset);
+        // map.on("viewreset", reset);
 		// fit the SVG element to leaflet's map layer
 		function reset(evt) {
             console.log(this);
