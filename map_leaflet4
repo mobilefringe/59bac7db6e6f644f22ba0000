@@ -26,7 +26,7 @@
                 crs: L.CRS.Simple,
                 zoom:-5,
                 min_zoom:-5,
-                max_zoom:15,
+                max_zoom:5,
                 center:[50,50]
             });
     // var tiles = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
