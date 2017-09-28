@@ -29,7 +29,7 @@
     
     var countries = [];
     var countriesOverlay = L.d3SvgOverlay(function(sel, proj) {
-    	
+    var d3layer_this ;
       var upd = sel.selectAll('path').data(countries);
       upd.enter()
         .append('path')
