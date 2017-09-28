@@ -12,11 +12,9 @@
     /*}*/
     
     </style>
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css'	rel='stylesheet' type='text/css'/>
+    <!--<link href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css'	rel='stylesheet' type='text/css'/>-->
 <div id="map-canvas"></div>
-    <!--<div id="tooltip" style="width:230px; height:100px;">-->
-     <!--</div>-->
-
+   
 <link href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.css' rel='stylesheet' type='text/css'/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet-src.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.min.js"></script>
