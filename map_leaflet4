@@ -79,6 +79,7 @@
         
        d3layer_this =  countriesOverlay.addTo(map);
     });
+    map.setZoom(3);
     $('.custom_backdrop').remove();
     $('.yield').fadeIn();
 </script>
