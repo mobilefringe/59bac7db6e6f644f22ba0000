@@ -23,7 +23,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.min.js"></script>
 <script src="../l.d3svgoverlay.js"></script>
 <script>
-    var map = L.map("map-canvas", {crs: L.CRS.Simple,center: [0, 0], zoom: 3, maxZoom:6, minZoom:0});
+    var map = L.map("map-canvas", {crs: L.CRS.Simple,center: [0, 0], zoom: 3, maxZoom:6, minZoom:1});
     var countries = [];
     var countriesOverlay = L.d3SvgOverlay(function(sel, proj) {
     });
@@ -35,7 +35,7 @@
         map.getPanes().overlayPane.appendChild(svgImg.documentElement);
         d3layer_this =  countriesOverlay.addTo(map);
     });
-    map.setZoom(1);
+    map.setZoom(3);
     // map.setMaxZoom(10);
     $('.custom_backdrop').remove();
     $('.yield').fadeIn();
