@@ -107,7 +107,6 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
             //   this.svgOverlay._g.push(val);
             temp_g.push(val);
           });
-        //   this.svgOverlay._g =  $('.'+ overlayClass +' svg #signs')[0];
            this._svgGroups = temp_g;
         } else {
             this._svg = L.svg();
