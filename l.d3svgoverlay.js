@@ -88,6 +88,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
     onAdd: function (map) {
         this.map = map;
         var _layer = this;
+        this._svgGroups [];
         console.log("this.map.getPanes().overlayPane ",this.map.getPanes().overlayPane.children);
         // SVG element
         if (L.version < "1.0") {
@@ -96,8 +97,20 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
                 .select("svg");
             // this._svg = this.map.getPanes().overlayPane.children[1];
                
-            this._rootGroup = this._svg.append("g");
-             
+            this._rootGroup = this._svg.append("g"); 
+            overlayClass=map.getPanes().overlayPane.className.replace(/ /g, '.');
+        // overlayClass
+          this._svg =  $('.'+ overlayClass +' svg')[0];
+        //   this.svgOverlay._g = [];
+          temp_g = []
+          console.log(this);
+          $('.'+ overlayClass +' svg').children().each (function (key,val){
+              console.log(val);
+            //   this.svgOverlay._g.push(val);
+            temp_g.push(val);
+          });
+        //   this.svgOverlay._g =  $('.'+ overlayClass +' svg #signs')[0];
+          this._g = temp_g;
         } else {
             this._svg = L.svg();
             map.addLayer(this._svg);
