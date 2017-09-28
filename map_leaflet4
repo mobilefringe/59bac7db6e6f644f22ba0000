@@ -79,7 +79,7 @@
         
        d3layer_this =  countriesOverlay.addTo(map);
     });
-    console.log("map.setZoom(2)",map.setZoom(2));
+    // console.log("map.setZoom(2)",map.setZoom(2));
     // map.setMaxZoom(10);
     $('.custom_backdrop').remove();
     $('.yield').fadeIn();
