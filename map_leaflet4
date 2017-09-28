@@ -24,8 +24,8 @@
     // var map = L.map("map-canvas", {center: [46.81509864599243, 8.3221435546875], zoom: 2, max_zoom:5, min_zoom: 2});
     map = new L.Map("map-canvas", {
                 crs: L.CRS.Simple,
-                zoom:-5,
-                min_zoom:-5,
+                zoom:-15,
+                min_zoom:-15,
                 max_zoom:10,
                 center:[50,50]
             });
