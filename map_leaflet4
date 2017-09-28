@@ -6,6 +6,10 @@
         height:500px;
         margin: auto;
     }
+    #map-canvas{
+        height:100%;
+        width:`00%;
+    }
     /*svg {*/
     /*    width:900px;*/
     /*    height:400px;*/
