@@ -117,6 +117,9 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         }
          console.log("this.map.getPanes().overlayPane ",this.map.getPanes().overlayPane.children[0],this.map.getPanes().overlayPane.children[1]);
         this._rootGroup.classed("leaflet-zoom-hide", this.options.zoomHide);
+        if(this.options.zoomHide) {
+            
+        }
         console.log("this._rootGroup",this._rootGroup);
         this.selection = this._rootGroup;
 
