@@ -82,6 +82,9 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         this._rootGroup.attr("transform", shift.concat(scale).join(""));
         $.each(this._svgGroups, function (key, val){
             console.log(val.id);
+            if(val.id){
+                
+            }
             val.attr("transform", shift.concat(scale).join(""));
         });
         if (this.options.zoomDraw) { this.draw() }
