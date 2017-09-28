@@ -83,7 +83,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         $.each(this._svgGroups, function (key, val){
             console.log(val.id);
             if(val.id){
-                
+                $("#"+val.id).attr("transform", shift.concat(scale).join(""));
             }
             val.attr("transform", shift.concat(scale).join(""));
         });
