@@ -76,7 +76,6 @@
        
         
     });
-    countriesOverlay.addTo(map);
     $('.custom_backdrop').remove();
     $('.yield').fadeIn();
 </script>
