@@ -12,10 +12,9 @@
     }
    
 </style>
-    <!--<link href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css'	rel='stylesheet' type='text/css'/>-->
-    <div id="map-container">
-       <div id="map-canvas"></div> 
-    </div>
+<div id="map-container">
+   <div id="map-canvas"></div> 
+</div>
    
 <link href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.css' rel='stylesheet' type='text/css'/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet-src.js"></script>
