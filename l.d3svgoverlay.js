@@ -94,7 +94,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
             map._initPathRoot();
             this._svg = d3.select(map._panes.overlayPane)
                 .select("svg");
-                this.map.getPanes().overlayPane.children[1];
+            this._svg    this.map.getPanes().overlayPane.children[1];
                 console.log("this.map.getPanes().overlayPane ",this.map.getPanes().overlayPane.children[0] );
             this._rootGroup = this._svg.append("g");
         } else {
