@@ -25,14 +25,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.min.js"></script>
 <script src="../l.d3svgoverlay.js"></script>
 <script>
-    $(document).ready(function(e){
-        init(e);
-        loadMallDataCached(renderPage);
-    })
-    function renderPage(){
-        var stores = getStoresList();
-        console.log(stores[0])
-        var map = L.map("map-canvas", {crs: L.CRS.Simple,center: [0, 0], zoom: 3, maxZoom:6, minZoom:1});
+    var map = L.map("map-canvas", {crs: L.CRS.Simple,center: [0, 0], zoom: 3, maxZoom:6, minZoom:1});
         var countries = [];
         var countriesOverlay = L.d3SvgOverlay(function(sel, proj) {
         });
@@ -45,6 +38,14 @@
             d3layer_this =  countriesOverlay.addTo(map);
             console.log(d3layer_this);
         });
+    $(document).ready(function(e){
+        init(e);
+        loadMallDataCached(renderPage);
+    })
+    function renderPage(){
+        var stores = getStoresList();
+        console.log(stores[0])
+        
         
         $('.custom_backdrop').remove();
         $('.yield').fadeIn();
