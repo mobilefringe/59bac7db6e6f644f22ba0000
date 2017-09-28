@@ -35,7 +35,7 @@
         map.getPanes().overlayPane.appendChild(svgImg.documentElement);
         d3layer_this =  countriesOverlay.addTo(map);
     });
-    map.setZoom(1);
+    map.setZoom(3);
     // map.setMaxZoom(10);
     $('.custom_backdrop').remove();
     $('.yield').fadeIn();
