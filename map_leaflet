@@ -42,7 +42,7 @@
               map.getPanes().overlayPane.appendChild(svgImg.documentElement);
               
             });
-             svg = d3.select(map.getPanes().overlayPane).attr("class", "leaflet-zoom-animated");
+             svg = d3.select(map.getPanes().overlayPane).addClass("leaflet-zoom-animated");
              console.log(svg._groups[0]);
             //   g = svg.append("g").attr("class", "leaflet-zoom-hide");
             //   g = svg.append("g").attr("class", "leaflet-zoom-animated");
