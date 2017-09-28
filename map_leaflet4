@@ -49,7 +49,7 @@
     // map.setMaxZoom(10);
     $('.custom_backdrop').remove();
     $('.yield').fadeIn();
-    window.load(function(){
+    $.window.load(function(){
         setTimeout(function(){
            map.setZoom(5);
         }, 2000);
