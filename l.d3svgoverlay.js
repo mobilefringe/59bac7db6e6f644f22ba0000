@@ -88,7 +88,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
     onAdd: function (map) {
         this.map = map;
         var _layer = this;
-        this._svgGroups [];
+        this._svgGroups = [];
         console.log("this.map.getPanes().overlayPane ",this.map.getPanes().overlayPane.children);
         // SVG element
         if (L.version < "1.0") {
