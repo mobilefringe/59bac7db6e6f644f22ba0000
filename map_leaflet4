@@ -44,6 +44,7 @@
     })
     function renderPage(){
         var stores = getStoresList();
+        var store_svgregion = svgmap_region;
         console.log(stores[0])
         
         
