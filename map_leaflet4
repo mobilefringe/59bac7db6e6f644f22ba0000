@@ -52,7 +52,7 @@
     $(window).load(function(){
         setTimeout(function(){
             console.log("delay is done!");
-           map.setZoom(5);
+           map.setZoom(1);
         }, 2000);
     })
 </script>
