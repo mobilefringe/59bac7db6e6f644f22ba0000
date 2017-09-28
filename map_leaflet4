@@ -40,6 +40,6 @@
         setTimeout(function(){
             console.log("delay is done!");
            map.setZoom(1);
-        }, 2000);
+        }, 1500);
     })
 </script>
