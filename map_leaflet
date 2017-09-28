@@ -51,7 +51,7 @@
             
 		reset();
         }
-        map.on("viewreset", reset);
+        // map.on("viewreset", reset);
 		// fit the SVG element to leaflet's map layer
 		function reset(evt) {
             console.log(this);
