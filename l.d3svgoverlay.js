@@ -100,11 +100,11 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
             this._rootGroup = this._svg.append("g"); 
             overlayClass=this.map.getPanes().overlayPane.className.replace(/ /g, '.');
         
-          temp_g = [];
-          $('.'+ overlayClass +' svg').children().each (function (key,val){
-              console.log(val);
-            //   this.svgOverlay._g.push(val);
-            temp_g.push(val);
+              temp_g = [];
+              $('.'+ overlayClass +' svg').children().each (function (key,val){
+                  console.log(val);
+                //   this.svgOverlay._g.push(val);
+                temp_g.push(val);
           });
            this._svgGroups = temp_g;
         } else {
