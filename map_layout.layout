@@ -171,45 +171,45 @@
     <!--        </div>-->
     <!--    </div>-->
     <!--</section>-->
-    <section class="copyright_footer main_container">
-        <div class="text-center visible_phone">
-            <p class="footer_text">
-                © Copyright 2016 Twin Pines Mall
-            </p>
-            <p class="footer_text">
-               24 Twin Pine Ave, ON L4E 429
-            </p>
-            <p class="footer_text">
-                <a href="tel:905-123-1234">905-123-1234</a> | <a href="/pages/twinpine-privacy-policy">Privacy Policy | </a> <a href="/jobs">Jobs</a> | Pine Property
-            </p>
+    <!--<section class="copyright_footer main_container">-->
+    <!--    <div class="text-center visible_phone">-->
+    <!--        <p class="footer_text">-->
+    <!--            © Copyright 2016 Twin Pines Mall-->
+    <!--        </p>-->
+    <!--        <p class="footer_text">-->
+    <!--           24 Twin Pine Ave, ON L4E 429-->
+    <!--        </p>-->
+    <!--        <p class="footer_text">-->
+    <!--            <a href="tel:905-123-1234">905-123-1234</a> | <a href="/pages/twinpine-privacy-policy">Privacy Policy | </a> <a href="/jobs">Jobs</a> | Pine Property-->
+    <!--        </p>-->
            
-            <p class="footer_text">
-                Powered by <a href="//mallmaverick.com" target="_blank">Mall Maverick</a>
-            </p>
-        </div>
-        <div class="row hidden_phone">
-            <div class="col-md-6">
-                <p class="footer_text">
-                    © Copyright 2016 Twin Pines Mall
-                </p>
-                <p class="footer_text">
-                    Powered by <a href="//mallmaverick.com" target="_blank">Mall Maverick</a>
-                </p>
-            </div>
+    <!--        <p class="footer_text">-->
+    <!--            Powered by <a href="//mallmaverick.com" target="_blank">Mall Maverick</a>-->
+    <!--        </p>-->
+    <!--    </div>-->
+    <!--    <div class="row hidden_phone">-->
+    <!--        <div class="col-md-6">-->
+    <!--            <p class="footer_text">-->
+    <!--                © Copyright 2016 Twin Pines Mall-->
+    <!--            </p>-->
+    <!--            <p class="footer_text">-->
+    <!--                Powered by <a href="//mallmaverick.com" target="_blank">Mall Maverick</a>-->
+    <!--            </p>-->
+    <!--        </div>-->
             
-            <div class="col-md-6 text-right ">
+    <!--        <div class="col-md-6 text-right ">-->
                
-                <div>
-                    <p class="footer_text">
-                       24 Twin Pine Ave, ON L4E 429
-                    </p>
-                    <p class="footer_text">
-                <a href="tel:905-123-1234">905-123-1234</a> | <a href="/pages/twinpine-privacy-policy">Privacy Policy | </a> <a href="/jobs">Jobs</a> | Pine Property
-            </p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!--            <div>-->
+    <!--                <p class="footer_text">-->
+    <!--                   24 Twin Pine Ave, ON L4E 429-->
+    <!--                </p>-->
+    <!--                <p class="footer_text">-->
+    <!--            <a href="tel:905-123-1234">905-123-1234</a> | <a href="/pages/twinpine-privacy-policy">Privacy Policy | </a> <a href="/jobs">Jobs</a> | Pine Property-->
+    <!--        </p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</section>-->
       <div id="ttdUniversalPixelTag9bf81384255d4d21b8651dce77f8ffa2" style="display:none">
         <!--<script src="//js.adsrvr.org/up_loader.1.1.0.js" type="text/javascript"></script>-->
         <script type="text/javascript">
