@@ -126,7 +126,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
                 val.classed("leaflet-zoom-hide", true);
             });
         }
-        console.log("this._rootGroup",this._rootGroup);
+        // console.log("this._rootGroup",this._rootGroup);
         this.selection = this._rootGroup;
 
         // Init shift/scale invariance helper values
