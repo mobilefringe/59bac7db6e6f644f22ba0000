@@ -101,6 +101,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
             this._rootGroup = d3.select(this._svg._rootGroup).classed("d3-overlay", true);
         }
         this._rootGroup.classed("leaflet-zoom-hide", this.options.zoomHide);
+        console.log("this._rootGroup",this._rootGroup)
         this.selection = this._rootGroup;
 
         // Init shift/scale invariance helper values
