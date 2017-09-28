@@ -37,9 +37,10 @@
     $('.custom_backdrop').remove();
     $('.yield').fadeIn();
     $(window).load(function(){
-        setTimeout(function(){
-            console.log("delay is done!");
-           map.setZoom(1);
-        }, 1000);
+        // setTimeout(function(){
+        //     console.log("delay is done!");
+        //   map.setZoom(1);
+        // }, 1000);
+        map.setZoom(1);
     })
 </script>
