@@ -51,6 +51,7 @@
     $('.yield').fadeIn();
     $(window).load(function(){
         setTimeout(function(){
+            console.log("delay is done!");
            map.setZoom(5);
         }, 2000);
     })
