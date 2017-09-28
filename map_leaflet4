@@ -31,15 +31,15 @@
     var countries = [];
     var countriesOverlay = L.d3SvgOverlay(function(sel, proj) {
     var d3layer_this ;
-      var upd = sel.selectAll('path').data(countries);
-      upd.enter()
-        .append('path')
-        .attr('d', proj.pathFromGeojson)
-        .attr('stroke', 'black')
-        .attr('fill', function(){ return d3.hsl(Math.random() * 360, 0.9, 0.5) })
-        .attr('fill-opacity', '0.5');
-      upd.attr('stroke-width', 1 / proj.scale);
-    });
+    //   var upd = sel.selectAll('path').data(countries);
+    //   upd.enter()
+    //     .append('path')
+    //     .attr('d', proj.pathFromGeojson)
+    //     .attr('stroke', 'black')
+    //     .attr('fill', function(){ return d3.hsl(Math.random() * 360, 0.9, 0.5) })
+    //     .attr('fill-opacity', '0.5');
+    //   upd.attr('stroke-width', 1 / proj.scale);
+    // });
     
     // L.control.layers({"Geo Tiles": tiles}, {"Countries": countriesOverlay}).addTo(map);
     var  svgUrl = "//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416"
