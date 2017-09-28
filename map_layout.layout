@@ -129,48 +129,48 @@
         <!--Pages that use this file as a layout will have their content replaced in the 'yield'-->
         {{yield}}
     </section>
-    <section class="main_footer main_container">
-        <div class="footer_row">
-            <div class="footer_col">
-                <h5 class="heading">MANAGEMENT OFFICE HOURS</h5>
-                <img src="//codecloud.cdn.speedyrails.net/sites/57f50a1b6e6f6426d2010000/image/png/1463686637000/clock.png" class="hours_clock" alt="hours clock">
-                <div class="hours_footer" id="hours_container">
-                    <script id="hours_template" type="x-tmpl-mustache/text">
-                        <p>
-                            {%raw%}
-                                {{day}} 
-                                <br />
-                                {{hour}}
-                            {%endraw%}
-                        </p>
-                    </script>
-                </div>
-                <div class="clearfix"></div>
-                <hr class="visible_phone mobile_separator" />
-            </div>
-            <div class="footer_col">
-                <h5 class="heading">NEWSLETTER SUBSCRIPTION</h5>
-                <div class="newsletter_div">
-                    <form action="//mobilefringe.createsend.com/t/d/s/ithdul/" method="post" id="newsletter_form">
-                        <input name="cm-ithdul-ithdul" type="text" placeholder="Susbcribe to Newsletter" class="newsletter_control" required />
-                        <button class="newsletter_btn animated_btn">Subscribe</button>
-                        <label class="newsletter_label">
-                            <input id="newsletter_agree" type="checkbox" />
-                            I agree to receive newsletters from Twin Pines Mall.
-                        </label>
-                        <p class="hidden_now" id="success_subscribe">
-                            Thank you for subscribing!
-                        </p>
-                    </form>
-                </div>
-            </div>
-            <div class="footer_col hidden_phone">
-                <a class="pull-right view_more_btn" href="https://www.instagram.com" target="_blank">view more ></a>
-                <h5 class="heading">INSTAGRAM</h5>
-                <div id="instafeed"></div>
-            </div>
-        </div>
-    </section>
+    <!--<section class="main_footer main_container">-->
+    <!--    <div class="footer_row">-->
+    <!--        <div class="footer_col">-->
+    <!--            <h5 class="heading">MANAGEMENT OFFICE HOURS</h5>-->
+    <!--            <img src="//codecloud.cdn.speedyrails.net/sites/57f50a1b6e6f6426d2010000/image/png/1463686637000/clock.png" class="hours_clock" alt="hours clock">-->
+    <!--            <div class="hours_footer" id="hours_container">-->
+    <!--                <script id="hours_template" type="x-tmpl-mustache/text">-->
+    <!--                    <p>-->
+    <!--                        {%raw%}-->
+    <!--                            {{day}} -->
+    <!--                            <br />-->
+    <!--                            {{hour}}-->
+    <!--                        {%endraw%}-->
+    <!--                    </p>-->
+    <!--                </script>-->
+    <!--            </div>-->
+    <!--            <div class="clearfix"></div>-->
+    <!--            <hr class="visible_phone mobile_separator" />-->
+    <!--        </div>-->
+    <!--        <div class="footer_col">-->
+    <!--            <h5 class="heading">NEWSLETTER SUBSCRIPTION</h5>-->
+    <!--            <div class="newsletter_div">-->
+    <!--                <form action="//mobilefringe.createsend.com/t/d/s/ithdul/" method="post" id="newsletter_form">-->
+    <!--                    <input name="cm-ithdul-ithdul" type="text" placeholder="Susbcribe to Newsletter" class="newsletter_control" required />-->
+    <!--                    <button class="newsletter_btn animated_btn">Subscribe</button>-->
+    <!--                    <label class="newsletter_label">-->
+    <!--                        <input id="newsletter_agree" type="checkbox" />-->
+    <!--                        I agree to receive newsletters from Twin Pines Mall.-->
+    <!--                    </label>-->
+    <!--                    <p class="hidden_now" id="success_subscribe">-->
+    <!--                        Thank you for subscribing!-->
+    <!--                    </p>-->
+    <!--                </form>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <div class="footer_col hidden_phone">-->
+    <!--            <a class="pull-right view_more_btn" href="https://www.instagram.com" target="_blank">view more ></a>-->
+    <!--            <h5 class="heading">INSTAGRAM</h5>-->
+    <!--            <div id="instafeed"></div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</section>-->
     <section class="copyright_footer main_container">
         <div class="text-center visible_phone">
             <p class="footer_text">
