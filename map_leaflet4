@@ -45,5 +45,11 @@
             console.log("delay is done!");
            map.setZoom(1);
         }, 500);
-    })
+    });
+    
+    //marker dev
+    get_coords: function (v) {
+        var coords = _data.R.getById(v).getBBox();
+        return coords;
+    }
 </script>
