@@ -58,7 +58,7 @@
         }, 500);
         var stores = getStoresList();
         var store_svgregion = stores[0].svgmap_region;
-        console.log($("#"+store_svgregion).getBBox());
+        console.log($("#"+store_svgregion));
     });
     
     //marker dev
