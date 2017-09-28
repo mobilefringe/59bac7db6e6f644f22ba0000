@@ -74,9 +74,9 @@
           this._g = temp_g;
            console.log(this.map);
        
-        countriesOverlay.addTo(map)
+        
     });
-    
+    countriesOverlay.addTo(map);
     $('.custom_backdrop').remove();
     $('.yield').fadeIn();
 </script>
