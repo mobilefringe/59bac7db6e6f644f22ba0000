@@ -8,7 +8,7 @@
     }
     #map-canvas{
         height:100%;
-        width:`00%;
+        width:100%;
     }
     /*svg {*/
     /*    width:900px;*/
