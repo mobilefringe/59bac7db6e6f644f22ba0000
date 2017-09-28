@@ -102,7 +102,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         
               temp_g = [];
               $('.'+ overlayClass +' svg').children().each (function (key,val){
-                  console.log(val);
+                //   console.log(val);
                 //   this.svgOverlay._g.push(val);
                 temp_g.push(val);
           });
