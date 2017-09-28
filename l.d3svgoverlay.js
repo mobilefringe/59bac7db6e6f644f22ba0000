@@ -85,7 +85,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
             if(val.id){
                 $("#"+val.id).attr("transform", shift.concat(scale).join(""));
             }
-            val.attr("transform", shift.concat(scale).join(""));
+            // val.attr("transform", shift.concat(scale).join(""));
         });
         if (this.options.zoomDraw) { this.draw() }
         this._enableLeafletRounding();
