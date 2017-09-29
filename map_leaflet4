@@ -66,6 +66,7 @@
         $('.yield').fadeIn();
     }
     $(window).load(function(){
+         var store ;
         setTimeout(function(){
             console.log("delay is done!");
             map.setZoom(1);
