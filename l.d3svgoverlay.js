@@ -199,7 +199,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
     },
     scaleMarker_coords: function (x,y) {
         console.log(this._scale);
-       return [x*this._scale, y*this._scale];
+        return [x*this._scale, y*this._scale];
     }
 
 });
