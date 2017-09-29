@@ -82,7 +82,7 @@
         }, 500);
         
         var stores_arr = [xy(0,0), xy(10,-10),xy(50,-50),xy(100,-100),xy(200,-200)];
-       console.log($("#Stores_x5F_1_x5F_21_1_")[0].getBBox()); 
+       console.log("hundson bay",$("#Stores_x5F_1_x5F_21_1_")[0].getBBox()); 
         //  [x*this._scale, y*this._scale]
         console.log("countriesOverlay",countriesOverlay);
         // console.log("scaleMarker_coords",countriesOverlay.scaleMarker_coords(coords["x"]));
