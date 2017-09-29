@@ -79,8 +79,8 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         var shift = ["translate(", this._shift.x, ",", this._shift.y, ") "];
         var scale = ["scale(", this._scale, ",", this._scale,") "];
         // console.log(this._svg[0].width.baseVal);
-        var svg_width = this._svg[0][0].width.baseVal.value;
-        var svg_height = this._svg[0][0].height.baseVal.value;
+        // var svg_width = this._svg[0][0].width.baseVal.value;
+        // var svg_height = this._svg[0][0].height.baseVal.value;
         // console.log(this._svg[0][0].width.baseVal.value,"scale" ,this._scale);
         this._rootGroup.attr("transform", shift.concat(scale).join(""));
         // this._svg.attr("width", svg_width*this._scale);
