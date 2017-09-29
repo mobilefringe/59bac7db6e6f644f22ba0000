@@ -54,9 +54,7 @@
             console.log("delay is done!");
            map.setZoom(1);
         }, 500);
-        var stores = getStoresList();
-        var store_svgregion = stores[0].svgmap_region;
-        console.log($("#"+store_svgregion));
+        
     });
     
     //marker dev
