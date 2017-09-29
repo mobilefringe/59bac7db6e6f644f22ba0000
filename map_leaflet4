@@ -18,6 +18,9 @@
     svg {
         overflow: visible;
     }
+    svg:not(:root) {
+    overflow: hidden;
+    }
 </style>
 <div id="map-container">
    <div id="map-canvas"></div> 
