@@ -24,18 +24,27 @@
 <script src="../l.d3svgoverlay.js"></script>
 <script>
     var map = L.map("map-canvas", {crs: L.CRS.Simple,center: [0, 0], zoom: 3, maxZoom:6, minZoom:1});
-        var countries = [];
-        var countriesOverlay = L.d3SvgOverlay(function(sel, proj) {
-        });
-        var d3layer_this;
-        var  svgUrl = "//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416"
-        
-        d3.xml(svgUrl).mimeType("image/svg+xml").get(function(error, svgImg) {
-            if (error) throw error;
-            map.getPanes().overlayPane.appendChild(svgImg.documentElement);
-            d3layer_this =  countriesOverlay.addTo(map);
-            console.log(d3layer_this);
-        });
+    var countries = [];
+    var countriesOverlay = L.d3SvgOverlay(function(sel, proj) {
+    });
+    var d3layer_this;
+    var  svgUrl = "//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416"
+    
+    d3.xml(svgUrl).mimeType("image/svg+xml").get(function(error, svgImg) {
+        if (error) throw error;
+        map.getPanes().overlayPane.appendChild(svgImg.documentElement);
+        d3layer_this =  countriesOverlay.addTo(map);
+        console.log(d3layer_this);
+    });
+    var smallIcon = new L.Icon({
+        iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-icon.png',
+        iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-icon-2x.png',
+        iconSize:    [25, 41],
+        iconAnchor:  [12, 41],
+        popupAnchor: [1, -34],
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        shadowSize:  [0,0]
+    });
     $(document).ready(function(e){
         init(e);
         loadMallDataCached(renderPage);
@@ -52,8 +61,8 @@
     $(window).load(function(){
         setTimeout(function(){
             console.log("delay is done!");
-           map.setZoom(1);
-           var stores = getStoresList();
+            map.setZoom(1);
+            var stores = getStoresList();
             var store_svgregion = stores[0].svgmap_region;
             console.log($("#"+store_svgregion)[0].getBBox());
             var coords = $("#"+store_svgregion)[0].getBBox();
