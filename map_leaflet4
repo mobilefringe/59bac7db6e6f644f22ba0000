@@ -66,7 +66,6 @@
         $('.yield').fadeIn();
     }
     $(window).load(function(){
-         var store ;
         setTimeout(function(){
             console.log("delay is done!");
             map.setZoom(1);
@@ -76,7 +75,7 @@
             var coords = $("#"+store_svgregion)[0].getBBox();
             var height = parseInt(coords["height"]);
             var width = parseInt(coords["width"]);
-             store    = xy(coords["x"],coords["y"]);
+            var store    = xy(coords["x"],coords["y"]);
         }, 500);
         
         var store2    = xy(0,0);
