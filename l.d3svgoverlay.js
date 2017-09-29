@@ -127,6 +127,9 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
             });
             this._svgGroups = temp_g;
         }
+        
+       this._svg.attr("width",5000);
+        this._svg.attr("height",  7000);
         //  console.log("this.map.getPanes().overlayPane ",this.map.getPanes().overlayPane.children[0],this.map.getPanes().overlayPane.children[1]);
         this._rootGroup.classed("leaflet-zoom-hide", this.options.zoomHide);
         if(this.options.zoomHide) {
