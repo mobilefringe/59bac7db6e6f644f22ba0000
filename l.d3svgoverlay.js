@@ -80,7 +80,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         var scale = ["scale(", this._scale, ",", this._scale,") "];
         console.log("this._scale", this._scale);
         this._rootGroup.attr("transform", shift.concat(scale).join(""));
-        this._shift = (-this.map.latLngToLayerPoint(this._wgsOrigin)).multiplyBy(this._scale-1)
+        this._shift = (-this.map.latLngToLayerPoint(this._wgsOrigin)).multiplyBy(this._scale-1);
             ._subtract(this._wgsInitialShift.multiplyBy(this._scale));
         var shift = ["translate(", this._shift.x, ",", this._shift.y, ") "];
         var scale = ["scale(", this._scale, ",", this._scale,") "];
