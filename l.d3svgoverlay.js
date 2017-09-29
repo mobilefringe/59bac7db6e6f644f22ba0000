@@ -79,18 +79,12 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         var shift = ["translate(", this._shift.x, ",", this._shift.y, ") "];
         var scale = ["scale(", this._scale, ",", this._scale,") "];
         console.log("this._scale", this._scale);
-        // var svg_width = this._svg[0][0].width.baseVal.value;
-        // var svg_height = this._svg[0][0].height.baseVal.value;
-        // console.log(this._svg[0][0].width.baseVal.value,"scale" ,this._scale);
         this._rootGroup.attr("transform", shift.concat(scale).join(""));
-        // this._svg.attr("width", svg_width*this._scale);
-        // this._svg.attr("height",  svg_height*this._scale);
         $.each(this._svgGroups, function (key, val){
             // console.log(val.id);
             if(val.id){
                 $("#"+val.id).attr("transform", shift.concat(scale).join(""));
             }
-            // val.attr("transform", shift.concat(scale).join(""));
         });
         if (this.options.zoomDraw) { this.draw() }
         this._enableLeafletRounding();
