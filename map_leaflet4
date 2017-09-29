@@ -76,6 +76,8 @@
             var height = parseInt(coords["height"]);
             var width = parseInt(coords["width"]);
             var store    = xy(coords["x"],coords["y"]);
+            
+        
         }, 500);
         
         var store2    = xy(0,0);
@@ -83,8 +85,7 @@
         //  [x*this._scale, y*this._scale]
         console.log("countriesOverlay",countriesOverlay);
         // console.log("scaleMarker_coords",countriesOverlay.scaleMarker_coords(coords["x"]));
-       
-        L.marker(store,{icon:smallIcon}).addTo(map).bindPopup('Store');
+       L.marker(store,{icon:smallIcon}).addTo(map).bindPopup('Store');
         L.marker(store2,{icon:smallIcon}).addTo(map).bindPopup('Store2');
     });
     
