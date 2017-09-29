@@ -45,6 +45,13 @@
         shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
         shadowSize:  [0,0]
     });
+    var yx = L.latLng;
+    var xy = function(x, y) {
+        if (L.Util.isArray(x)) {    // When doing xy([x, y]);
+            return yx(x[1], x[0]);
+        }
+        return yx(y, x);  // When doing xy(x, y);
+    };
     $(document).ready(function(e){
         init(e);
         loadMallDataCached(renderPage);
@@ -69,7 +76,7 @@
             var height = parseInt(coords["height"]);
             var width = parseInt(coords["width"]);
             
-        L.marker(store,{icon:smallerIcon}).addTo(map).bindPopup('Store');
+            L.marker(store,{icon:smallerIcon}).addTo(map).bindPopup('Store');
         }, 500);
         
     });
