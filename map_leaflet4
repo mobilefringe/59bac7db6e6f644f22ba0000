@@ -56,6 +56,9 @@
            var stores = getStoresList();
             var store_svgregion = stores[0].svgmap_region;
             console.log($("#"+store_svgregion)[0].getBBox());
+            var coords = this.map.get_coords(val.svgmap_region);
+            var height = parseInt(coords["height"])
+            var width = parseInt(coords["width"])
         }, 500);
         
     });
