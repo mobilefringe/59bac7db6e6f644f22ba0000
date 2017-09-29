@@ -77,7 +77,7 @@
         var coords = $("#"+store_svgregion)[0].getBBox();
         var height = parseInt(coords["height"]);
         var width = parseInt(coords["width"]);
-        var store    = xy(coords["x"],coords["y"]);
+        var store    = xy(countriesOverlay.scaleMarker_coords(coords["x"])coords["x"],countriesOverlay.scaleMarker_coords(coords["y"]));
         //  [x*this._scale, y*this._scale]
         console.log("countriesOverlay",countriesOverlay);
         console.log("scaleMarker_coords",countriesOverlay.scaleMarker_coords(coords["x"]));
