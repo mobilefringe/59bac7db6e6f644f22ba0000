@@ -85,6 +85,7 @@
         console.log("scaleMarker_coords",countriesOverlay.scaleMarker_coords(coords["x"]));
        
         L.marker(store,{icon:smallIcon}).addTo(map).bindPopup('Store');
+        L.marker(store2,{icon:smallIcon}).addTo(map).bindPopup('Store2');
     });
     
     //marker dev
