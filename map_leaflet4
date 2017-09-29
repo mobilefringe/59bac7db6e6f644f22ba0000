@@ -81,12 +81,15 @@
         
         }, 500);
         
-        var stores = [xy(0,0), xy(10,10),xy(50,50),xy(100,100),xy(200,200)];
+        var stores_arr = [xy(0,0), xy(10,10),xy(50,50),xy(100,100),xy(200,200)];
         
         //  [x*this._scale, y*this._scale]
         console.log("countriesOverlay",countriesOverlay);
         // console.log("scaleMarker_coords",countriesOverlay.scaleMarker_coords(coords["x"]));
         L.marker(store2,{icon:smallIcon}).addTo(map).bindPopup('Store2'+store2);
+        $.each(stores_arr, function (key,val){
+            L.marker(store2,{icon:smallIcon}).addTo(map).bindPopup('Store2'+store2);
+        })
     });
     
     //marker dev
