@@ -86,7 +86,7 @@
         //  [x*this._scale, y*this._scale]
         console.log("countriesOverlay",countriesOverlay);
         // console.log("scaleMarker_coords",countriesOverlay.scaleMarker_coords(coords["x"]));
-        L.marker(store2,{icon:smallIcon}).addTo(map).bindPopup('Store2'+store2);
+        // L.marker(store2,{icon:smallIcon}).addTo(map).bindPopup('Store2'+store2);
         $.each(stores_arr, function (key,val){
             L.marker(store2,{icon:smallIcon}).addTo(map).bindPopup('Store2'+store2);
         })
