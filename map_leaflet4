@@ -76,7 +76,7 @@
             var height = parseInt(coords["height"]);
             var width = parseInt(coords["width"]);
             var store    = xy(coords["x"],coords["y"]);
-            console.log("countriesOverlay",countriesOverlay);
+            console.log("countriesOverlay",countriesOverlay.scaleMarker_coords(coords["x"],coords["y"]));
            
             L.marker(store,{icon:smallIcon}).addTo(map).bindPopup('Store');
         }, 500);
