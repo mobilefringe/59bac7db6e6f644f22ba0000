@@ -81,8 +81,8 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         
         console.log(this._svg.attr("width"),"scale" ,this._scale);
         this._rootGroup.attr("transform", shift.concat(scale).join(""));
-        this._svg.attr("width",  this._svg.attr("width")*scale);
-        this._svg.attr("height",  this._svg.attr("height")*scale);
+        this._svg.attr("width",  this._svg.attr("width")*this._scale);
+        this._svg.attr("height",  this._svg.attr("height")*this._scale);
        
         $.each(this._svgGroups, function (key, val){
             // console.log(val.id);
