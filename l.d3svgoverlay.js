@@ -72,7 +72,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         this._disableLeafletRounding();
         var newZoom = this._undef(evt.zoom) ? this.map._zoom : evt.zoom; // "viewreset" event in Leaflet has not zoom/center parameters like zoomanim
         this._zoomDiff = newZoom - this._zoom;
-        this._scale = Math.pow(2, this._zoomDiff);
+        this._scale = Math.pow(1.1, this._zoomDiff);
         this.projection.scale = this._scale;
         this._shift = this.map.latLngToLayerPoint(this._wgsOrigin)
             ._subtract(this._wgsInitialShift.multiplyBy(this._scale));
