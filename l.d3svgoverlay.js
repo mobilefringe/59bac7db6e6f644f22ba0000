@@ -197,10 +197,8 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         map.addLayer(this);
         return this;
     },
-    scaleMarker_coords: function () {
-        this._disableLeafletRounding();
-        this._drawCallback(this.selection, this.projection, this.map.getZoom());
-        this._enableLeafletRounding();
+    scaleMarker_coords: function (x,y) {
+       return [x*this._scale, y*this._scale];
     }
 
 });
