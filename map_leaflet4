@@ -10,11 +10,11 @@
         height:100%;
         width:100%;
     }
-    g{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-    }
+    /*g{*/
+    /*    position: absolute;*/
+    /*    top: 50%;*/
+    /*    left: 50%;*/
+    /*}*/
     svg:not(:root) {
         overflow: visible;
     }
