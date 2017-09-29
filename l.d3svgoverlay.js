@@ -76,7 +76,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         this.projection.scale = this._scale;
         this._shift = this.map.latLngToLayerPoint(this._wgsOrigin)
             ._subtract(this._wgsInitialShift.multiplyBy(this._scale));
-        console.log(this._svg.attr("width"));
+        console.log(this._svg.attr("width"),scale);
         var shift = ["translate(", this._shift.x, ",", this._shift.y, ") "];
         var scale = ["scale(", this._scale, ",", this._scale,") "];
         this._rootGroup.attr("transform", shift.concat(scale).join(""));
