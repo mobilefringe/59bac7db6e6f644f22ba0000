@@ -101,7 +101,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         // SVG element
         if (L.version < "1.0") {
             map._initPathRoot();
-            this._svg = $('.'+ overlayClass +' svg')[0];// d3.select(map._panes.overlayPane).select("svg");//$('.'+ overlayClass +' svg');//this.map.getPanes().overlayPane.children[0];
+            this._svg = $('.'+ overlayClass +' svg');// d3.select(map._panes.overlayPane).select("svg");//$('.'+ overlayClass +' svg');//this.map.getPanes().overlayPane.children[0];
             // this._svg = this.map.getPanes().overlayPane.children[1];
             this._svg.attr("class","leaflet-zoom-animated");
             
