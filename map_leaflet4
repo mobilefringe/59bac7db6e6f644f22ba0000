@@ -99,7 +99,7 @@
         $.each(stores_arr, function (key,val){
             L.marker(val,{icon:smallIcon}).addTo(map).bindPopup('Store2'+val);
         })
-        
+        polygon.bindPopup("I am a polygon.");
         }, 500);
         
        
