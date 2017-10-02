@@ -88,9 +88,6 @@
             var store    = xy(coords["x"],coords["y"]);
             
        L.marker(store,{icon:smallIcon}).addTo(map).bindPopup('Store');
-        
-        }, 500);
-        
         var stores_arr = [xy(100,-100),xy(200,-200)];
        console.log("hundson bay",$("#Stores_x5F_1_x5F_21_1_")[0].getBBox()); 
         //  [x*this._scale, y*this._scale]
@@ -100,6 +97,10 @@
         $.each(stores_arr, function (key,val){
             L.marker(val,{icon:smallIcon}).addTo(map).bindPopup('Store2'+val);
         })
+        
+        }, 500);
+        
+       
     });
     
     //marker dev
