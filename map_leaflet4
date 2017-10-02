@@ -23,6 +23,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.min.js"></script>
 <script src="../l.d3svgoverlay.js"></script>
 <script>
+var stores;
     var map = L.map("map-canvas", 
         {crs: L.CRS.Simple,
         center: [0, 0],
@@ -116,7 +117,7 @@
        
     });
    function onMapClick(e) {
-       console.log(e.originalEvent.toElement.nodeName);
+       console.log(e.originalEvent.toElement.id);
        if(e.originalEvent.toElement.nodeName == "rect"  || e.originalEvent.toElement.nodeName == "polygon")
         var popup = L.popup().setLatLng(e.latlng)
             .setContent("You clicked the map at " + e.latlng.toString())
