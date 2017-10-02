@@ -145,6 +145,6 @@
 .hidden_now {
     display:none;
 }
-polygon[id^='STORES'] {
+polygon {
    &:hover{ fill: #a94442;  }
 }
