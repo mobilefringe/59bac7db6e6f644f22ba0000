@@ -1,0 +1,150 @@
+// .main_btn,.back_to_home,.copyright_footer,.newsletter_btn,.flex-control-paging li a.flex-active,.store_nav a.active_store_nav:after,.store_nav a:hover:after,.store_initial,.details_header,.back_to_list,.back_to_list:hover,.back_to_list:focus,.mobile_menu_dd,#mm_page_content h2{background:#6cc6cc}.newsletter_control:focus{border-color:#6cc6cc}.view_more_btn,.colored_link,.colored_link a,#mm_page_content h1,.mobile_menu li a{color:#6cc6cc}.animated_btn:before{background:#a8cc4b}.stores_banner{background-image:url(//codecloud.cdn.speedyrails.net/sites/57f50a1b6e6f6426d2010000/image/jpeg/undefined/rsb_1920x150_banner_directory.jpg)}.events_banner{background-image:url(//codecloud.cdn.speedyrails.net/sites/58332abd6e6f646f31040000/image/jpeg/1483737340000/dph_1920x150_banner_events.jpg)}.dine_banner{background-image:url(//codecloud.cdn.speedyrails.net/sites/58332abd6e6f646f31040000/image/jpeg/1483737316000/dph_1920x150_banner_dine.jpg)}.jobs_banner{background-image:url(//codecloud.cdn.speedyrails.net/sites/58332abd6e6f646f31040000/image/jpeg/1483737464000/dph_1920x150_banner_jobs.jpg)}.location_banner{background-image:url(//codecloud.cdn.speedyrails.net/sites/58332abd6e6f646f31040000/image/jpeg/1483737372000/dph_1920x150_banner_location.jpg)}.pleasanthill-services{background-image:url(//codecloud.cdn.speedyrails.net/sites/58332abd6e6f646f31040000/image/jpeg/1483737414000/dph_1920x150_banner_services.jpg)}.pleasanthill-contact-us{background-image:url(//codecloud.cdn.speedyrails.net/sites/58332abd6e6f646f31040000/image/jpeg/1483737440000/dph_1920x150_banner_contact.jpg)}.pleasanthill-privacy-policy{background-image:url(//codecloud.cdn.speedyrails.net/sites/58332abd6e6f646f31040000/image/jpeg/1483737490000/dph_1920x150_banner_privacy.jpg)}.pleasanthill-partners{background-image:url(//codecloud.cdn.speedyrails.net/sites/58332abd6e6f646f31040000/image/jpeg/1483737490000/dph_1920x150_banner_privacy.jpg)}.mark{background:transparent}.shopsatrossmoor-videos{background-image:url(//codecloud.cdn.speedyrails.net/sites/57f50a1b6e6f6426d2010000/image/jpeg/undefined/rsb_1920x150_banner_events.jpg)}.main_logo{max-width:180px;margin-top:10px;max-height:100px}.popup_home img{max-width:100%;max-height:100%}.popup_home{position:absolute;top:50%;left:50%;z-index:9999;-webkit-transform:translate(-50%, -50%);-moz-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);-o-transform:translate(-50%, -50%);transform:translate(-50%, -50%)}.close_popup{position:absolute;top:5px;right:5px;padding:2px 5px;font-size:25px;cursor:pointer;background-color:#fff}.popup{background:none repeat scroll 0 0 #000000;border:1px solid #808080;border-radius:6px;box-shadow:-1px 1px 4px 1px #000;color:#ffffff;font-size:18px;font-weight:bold;padding-bottom:8px;padding-top:8px;text-align:center;width:200px; .close_popup{background-color:#6cc6cc;}}.popup_content{background:#6cc6cc;color:#ffffff;padding:25px;text-align:center}#allowPush{background-color:#ffffff;color:#6cc6cc;padding:5px;text-align:center}#disablePush{background-color:#ffffff;color:#6cc6cc;padding:5px;text-align:center}
+
+.main_btn, .back_to_home, .copyright_footer, .newsletter_btn, .flex-control-paging li a.flex-active, .store_nav a.active_store_nav:after, .store_nav a:hover:after, .store_initial, .details_header, .back_to_list, .back_to_list:hover, .back_to_list:focus, .mobile_menu_dd, #mm_page_content h2 {
+    background: #6cc6cc;
+}
+.newsletter_control:focus {
+    border-color: #6cc6cc;
+}
+.view_more_btn, .colored_link, .colored_link a, #mm_page_content h1, .mobile_menu li a {
+    color: #6cc6cc;
+}
+.animated_btn:before {
+    background: #a8cc4b;
+}
+.stores_banner {
+    background-image: url(//codecloud.cdn.speedyrails.net/sites/57f50a1b6e6f6426d2010000/image/jpeg/undefined/rsb_1920x150_banner_directory.jpg);
+}
+.events_banner {
+    background-image: url(//codecloud.cdn.speedyrails.net/sites/58332abd6e6f646f31040000/image/jpeg/1483737340000/dph_1920x150_banner_events.jpg);
+}
+.dine_banner {
+    background-image: url(//codecloud.cdn.speedyrails.net/sites/58332abd6e6f646f31040000/image/jpeg/1483737316000/dph_1920x150_banner_dine.jpg);
+}
+.jobs_banner {
+    background-image: url(//codecloud.cdn.speedyrails.net/sites/58332abd6e6f646f31040000/image/jpeg/1483737464000/dph_1920x150_banner_jobs.jpg);
+}
+.location_banner {
+    background-image: url(//codecloud.cdn.speedyrails.net/sites/58332abd6e6f646f31040000/image/jpeg/1483737372000/dph_1920x150_banner_location.jpg);
+}
+.pleasanthill-services {
+    background-image: url(//codecloud.cdn.speedyrails.net/sites/58332abd6e6f646f31040000/image/jpeg/1483737414000/dph_1920x150_banner_services.jpg);
+}
+.pleasanthill-contact-us {
+    background-image: url(//codecloud.cdn.speedyrails.net/sites/58332abd6e6f646f31040000/image/jpeg/1483737440000/dph_1920x150_banner_contact.jpg);
+}
+.pleasanthill-privacy-policy {
+    background-image: url(//codecloud.cdn.speedyrails.net/sites/58332abd6e6f646f31040000/image/jpeg/1483737490000/dph_1920x150_banner_privacy.jpg);
+}
+.pleasanthill-partners {
+    background-image: url(//codecloud.cdn.speedyrails.net/sites/58332abd6e6f646f31040000/image/jpeg/1483737490000/dph_1920x150_banner_privacy.jpg);
+}
+.mark {
+    background: transparent;
+}
+.shopsatrossmoor-videos {
+    background-image: url(//codecloud.cdn.speedyrails.net/sites/57f50a1b6e6f6426d2010000/image/jpeg/undefined/rsb_1920x150_banner_events.jpg);
+}
+.main_logo {
+    max-width: 180px;
+    margin-top: 10px;
+    max-height: 100px;
+}
+.popup_home img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.popup_home {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 9999;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    .checkbox {
+        margin: 10px 150px;
+        text-align: left;
+    }
+}
+.close_popup {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 2px 5px;
+    font-size: 25px;
+    cursor: pointer;
+    background-color: #fff;
+}
+.popup {
+    background: none repeat scroll 0 0 #000000;
+    border: 1px solid #808080;
+    border-radius: 6px;
+    box-shadow: -1px 1px 4px 1px #000;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    text-align: center;
+    width: 200px;
+    .close_popup {
+        background-color: #6cc6cc;
+    }
+}
+.popup_content {
+    background: #6cc6cc;
+    color: #ffffff;
+    padding: 25px;
+    text-align: center;
+}
+#allowPush {
+    background-color: #ffffff;
+    color: #6cc6cc;
+    padding: 5px;
+    text-align: center;
+}
+#disablePush {
+    background-color: #ffffff;
+    color: #6cc6cc;
+    padding: 5px;
+    text-align: center;
+}
+
+.custom_backdrop_notif {
+     position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2040;
+        background-color: #000;
+        opacity:0.6;
+}
+.allow_notif_custom {
+    position: fixed;
+    top: 180px;
+    left: 50px;
+    z-index: 2041;
+    font-size: 30px;
+    color: #fff;
+    img {
+        width :100%;
+        height : 100%;
+    }
+    i {
+        color: #fff;
+        top: -46px;
+        left: 300px;
+        position: relative;
+    }
+}
+
+.hidden_now {
+    display:none;
+}
+polygon[id^='STORES'] {
+   &:hover{ color: red;  }
+}
