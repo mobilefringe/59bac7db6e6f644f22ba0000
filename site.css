@@ -145,6 +145,6 @@
 .hidden_now {
     display:none;
 }
-polygon {
+polygon,path {
    &:hover{ fill: #a94442!important;  }
 }
