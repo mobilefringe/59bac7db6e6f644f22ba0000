@@ -120,9 +120,10 @@
         console.log(e.originalEvent.toElement.id);
         if(e.originalEvent.toElement.nodeName == "rect"  || e.originalEvent.toElement.nodeName == "polygon"){
             my_store = stores.filter(function( index ) {
-                console.log();
                 return index.svgmap_region ===  e.originalEvent.toElement.id ;
-            })
+            });
+            
+                console.log(my_store);
             var popup = L.popup().setLatLng(e.latlng)
                 .setContent("You clicked the map at " + e.latlng.toString())
                 .openOn(map);
