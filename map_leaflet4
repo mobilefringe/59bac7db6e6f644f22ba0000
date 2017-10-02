@@ -117,11 +117,15 @@
        
     });
    function onMapClick(e) {
-       console.log(e.originalEvent.toElement.id);
-       if(e.originalEvent.toElement.nodeName == "rect"  || e.originalEvent.toElement.nodeName == "polygon")
+        console.log(e.originalEvent.toElement.id);
+        if(e.originalEvent.toElement.nodeName == "rect"  || e.originalEvent.toElement.nodeName == "polygon"){
+        stores.filter(function( index ) {
+            return index === 1 || $( this ).attr( "id" ) === "fourth";
+        })
         var popup = L.popup().setLatLng(e.latlng)
             .setContent("You clicked the map at " + e.latlng.toString())
             .openOn(map);
+        }
     }
     //marker dev
     // get_coords: function (v) {
