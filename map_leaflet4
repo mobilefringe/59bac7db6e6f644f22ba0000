@@ -103,7 +103,7 @@
             L.marker(val,{icon:smallIcon}).addTo(map).bindPopup('Store2'+val);
         });
         // polygon.bindPopup("I am a polygon.");
-        stores = getStoresList();
+        
         var store_svgregion = stores[0].svgmap_region;
         // console.log($("#"+store_svgregion));
         $.each(stores,function(key,val){
