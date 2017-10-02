@@ -146,5 +146,5 @@
     display:none;
 }
 polygon {
-   &:hover{ fill: #a94442;  }
+   &:hover{ fill: #a94442!important;  }
 }
