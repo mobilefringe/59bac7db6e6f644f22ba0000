@@ -120,7 +120,7 @@
         console.log(e.originalEvent.toElement.id);
         if(e.originalEvent.toElement.nodeName == "rect"  || e.originalEvent.toElement.nodeName == "polygon"){
             my_store = stores.filter(function( index ) {
-                console.log(index)l
+                console.log(index);
                 return index === 1 || $( this ).attr( "id" ) === "fourth";
             })
             var popup = L.popup().setLatLng(e.latlng)
