@@ -119,7 +119,8 @@
    function onMapClick(e) {
         console.log(e.originalEvent.toElement.id);
         if(e.originalEvent.toElement.nodeName == "rect"  || e.originalEvent.toElement.nodeName == "polygon"){
-            stores.filter(function( index ) {
+            my_store = stores.filter(function( index ) {
+                console.log(index)l
                 return index === 1 || $( this ).attr( "id" ) === "fourth";
             })
             var popup = L.popup().setLatLng(e.latlng)
