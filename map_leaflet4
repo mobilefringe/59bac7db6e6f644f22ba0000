@@ -102,7 +102,7 @@
         // polygon.bindPopup("I am a polygon.");
         var stores = getStoresList();
         var store_svgregion = stores[0].svgmap_region;
-        console.log($("#"+store_svgregion));
+        // console.log($("#"+store_svgregion));
         
         select_map_region
         }, 500);
