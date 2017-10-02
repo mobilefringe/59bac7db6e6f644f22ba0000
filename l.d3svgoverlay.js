@@ -107,7 +107,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
             overlayClass=this.map.getPanes().overlayPane.className.replace(/ /g, '.');
             temp_g = [];
             $('.'+ overlayClass +' svg').children().each (function (key,val){
-                console.log($("#"+val.id).classList.add("leaflet-zoom-animated"));
+                console.log($("#"+val.id).classList);//.add("leaflet-zoom-animated")
                 temp_g.push(val);
             });
             this._svgGroups = temp_g;
