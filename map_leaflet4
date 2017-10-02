@@ -117,6 +117,7 @@
     });
    function onMapClick(e) {
        console.log(e.originalEvent.toElement.nodeName);
+       if(e.originalEvent.toElement.nodeName == "rect"  || e.originalEvent.toElement.nodeName == "polygon")
         var popup = L.popup().setLatLng(e.latlng)
             .setContent("You clicked the map at " + e.latlng.toString())
             .openOn(map);
