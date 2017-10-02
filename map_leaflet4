@@ -118,7 +118,7 @@
    function onMapClick(e) {
         var popup = L.popup().setLatLng(e.latlng)
             .setContent("You clicked the map at " + e.latlng.toString())
-            .openOn(mymap);
+            .openOn(map);
     }
     //marker dev
     // get_coords: function (v) {
