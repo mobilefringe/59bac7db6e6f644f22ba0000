@@ -125,7 +125,7 @@
             
             // console.log(my_store);
             var popup = L.popup().setLatLng(e.latlng)
-                .setContent(my_store.name +"You clicked the map at " + e.latlng.toString())
+                .setContent(my_store.name)
                 .openOn(map);
         }
     }
