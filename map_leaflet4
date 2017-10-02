@@ -48,6 +48,8 @@
         d3layer_this =  countriesOverlay.addTo(map);
         console.log(d3layer_this);
     });
+    
+    map.on('click', onMapClick);
     var smallIcon = new L.Icon({
         iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-icon.png',
         iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-icon-2x.png',
@@ -104,14 +106,18 @@
         var store_svgregion = stores[0].svgmap_region;
         // console.log($("#"+store_svgregion));
         $.each(stores,function(key,val){
-            $("#"+val.svgmap_region).attr("class",select_map_region");
+            $("#"+val.svgmap_region).attr("class","select_map_region");
         });
+        
+        
         
         }, 500);
         
        
     });
-    
+    function onMapClick(e) {
+            alert("You clicked the map at " + e.latlng);
+        }
     //marker dev
     // get_coords: function (v) {
     //     var coords = _data.R.getById(v).getBBox();
