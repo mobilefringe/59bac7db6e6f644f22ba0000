@@ -104,9 +104,9 @@
         var store_svgregion = stores[0].svgmap_region;
         // console.log($("#"+store_svgregion));
         $.each(stores,function(key,val){
-            $("#"+val.svgmap_region)
+            $("#"+val.svgmap_region).addClass("select_map_region")
         });
-        select_map_region
+        
         }, 500);
         
        
