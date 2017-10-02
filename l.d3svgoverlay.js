@@ -95,6 +95,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         // console.log(this.map);
         var _layer = this;
         this._svgGroups = [];
+        overlayClass=this.map.getPanes().overlayPane.className.replace(/ /g, '.');
         console.log("this.map.getPanes().overlayPane ",this.map.getPanes().overlayPane.className);
         // SVG element
         if (L.version < "1.0") {
@@ -103,7 +104,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
             // this._svg = this.map.getPanes().overlayPane.children[1];
             this._svg.attr("class","leaflet-zoom-animated");
             this._rootGroup = this._svg.append("g"); 
-            overlayClass=this.map.getPanes().overlayPane.className.replace(/ /g, '.');
+            
             temp_g = [];
             $('.'+ overlayClass +' svg').children().each (function (key,val){
                 $("#"+val.id).attr("class","leaflet-zoom-animated");
