@@ -146,5 +146,5 @@
     display:none;
 }
 polygon[id^='STORES'] {
-   &:hover{ color: red;  }
+   &:hover{ fill: #a94442;  }
 }
