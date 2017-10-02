@@ -32,7 +32,7 @@
         zoomDelta: 0.25,
         zoomSnap: 0,
         touchZoom:true
-     });
+    });
     var countries = [];
     var countriesOverlay = L.d3SvgOverlay(function(sel, proj) {
     });
