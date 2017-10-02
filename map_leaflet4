@@ -30,7 +30,8 @@
         maxZoom:6,
         minZoom:1,
         zoomDelta: 0.25,
-        zoomSnap: 0,touchZoom:true
+        zoomSnap: 0,
+        touchZoom:true
      });
     var countries = [];
     var countriesOverlay = L.d3SvgOverlay(function(sel, proj) {
