@@ -115,9 +115,12 @@
         
        
     });
-    function onMapClick(e) {
-            alert("You clicked the map at " + e.latlng);
-        }
+   function onMapClick(e) {
+    popup
+        .setLatLng(e.latlng)
+        .setContent("You clicked the map at " + e.latlng.toString())
+        .openOn(mymap);
+}
     //marker dev
     // get_coords: function (v) {
     //     var coords = _data.R.getById(v).getBBox();
