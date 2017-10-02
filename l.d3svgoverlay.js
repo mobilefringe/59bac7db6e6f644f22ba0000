@@ -105,7 +105,6 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
             this._svg.attr("class","leaflet-zoom-animated");
             
             
-            console.log("this._rootGroup",this._rootGroup);
             temp_g = [];
             $('.'+ overlayClass +' svg').children().each (function (key,val){
                 $("#"+val.id).attr("class","leaflet-zoom-animated");
