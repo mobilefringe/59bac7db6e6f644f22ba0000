@@ -111,8 +111,8 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
                 temp_g.push(val);
             });
             this._svgGroups = temp_g;
-            this._rootGroup = this._svg.append("g"); 
-            
+            // this._rootGroup = this._svg.append("g"); 
+            this._rootGroup =this._svgGroups; 
             console.log("this._rootGroup",this._rootGroup);
             
             console.log("this._svgGroups",this._svgGroups);
