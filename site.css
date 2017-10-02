@@ -145,6 +145,6 @@
 .hidden_now {
     display:none;
 }
-polygon,path {
+.select_map_region {
    &:hover{ fill: #a94442!important;  }
 }
