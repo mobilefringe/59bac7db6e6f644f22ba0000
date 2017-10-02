@@ -33,7 +33,7 @@
         zoomSnap: 0,
         touchZoom:true
     });
-    var countries = [];
+    // var countries = [];
     var countriesOverlay = L.d3SvgOverlay(function(sel, proj) {
     });
     var d3layer_this;
