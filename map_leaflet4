@@ -116,7 +116,7 @@
        
     });
    function onMapClick(e) {
-       console.log(e.originalEvent);
+       console.log(e.originalEvent.toElement.nodeName);
         var popup = L.popup().setLatLng(e.latlng)
             .setContent("You clicked the map at " + e.latlng.toString())
             .openOn(map);
