@@ -32,7 +32,8 @@
         zoomDelta: 0.25,
         zoomAnimation: true,
         // zoomSnap: 0,
-        touchZoom:true//,
+        touchZoom:true,
+        bounceAtZoomLimits: true
         // _animatingZoom:true
     });
     // var countries = [];
