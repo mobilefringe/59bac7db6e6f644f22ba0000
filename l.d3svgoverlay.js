@@ -79,7 +79,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         var shift = ["translate(", this._shift.x, ",", this._shift.y, ") "];
         var scale = ["scale(", this._scale, ",", this._scale,") "];
         console.log("this._scale", this._scale);
-        // this._rootGroup.attr("transform", shift.concat(scale).join(""));
+        this._rootGroup.attr("transform", shift.concat(scale).join(""));
         $.each(this._svgGroups, function (key, val){
             // console.log(val.id);
             if(val.id){
@@ -100,10 +100,10 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         // SVG element
         if (L.version < "1.0") {
             map._initPathRoot();
-            this._svg =  d3.select(map._panes.overlayPane).select("svg");//$('.'+ overlayClass +' svg');//this.map.getPanes().overlayPane.children[0];
+            this._svg =  this._svg =  d3.select(map._panes.overlayPane).select("svg");//$('.'+ overlayClass +' svg');//this.map.getPanes().overlayPane.children[0];
             // this._svg = this.map.getPanes().overlayPane.children[1];
             this._svg.attr("class","leaflet-zoom-animated");
-            // this._rootGroup = this._svg.append("g"); 
+            this._rootGroup = this._svg.append("g"); 
             
             temp_g = [];
             $('.'+ overlayClass +' svg').children().each (function (key,val){
@@ -114,7 +114,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         } else {
             this._svg = L.svg();
             map.addLayer(this._svg);
-            // this._rootGroup = d3.select(this._svg._rootGroup).classed("d3-overlay", true);
+            this._rootGroup = d3.select(this._svg._rootGroup).classed("d3-overlay", true);
             overlayClass=this.map.getPanes().overlayPane.className.replace(/ /g, '.');
             temp_g = [];
             $('.'+ overlayClass +' svg').children().each (function (key,val){
@@ -124,14 +124,14 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         }
         
         //  console.log("this.map.getPanes().overlayPane ",this.map.getPanes().overlayPane.children[0],this.map.getPanes().overlayPane.children[1]);
-        // this._rootGroup.classed("leaflet-zoom-hide", this.options.zoomHide);
+        this._rootGroup.classed("leaflet-zoom-hide", this.options.zoomHide);
         if(this.options.zoomHide) {
             $.each(this._svgGroups, function (key, val){
                 val.classed("leaflet-zoom-hide", true);
             });
         }
         // console.log("this._rootGroup",this._rootGroup);
-        // this.selection = this._rootGroup;
+        this.selection = this._rootGroup;
 
         // Init shift/scale invariance helper values
         this._pixelOrigin = map.getPixelOrigin();
@@ -168,7 +168,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         this.projection.latLngToLayerFloatPoint = this.projection.latLngToLayerPoint;
         this.projection.getZoom = this.map.getZoom.bind(this.map);
         this.projection.getBounds = this.map.getBounds.bind(this.map);
-        // this.selection = this._rootGroup;
+        this.selection = this._rootGroup;
 
         if (L.version < "1.0") map.on("viewreset", this._zoomChange, this);
 
@@ -182,7 +182,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
     onRemove: function (map) {
         if (L.version < "1.0") {
             map.off("viewreset", this._zoomChange, this);
-            // this._rootGroup.remove();
+            this._rootGroup.remove();
         } else {
             this._svg.remove();
         }
