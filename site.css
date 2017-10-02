@@ -147,6 +147,9 @@
 }
 .select_map_region {
    &:hover{ fill: #a94442!important;  }
+   &:active, &:focus {
+        fill: #a94442!important;
+   }
 }
 .map_region_selected {
     fill: #a94442!important;
