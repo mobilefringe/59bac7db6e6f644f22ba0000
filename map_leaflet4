@@ -29,9 +29,9 @@
         zoom: 3,
         maxZoom:6,
         minZoom:1,
-        zoomDelta: 0.25,
-        zoomSnap: 0,
-        touchZoom:true//,
+        zoomDelta: 0.25//,
+        // zoomSnap: 0,
+        // touchZoom:true//,
         // _animatingZoom:true
     });
     // var countries = [];
