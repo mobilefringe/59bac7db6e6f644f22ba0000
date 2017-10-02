@@ -30,9 +30,9 @@
         maxZoom:6,
         minZoom:1,
         zoomDelta: 0.25,
-        zoomAnimation: true
+        zoomAnimation: true,
         // zoomSnap: 0,
-        // touchZoom:true//,
+        touchZoom:true//,
         // _animatingZoom:true
     });
     // var countries = [];
