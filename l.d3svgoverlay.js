@@ -211,8 +211,8 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
     },
     _animateZoom: function (e) {
         console.log(e);
-         var bounds = this.map.getBounds();
-         this._lastTopLeftlatLng  = new L.LatLng(bounds.getNorth(), bounds.getWest());
+        //  var bounds = this.map.getBounds();
+        //  this._lastTopLeftlatLng  = new L.LatLng(bounds.getNorth(), bounds.getWest());
         // console.log("map is", this.map);
         // console.log("zoom is", evt.target._zoom);
         // this._disableLeafletRounding();
