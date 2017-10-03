@@ -144,7 +144,7 @@
           
             // }
             console.log("popup close event", e);
-             console.log(popup.getElement());
+             console.log(popup.getContent());
         });
     });
     
