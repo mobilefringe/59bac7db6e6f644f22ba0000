@@ -162,7 +162,7 @@
                 .openOn(map);
                 // e.originalEvent.toElement.bindTooltip("my tooltip text").openTooltip();
                 // var someTTip = .bindTooltip("my tooltip text").openTooltip();
-                console.log(popup.attr("id",my_store.svgmap_region));
+                console.log(popup);
             }
         }
     }
