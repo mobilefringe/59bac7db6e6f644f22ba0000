@@ -208,7 +208,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         return val*this._scale;
     },
     _animateZoom: function (evt) {
-		var map = this._map;
+// 		var map = this._map;
 // 		    image = this._image,
 // 		    scale = map.getZoomScale(e.zoom),
 // 		    nw = this._bounds.getNorthWest(),
