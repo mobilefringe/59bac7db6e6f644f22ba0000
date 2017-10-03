@@ -142,7 +142,7 @@
             // },300);
             if(popup.isOpen()){
           
-       }
+            }
              console.log(popup.getElement());
         });
     });
