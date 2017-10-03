@@ -138,7 +138,7 @@
                 var popup = L.popup().setLatLng(e.latlng)
                 .setContent(my_store.name)
                 .openOn(map);
-                e..bindTooltip("my tooltip text").openTooltip();
+                e.bindTooltip("my tooltip text").openTooltip();
                 // var someTTip = .bindTooltip("my tooltip text").openTooltip();
             }
         }
