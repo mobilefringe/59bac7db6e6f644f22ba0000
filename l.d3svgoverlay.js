@@ -91,6 +91,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         });
         if (this.options.zoomDraw) { this.draw() }
         // this._enableLeafletRounding();
+        console.log(("transform", shift.concat(scale).join("")));
     },
 
     onAdd: function (map) {
