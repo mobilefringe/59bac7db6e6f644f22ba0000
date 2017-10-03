@@ -127,7 +127,7 @@
        
     });
    function onMapClick(e) {
-        console.log(e.originalEvent.toElement);
+        console.log(e.originalEvent);
         if(e.originalEvent.toElement.nodeName == "rect"  || e.originalEvent.toElement.nodeName == "polygon"){
             my_store = stores.filter(function( index ) {
                 return index.svgmap_region ==  e.originalEvent.toElement.id ;
