@@ -24,7 +24,6 @@
 <script src="../l.d3svgoverlay.js"></script>
 <script>
     var stores;
-    var svg_region;
     $(document).ready(function(e){
         
     })
@@ -50,18 +49,16 @@
     var d3layer_this;
     var  svgUrl = "//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416"
     var countriesOverlay = L.d3SvgOverlay(function(sel, proj) {
-        console.log(svg_region);
-        map.getPanes().overlayPane.appendChild(svg_region);
     });
    
     map.on('click', onMapClick);
     
     d3.xml(svgUrl).mimeType("image/svg+xml").get(function(error, svgImg) {
         if (error) throw error;
-        console.log(map.getPanes().overlayPane.children.length, countriesOverlay);
+        console.log(map.getPanes().overlayPane.children.length);
         map.getPanes().overlayPane.appendChild(svgImg.documentElement);
-        svg_region = svgImg.documentElement;
-        console.log(map.getPanes().overlayPane.children.length, countriesOverlay);
+        
+        console.log(map.getPanes().overlayPane.children.length);
         d3layer_this =  countriesOverlay.addTo(map);
         console.log(map.getPanes().overlayPane.children.length);
         console.log(d3layer_this);
