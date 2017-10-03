@@ -84,6 +84,7 @@
     };
    
     L.control.layers({"Floor1": countriesOverlay},{"Floor2": countriesOverlay}).addTo(map);
+    
     $(window).load(function(e){
         init(e);
         loadMallDataCached(renderPage);
