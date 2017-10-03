@@ -233,6 +233,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
                 $("#"+val.id).attr("transform", shift.concat(scale).join(""));
             }
         });
+        console.log(("transform", shift.concat(scale).join("")))l
 	}
 
 });
