@@ -56,9 +56,9 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
     },
 
     draw: function () {
-        this._disableLeafletRounding();
+        // this._disableLeafletRounding();
         this._drawCallback(this.selection, this.projection, this.map.getZoom());
-        this._enableLeafletRounding();
+        // this._enableLeafletRounding();
     },
 
     initialize: function (drawCallback, options) { // (Function(selection, projection)), (Object)options
@@ -70,7 +70,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
     _zoomChange: function (evt) {
         // console.log("map is", this.map);
         // console.log("zoom is", evt.target._zoom);
-        this._disableLeafletRounding();
+        // this._disableLeafletRounding();
         var newZoom = this._undef(evt.target._zoom) ? this.map._zoom : evt.target._zoom; // "viewreset" event in Leaflet has not zoom/center parameters like zoomanim
         this._zoomDiff = newZoom - this._zoom;
         this._scale = Math.pow(2, this._zoomDiff);
@@ -88,7 +88,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
             }
         });
         if (this.options.zoomDraw) { this.draw() }
-        this._enableLeafletRounding();
+        // this._enableLeafletRounding();
     },
 
     onAdd: function (map) {
