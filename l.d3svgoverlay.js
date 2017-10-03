@@ -207,33 +207,11 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         console.log(this._scale);
         return val*this._scale;
     },
-    _animateZoom: function (evt) {
-// 		var map = this._map;
-// 		    image = this._image,
-// 		    scale = map.getZoomScale(e.zoom),
-// 		    nw = this._bounds.getNorthWest(),
-// 		    se = this._bounds.getSouthEast(),
+    _animateZoom: function (e) {
+        var scale = this._map.getZoomScale(e.zoom, this._lastZoom),
+		    offset = this._map._latLngToNewLayerPoint(this._lastTopLeftlatLng, e.zoom, e.center);
 
-// 		    topLeft = map._latLngToNewLayerPoint(nw, e.zoom, e.center),
-// 		    size = map._latLngToNewLayerPoint(se, e.zoom, e.center)._subtract(topLeft),
-// 		    origin = topLeft._add(size._multiplyBy((1 / 2) * (1 - 1 / scale)));
-
-// 		image.style[L.DomUtil.TRANSFORM] =
-// 		        L.DomUtil.getTranslateString(origin) + ' scale(' + scale + ') ';
-
-        
-        
-        // var newZoom = this._undef(evt._zoom) ? this.map._zoom : evt._zoom; // "viewreset" event in Leaflet has not zoom/center parameters like zoomanim
-        // this._zoomDiff = newZoom - this._zoom;
-        // this._scale = this.map.getZoomScale(evt.zoom);// Math.pow(2, this._zoomDiff);
-        // this.projection.scale = this._scale;
-        // this._shift = this.map.latLngToLayerPoint(this._wgsOrigin)
-        //     ._subtract(this._wgsInitialShift.multiplyBy(this._scale*0.1));
-        // var shift = ["translate(", this.map.latLngToLayerPoint(this._wgsOrigin).x, ",",this.map.latLngToLayerPoint(this._wgsOrigin).y, ") "];
-        // var scale = ["scale(", this._scale, ",", this._scale,") "];
-        // console.log("this._scale", this._scale);
-        
-        overlayClass=this.map.getPanes().markerPane.className.replace(/ /g, '.');
+        L.DomUtil.setTransform(this._svg, offset, scale);
         $.each(this._rootGroup, function (key, val){
             // console.log(val.id);
             if(val.id){
