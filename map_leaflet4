@@ -24,6 +24,7 @@
 <script src="../l.d3svgoverlay.js"></script>
 <script>
     var stores;
+    var popup;
     $(document).ready(function(e){
         
     })
