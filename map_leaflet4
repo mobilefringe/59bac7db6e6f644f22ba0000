@@ -135,7 +135,7 @@
         });
         
         // console.log($("#"+stores[0].svgmap_region).click());
-        console.log(countriesOverlay)
+        // console.log(countriesOverlay)
         }, 500);
         
        
