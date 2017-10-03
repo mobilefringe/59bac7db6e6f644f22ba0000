@@ -143,6 +143,7 @@
             // if(popup.isOpen()){
           
             // }
+            console.log("popup close event", e)
              console.log(popup.getElement());
         });
     });
