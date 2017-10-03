@@ -32,7 +32,7 @@
     
     var map = L.map("map-canvas", 
         {crs: L.CRS.Simple,
-        center: [0, 0],
+        center: [450, 250],
         zoom: 3,
         maxZoom:6,
         minZoom:1,
