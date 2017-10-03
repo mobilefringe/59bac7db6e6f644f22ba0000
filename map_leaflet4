@@ -23,7 +23,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.min.js"></script>
 <script src="../l.d3svgoverlay.js"></script>
 <script>
-var stores;
+    var stores;
      $(document).ready(function(e){
         init(e);
         loadMallDataCached(renderPage);
