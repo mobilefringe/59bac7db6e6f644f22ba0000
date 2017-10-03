@@ -78,7 +78,7 @@
     };
    
     
-    $(window).load(function(){
+    $(window).load(function(e){
         init(e);
         loadMallDataCached(renderPage);
         function renderPage(){
