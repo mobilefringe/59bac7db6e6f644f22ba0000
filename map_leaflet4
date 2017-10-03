@@ -30,7 +30,7 @@
         // var stores = getStoresList();
         // var store_svgregion = stores[0].svgmap_region;
         // console.log($("#"+store_svgregion));
-        
+        var stores = getStoresList();
         
         $('.custom_backdrop').remove();
         $('.yield').fadeIn();
