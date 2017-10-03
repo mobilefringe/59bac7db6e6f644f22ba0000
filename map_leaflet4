@@ -129,6 +129,7 @@
         // console.log($("#"+store_svgregion));
         $.each(stores,function(key,val){
             $("#"+val.svgmap_region).attr("class","select_map_region");
+            
         });
         
         
