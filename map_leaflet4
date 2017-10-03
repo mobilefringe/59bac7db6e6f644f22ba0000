@@ -133,9 +133,7 @@
         
         }, 500);
         
-       if(popup.isOpen()){
-          
-       }
+       
        map.on('popupclose', function(e) {
             // setTimeout(function(){
             //     if(LS.Send.IsDragging == false){
