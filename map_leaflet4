@@ -139,8 +139,7 @@
        
        map.on('popupclose', function(e) {
            if(current_popup_store!=undefined){
-               
-            $("#"+current_popup_store.svgmap_region).attr("class", "");
+                $("#"+current_popup_store.svgmap_region).attr("class", "");
            }
         });
     });
