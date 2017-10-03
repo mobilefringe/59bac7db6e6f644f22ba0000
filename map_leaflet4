@@ -140,9 +140,9 @@
             //         map.removeLayer(LS.Send.Marker);
             //     }
             // },300);
-            if(popup.isOpen()){
+            // if(popup.isOpen()){
           
-            }
+            // }
              console.log(popup.getElement());
         });
     });
