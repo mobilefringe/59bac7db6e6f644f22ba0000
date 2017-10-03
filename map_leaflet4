@@ -132,7 +132,7 @@
             
         });
         
-        console.log($("#"+stores[0].svgmap_region))
+        console.log($("#"+stores[0].svgmap_region));
         
         }, 500);
         
