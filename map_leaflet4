@@ -58,7 +58,7 @@
         console.log(map.getPanes().overlayPane.children.length, countriesOverlay);
         map.getPanes().overlayPane.appendChild(svgImg.documentElement);
         
-        console.log(map.getPanes().overlayPane.children.length);
+        console.log(map.getPanes().overlayPane.children.length, countriesOverlay);
         d3layer_this =  countriesOverlay.addTo(map);
         console.log(map.getPanes().overlayPane.children.length);
         console.log(d3layer_this);
