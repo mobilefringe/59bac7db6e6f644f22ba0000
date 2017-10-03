@@ -118,7 +118,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
             
             // console.log("this._svgGroups",this._svgGroups);
         } else {
-          this._svg = $('.'+ overlayClass +' svg');
+            this._svg = $('.'+ overlayClass +' svg');
             // this._svg = L.svg();
             map.addLayer(this._svg);
             // this._rootGroup = d3.select(this._svg._rootGroup).classed("d3-overlay", true);
