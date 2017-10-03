@@ -29,7 +29,9 @@
     $(document).ready(function(e){
        
     })
-    
+     var click_function = function(e){
+            console.log(e);
+        })
     var map = L.map("map-canvas", 
         {crs: L.CRS.Simple,
         center: [0, 0],
