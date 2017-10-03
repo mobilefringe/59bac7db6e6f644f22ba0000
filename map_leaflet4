@@ -77,15 +77,7 @@
         return yx(y, x);  // When doing xy(x, y);
     };
    
-    function renderPage(){
-        // var stores = getStoresList();
-        // var store_svgregion = stores[0].svgmap_region;
-        // console.log($("#"+store_svgregion));
-        
-        
-        $('.custom_backdrop').remove();
-        $('.yield').fadeIn();
-    }
+    
     $(window).load(function(){
         setTimeout(function(){
             console.log("delay is done!");
