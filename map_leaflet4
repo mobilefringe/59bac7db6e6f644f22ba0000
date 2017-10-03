@@ -135,7 +135,7 @@
             // $("#"+).attr("class","map_region_selected");
             // console.log(my_store);
             if(my_store != undefined) {
-                var popup = L.popup({autoPan:false}).setLatLng(e.latlng)
+                var popup = L.popup({autoPan:false,autoClose:false}).setLatLng(e.latlng)
                 .setContent(my_store.name)
                 .openOn(map);
                 // e.originalEvent.toElement.bindTooltip("my tooltip text").openTooltip();
