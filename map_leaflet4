@@ -27,7 +27,9 @@
     var popup;
     var current_popup_store;
     $(document).ready(function(e){
-        
+        $(polygon).click(function(){
+            
+        })
     })
     
     var map = L.map("map-canvas", 
