@@ -24,6 +24,7 @@
 <script src="../l.d3svgoverlay.js"></script>
 <script>
     var stores;
+    var svg_region;
     $(document).ready(function(e){
         
     })
