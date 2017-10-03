@@ -19,7 +19,9 @@
 	}
 	</style>
 	
-	
+	<link href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.css' rel='stylesheet' type='text/css'/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet-src.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.min.js"></script>
 	<h1>Zoom delta test.</h1>
 
 	<p>Zooming with touch zoom, box zoom or flyTo then <code>map.stop()</code> must make the zoom level snap to the value of the <code>zoomSnap</code> option. Zoom interactions (keyboard, mouse wheel, zoom control buttons must change the zoom by the amount in the <code>zoomDelta</code> option.</p>
