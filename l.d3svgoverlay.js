@@ -223,7 +223,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
 
         
         
-        var newZoom = this._undef(evt.target._zoom) ? this.map._zoom : evt.target._zoom; // "viewreset" event in Leaflet has not zoom/center parameters like zoomanim
+        var newZoom = this._undef(evt._zoom) ? this.map._zoom : evt._zoom; // "viewreset" event in Leaflet has not zoom/center parameters like zoomanim
         this._zoomDiff = newZoom - this._zoom;
         this._scale = map.getZoomScale(e.zoom);// Math.pow(2, this._zoomDiff);
         this.projection.scale = this._scale;
