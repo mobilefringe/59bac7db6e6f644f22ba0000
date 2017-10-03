@@ -134,14 +134,15 @@
         }, 500);
         
        if(popup.isOpen()){
-           console.log(popup.getElement());
+          
        }
        map.on('popupclose', function(e) {
-            setTimeout(function(){
-                if(LS.Send.IsDragging == false){
-                    map.removeLayer(LS.Send.Marker);
-                }
-            },300);
+            // setTimeout(function(){
+            //     if(LS.Send.IsDragging == false){
+            //         map.removeLayer(LS.Send.Marker);
+            //     }
+            // },300);
+             console.log(popup.getElement());
         });
     });
     
