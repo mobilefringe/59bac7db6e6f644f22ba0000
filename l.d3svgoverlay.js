@@ -69,7 +69,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
     // Handler for "viewreset"-like events, updates scale and shift after the animation
     _zoomChange: function (evt) {
         // console.log("map is", this.map);
-        console.log("zoom event", evt);
+        // console.log("zoom is", evt.target._zoom);
         // this._disableLeafletRounding();
         var newZoom = this._undef(evt.target._zoom) ? this.map._zoom : evt.target._zoom; // "viewreset" event in Leaflet has not zoom/center parameters like zoomanim
         this._zoomDiff = newZoom - this._zoom;
@@ -180,7 +180,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
 
         if (L.version < "1.0"){
             map.on("viewreset", this._zoomChange, this);
-            map.on('zoomanim', this._zoomChange, this);
+            map.on('zoomanim', this._animateZoom, this);
         }
 
         // Initial draw
