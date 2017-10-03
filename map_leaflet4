@@ -146,7 +146,7 @@
             // }
             // console.log("popup close event", e);
             console.log(popup.getContent());
-            $("#"+current_popup_store.svgmap_region).addClass("active_region");
+            $("#"+current_popup_store.svgmap_region).removeClass("active_region");
         });
     });
     
