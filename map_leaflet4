@@ -136,7 +136,15 @@
        if(popup.isOpen()){
            console.log(popup.getElement());
        }
+       map.on('popupclose', function(e) {
+            setTimeout(function(){
+                if(LS.Send.IsDragging == false){
+                    map.removeLayer(LS.Send.Marker);
+                }
+            },300);
+        });
     });
+    
    function onMapClick(e) {
         // console.log(e.originalEvent.toElement);
         if(e.originalEvent.toElement.nodeName == "rect"  || e.originalEvent.toElement.nodeName == "polygon"){
