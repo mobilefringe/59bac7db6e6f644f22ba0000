@@ -220,6 +220,12 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
 
 		image.style[L.DomUtil.TRANSFORM] =
 		        L.DomUtil.getTranslateString(origin) + ' scale(' + scale + ') ';
+		$.each(this._rootGroup, function (key, val){
+            // console.log(val.id);
+            if(val.id){
+                $("#"+val.id).attr("transform", shift.concat(scale).join(""));
+            }
+        });
 	}
 
 });
