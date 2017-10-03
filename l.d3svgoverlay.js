@@ -216,8 +216,8 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
 
         L.DomUtil.setTransform(this._svg, offset, scale);
         var shift = ["translate(", offset.x, ",", offset.y, ") "];
-        var scale = ["scale(", tscale, ",", scale,") "];
-        this._svg.attr("transform", shift.concat(scale).join(""));
+        var my_scale = ["scale(", tscale, ",", scale,") "];
+        this._svg.attr("transform", shift.concat(my_scale).join(""));
         // $.each(this._rootGroup, function (key, val){
         //     // console.log(val.id);
         //     if(val.id){
