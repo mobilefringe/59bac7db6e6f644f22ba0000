@@ -157,6 +157,7 @@
             })[0];
             // $("#"+).attr("class","map_region_selected");
             // console.log(my_store);
+            current_popup_store = my_storel
             if(my_store != undefined) {
                 popup = L.popup({autoPan:false}).setLatLng(e.latlng)
                 .setContent(my_store.name)
