@@ -23,6 +23,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.min.js"></script>
 <script src="../l.d3svgoverlay.js"></script>
 <script>
+     $(document).ready(function(e){
+        init(e);
+        loadMallDataCached(renderPage);
+    })
     var stores = getStoresList();
     var map = L.map("map-canvas", 
         {crs: L.CRS.Simple,
@@ -72,10 +76,7 @@
         }
         return yx(y, x);  // When doing xy(x, y);
     };
-    $(document).ready(function(e){
-        init(e);
-        loadMallDataCached(renderPage);
-    })
+   
     function renderPage(){
         // var stores = getStoresList();
         // var store_svgregion = stores[0].svgmap_region;
@@ -135,7 +136,7 @@
             // $("#"+).attr("class","map_region_selected");
             // console.log(my_store);
             if(my_store != undefined) {
-                var popup = L.popup({autoPan:false,}).setLatLng(e.latlng)
+                var popup = L.popup({autoPan:false}).setLatLng(e.latlng)
                 .setContent(my_store.name)
                 .openOn(map);
                 // e.originalEvent.toElement.bindTooltip("my tooltip text").openTooltip();
