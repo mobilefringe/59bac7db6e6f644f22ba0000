@@ -25,6 +25,7 @@
 <script>
     var stores;
     var popup;
+    var current_popup_store;
     $(document).ready(function(e){
         
     })
