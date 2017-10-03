@@ -56,8 +56,8 @@
     d3.xml(svgUrl).mimeType("image/svg+xml").get(function(error, svgImg) {
         if (error) throw error;
         console.log(map.getPanes().overlayPane.children.length);
-        // map.getPanes().overlayPane.appendChild(svgImg.documentElement);
-        countriesOverlay.appendChild(svgImg.documentElement);
+        map.getPanes().overlayPane.appendChild(svgImg.documentElement);
+        
         console.log(map.getPanes().overlayPane.children.length);
         d3layer_this =  countriesOverlay.addTo(map);
         console.log(map.getPanes().overlayPane.children.length);
