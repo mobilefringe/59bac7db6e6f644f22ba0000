@@ -28,7 +28,7 @@
     var current_popup_store;
     $(document).ready(function(e){
         $(polygon).click(function(e){
-            
+            console.log(e);
         })
     })
     
