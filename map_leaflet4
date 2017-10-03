@@ -50,6 +50,7 @@
     var d3layer_this;
     var  svgUrl = "//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416"
     var countriesOverlay = L.d3SvgOverlay(function(sel, proj) {
+        map.getPanes().overlayPane.appendChild(svg_region);
     });
    
     map.on('click', onMapClick);
