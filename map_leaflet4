@@ -42,18 +42,17 @@
         // _animatingZoom:true
     });
     // var countries = [];
-    var countriesOverlay = L.d3SvgOverlay(function(sel, proj) {
-    });
-    var d3layer_this;
+     var d3layer_this;
     var  svgUrl = "//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416"
-    
-    d3.xml(svgUrl).mimeType("image/svg+xml").get(function(error, svgImg) {
-        if (error) throw error;
-        map.getPanes().overlayPane.appendChild(svgImg.documentElement);
-        d3layer_this =  countriesOverlay.addTo(map);
-        console.log(d3layer_this);
+    var countriesOverlay = L.d3SvgOverlay(function(sel, proj) {
+        d3.xml(svgUrl).mimeType("image/svg+xml").get(function(error, svgImg) {
+            if (error) throw error;
+            map.getPanes().overlayPane.appendChild(svgImg.documentElement);
+            d3layer_this =  countriesOverlay.addTo(map);
+            console.log(d3layer_this);
+        });
     });
-    
+   
     map.on('click', onMapClick);
     var smallIcon = new L.Icon({
         iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-icon.png',
