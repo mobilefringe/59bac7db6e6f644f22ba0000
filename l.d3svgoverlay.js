@@ -208,7 +208,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         return val*this._scale;
     },
     _animateZoom: function (e) {
-        var scale = this.map.getZoomScale(e.zoom, this._lastZoom),
+        var scale = this.map.getZoomScale(e.zoom, this._zoom),
 		    offset = this.map._latLngToNewLayerPoint(this._lastTopLeftlatLng, e.zoom, e.center);
 
         L.DomUtil.setTransform(this._svg, offset, scale);
