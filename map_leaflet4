@@ -153,7 +153,7 @@
             current_popup_store = my_store;
             if(my_store != undefined) {
                 popup = L.popup({autoPan:false}).setLatLng(e.latlng)
-                .setContent("<a href="/stores/"+my_store.slug+my_store.name)
+                .setContent("<a href='/stores/'"+my_store.slug+ " my_store.name)
                 .openOn(map);
                 // e.originalEvent.toElement.bindTooltip("my tooltip text").openTooltip();
                 // var someTTip = .bindTooltip("my tooltip text").openTooltip();
