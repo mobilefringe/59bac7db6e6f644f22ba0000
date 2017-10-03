@@ -50,11 +50,11 @@
     map.on('click', onMapClick);
     
     d3.xml(svgUrl).mimeType("image/svg+xml").get(function(error, svgImg) {
-            if (error) throw error;
-            map.getPanes().overlayPane.appendChild(svgImg.documentElement);
-            d3layer_this =  countriesOverlay.addTo(map);
-            console.log(d3layer_this);
-        });
+        if (error) throw error;
+        map.getPanes().overlayPane.appendChild(svgImg.documentElement);
+        d3layer_this =  countriesOverlay.addTo(map);
+        console.log(d3layer_this);
+    });
     
     var smallIcon = new L.Icon({
         iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-icon.png',
