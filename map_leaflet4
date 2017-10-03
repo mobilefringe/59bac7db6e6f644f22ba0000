@@ -133,7 +133,7 @@
         
         }, 500);
         
-       
+       if(popup.isOpen())
     });
    function onMapClick(e) {
         // console.log(e.originalEvent.toElement);
