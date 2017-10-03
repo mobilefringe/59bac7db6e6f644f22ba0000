@@ -134,7 +134,7 @@
         }, 500);
         
        if(popup.isOpen()){
-           console.log();
+           console.log(popup.getElement());
        }
     });
    function onMapClick(e) {
