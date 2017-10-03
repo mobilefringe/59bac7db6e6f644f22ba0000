@@ -34,7 +34,11 @@
         zoomAnimation: true,
         // zoomSnap: 0,
         touchZoom:true,
-        bounceAtZoomLimits: true
+        bounceAtZoomLimits: true,
+        zoomSnap: 0.25,
+		zoomDelta: 0.5,
+		wheelPxPerZoomLevel: 50
+
         // _animatingZoom:true
     });
     // var countries = [];
