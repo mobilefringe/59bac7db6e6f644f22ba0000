@@ -145,8 +145,8 @@
           
             // }
             // console.log("popup close event", e);
-             console.log(popup.getContent());
-              $("#"+region_id).addClass("active_region");
+            console.log(popup.getContent());
+            $("#"+region_id).addClass("active_region");
         });
     });
     
