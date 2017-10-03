@@ -24,18 +24,8 @@
 <script src="../l.d3svgoverlay.js"></script>
 <script>
     var stores;
-     $(document).ready(function(e){
-        init(e);
-        loadMallDataCached(renderPage);
-        function renderPage(){
-        // var stores = getStoresList();
-        // var store_svgregion = stores[0].svgmap_region;
-        // console.log($("#"+store_svgregion));
-        var stores = getStoresList();
+    $(document).ready(function(e){
         
-        $('.custom_backdrop').remove();
-        $('.yield').fadeIn();
-    }
     })
     
     var map = L.map("map-canvas", 
