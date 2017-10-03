@@ -57,7 +57,9 @@
         if (error) throw error;
         console.log(map.getPanes().overlayPane.children.length);
         map.getPanes().overlayPane.appendChild(svgImg.documentElement);
+        console.log(map.getPanes().overlayPane.children.length);
         d3layer_this =  countriesOverlay.addTo(map);
+        console.log(map.getPanes().overlayPane.children.length);
         console.log(d3layer_this);
     });
     
