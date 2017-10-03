@@ -225,7 +225,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         // console.log(newZoom,this._zoomDiff, this._scale,this._wgsOrigin, e.center );
         this._shift = this.map.latLngToLayerPoint(this._wgsOrigin)
             ._subtract(this._wgsInitialShift.multiplyBy(this._scale*0.1));
-            console.log("shifting",this._shift,this._wgsInitialShift.multiplyBy(this._scale*0.1));
+            console.log("shifting",this._shift,this._wgsInitialShift.multiplyBy(this._scale));
         var shift = ["translate(", this._shift.x, ",", this._shift.y, ") "];
         var scale = ["scale(", this._scale, ",", this._scale,") "];
         // console.log("this._scale", this._scale);
