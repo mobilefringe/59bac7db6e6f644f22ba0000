@@ -214,7 +214,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         var scale = this.map.getZoomScale(e.zoom, this._zoom),
 		    offset = this.map._latLngToNewLayerPoint(this._lastTopLeftlatLng, e.zoom, e.center);
 
-        L.DomUtil.setTransform(this._svg, offset, scale);
+        // L.DomUtil.setTransform(this._svg, offset, scale);
         var shift = ["translate(", offset.x, ",", offset.y, ") "];
         var my_scale = ["scale(", tscale, ",", scale,") "];
         this._svg.attr("transform", shift.concat(my_scale).join(""));
