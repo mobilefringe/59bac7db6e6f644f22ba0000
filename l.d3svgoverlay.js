@@ -24,11 +24,11 @@ if (typeof L == "undefined") {
 }
 
 // Tiny stylesheet bundled here instead of a separate file
-if (L.version >= "1.0") {
-    d3.select("head")
-        .append("style").attr("type", "text/css")
-        .text("g.d3-overlay *{pointer-events:visiblePainted;}");
-}
+// if (L.version >= "1.0") {
+//     d3.select("head")
+//         .append("style").attr("type", "text/css")
+//         .text("g.d3-overlay *{pointer-events:visiblePainted;}");
+// }
 
 // Class definition
 L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
