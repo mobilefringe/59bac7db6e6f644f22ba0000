@@ -29,9 +29,9 @@
     $(document).ready(function(e){
        
     })
-    var click_function = function(e){
-            console.log(e);
-    }
+    // var click_function = function(e){
+    //         console.log(e);
+    // }
     var map = L.map("map-canvas", 
         {crs: L.CRS.Simple,
         center: [0, 0],
@@ -131,10 +131,10 @@
         // console.log($("#"+store_svgregion));
         $.each(stores,function(key,val){
             $("#"+val.svgmap_region).attr("class","select_map_region");
-            $("#"+val.svgmap_region).bind("click",click_function);
+            // $("#"+val.svgmap_region).bind("click",click_function);
         });
         
-        console.log($("#"+stores[0].svgmap_region).click());
+        // console.log($("#"+stores[0].svgmap_region).click());
         
         }, 500);
         
