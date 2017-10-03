@@ -164,7 +164,7 @@
                 .openOn(map);
                 // e.originalEvent.toElement.bindTooltip("my tooltip text").openTooltip();
                 // var someTTip = .bindTooltip("my tooltip text").openTooltip();
-                console.log(popup);
+                // console.log(popup);
             }
         }
     }
