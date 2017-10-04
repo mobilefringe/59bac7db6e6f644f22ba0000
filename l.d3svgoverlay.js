@@ -263,6 +263,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
             }
         });
         if (this.options.zoomDraw) { this.draw() }
+        console.log("zoomanim",("transform", shift.concat(scale).join("")));
 	}
 
 });
