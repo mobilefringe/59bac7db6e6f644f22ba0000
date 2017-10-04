@@ -289,7 +289,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
 	},
 	anim_latLngToLayerPoint: function (latLng, zoom) {
         // zoom = _layer._undef(zoom) ? _layer._zoom : zoom;
-        var projectedPoint = this.map.this.options.crs.latLngToPoint(L.latLng(latlng), zoom)._round();
+        var projectedPoint = this.options.crs.latLngToPoint(L.latLng(latlng), zoom)._round();
         return projectedPoint._subtract(_layer._pixelOrigin);
     }
 
