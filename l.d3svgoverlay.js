@@ -212,7 +212,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         console.log(this._scale);
         return val*this._scale;
     },
-    _animateZoom: function (e) {
+    _animateZoom: function (evt) {
         // console.log(e);
         // //  var bounds = this.map.getBounds();
         // //  this._lastTopLeftlatLng  = new L.LatLng(bounds.getNorth(), bounds.getWest());
