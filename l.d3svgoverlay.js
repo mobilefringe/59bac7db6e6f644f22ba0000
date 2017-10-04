@@ -262,9 +262,19 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
             ._subtract(this._wgsInitialShift.multiplyBy(this._scale*0.1));
         var shift = ["translate(", this._shift.x, ",", this._shift.y, ") "];
         var scale = ["scale(", this._scale, ",", this._scale,") "];
-           console.log(this._shift);
+        //   console.log(this._shift);
         // console.log("this._scale", this._scale);
         // this._rootGroup.attr("transform", shift.concat(scale).join(""));
+        console.log("newZoom",newZoom ,"\n",
+        "this._zoomDiff",this._zoomDiff ,"\n",
+        "this._scale",this._scale ,"\n",
+        "this._wgsOrigin",this._wgsOrigin ,"\n",
+        "this.map.latLngToLayerPoint(this._wgsOrigin)",this.map.latLngToLayerPoint(this._wgsOrigin) ,"\n",
+        "this._wgsInitialShift",this._wgsInitialShift ,"\n",
+        "this._wgsInitialShift.multiplyBy(this._scale*0.1)",this._wgsInitialShift.multiplyBy(this._scale*0.1) ,"\n",
+        "shift",shift ,"\n",
+        "scale",scale,"\n"
+        );
         $.each(this._rootGroup, function (key, val){
             // console.log(val.id);
             if(val.id){
