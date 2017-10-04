@@ -84,6 +84,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         console.log("newZoom",newZoom ,"\n",
         "this._zoomDiff",this._zoomDiff ,"\n",
         "this._scale",this._scale ,"\n",
+        "this._wgsOrigin",this._wgsOrigin ,"\n",
         "this.map.latLngToLayerPoint(this._wgsOrigin)",this.map.latLngToLayerPoint(this._wgsOrigin) ,"\n",
         "this._scale",this._scale ,"\n",
         "this._scale",this._scale ,"\n",
