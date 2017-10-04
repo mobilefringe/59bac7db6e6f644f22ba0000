@@ -82,7 +82,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
             ._subtract(this._wgsInitialShift.multiplyBy(this._scale*0.1));
         var shift = ["translate(", this._shift.x, ",", this._shift.y, ") "];
         var scale = ["scale(", this._scale, ",", this._scale,") "];
-        console.log("newZoom",newZoom ,"\n",
+        console.log(" newZoom",newZoom ,"\n",
         "this._zoomDiff",this._zoomDiff ,"\n",
         "this._scale",this._scale ,"\n",
         "this._wgsOrigin",this._wgsOrigin ,"\n",
