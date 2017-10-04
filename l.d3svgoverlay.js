@@ -83,7 +83,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         var scale = ["scale(", this._scale, ",", this._scale,") "];
         console.log("newZoom",newZoom ,"\n",
         "this._zoomDiff",this._zoomDiff ,"\n",
-        "this._shift",this._shift ,"\n",
+        "this._scale",this._scale ,"\n",
         "this._shift",this._shift ,"\n",
             "this._shift",this._shift ,"\n"
         );
