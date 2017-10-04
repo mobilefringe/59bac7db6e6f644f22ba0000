@@ -249,6 +249,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         // console.log("zoomanim",("transform", shift.concat(scale).join("")));
         // this.anim__zoom = e.zoom;
         
+        console.log("zoomanim");
         var bounds = this.map.getBounds();
         this._lastTopLeftlatLng  = new L.LatLng(bounds.getNorth(), bounds.getWest());
         // console.log("map is", this.map);
