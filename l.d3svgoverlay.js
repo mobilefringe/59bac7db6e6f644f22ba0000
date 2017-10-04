@@ -240,15 +240,12 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         // console.log("zoomanim",("transform", shift.concat(scale).join("")));
         // this.anim__zoom = e.zoom;
         
-        
-        
-        
         var bounds = this.map.getBounds();
-         this._lastTopLeftlatLng  = new L.LatLng(bounds.getNorth(), bounds.getWest());
+        this._lastTopLeftlatLng  = new L.LatLng(bounds.getNorth(), bounds.getWest());
         // console.log("map is", this.map);
         // console.log("zoom is", evt.target._zoom);
         // this._disableLeafletRounding();
-        var newZoom = this._undef(evt.zoom) ? this.map._zoom : evt.zoom; // "viewreset" event in Leaflet has not zoom/center parameters like zoomanim
+        var newZoom = evt.zoom; // "viewreset" event in Leaflet has not zoom/center parameters like zoomanim
         this._zoomDiff = newZoom - this._zoom;
         this._scale = Math.pow(2, this._zoomDiff);
         this.projection.scale = this._scale;
