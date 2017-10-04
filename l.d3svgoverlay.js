@@ -267,7 +267,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         //   console.log(this._shift);
         // console.log("this._scale", this._scale);
         // this._rootGroup.attr("transform", shift.concat(scale).join(""));
-        console.log("newZoom",newZoom ,"\n",
+        console.log(" newZoom",newZoom ,"\n",
         "this._zoomDiff",this._zoomDiff ,"\n",
         "this._scale",this._scale ,"\n",
         "this._wgsOrigin",this._wgsOrigin ,"\n",
