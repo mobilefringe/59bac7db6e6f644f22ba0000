@@ -211,36 +211,35 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
     scaleMarker_coords: function (val) {
         console.log(this._scale);
         return val*this._scale;
-    }
-//     ,
-//     _animateZoom: function (e) {
-//         console.log(e);
-//         //  var bounds = this.map.getBounds();
-//         //  this._lastTopLeftlatLng  = new L.LatLng(bounds.getNorth(), bounds.getWest());
-//         // console.log("map is", this.map);
-//         // console.log("zoom is", evt.target._zoom);
-//         // this._disableLeafletRounding();
-//         var newZoom = e.zoom; // "viewreset" event in Leaflet has not zoom/center parameters like zoomanim
-//         this._zoomDiff = newZoom - this.anim__zoom;
-//         this._scale = Math.pow(2, this._zoomDiff);
-//         // this.projection.scale = this._scale;
-//         // console.log(newZoom,this._zoomDiff, this._scale,this._wgsOrigin, e.center );
-//         this._shift = this.map.latLngToLayerPoint(e.center)
-//             ._subtract(this._wgsInitialShift.multiplyBy(this._scale*0.1));
-//             console.log("shifting",this._shift,this._wgsInitialShift.multiplyBy(this._scale));
-//         var shift = ["translate(", this._shift.x, ",", this._shift.y, ") "];
-//         var scale = ["scale(", this._scale, ",", this._scale,") "];
-//         // console.log("this._scale", this._scale);
-//         // this._rootGroup.attr("transform", shift.concat(scale).join(""));
-//         $.each(this._rootGroup, function (key, val){
-//             // console.log(val.id);
-//             if(val.id){
-//                 $("#"+val.id).attr("transform", shift.concat(scale).join(""));
-//             }
-//         });
-//         console.log("zoomanim",("transform", shift.concat(scale).join("")));
-//         this.anim__zoom = e.zoom;
-// 	}
+    },
+    _animateZoom: function (e) {
+        console.log(e);
+        //  var bounds = this.map.getBounds();
+        //  this._lastTopLeftlatLng  = new L.LatLng(bounds.getNorth(), bounds.getWest());
+        // console.log("map is", this.map);
+        // console.log("zoom is", evt.target._zoom);
+        // this._disableLeafletRounding();
+        var newZoom = e.zoom; // "viewreset" event in Leaflet has not zoom/center parameters like zoomanim
+        this._zoomDiff = newZoom - this.anim__zoom;
+        this._scale = Math.pow(2, this._zoomDiff);
+        // this.projection.scale = this._scale;
+        // console.log(newZoom,this._zoomDiff, this._scale,this._wgsOrigin, e.center );
+        this._shift = this.map.latLngToLayerPoint(e.center)
+            ._subtract(this._wgsInitialShift.multiplyBy(this._scale*0.1));
+            console.log("shifting",this._shift,this._wgsInitialShift.multiplyBy(this._scale));
+        var shift = ["translate(", this._shift.x, ",", this._shift.y, ") "];
+        var scale = ["scale(", this._scale, ",", this._scale,") "];
+        // console.log("this._scale", this._scale);
+        // this._rootGroup.attr("transform", shift.concat(scale).join(""));
+        $.each(this._rootGroup, function (key, val){
+            // console.log(val.id);
+            if(val.id){
+                $("#"+val.id).attr("transform", shift.concat(scale).join(""));
+            }
+        });
+        console.log("zoomanim",("transform", shift.concat(scale).join("")));
+        this.anim__zoom = e.zoom;
+	}
 
 });
 
