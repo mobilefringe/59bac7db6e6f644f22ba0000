@@ -88,7 +88,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         "this.map.latLngToLayerPoint(this._wgsOrigin)",this.map.latLngToLayerPoint(this._wgsOrigin) ,"\n",
         "this._wgsInitialShift",this._wgsInitialShift ,"\n",
         "this._wgsInitialShift.multiplyBy(this._scale*0.1)",this._wgsInitialShift.multiplyBy(this._scale*0.1) ,"\n",
-        "shift",this._shift ,"\n",
+        "shift",shift ,"\n",
         "this._shift",this._shift ,"\n"
         );
         // console.log("this._scale", this._scale);
