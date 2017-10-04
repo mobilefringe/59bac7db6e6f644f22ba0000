@@ -88,7 +88,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         "this._scale",this._scale ,"\n",
         "this._scale",this._scale ,"\n",
         "this._shift",this._shift ,"\n",
-            "this._shift",this._shift ,"\n"
+        "this._shift",this._shift ,"\n"
         );
         // console.log("this._scale", this._scale);
         // this._rootGroup.attr("transform", shift.concat(scale).join(""));
