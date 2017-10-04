@@ -273,7 +273,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         "this._wgsOrigin",this._wgsOrigin ,"\n",
         "this.map.latLngToLayerPoint", this.map.latLngToLayerPoint ,"\n",
         "this", this ,"\n",
-        "this.map.latLngToLayerPoint(this._wgsOrigin)",this.anim_latLngToLayerPoint(this._wgsOrigin,newZoom) ,"\n",
+        "this.map.latLngToLayerPoint(this._wgsOrigin)",this.anim_latLngToLayerPoint(this._wgsOrigin) ,"\n",
         "this._wgsInitialShift",this._wgsInitialShift ,"\n",
         "this._wgsInitialShift.multiplyBy(this._scale*0.1)",this._wgsInitialShift.multiplyBy(this._scale*0.1) ,"\n",
         "shift",shift ,"\n",
@@ -289,10 +289,8 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
 	},
 	anim_latLngToLayerPoint: function (latLng, zoom) {
         // zoom = _layer._undef(zoom) ? _layer._zoom : zoom;
-        // console.log(L);
-        console.log(zoom);
-        var projectedPoint = this.map.options.crs.latLngToPoint(L.latLng(latLng), zoom)._round();
-        return projectedPoint._subtract(this.map.getPixelOrigin());
+        var projectedPoint = _layer.map.project(L.latLng(latLng), zoom)._round();
+        return projectedPoint._subtract(_layer._pixelOrigin);
     }
 
 });
