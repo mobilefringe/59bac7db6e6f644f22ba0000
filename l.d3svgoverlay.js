@@ -194,8 +194,8 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
 
         if (L.version < "1.0"){
             map.on("viewreset", this._zoomChange, this);
-            // map.on('zoomanim', this._zoomChange, this);
-            map.on('zoomanim', this._animateZoom, this);
+            map.on('zoomanim', this._zoomChange, this);
+            // map.on('zoomanim', this._animateZoom, this);
         }
 
         // Initial draw
