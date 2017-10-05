@@ -1921,9 +1921,10 @@ L.Map = L.Class.extend({
 	// conversion methods
 
 	project: function (latlng, zoom) { // (LatLng[, Number]) -> Point
-	    console.log("leaflet project.zoom" ,zoom);
-	    console.log("leaflet this.zoom" ,this.zoom);
+	    
 		zoom = zoom === undefined ? this._zoom : zoom;
+		console.log("leaflet project.zoom" ,zoom);
+	    console.log("leaflet this.zoom" ,this.zoom);
 		return this.options.crs.latLngToPoint(L.latLng(latlng), zoom);
 	},
 
