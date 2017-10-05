@@ -1922,7 +1922,7 @@ L.Map = L.Class.extend({
 
 	project: function (latlng, zoom) { // (LatLng[, Number]) -> Point
 	    console.log("leaflet project.zoom" ,zoom);
-	    console.log("leaflet this.zoom" ,map.zoom);
+	    console.log("leaflet this.zoom" ,this.zoom);
 		zoom = zoom === undefined ? this._zoom : zoom;
 		return this.options.crs.latLngToPoint(L.latLng(latlng), zoom);
 	},
