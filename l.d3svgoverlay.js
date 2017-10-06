@@ -228,8 +228,8 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         
         var map = this.map,
 		    scale = map.getZoomScale(evt.zoom),
-		    nw = this._bounds.getNorthWest(),
-		    se = this._bounds.getSouthEast(),
+		    nw = this.map.getBounds();.getNorthWest(),
+		    se = this.map.getBounds();.getSouthEast(),
 
 		    topLeft = map._latLngToNewLayerPoint(nw, e.zoom, e.center),
 		    size = map._latLngToNewLayerPoint(se, e.zoom, e.center)._subtract(topLeft),
