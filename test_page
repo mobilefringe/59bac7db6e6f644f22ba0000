@@ -93,6 +93,8 @@
 			map1.stop();
 			map2.stop();
 		};
+		$('.custom_backdrop').remove();
+          $('.yield').fadeIn();
 	</script>
 
 <!--	<style>-->
