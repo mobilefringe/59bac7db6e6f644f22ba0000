@@ -1937,6 +1937,8 @@ L.Map = L.Class.extend({
 
 	latLngToLayerPoint: function (latlng) { // (LatLng)
 		var projectedPoint = this.project(L.latLng(latlng))._round();
+		console.log("leaflet projectedPoint" ,projectedPoint);
+	    console.log("leaflet this.zoom" ,this.zoom);
 		return projectedPoint._subtract(this.getPixelOrigin());
 	},
 
