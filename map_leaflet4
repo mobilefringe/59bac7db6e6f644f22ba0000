@@ -44,8 +44,9 @@
         // zoomSnap: 0,
         touchZoom:true,
         bounceAtZoomLimits: true,
-        zoomSnap: 0,
 		zoomDelta: 0.25,
+		
+        zoomSnap: 0,
 		wheelPxPerZoomLevel: 50
 
         // _animatingZoom:true
