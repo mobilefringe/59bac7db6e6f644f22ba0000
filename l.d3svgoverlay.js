@@ -225,6 +225,18 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
     _animateZoom: function (evt) {
       
         console.log("zoomanim");
+        
+        var map = this.map,
+		    scale = map.getZoomScale(evt.zoom),
+		    nw = this._bounds.getNorthWest(),
+		    se = this._bounds.getSouthEast(),
+
+		    topLeft = map._latLngToNewLayerPoint(nw, e.zoom, e.center),
+		    size = map._latLngToNewLayerPoint(se, e.zoom, e.center)._subtract(topLeft),
+		    origin = topLeft._add(size._multiplyBy((1 / 2) * (1 - 1 / scale)));
+
+		image.style[L.DomUtil.TRANSFORM] =
+		        L.DomUtil.getTranslateString(origin) + ' scale(' + scale + ') ';
         // var bounds = this.map.getBounds();
         // this._lastTopLeftlatLng  = new L.LatLng(bounds.getNorth(), bounds.getWest());
         // // console.log("map is", this.map);
