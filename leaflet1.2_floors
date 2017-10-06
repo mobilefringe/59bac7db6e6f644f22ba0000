@@ -158,7 +158,7 @@
             }
             
         var stores_arr = [xy(100,-100),xy(200,-200)];
-        console.log("floor2",floor1);
+        console.log("floor1",floor1);
         $.each(stores_arr, function (key,val){
             // L.marker(val,{icon:smallIcon, autoPan:false}).addTo(map).bindPopup(L.popup({autoPan:false}).setContent('Store2 '+val));
         });
