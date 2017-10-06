@@ -1,0 +1,159 @@
+<style type="text/css">
+    html { height: 100% }
+    body { height: 100%; margin: 0; padding: 0 }
+     #map-container {
+        width:900px;
+        height:500px;
+        margin: auto;
+    }
+    #map-canvas{
+        height:100%;
+        width:100%;
+    }
+    svg:not(:root) {
+        overflow: visible;
+    }
+</style>
+<div id="map-container">
+   <div id="map-canvas"></div> 
+</div>
+   
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+  integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+  crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+  integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+  crossorigin=""></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet-src.js"></script>-->
+<!--<script src="http://preview-leafletmap.codecloudapp.com/leaflet.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.min.js"></script>
+<script src="../l.d3svgoverlay.js"></script>
+<script>
+    var stores;
+    var popup;
+    var current_popup_store;
+    $(document).ready(function(e){
+       
+    })
+    // var click_function = function(e){
+    //         console.log(e);
+    // }
+    var map = L.map("map-canvas", 
+        {crs: L.CRS.Simple,
+        center: [-150, 250],
+        zoom: 3,
+        maxZoom:6,
+        minZoom:1,
+        zoomAnimation: true,
+        touchZoom:true,
+        // bounceAtZoomLimits: true,
+		zoomDelta: 0.2,
+        zoomSnap: 0,
+		wheelPxPerZoomLevel: 25
+
+        // _animatingZoom:true
+    });
+    // var countries = [];
+    var d3layer_this;
+    var  svgUrl = "//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416"
+    var countriesOverlay = L.d3SvgOverlay(function(sel, proj) {
+    });
+   
+    map.on('click', onMapClick);
+    
+    d3.xml(svgUrl).mimeType("image/svg+xml").get(function(error, svgImg) {
+        if (error) throw error;
+        console.log(map.getPanes().overlayPane.children.length);
+        map.getPanes().overlayPane.appendChild(svgImg.documentElement);
+        
+        console.log(map.getPanes().overlayPane.children.length);
+        d3layer_this =  countriesOverlay.addTo(map);
+        console.log(map.getPanes().overlayPane.children.length);
+        console.log(d3layer_this);
+    });
+    
+    var smallIcon = new L.Icon({
+        iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-icon.png',
+        iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-icon-2x.png',
+        iconSize:    [25, 41],
+        iconAnchor:  [12, 41],
+        popupAnchor: [1, -34],
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        shadowSize:  [0,0]
+    });
+    var yx = L.latLng;
+    var xy = function(x, y) {
+        if (L.Util.isArray(x)) {    // When doing xy([x, y]);
+            return yx(x[1], x[0]);
+        }
+        return yx(y, x);  // When doing xy(x, y);
+    };
+   
+    // L.control.layers({"Floor1": countriesOverlay},{"Floor2": countriesOverlay}).addTo(map);
+    
+    $(window).load(function(e){
+        init(e);
+        loadMallDataCached(renderPage);
+        function renderPage(){
+            var stores = getStoresList();
+            
+            $('.custom_backdrop').remove();
+            $('.yield').fadeIn();
+        }
+        setTimeout(function(){
+            console.log("delay is done!");
+            map.setZoom(1,{animate:true});
+             stores = getStoresList();
+            var store_svgregion = stores[0].svgmap_region;
+            if($("#"+store_svgregion)[0] != undefined) {
+                console.log($("#"+store_svgregion)[0].getBBox());
+                var coords = $("#"+store_svgregion)[0].getBBox();
+                var height = parseInt(coords["height"]);
+                var width = parseInt(coords["width"]);
+                var store    = xy(coords["x"],coords["y"]);
+                // L.marker(store,{icon:smallIcon}).addTo(map).bindPopup(L.popup({autoPan:false}).setContent('Store'));
+            }
+            
+        var stores_arr = [xy(100,-100),xy(200,-200)];
+        console.log("countriesOverlay",countriesOverlay);
+        $.each(stores_arr, function (key,val){
+            // L.marker(val,{icon:smallIcon, autoPan:false}).addTo(map).bindPopup(L.popup({autoPan:false}).setContent('Store2 '+val));
+        });
+        // polygon.bindPopup("I am a polygon.");
+        
+        var store_svgregion = stores[0].svgmap_region;
+        // console.log($("#"+store_svgregion));
+        $.each(stores,function(key,val){
+            $("#"+val.svgmap_region).attr("class","select_map_region");
+            // $("#"+val.svgmap_region).bind("click",click_function);
+        });
+        
+        }, 500);
+        
+       
+       map.on('popupclose', function(e) {
+           if(current_popup_store!=undefined){
+                $("#"+current_popup_store.svgmap_region).attr("class", "");
+           }
+        });
+    });
+    
+   function onMapClick(e) {
+        console.log(e.layerPoint);
+        var region_id = e.originalEvent.toElement.id;
+        if(e.originalEvent.toElement.nodeName == "rect"  || e.originalEvent.toElement.nodeName == "polygon"){
+            my_store = stores.filter(function( index ) {
+                return index.svgmap_region ==  region_id ;
+            })[0];
+            // $("#"+).attr("class","map_region_selected");
+            // console.log(my_store);
+            current_popup_store = my_store;
+            if(my_store != undefined) {
+                popup = L.popup({autoPan:false}).setLatLng(e.latlng)
+                .setContent("<a href='/stores/"+my_store.slug+ "'> " +my_store.name+"<a/>")
+                .openOn(map);
+                $("#"+region_id).attr("class","active_region");
+            }
+        }
+    }
+</script>
