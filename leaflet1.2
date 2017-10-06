@@ -139,7 +139,7 @@
     });
     
    function onMapClick(e) {
-        // console.log(e.originalEvent.toElement);
+        console.log(e);
         var region_id = e.originalEvent.toElement.id;
         if(e.originalEvent.toElement.nodeName == "rect"  || e.originalEvent.toElement.nodeName == "polygon"){
             my_store = stores.filter(function( index ) {
