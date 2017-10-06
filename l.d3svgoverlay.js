@@ -82,15 +82,15 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
             ._subtract(this._wgsInitialShift.multiplyBy(this._scale*0.1));
         var shift = ["translate(", this._shift.x, ",", this._shift.y, ") "];
         var scale = ["scale(", this._scale, ",", this._scale,") "];
-        console.log(" newZoom",newZoom ,"\n");
-        console.log("this._zoomDiff",this._zoomDiff ,"\n");
-        console.log("this._scale",this._scale ,"\n");
-        console.log( "this._wgsOrigin",this._wgsOrigin ,"\n");
-        console.log("this.map.latLngToLayerPoint(this._wgsOrigin)",this.map.latLngToLayerPoint(this._wgsOrigin) ,"\n" );
-        console.log("this._wgsInitialShift",this._wgsInitialShift ,"\n" );
-        console.log( "this._wgsInitialShift.multiplyBy(this._scale*0.1)",this._wgsInitialShift.multiplyBy(this._scale*0.1) ,"\n" );
-        console.log("shift",shift ,"\n" );
-        console.log("scale",scale,"\n"
+        // console.log(" newZoom",newZoom ,"\n");
+        // console.log("this._zoomDiff",this._zoomDiff ,"\n");
+        // console.log("this._scale",this._scale ,"\n");
+        // console.log( "this._wgsOrigin",this._wgsOrigin ,"\n");
+        // console.log("this.map.latLngToLayerPoint(this._wgsOrigin)",this.map.latLngToLayerPoint(this._wgsOrigin) ,"\n" );
+        // console.log("this._wgsInitialShift",this._wgsInitialShift ,"\n" );
+        // console.log( "this._wgsInitialShift.multiplyBy(this._scale*0.1)",this._wgsInitialShift.multiplyBy(this._scale*0.1) ,"\n" );
+        // console.log("shift",shift ,"\n" );
+        // console.log("scale",scale,"\n"
         );
         // console.log("this._scale", this._scale);
         // this._rootGroup.attr("transform", shift.concat(scale).join(""));
