@@ -18,6 +18,10 @@
      left: 0; 
      top: 0; 
     }
+    svg {
+        width:1500px;
+        height:1000;
+    }
 </style>
 <div id="map-container">
    <div id="map-canvas"></div> 
