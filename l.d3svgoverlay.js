@@ -241,17 +241,15 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         //   console.log(this._shift);
         // console.log("this._scale", this._scale);
         // this._rootGroup.attr("transform", shift.concat(scale).join(""));
-        console.log(" newZoom",newZoom ,"\n",
-        "this._zoomDiff",this._zoomDiff ,"\n",
-        "this._scale",this._scale ,"\n",
-        "this._wgsOrigin",this._wgsOrigin ,"\n",
-        "this.map.latLngToLayerPoint", this.map.latLngToLayerPoint ,"\n",
-        "this", this ,"\n",
-        "this.map.latLngToLayerPoint(this._wgsOrigin)",this.map.latLngToLayerPoint(this._wgsOrigin) ,"\n",
-        "this._wgsInitialShift",this._wgsInitialShift ,"\n",
-        "this._wgsInitialShift.multiplyBy(this._scale*0.1)",this._wgsInitialShift.multiplyBy(this._scale*0.1) ,"\n",
-        "shift",shift ,"\n",
-        "scale",scale,"\n"
+        console.log(" newZoom",newZoom ,"\n");
+        console.log("this._zoomDiff",this._zoomDiff ,"\n");
+        console.log("this._scale",this._scale ,"\n");
+        console.log( "this._wgsOrigin",this._wgsOrigin ,"\n");
+        console.log("this.map.latLngToLayerPoint(this._wgsOrigin)",this.map.latLngToLayerPoint(this._wgsOrigin) ,"\n" );
+        console.log("this._wgsInitialShift",this._wgsInitialShift ,"\n" );
+        console.log( "this._wgsInitialShift.multiplyBy(this._scale*0.1)",this._wgsInitialShift.multiplyBy(this._scale*0.1) ,"\n" );
+        console.log("shift",shift ,"\n" );
+        console.log("scale",scale,"\n"
         );
         $.each(this._rootGroup, function (key, val){
             // console.log(val.id);
