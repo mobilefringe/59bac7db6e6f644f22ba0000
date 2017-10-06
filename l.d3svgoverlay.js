@@ -247,7 +247,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         "this._wgsOrigin",this._wgsOrigin ,"\n",
         "this.map.latLngToLayerPoint", this.map.latLngToLayerPoint ,"\n",
         "this", this ,"\n",
-        "this.map.latLngToLayerPoint(this._wgsOrigin)",this.anim_latLngToLayerPoint(this._wgsOrigin) ,"\n",
+        "this.map.latLngToLayerPoint(this._wgsOrigin)",this.map.latLngToLayerPoint(this._wgsOrigin) ,"\n",
         "this._wgsInitialShift",this._wgsInitialShift ,"\n",
         "this._wgsInitialShift.multiplyBy(this._scale*0.1)",this._wgsInitialShift.multiplyBy(this._scale*0.1) ,"\n",
         "shift",shift ,"\n",
