@@ -69,8 +69,8 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
     // Handler for "viewreset"-like events, updates scale and shift after the animation
     _zoomChange: function (evt) {
         console.log("viewreset");
-        var bounds = this.map.getBounds();
-         this._lastTopLeftlatLng  = new L.LatLng(bounds.getNorth(), bounds.getWest());
+        // var bounds = this.map.getBounds();
+        //  this._lastTopLeftlatLng  = new L.LatLng(bounds.getNorth(), bounds.getWest());
         // console.log("map is", this.map);
         // console.log("zoom is", evt.target._zoom);
         // this._disableLeafletRounding();
