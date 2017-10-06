@@ -73,7 +73,7 @@
     // });
     var d3layer_this;
     var  svgUrl = "//codecloud.cdn.speedyrails.net/sites/59bac7db6e6f644f22ba0000/image/svg+xml/1507309747000/Londonderry_Web_Map_Floor_1.svg"
-    var countriesOverlay = L.d3SvgOverlay(function(sel, proj) {
+    var floor1 = L.d3SvgOverlay(function(sel, proj) {
     });
    
     map.on('click', onMapClick);
@@ -84,13 +84,13 @@
         map.getPanes().overlayPane.appendChild(svgImg.documentElement);
         
         console.log(map.getPanes().overlayPane.children.length);
-        d3layer_this =  countriesOverlay.addTo(map);
+        d3layer_this =  floor1.addTo(map);
         console.log(map.getPanes().overlayPane.children.length);
         console.log(d3layer_this);
     });
     var d3layer_this;
     var  svgUrl = "//codecloud.cdn.speedyrails.net/sites/59bac7db6e6f644f22ba0000/image/svg+xml/1507309738000/Londonderry_Web_Map_Floor_2.svg"
-    var countriesOverlay = L.d3SvgOverlay(function(sel, proj) {
+    var floor2 = L.d3SvgOverlay(function(sel, proj) {
     });
    
     map.on('click', onMapClick);
