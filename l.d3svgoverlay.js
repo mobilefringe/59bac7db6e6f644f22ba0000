@@ -90,8 +90,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         // console.log("this._wgsInitialShift",this._wgsInitialShift ,"\n" );
         // console.log( "this._wgsInitialShift.multiplyBy(this._scale*0.1)",this._wgsInitialShift.multiplyBy(this._scale*0.1) ,"\n" );
         // console.log("shift",shift ,"\n" );
-        // console.log("scale",scale,"\n"
-        );
+        // console.log("scale",scale,"\n");
         // console.log("this._scale", this._scale);
         // this._rootGroup.attr("transform", shift.concat(scale).join(""));
         $.each(this._rootGroup, function (key, val){
