@@ -224,42 +224,42 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
     },
     _animateZoom: function (evt) {
       
-        // console.log("zoomanim");
-        // var bounds = this.map.getBounds();
-        // this._lastTopLeftlatLng  = new L.LatLng(bounds.getNorth(), bounds.getWest());
-        // // console.log("map is", this.map);
-        // // console.log("zoom is", evt.target._zoom);
-        // // this._disableLeafletRounding();
-        // var newZoom = evt.zoom; // "viewreset" event in Leaflet has not zoom/center parameters like zoomanim
-        // this._zoomDiff = newZoom - this._zoom;
-        // this._scale = Math.pow(2, this._zoomDiff);
-        // this.projection.scale = this._scale;
-        // this._shift = this.map.latLngToLayerPoint(this._wgsOrigin)
-        //     ._subtract(this._wgsInitialShift.multiplyBy(this._scale*0.1));
-        // var shift = ["translate(", this._shift.x, ",", this._shift.y, ") "];
-        // var scale = ["scale(", this._scale, ",", this._scale,") "];
-        // //   console.log(this._shift);
-        // // console.log("this._scale", this._scale);
-        // // this._rootGroup.attr("transform", shift.concat(scale).join(""));
-        // console.log(" newZoom",newZoom ,"\n",
-        // "this._zoomDiff",this._zoomDiff ,"\n",
-        // "this._scale",this._scale ,"\n",
-        // "this._wgsOrigin",this._wgsOrigin ,"\n",
-        // "this.map.latLngToLayerPoint", this.map.latLngToLayerPoint ,"\n",
-        // "this", this ,"\n",
-        // "this.map.latLngToLayerPoint(this._wgsOrigin)",this.anim_latLngToLayerPoint(this._wgsOrigin) ,"\n",
-        // "this._wgsInitialShift",this._wgsInitialShift ,"\n",
-        // "this._wgsInitialShift.multiplyBy(this._scale*0.1)",this._wgsInitialShift.multiplyBy(this._scale*0.1) ,"\n",
-        // "shift",shift ,"\n",
-        // "scale",scale,"\n"
-        // );
-        // $.each(this._rootGroup, function (key, val){
-        //     // console.log(val.id);
-        //     if(val.id){
-        //         $("#"+val.id).attr("transform", shift.concat(scale).join(""));
-        //     }
-        // });
-        // if (this.options.zoomDraw) { this.draw() }
+        console.log("zoomanim");
+        var bounds = this.map.getBounds();
+        this._lastTopLeftlatLng  = new L.LatLng(bounds.getNorth(), bounds.getWest());
+        // console.log("map is", this.map);
+        // console.log("zoom is", evt.target._zoom);
+        // this._disableLeafletRounding();
+        var newZoom = evt.zoom; // "viewreset" event in Leaflet has not zoom/center parameters like zoomanim
+        this._zoomDiff = newZoom - this._zoom;
+        this._scale = Math.pow(2, this._zoomDiff);
+        this.projection.scale = this._scale;
+        this._shift = this.map.latLngToLayerPoint(this._wgsOrigin)
+            ._subtract(this._wgsInitialShift.multiplyBy(this._scale*0.1));
+        var shift = ["translate(", this._shift.x, ",", this._shift.y, ") "];
+        var scale = ["scale(", this._scale, ",", this._scale,") "];
+        //   console.log(this._shift);
+        // console.log("this._scale", this._scale);
+        // this._rootGroup.attr("transform", shift.concat(scale).join(""));
+        console.log(" newZoom",newZoom ,"\n",
+        "this._zoomDiff",this._zoomDiff ,"\n",
+        "this._scale",this._scale ,"\n",
+        "this._wgsOrigin",this._wgsOrigin ,"\n",
+        "this.map.latLngToLayerPoint", this.map.latLngToLayerPoint ,"\n",
+        "this", this ,"\n",
+        "this.map.latLngToLayerPoint(this._wgsOrigin)",this.anim_latLngToLayerPoint(this._wgsOrigin) ,"\n",
+        "this._wgsInitialShift",this._wgsInitialShift ,"\n",
+        "this._wgsInitialShift.multiplyBy(this._scale*0.1)",this._wgsInitialShift.multiplyBy(this._scale*0.1) ,"\n",
+        "shift",shift ,"\n",
+        "scale",scale,"\n"
+        );
+        $.each(this._rootGroup, function (key, val){
+            // console.log(val.id);
+            if(val.id){
+                $("#"+val.id).attr("transform", shift.concat(scale).join(""));
+            }
+        });
+        if (this.options.zoomDraw) { this.draw() }
 	},
 	anim_latLngToLayerPoint: function (latLng, zoom) {
         // zoom = _layer._undef(zoom) ? _layer._zoom : zoom;
