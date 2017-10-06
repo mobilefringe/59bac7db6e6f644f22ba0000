@@ -88,7 +88,7 @@
         console.log(map.getPanes().overlayPane.children.length);
         console.log(d3layer_this);
     });
-    d3.xml(https://www.mallmaverick.com/system/site_images/photos/000/033/099/original/Londonderry_Web_Map_Floor_2.svg?1507317859).mimeType("image/svg+xml").get(function(error, svgImg) {
+    d3.xml("https://www.mallmaverick.com/system/site_images/photos/000/033/099/original/Londonderry_Web_Map_Floor_2.svg?1507317859").mimeType("image/svg+xml").get(function(error, svgImg) {
         if (error) throw error;
         console.log(map.getPanes().overlayPane.children.length);
         map.getPanes().overlayPane.appendChild(svgImg.documentElement);
