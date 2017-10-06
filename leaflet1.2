@@ -53,7 +53,7 @@
         // bounceAtZoomLimits: true,
 		zoomDelta: 0.25,
         zoomSnap: 0
-// 		wheelPxPerZoomLevel: 50
+		wheelPxPerZoomLevel: 50
 
         // _animatingZoom:true
     });
@@ -99,9 +99,6 @@
         init(e);
         loadMallDataCached(renderPage);
         function renderPage(){
-            // var stores = getStoresList();
-            // var store_svgregion = stores[0].svgmap_region;
-            // console.log($("#"+store_svgregion));
             var stores = getStoresList();
             
             $('.custom_backdrop').remove();
@@ -122,14 +119,7 @@
             }
             
         var stores_arr = [xy(100,-100),xy(200,-200)];
-        // if($("#Stores_x5F_1_x5F_21_1_")[0] != undefined) {
-        //     console.log("hundson bay",$("#Stores_x5F_1_x5F_21_1_")[0].getBBox()); 
-        // }
-       
-        //  [x*this._scale, y*this._scale]
         console.log("countriesOverlay",countriesOverlay);
-        // console.log("scaleMarker_coords",countriesOverlay.scaleMarker_coords(coords["x"]));
-        // L.marker(store2,{icon:smallIcon}).addTo(map).bindPopup('Store2'+store2);
         $.each(stores_arr, function (key,val){
             L.marker(val,{icon:smallIcon, autoPan:false}).addTo(map).bindPopup(L.popup({autoPan:false}).setContent('Store2 '+val));
         });
@@ -142,8 +132,6 @@
             // $("#"+val.svgmap_region).bind("click",click_function);
         });
         
-        // console.log($("#"+stores[0].svgmap_region).click());
-        // console.log(countriesOverlay)
         }, 500);
         
        
@@ -168,16 +156,8 @@
                 popup = L.popup({autoPan:false}).setLatLng(e.latlng)
                 .setContent("<a href='/stores/"+my_store.slug+ "'> " +my_store.name+"<a/>")
                 .openOn(map);
-                // e.originalEvent.toElement.bindTooltip("my tooltip text").openTooltip();
-                // var someTTip = .bindTooltip("my tooltip text").openTooltip();
-                // console.log(popup);
                 $("#"+region_id).attr("class","active_region");
             }
         }
     }
-    //marker dev
-    // get_coords: function (v) {
-    //     var coords = _data.R.getById(v).getBBox();
-    //     return coords;
-    // }
 </script>
