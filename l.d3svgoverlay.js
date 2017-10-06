@@ -266,6 +266,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         // );
         var shift = ["translate(", origin.x, ",", origin.y, ") "];
         var scale = ["scale(", scale, ",",scale,") "];
+        console.log("shift: "shift, "/n scale:", scale)
         $.each(this._rootGroup, function (key, val){
             // console.log(val.id);
             if(val.id){
