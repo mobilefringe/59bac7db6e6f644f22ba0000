@@ -43,10 +43,10 @@
         zoomAnimation: true,
         // zoomSnap: 0,
         touchZoom:true,
-        bounceAtZoomLimits: true,
+        // bounceAtZoomLimits: true,
 		zoomDelta: 0.25,
-        zoomSnap: 0,
-		wheelPxPerZoomLevel: 50
+        zoomSnap: 0
+// 		wheelPxPerZoomLevel: 50
 
         // _animatingZoom:true
     });
