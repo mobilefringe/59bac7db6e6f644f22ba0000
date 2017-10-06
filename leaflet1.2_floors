@@ -122,7 +122,7 @@
         return yx(y, x);  // When doing xy(x, y);
     };
    
-    L.control.layers({"Floor1": countriesOverlay},{"Floor2": countriesOverlay}).addTo(map);
+    L.control.layers({"Floor1": floor1},{"Floor2": floor2}).addTo(map);
     
     $(window).load(function(e){
         init(e);
