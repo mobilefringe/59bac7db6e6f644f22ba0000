@@ -3,11 +3,8 @@
 
 	<meta name="viewport" content="initial-scale=1.0" />
 
-	<link rel="stylesheet" href="../../dist/leaflet.css" />
-
-	<link rel="stylesheet" href="../css/mobile.css" />
-
-	<script src="../leaflet-include.js"></script>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.css' rel='stylesheet' type='text/css'/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet-src.js"></script>
 	<style>
 	.container {
 		float:left; width: 600px; height: 600px;
