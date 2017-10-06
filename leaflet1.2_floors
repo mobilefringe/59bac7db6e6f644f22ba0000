@@ -14,7 +14,7 @@
         overflow: visible;
     }
     leaflet-pane, .leaflet-tile, .leaflet-marker-icon, .leaflet-marker-shadow, .leaflet-tile-container, .leaflet-pane > svg, .leaflet-pane > canvas, .leaflet-zoom-box, .leaflet-image-layer, .leaflet-layer {
-     position: absolute; 
+     position: relative; 
      left: 0; 
      top: 0; 
     }
