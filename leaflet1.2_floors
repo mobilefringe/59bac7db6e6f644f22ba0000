@@ -94,7 +94,7 @@
         map.getPanes().overlayPane.appendChild(svgImg.documentElement);
         
         console.log(map.getPanes().overlayPane.children.length);
-        d3layer_this =  floor2.addTo(map);
+        d3layer_this =  floor1.addTo(map);
         console.log(map.getPanes().overlayPane.children.length);
         console.log(d3layer_this);
     });
