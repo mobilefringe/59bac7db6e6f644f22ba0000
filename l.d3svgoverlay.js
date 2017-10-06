@@ -222,51 +222,36 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         console.log(this._scale);
         return val*this._scale;
     },
-    _animateZoom: function (e) {
+    _animateZoom: function (evt) {
       
         console.log("zoomanim");
-        
-        var map = this.map,
-		    scale = map.getZoomScale(e.zoom),
-		    nw = this.map.getBounds().getNorthWest(),
-		    se = this.map.getBounds().getSouthEast(),
-
-		    topLeft = map._latLngToNewLayerPoint(nw, e.zoom, e.center),
-		    size = map._latLngToNewLayerPoint(se, e.zoom, e.center)._subtract(topLeft),
-		    origin = topLeft._add(size._multiplyBy((1 / 2) * (1 - 1 / scale)));
-
-// 		image.style[L.DomUtil.TRANSFORM] =
-// 		        L.DomUtil.getTranslateString(origin) + ' scale(' + scale + ') ';
-        // var bounds = this.map.getBounds();
-        // this._lastTopLeftlatLng  = new L.LatLng(bounds.getNorth(), bounds.getWest());
-        // // console.log("map is", this.map);
-        // // console.log("zoom is", evt.target._zoom);
-        // // this._disableLeafletRounding();
-        // var newZoom = evt.zoom; // "viewreset" event in Leaflet has not zoom/center parameters like zoomanim
-        // this._zoomDiff = newZoom - this._zoom;
-        // this._scale = Math.pow(2, this._zoomDiff);
-        // this.projection.scale = this._scale;
-        // this._shift = this.map.latLngToLayerPoint(this._wgsOrigin)
-        //     ._subtract(this._wgsInitialShift.multiplyBy(this._scale*0.1));
-        // var shift = ["translate(", this._shift.x, ",", this._shift.y, ") "];
-        // var scale = ["scale(", this._scale, ",", this._scale,") "];
+        var bounds = this.map.getBounds();
+        this._lastTopLeftlatLng  = new L.LatLng(bounds.getNorth(), bounds.getWest());
+        // console.log("map is", this.map);
+        // console.log("zoom is", evt.target._zoom);
+        // this._disableLeafletRounding();
+        var newZoom = evt.zoom; // "viewreset" event in Leaflet has not zoom/center parameters like zoomanim
+        this._zoomDiff = newZoom - this._zoom;
+        this._scale = Math.pow(2, this._zoomDiff);
+        this.projection.scale = this._scale;
+        this._shift = this.map.latLngToLayerPoint(this._wgsOrigin)
+            ._subtract(this._wgsInitialShift.multiplyBy(this._scale*0.1));
+        var shift = ["translate(", this._shift.x, ",", this._shift.y, ") "];
+        var scale = ["scale(", this._scale, ",", this._scale,") "];
         //   console.log(this._shift);
         // console.log("this._scale", this._scale);
         // this._rootGroup.attr("transform", shift.concat(scale).join(""));
-        // console.log(" newZoom",newZoom ,"\n");
-        // console.log("this._zoomDiff",this._zoomDiff ,"\n");
-        // console.log("this._scale",this._scale ,"\n");
-        // console.log( "this._wgsOrigin",this._wgsOrigin ,"\n");
-        // console.log("this.map.latLngToLayerPoint(this._wgsOrigin)",this.map.latLngToLayerPoint(this._wgsOrigin) ,"\n" );
-        //  console.log( "this._wgsOrigin",this._wgsOrigin ,"\n");
-        // console.log("this._wgsInitialShift",this._wgsInitialShift ,"\n" );
-        // console.log( "this._wgsInitialShift.multiplyBy(this._scale*0.1)",this._wgsInitialShift.multiplyBy(this._scale*0.1) ,"\n" );
-        // console.log("shift",shift ,"\n" );
-        // console.log("scale",scale,"\n"
-        // );
-        var shift = ["translate(", origin.x, ",", origin.y, ") "];
-        var scale = ["scale(", scale, ",",scale,") "];
-        console.log("shift: ", shift, "/n scale:", scale)
+        console.log(" newZoom",newZoom ,"\n");
+        console.log("this._zoomDiff",this._zoomDiff ,"\n");
+        console.log("this._scale",this._scale ,"\n");
+        console.log( "this._wgsOrigin",this._wgsOrigin ,"\n");
+        console.log("this.map.latLngToLayerPoint(this._wgsOrigin)",this.map.latLngToLayerPoint(this._wgsOrigin) ,"\n" );
+         console.log( "this._wgsOrigin",this._wgsOrigin ,"\n");
+        console.log("this._wgsInitialShift",this._wgsInitialShift ,"\n" );
+        console.log( "this._wgsInitialShift.multiplyBy(this._scale*0.1)",this._wgsInitialShift.multiplyBy(this._scale*0.1) ,"\n" );
+        console.log("shift",shift ,"\n" );
+        console.log("scale",scale,"\n"
+        );
         $.each(this._rootGroup, function (key, val){
             // console.log(val.id);
             if(val.id){
