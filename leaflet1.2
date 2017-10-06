@@ -111,13 +111,13 @@
                 var height = parseInt(coords["height"]);
                 var width = parseInt(coords["width"]);
                 var store    = xy(coords["x"],coords["y"]);
-                L.marker(store,{icon:smallIcon}).addTo(map).bindPopup(L.popup({autoPan:false}).setContent('Store'));
+                // L.marker(store,{icon:smallIcon}).addTo(map).bindPopup(L.popup({autoPan:false}).setContent('Store'));
             }
             
         var stores_arr = [xy(100,-100),xy(200,-200)];
         console.log("countriesOverlay",countriesOverlay);
         $.each(stores_arr, function (key,val){
-            L.marker(val,{icon:smallIcon, autoPan:false}).addTo(map).bindPopup(L.popup({autoPan:false}).setContent('Store2 '+val));
+            // L.marker(val,{icon:smallIcon, autoPan:false}).addTo(map).bindPopup(L.popup({autoPan:false}).setContent('Store2 '+val));
         });
         // polygon.bindPopup("I am a polygon.");
         
