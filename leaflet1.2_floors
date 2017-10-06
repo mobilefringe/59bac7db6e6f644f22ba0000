@@ -72,7 +72,7 @@
     //     console.log(d3layer_this);
     // });
     var d3layer_this;
-    var  svgUrl = "http://assets.codecloudapp.com/sites/59bac7db6e6f644f22ba0000/image/svg+xml/1507309747000/Londonderry_Web_Map_Floor_1.svg"
+    var  svgUrl = "//codecloud.cdn.speedyrails.net/sites/59bac7db6e6f644f22ba0000/image/svg+xml/1507309747000/Londonderry_Web_Map_Floor_1.svg"
     var countriesOverlay = L.d3SvgOverlay(function(sel, proj) {
     });
    
