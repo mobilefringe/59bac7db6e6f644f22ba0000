@@ -63,9 +63,26 @@
         // _animatingZoom:true
     });
     // var countries = [];
+    var d3layer_this;
+    var  svgUrl = "//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416"
+    var countriesOverlay = L.d3SvgOverlay(function(sel, proj) {
+    });
+   
+    map.on('click', onMapClick);
+    
+    d3.xml(svgUrl).mimeType("image/svg+xml").get(function(error, svgImg) {
+        if (error) throw error;
+        console.log(map.getPanes().overlayPane.children.length);
+        map.getPanes().overlayPane.appendChild(svgImg.documentElement);
+        
+        console.log(map.getPanes().overlayPane.children.length);
+        d3layer_this =  countriesOverlay.addTo(map);
+        console.log(map.getPanes().overlayPane.children.length);
+        console.log(d3layer_this);
+    });
     // var d3layer_this;
-    // var  svgUrl = "//mallmaverick.cdn.speedyrails.net/system/properties/svgmaps/000/000/028/original/Londonderry_DB_4.svg?1497642416"
-    // var countriesOverlay = L.d3SvgOverlay(function(sel, proj) {
+    // var  svgUrl = "https://www.mallmaverick.com/system/site_images/photos/000/033/098/original/Londonderry_Web_Map_Floor_1.svg?1507317823"
+    // var floor1 = L.d3SvgOverlay(function(sel, proj) {
     // });
    
     // map.on('click', onMapClick);
@@ -76,44 +93,27 @@
     //     map.getPanes().overlayPane.appendChild(svgImg.documentElement);
         
     //     console.log(map.getPanes().overlayPane.children.length);
-    //     d3layer_this =  countriesOverlay.addTo(map);
+    //     d3layer_this =  floor1.addTo(map);
     //     console.log(map.getPanes().overlayPane.children.length);
     //     console.log(d3layer_this);
     // });
-    var d3layer_this;
-    var  svgUrl = "https://www.mallmaverick.com/system/site_images/photos/000/033/098/original/Londonderry_Web_Map_Floor_1.svg?1507317823"
-    var floor1 = L.d3SvgOverlay(function(sel, proj) {
-    });
+    // var d3layer_this;
+    // var  svgUrl = "https://www.mallmaverick.com/system/site_images/photos/000/033/099/original/Londonderry_Web_Map_Floor_2.svg?1507317859"
+    // var floor2 = L.d3SvgOverlay(function(sel, proj) {
+    // });
    
-    map.on('click', onMapClick);
+    // map.on('click', onMapClick);
     
-    d3.xml(svgUrl).mimeType("image/svg+xml").get(function(error, svgImg) {
-        if (error) throw error;
-        console.log(map.getPanes().overlayPane.children.length);
-        map.getPanes().overlayPane.appendChild(svgImg.documentElement);
+    // d3.xml(svgUrl).mimeType("image/svg+xml").get(function(error, svgImg) {
+    //     if (error) throw error;
+    //     console.log(map.getPanes().overlayPane.children.length);
+    //     map.getPanes().overlayPane.appendChild(svgImg.documentElement);
         
-        console.log(map.getPanes().overlayPane.children.length);
-        d3layer_this =  floor1.addTo(map);
-        console.log(map.getPanes().overlayPane.children.length);
-        console.log(d3layer_this);
-    });
-    var d3layer_this;
-    var  svgUrl = "https://www.mallmaverick.com/system/site_images/photos/000/033/099/original/Londonderry_Web_Map_Floor_2.svg?1507317859"
-    var floor2 = L.d3SvgOverlay(function(sel, proj) {
-    });
-   
-    map.on('click', onMapClick);
-    
-    d3.xml(svgUrl).mimeType("image/svg+xml").get(function(error, svgImg) {
-        if (error) throw error;
-        console.log(map.getPanes().overlayPane.children.length);
-        map.getPanes().overlayPane.appendChild(svgImg.documentElement);
-        
-        console.log(map.getPanes().overlayPane.children.length);
-        d3layer_this =  floor2.addTo(map);
-        console.log(map.getPanes().overlayPane.children.length);
-        console.log(d3layer_this);
-    });
+    //     console.log(map.getPanes().overlayPane.children.length);
+    //     d3layer_this =  floor2.addTo(map);
+    //     console.log(map.getPanes().overlayPane.children.length);
+    //     console.log(d3layer_this);
+    // });
     var smallIcon = new L.Icon({
         iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-icon.png',
         iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-icon-2x.png',
