@@ -194,7 +194,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         if (L.version < "1.0"){
             map.on("viewreset", this._zoomChange, this);
             // map.on('zoomanim', this._zoomChange, this);
-            // map.on('zoomanim', this._animateZoom, this);
+            map.on('zoomanim', this._animateZoom, this);
         }
 
         // Initial draw
@@ -202,7 +202,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
     },
 
     // Leaflet 1.0
-    getEvents: function() { return {zoomend: this._zoomChange, zoomanim: this._animateZoom}; },
+    getEvents: function() { return {zoomend: this._zoomChange}; },
 
     onRemove: function (map) {
         if (L.version < "1.0") {
@@ -227,7 +227,7 @@ L.D3SvgOverlay = (L.version < "1.0" ? L.Class : L.Layer).extend({
         var bounds = this.map.getBounds();
         this._lastTopLeftlatLng  = new L.LatLng(bounds.getNorth(), bounds.getWest());
         // console.log("map is", this.map);
-        console.log("zoom is", evt.zoom);
+        console.log("zoom is", evt._zoom);
         // this._disableLeafletRounding();
         var newZoom = evt.zoom; // "viewreset" event in Leaflet has not zoom/center parameters like zoomanim
         this._zoomDiff = newZoom - this._zoom;
