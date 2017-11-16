@@ -26,7 +26,8 @@
     <link href="//580904016e6f64160b020000.codecloudapp.com/application.css" rel="stylesheet" />
     <link href="../site.css" rel="stylesheet">
     <link rel="manifest" href="/manifest.json" />
-    
+    <link href="//codecloud.cdn.speedyrails.net/sites/59bac7db6e6f644f22ba0000/text/css/1487362118000/mapplic.css" rel="stylesheet">
+    <link href="//codecloud.cdn.speedyrails.net/sites/59bac7db6e6f644f22ba0000/text/css/1485967426000/map.css" rel="stylesheet">
     <!--Javascript-->
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
