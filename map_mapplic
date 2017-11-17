@@ -79,6 +79,16 @@
             console.log("location",location);
             console.log("stores_x5F_1_x5F_36", $("#stores_x5F_1_x5F_36"));
         });
+        // Location opened
+map.on('locationopened', function(e, location) {
+	// location grants full access to the location
+	console.log(location.title + ' opened.');
+});
+
+// Location closed
+map.on('locationclosed', function(e) {
+	console.log('Location closed.');
+});
         var self = map.data('mapplic');
         
         show_content();
