@@ -27,6 +27,8 @@
             temp_val.title= val.name;
             temp_val.color= "#b7a6bd";
             temp_val.show="true";
+            mall_json.categories.push(temp_val);
+            
         });
         $('#mapplic').mapplic({
         	source: '//codecloud.cdn.speedyrails.net/sites/59bac7db6e6f644f22ba0000/application/json/1510937136000/mall copy.json',
