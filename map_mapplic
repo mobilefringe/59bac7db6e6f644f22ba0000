@@ -26,7 +26,7 @@
             temp_val.id = val.id;
             temp_val.title= val.name;
             temp_val.color= "";
-            temp_val.show="true"
+            temp_val.show="true";
             console.log(val);
         });
         $('#mapplic').mapplic({
