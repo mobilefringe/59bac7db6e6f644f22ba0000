@@ -62,7 +62,7 @@
         	source: mall_json,
         	height: 600,
         	mapfill:true,
-        	minimap: false,
+        	minimap: true,
         	sidebar: true,
         	hovertip: true,
         	developer: true,
