@@ -50,7 +50,6 @@
                 temp_val.y = val.y_coordinate;
                 floor_1.locations.push(temp_val);
             }
-            
         });
         mall_json.levels.push(floor_1);
         console.log(mall_json);
