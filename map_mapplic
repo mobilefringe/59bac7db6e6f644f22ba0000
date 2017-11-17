@@ -69,7 +69,7 @@
         	maxscale: 5
         });
         var self = map.data('mapplic');
-        var location = self.getLocationData('stores_x5F_1_x5F_126_1_');
+        var location = self.getLocationData('stores_x5F_1_x5F_36');
         console.log(self);
         console.log("location",location);
         show_content();
