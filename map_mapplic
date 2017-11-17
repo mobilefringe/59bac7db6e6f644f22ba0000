@@ -7,16 +7,6 @@
 <div id="mapplic" class="mapplic"></div>
 
 <script>
-    $('#mapplic').mapplic({
-    	source: '//codecloud.cdn.speedyrails.net/sites/59bac7db6e6f644f22ba0000/application/json/1472253662000/mall.json',
-    	height: 480,
-    	minimap: false,
-    	sidebar: true,
-    	hovertip: true,
-    	developer: false,
-    	maxscale: 3
-    });
-    
     $(document).ready(function(e){
         init(e);
         
