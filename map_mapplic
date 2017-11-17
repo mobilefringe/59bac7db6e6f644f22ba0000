@@ -52,6 +52,8 @@
                     temp_val.thumbnail=val.store_front_url_abs;
                 }
                 //get svg's wifth/height by checking the map
+                var svg_width = 1000;
+                var svg_height = 960;
                 temp_val.x = val.x_coordinate;
                 temp_val.y = val.y_coordinate;
                 floor_1.locations.push(temp_val);
