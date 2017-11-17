@@ -23,6 +23,7 @@
         var store_cats = getStoreCategories();
         $.each(store_cats, function(key,val){
             var temp_val = {};
+            temp_val.id = val.id;
             
             console.log(val);
         });
