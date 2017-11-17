@@ -55,7 +55,7 @@
         mall_json.levels.push(floor_1);
         console.log(mall_json);
         $('#mapplic').mapplic({
-        	source: '//codecloud.cdn.speedyrails.net/sites/59bac7db6e6f644f22ba0000/application/json/1510937136000/mall copy.json',
+        	source: mall_json,
         	height: 600,
         	mapfill:true,
         	minimap: false,
