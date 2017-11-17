@@ -24,6 +24,7 @@
         $.each(store_cats, function(key,val){
             var temp_val = {};
             temp_val.id = val.id;
+            temp_val.title= val.name;
             
             console.log(val);
         });
