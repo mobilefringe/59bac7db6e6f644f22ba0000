@@ -72,6 +72,7 @@
         var location = self.getLocationData('stores_x5F_1_x5F_36');
         console.log(self);
         console.log("location",location);
+        console.log("stores_x5F_1_x5F_36", $("#stores_x5F_1_x5F_36"));
         show_content();
     }
 </script>
