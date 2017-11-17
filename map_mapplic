@@ -1,4 +1,4 @@
-<div id="mapplic" class="openseadragon1"></div>
+<div id="mapplic" class=""></div>
 
 <script>
     $('#mapplic').mapplic({
