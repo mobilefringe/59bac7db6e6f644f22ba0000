@@ -19,7 +19,30 @@
         	maxscale: 3
         });
         loadMallDataCached(renderPage);
-        show_content();
     });
+    
+    function renderPage(){
+        var jobs = getJobsList().sortBy(function(o){ return o.start_date});
+        var published_jobs = [];
+        $.each (jobs, function(key, val){
+            // today = new Date();
+            // webDate = new Date(val.show_on_web_date)
+            
+            today = moment();
+            webDate = moment(val.show_on_web_date);
+            if (today >= webDate) {
+                published_jobs.push(val)
+            } 
+        });
+        if (published_jobs.length > 0){
+            renderJobs("#jobs_container","#jobs_template", published_jobs);
+            $('#no_jobs').hide()
+        }
+        else {
+            $('#events_header').click();
+            $('#events_header').find('i').toggleClass('fa-chevron-down fa-chevron-up');
+        }
+        show_content();
+    }
 </script>
 <!--//www.mallmaverick.com/system/site_images/photos/000/034/436/original/Northpark_-_Map_-_Floor_1_-_Mapplic_Test_1.svg?1510930761-->
