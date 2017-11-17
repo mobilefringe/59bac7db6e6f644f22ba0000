@@ -37,6 +37,7 @@
         floor_1.title = "Floor 1";
         floor_1.map = "//www.mallmaverick.com/system/site_images/photos/000/034/436/original/Northpark_-_Map_-_Floor_1_-_Mapplic_Test_1.svg";
         floor_1.minimap = "//codecloud.cdn.speedyrails.net/sites/59bac7db6e6f644f22ba0000/image/jpeg/1510940237000/Northpark_-_Map_-_Floor_1_-_Mapplic_Test_1.jpg";
+        floor_1.locations = [];
         $.each(stores, function(key,val){
             if(key < 20) {
                 var temp_val = {};
