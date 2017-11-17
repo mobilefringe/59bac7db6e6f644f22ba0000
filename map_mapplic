@@ -25,7 +25,7 @@
         	sidebar: true,
         	hovertip: true,
         	developer: true,
-        	maxscale: 3
+        	maxscale: 5
         });
         
         show_content();
