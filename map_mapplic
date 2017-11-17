@@ -18,7 +18,7 @@
         	developer: false,
         	maxscale: 3
         });
-        loadMallDataCached();
+        loadMallDataCached(renderPage);
         show_content();
     });
 </script>
