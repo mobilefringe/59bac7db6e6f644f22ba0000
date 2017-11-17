@@ -93,6 +93,11 @@
         // var bBox = $(svg).getBBox();
         //     console.log('XxY', bBox.x + 'x' + bBox.y);
         //     console.log('size', bBox.width + 'x' + bBox.height);
+        var el   = document.getElementById("yourElement"); // or other selector like querySelector()
+var rect = el.getBoundingClientRect(); // get the bounding rectangle
+
+console.log( rect.width );
+console.log( rect.height);
         show_content();
     }
 </script>
