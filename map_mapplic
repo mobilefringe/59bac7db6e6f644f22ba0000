@@ -64,7 +64,7 @@
         mall_json.levels.push(floor_1);
         // need to add the following for each floor we want to configure.
         var floor_2 ={};
-        floor_2.id = "first-floor";
+        floor_2.id = "second-floor";
         floor_2.title = "Floor 2";
         floor_2.map = "/www.mallmaverick.com/system/site_images/photos/000/034/472/original/Northpark_-_Map_-_Floor_2_-_Mapplic_Test_1.svg";
         floor_2.minimap = "//codecloud.cdn.speedyrails.net/sites/59bac7db6e6f644f22ba0000/image/jpeg/1510940237000/Northpark_-_Map_-_Floor_1_-_Mapplic_Test_1.jpg";
