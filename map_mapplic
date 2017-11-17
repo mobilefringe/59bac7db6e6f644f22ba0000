@@ -45,7 +45,7 @@
                 temp_val.id = val.id;
                 temp_val.title= val.name;
                 temp_val.about = val.description;
-                temp_val.category = val.categories;
+                temp_val.category = val.categories[0];
                 temp_val.thumbnail = "";
                 if(val.store_front_url_abs.indexOf("missing") == -1){
                     temp_val.thumbnail=val.store_front_url_abs;
