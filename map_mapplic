@@ -88,9 +88,9 @@
     			location.lng = pos.coords.longitude;
     			self.updateLocation('pos');
     		});
-	}
-	else console.log('Geolocation not enabled.');
-});
+        	}
+        	else console.log('Geolocation not enabled.');
+        });
         var self = map.data('mapplic');
         
         show_content();
