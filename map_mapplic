@@ -70,7 +70,7 @@
         });
         var self = map.data('mapplic');
         var location = self.getLocationData('pos');
-        
+        console.log(location);
         show_content();
     }
 </script>
