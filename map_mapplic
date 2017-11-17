@@ -22,6 +22,8 @@
         mall_json.categories=[]; 
         var store_cats = getStoreCategories();
         $.each(store_cats, function(key,val){
+            var temp_val = {};
+            
             console.log(val);
         });
         $('#mapplic').mapplic({
