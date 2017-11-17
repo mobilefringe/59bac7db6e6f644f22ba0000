@@ -90,7 +90,7 @@
                 floor_1.locations.push(temp_val);
             }
         });
-        www.mallmaverick.com/system/site_images/photos/000/034/472/original/Northpark_-_Map_-_Floor_2_-_Mapplic_Test_1.svg
+        
         mall_json.levels.push(floor_2);
         console.log(mall_json);
         var map = $('#mapplic').mapplic({
