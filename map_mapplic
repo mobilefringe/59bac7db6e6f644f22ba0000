@@ -1,6 +1,6 @@
 <script>
     $('#mapplic').mapplic({
-    	source: 'map-data.json',
+    	source: '//www.mallmaverick.com/system/site_images/photos/000/034/436/original/Northpark_-_Map_-_Floor_1_-_Mapplic_Test_1.svg?1510930761',
     	height: 480,
     	minimap: false,
     	sidebar: true,
