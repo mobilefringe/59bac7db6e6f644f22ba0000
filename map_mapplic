@@ -68,7 +68,7 @@
         	developer: true,
         	maxscale: 5
         });
-        
+        var self = map.data('mapplic');
         show_content();
     }
 </script>
