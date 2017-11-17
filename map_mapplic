@@ -72,7 +72,7 @@
         	console.log('Map is ready!')
         	// self grants direct access to the map object
         	// The map will be focused on the washing machine by default
-        	self.moveTo(0.67, 0.62, 3, 0);
+        // 	self.moveTo(0.67, 0.62, 3, 0);
         });
         var self = map.data('mapplic');
         var location = self.getLocationData('stores_x5F_1_x5F_36');
