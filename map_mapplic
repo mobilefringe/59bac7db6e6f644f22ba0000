@@ -46,6 +46,9 @@
                 temp_val.title= val.name;
                 temp_val.about = val.description;
                 temp_val.category = val.categories;
+                if(val.store_front_url_abs.indexOf("missing") == -1){
+                    
+                }
                 temp_val.thumbnail=val.store_front_url_abs;
                 temp_val.x = val.x_coordinate;
                 temp_val.y = val.y_coordinate;
