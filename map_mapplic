@@ -33,7 +33,7 @@
         mall_json.levels=[]; 
         // need to add the following for each floor we want to configure.
         var floor_1 ={};
-        floor_1.id = "";
+        floor_1.id = "first-floor";
         
         console.log(mall_json);
         $('#mapplic').mapplic({
