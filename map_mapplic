@@ -18,6 +18,7 @@
         	developer: false,
         	maxscale: 3
         });
+        loadMallDataCached();
         show_content();
     });
 </script>
