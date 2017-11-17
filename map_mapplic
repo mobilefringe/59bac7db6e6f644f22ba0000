@@ -90,9 +90,9 @@
     		self.updateLocation('pos');
     	});
     
-        var bBox = $(svg).getBBox();
-            console.log('XxY', bBox.x + 'x' + bBox.y);
-            console.log('size', bBox.width + 'x' + bBox.height);
+        // var bBox = $(svg).getBBox();
+        //     console.log('XxY', bBox.x + 'x' + bBox.y);
+        //     console.log('size', bBox.width + 'x' + bBox.height);
         show_content();
     }
 </script>
