@@ -30,7 +30,7 @@
             temp_val.show="true";
             mall_json.categories.push(temp_val);
         });
-        
+        mall_json.levels=[]; 
         
         console.log(mall_json);
         $('#mapplic').mapplic({
