@@ -1,0 +1,11 @@
+<script>
+    $('#mapplic').mapplic({
+	source: 'map-data.json',
+	height: 480,
+	minimap: false,
+	sidebar: true,
+	hovertip: true,
+	developer: false,
+	maxscale: 3
+});
+</script>
