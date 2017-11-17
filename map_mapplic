@@ -1,4 +1,4 @@
-<div id="mapplic" class="zmapplic"></div>
+<div id="mapplic" class="mapplic"></div>
 
 <script>
     $('#mapplic').mapplic({
