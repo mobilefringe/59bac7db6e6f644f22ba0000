@@ -43,6 +43,7 @@
                 var temp_val = {};
                 temp_val.id = val.id;
                 temp_val.title= val.name;
+                temp_val.about = val.description;
                 temp_val.color= "#b7a6bd";
                 temp_val.show="true";
                 floor_1.locations.push(temp_val);
