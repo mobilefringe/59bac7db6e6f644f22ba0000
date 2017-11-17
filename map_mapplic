@@ -15,7 +15,7 @@
     
     function renderPage(){
         $('#mapplic').mapplic({
-        	source: '//codecloud.cdn.speedyrails.net/sites/59bac7db6e6f644f22ba0000/application/json/1510937078000/mall copy.json',
+        	source: '//codecloud.cdn.speedyrails.net/sites/59bac7db6e6f644f22ba0000/application/json/1510937136000/mall copy.json',
         	height: 480,
         	minimap: false,
         	sidebar: true,
