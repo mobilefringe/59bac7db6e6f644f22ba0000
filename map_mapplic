@@ -45,7 +45,7 @@
                 temp_val.title= val.name;
                 temp_val.about = val.description;
                 temp_val.category = val.categories;
-                temp_val.show="true";
+                temp_val.thumbnail="true";
                 floor_1.locations.push(temp_val);
             }
             
