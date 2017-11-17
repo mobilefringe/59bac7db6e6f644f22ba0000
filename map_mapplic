@@ -14,26 +14,15 @@
     });
     
     function renderPage(){
-        var jobs = getJobsList().sortBy(function(o){ return o.start_date});
-        var published_jobs = [];
-        $.each (jobs, function(key, val){
-            // today = new Date();
-            // webDate = new Date(val.show_on_web_date)
-            
-            today = moment();
-            webDate = moment(val.show_on_web_date);
-            if (today >= webDate) {
-                published_jobs.push(val)
-            } 
+        $('#mapplic').mapplic({
+        	source: '//codecloud.cdn.speedyrails.net/sites/59bac7db6e6f644f22ba0000/application/json/1472253662000/mall.json',
+        	height: 480,
+        	minimap: false,
+        	sidebar: true,
+        	hovertip: true,
+        	developer: false,
+        	maxscale: 3
         });
-        if (published_jobs.length > 0){
-            renderJobs("#jobs_container","#jobs_template", published_jobs);
-            $('#no_jobs').hide()
-        }
-        else {
-            $('#events_header').click();
-            $('#events_header').find('i').toggleClass('fa-chevron-down fa-chevron-up');
-        }
         show_content();
     }
 </script>
