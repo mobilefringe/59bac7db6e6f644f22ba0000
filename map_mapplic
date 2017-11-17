@@ -69,7 +69,7 @@
         	maxscale: 5
         });
         var self = map.data('mapplic');
-        
+        var location = self.getLocationData('pos');
         
         show_content();
     }
