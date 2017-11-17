@@ -80,19 +80,12 @@
             console.log("stores_x5F_1_x5F_36", $("#stores_x5F_1_x5F_36"));
         });
         map.on('mapready', function(e, self) {
-    	// Update location with geoposition
-    	if (navigator.geolocation) {
-    		navigator.geolocation.getCurrentPosition(function(pos) {
-    			var location = self.getLocationData('pos');
-    			location.lat = pos.coords.latitude;
-    			location.lng = pos.coords.longitude;
-    			self.updateLocation('pos');
-    		});
-        	}
-        	else console.log('Geolocation not enabled.');
-        });
-        var self = map.data('mapplic');
-        
+            var location = self.getLocationData('pos');
+    		location.lat = pos.coords.latitude;
+    		location.lng = pos.coords.longitude;
+    		'self.updateLocation('pos');
+    	});
+        	
         show_content();
     }
 </script>
