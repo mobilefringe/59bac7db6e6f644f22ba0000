@@ -46,6 +46,8 @@
                 temp_val.about = val.description;
                 temp_val.category = val.categories;
                 temp_val.thumbnail=val.store_front_url_abs;
+                temp_val.x = ;
+                temp_val.y = ;
                 floor_1.locations.push(temp_val);
             }
             
