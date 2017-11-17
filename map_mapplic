@@ -63,7 +63,7 @@
         	height: 600,
         	mapfill:true,
         	minimap: true,
-        	sidebar: false,
+        	sidebar: true,
         	hovertip: true,
         	developer: true,
         	maxscale: 5
