@@ -44,7 +44,8 @@
                 var temp_val = {};
                 temp_val.id = val.id;
                 temp_val.title= val.name;
-                temp_val.about = val.description;
+                temp_val.about = Query.trim(title).substring(0, 10)
+    .split(" ").slice(0, -1).join(" ") + "...";;
                 temp_val.category = val.categories[1];
                 temp_val.thumbnail = "";
                 temp_val.link = "/stores/"+val.slug;
