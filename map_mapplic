@@ -94,6 +94,7 @@
         //     console.log('XxY', bBox.x + 'x' + bBox.y);
         //     console.log('size', bBox.width + 'x' + bBox.height);
         var el   = document.getElementsByTagName("svg"); // or other selector like querySelector()
+        console.log(el);
         var rect = el.getBoundingClientRect(); // get the bounding rectangle
         
         console.log( rect.width );
