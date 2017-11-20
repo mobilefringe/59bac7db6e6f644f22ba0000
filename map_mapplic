@@ -20,6 +20,7 @@
     
     function renderPage(){
         var stores = getStoresList();
+        var floor1_stores= z_coordinate;
         console.log(stores);
         var mall_json = {};
         var landmarks = {};
