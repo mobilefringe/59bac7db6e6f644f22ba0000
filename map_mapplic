@@ -102,7 +102,7 @@
         	sidebar: true,
         	hovertip: true,
         	developer: true,
-        	landmarks : {id:"init", x:0.5, y:0.5},
+        	landmark : {id:"init", x:0.5, y:0.5},
         	maxscale: 5
         });
         map.on('mapready', function(e, self) {
