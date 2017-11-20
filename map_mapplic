@@ -109,7 +109,7 @@
         	hovertip: true,
         	developer: true,
         	landmark : {id:"init", x:0.5, y:0.5},
-        	maxscale: 5
+        	maxscale: 1
         });
         map.on('mapready', function(e, self) {
         	console.log('Map is ready!')
