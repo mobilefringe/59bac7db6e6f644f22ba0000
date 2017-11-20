@@ -139,6 +139,17 @@
         console.log("map",map);
         var self = map.data('mapplic');
         console.log("self", self);
+        
+        // Update location with geoposition
+	if (navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(function(pos) {
+			var location = self.getLocationData('pos');
+			location.lat = pos.coords.latitude;
+			location.lng = pos.coords.longitude;
+			self.updateLocation('pos');
+		});
+	}
+	else console.log('Geolocation not enabled.');
         show_content();
         $(window).resize();
     }
