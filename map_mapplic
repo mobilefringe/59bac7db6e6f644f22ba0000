@@ -131,6 +131,7 @@
     
         console.log("map",map);
         var self = map.data('mapplic');
+        console.log("self", self);
         show_content();
     }
 </script>
