@@ -102,7 +102,7 @@
         	sidebar: true,
         	hovertip: true,
         	developer: true,
-        	landmarks
+        	landmarks : {},
         	maxscale: 5
         });
         map.on('mapready', function(e, self) {
