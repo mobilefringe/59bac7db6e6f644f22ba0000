@@ -90,6 +90,9 @@
                 temp_val.y = val.y_coordinate/svg_height;
                 floor_2.locations.push(temp_val);
             }
+            else {
+                return;
+            }
         });
         
         mall_json.levels.push(floor_2);
