@@ -117,7 +117,8 @@
         	sidebar: true,
         	hovertip: true,
         	developer: true,
-        	maxscale: 5
+        	maxscale: 5,
+        	skin: 'mapplic-dark'
         });
         map.on('mapready', function(e, self) {
         	console.log('Map is ready!')
