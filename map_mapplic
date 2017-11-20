@@ -12,7 +12,7 @@
     /* clickable elements */
     .mapplic-clickable:not(g),
     g.mapplic-clickable > * {
-    	opacity: 0.4;
+    	/*opacity: 0.4;*/
     	/*fill: #b7a6bd*/;
     }
     
