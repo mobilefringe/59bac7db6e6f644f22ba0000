@@ -18,7 +18,7 @@
         console.log(stores);
         var mall_json = {};
         mall_json.mapwidth = "1000";
-        mall_json.mapheight = "600";
+        mall_json.mapheight = "700";
         mall_json.categories=[]; 
         var store_cats = getStoreCategories();
         console.log(store_cats);
