@@ -20,7 +20,7 @@
     
     function renderPage(){
         var stores = getStoresList();
-        var floor1_stores= .grep(arr, function( n, i ) {
+        var floor1_stores= .grep(stores, function( n, i ) {
             return ( n.z_coordinate == 1);
         });;
         console.log(stores);
