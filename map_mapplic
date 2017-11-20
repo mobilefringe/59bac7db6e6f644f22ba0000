@@ -27,7 +27,7 @@
             return ( n.z_coordinate == 2);
         });
         
-        console.log(floor1_stores);
+        console.log(floor1_stores,floor2_stores);
         var mall_json = {};
         var landmarks = {};
         mall_json.mapwidth = "1000";
