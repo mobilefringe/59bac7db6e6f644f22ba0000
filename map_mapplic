@@ -8,6 +8,28 @@
     .mapplic-pin{
         /*background-color: transparent!important;    */
     }
+    /* INTERACTIVE ELEMENTS */
+/* clickable elements */
+.mapplic-clickable:not(g),
+g.mapplic-clickable > * {
+	opacity: 0.4;
+	/*fill: #b7a6bd*/;
+}
+
+/* hovered elements */
+.mapplic-clickable:not(g):hover,
+g.mapplic-clickable:hover > * {
+	opacity: 0.8;
+}
+
+/* active elements */
+.mapplic-active,
+a.mapplic-active > path,
+g.mapplic-active > * {
+	fill: #343F4B;
+	opacity: 1.0 !important;
+}
+
 </style>
 <div id="mapplic" class="mapplic"></div>
 
