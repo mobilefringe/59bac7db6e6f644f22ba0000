@@ -129,7 +129,7 @@
     		self.updateLocation('pos');
     	});
     
-        
+        console.log(map);
         show_content();
     }
 </script>
