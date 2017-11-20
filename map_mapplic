@@ -19,7 +19,7 @@
     /* hovered elements */
     .mapplic-clickable:not(g):hover,
     g.mapplic-clickable:hover > * {
-    	opacity: 0.8;
+    	/*opacity: 0.8;*/
     }
     
     /* active elements */
