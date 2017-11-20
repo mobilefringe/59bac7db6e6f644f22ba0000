@@ -101,8 +101,9 @@
         	minimap: true,
         	sidebar: true,
         	hovertip: true,
-        	developer: true
-        // 	maxscale: 5
+        	developer: true,
+        	landmarks
+        	maxscale: 5
         });
         map.on('mapready', function(e, self) {
         	console.log('Map is ready!')
