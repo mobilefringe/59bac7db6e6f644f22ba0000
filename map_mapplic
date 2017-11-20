@@ -9,8 +9,8 @@
         background-color: transparent!important;    
     }
     .mapplic-clickable:not(g), g.mapplic-clickable > * {
-	opacity: 0.4;
-	/*fill: #b7a6bd*/;
+    	opacity: 0.4;
+    	background-color: transparent!important;    
 }
 </style>
 <div id="mapplic" class="mapplic"></div>
