@@ -25,7 +25,7 @@
         mall_json.bottomLat = "900";
         mall_json.leftLng = "900";
         mall_json.bottomLat = "900";
-        mall_json.topLat = "900";
+        mall_json.rightLng = "900";
         mall_json.categories=[]; 
         var store_cats = getStoreCategories();
         console.log(store_cats);
