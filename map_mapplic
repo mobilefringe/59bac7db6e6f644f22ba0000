@@ -22,10 +22,10 @@
         var mall_json = {};
         mall_json.mapwidth = "1000";
         mall_json.mapheight = "900";
-        mall_json.bottomLat = "900";
+        mall_json.bottomLat = "32.865617";
         mall_json.leftLng = "-96.776450";
         mall_json.topLat = "32.870395";
-        mall_json.rightLng = "900";
+        mall_json.rightLng = "-96.770720";
         mall_json.categories=[]; 
         var store_cats = getStoreCategories();
         console.log(store_cats);
