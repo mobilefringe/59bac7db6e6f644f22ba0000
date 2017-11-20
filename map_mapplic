@@ -6,7 +6,7 @@
 
 <style>
     .mapplic-pin{
-        background-color: rgb(255, 105, 180);    
+        background-color: tranparent;    
     }
 </style>
 <div id="mapplic" class="mapplic"></div>
