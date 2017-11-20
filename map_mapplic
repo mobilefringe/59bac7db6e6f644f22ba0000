@@ -97,7 +97,7 @@
         var map = $('#mapplic').mapplic({
         	source: mall_json,
         	height: 600,
-        	mapfill:true,
+        	mapfill:false,
         	minimap: true,
         	sidebar: true,
         	hovertip: true,
