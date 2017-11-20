@@ -20,6 +20,7 @@
         var stores = getStoresList();
         console.log(stores);
         var mall_json = {};
+        var landmarks = {};
         mall_json.mapwidth = "1000";
         mall_json.mapheight = "900";
         mall_json.bottomLat = "32.865617";
