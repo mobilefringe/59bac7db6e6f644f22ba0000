@@ -14,7 +14,7 @@
     .mapplic-clickable:not(g),
     g.mapplic-clickable > * {
     	/*opacity: 0.4;*/
-    	fill: #b7a6bd*/;
+    	fill: inherit;
     }
     
     /* hovered elements */
