@@ -26,7 +26,7 @@
     .mapplic-active,
     a.mapplic-active > path,
     g.mapplic-active > * {
-    	fill: #343F4B;
+    	fill: #ff69b4;
     	opacity: 1.0 !important;
     }
 
