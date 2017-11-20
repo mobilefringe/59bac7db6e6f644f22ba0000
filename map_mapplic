@@ -130,6 +130,7 @@
     	});
     
         console.log("map",map);
+        var self = map.data('mapplic');
         show_content();
     }
 </script>
