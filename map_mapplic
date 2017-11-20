@@ -23,6 +23,12 @@
         var floor1_stores= $.grep(stores, function( n, i ) {
             return ( n.z_coordinate == 1);
         });
+        var floor1_stores= $.grep(stores, function( n, i ) {
+            return ( n.z_coordinate == 1);
+        });
+        var floor1_stores= $.grep(stores, function( n, i ) {
+            return ( n.z_coordinate == 1);
+        });
         console.log(floor1_stores);
         var mall_json = {};
         var landmarks = {};
