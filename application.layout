@@ -60,7 +60,7 @@
     
     <!-- Site data -->
     <script>
-        setEndPoint('https://twinpines.mallmaverick.com/api/v4/twinpines/all.json');
+        setEndPoint('https://northpark.mallmaverick.com/api/v4/northpark/all.json');
     </script>
 </head>
 
