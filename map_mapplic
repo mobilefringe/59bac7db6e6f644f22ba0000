@@ -18,7 +18,7 @@
         console.log(stores);
         var mall_json = {};
         mall_json.mapwidth = "1000";
-        mall_json.mapheight = "700";
+        mall_json.mapheight = "800";
         mall_json.categories=[]; 
         var store_cats = getStoreCategories();
         console.log(store_cats);
@@ -96,7 +96,7 @@
         console.log(mall_json);
         var map = $('#mapplic').mapplic({
         	source: mall_json,
-        	height: 700,
+        	height: 800,
         	mapfill:true,
         	minimap: true,
         	sidebar: true,
