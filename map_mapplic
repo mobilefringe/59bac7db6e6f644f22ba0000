@@ -10,7 +10,7 @@
     }
     .mapplic-clickable:not(g), g.mapplic-clickable > * {
     	opacity: 0.4;
-    	fill: inherit!important;    
+    	/*fill: inherit!important;    */
 }
 </style>
 <div id="mapplic" class="mapplic"></div>
