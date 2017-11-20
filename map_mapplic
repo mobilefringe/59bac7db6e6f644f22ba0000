@@ -89,7 +89,7 @@
         floor_2.locations = [];
         $.each(floor2_stores, function(key,val){
             //for testing limiting the store numbers to this
-            if(key > 10 && key < 20) {
+            // if(key > 10 && key < 20) {
                 var temp_val = {};
                 temp_val.id = val.svgmap_region;
                 temp_val.title= val.name;
@@ -107,10 +107,10 @@
                 temp_val.x = val.x_coordinate/svg_width;
                 temp_val.y = val.y_coordinate/svg_height;
                 floor_2.locations.push(temp_val);
-            }
-            else {
-                return;
-            }
+            // }
+            // else {
+            //     return;
+            // }
         });
         
         mall_json.levels.push(floor_2);
