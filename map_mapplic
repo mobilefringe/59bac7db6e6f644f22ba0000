@@ -23,7 +23,7 @@
         var floor1_stores= .grep(stores, function( n, i ) {
             return ( n.z_coordinate == 1);
         });
-        console.log(stores);
+        console.log(floor1_stores);
         var mall_json = {};
         var landmarks = {};
         mall_json.mapwidth = "1000";
