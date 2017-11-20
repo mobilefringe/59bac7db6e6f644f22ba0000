@@ -12,14 +12,14 @@
     /* clickable elements */
     .mapplic-clickable:not(g),
     g.mapplic-clickable > * {
-    	/*opacity: 0.4;*/
+    	opacity: 1;
     	/*fill: #b7a6bd*/;
     }
     
     /* hovered elements */
     .mapplic-clickable:not(g):hover,
     g.mapplic-clickable:hover > * {
-    	/*opacity: 0.8;*/
+    	opacity: 1;
     }
     
     /* active elements */
