@@ -56,7 +56,7 @@
                 temp_val.category = val.categories[1];
                 temp_val.thumbnail = "";
                 temp_val.link = "/stores/"+val.slug;
-                temp_val.pin = "purple pin-label";
+                temp_val.pin = "purple pin-lg";
                 temp_val.fill = "#ff69b4";
                 if(val.store_front_url_abs.indexOf("missing") == -1){
                     temp_val.thumbnail=val.store_front_url_abs;
