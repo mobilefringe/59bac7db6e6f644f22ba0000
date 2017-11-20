@@ -20,7 +20,9 @@
     
     function renderPage(){
         var stores = getStoresList();
-        var floor1_stores= z_coordinate;
+        var floor1_stores= .grep(arr, function( n, i ) {
+            return ( n !== 5 && i > 4 );
+        });;
         console.log(stores);
         var mall_json = {};
         var landmarks = {};
