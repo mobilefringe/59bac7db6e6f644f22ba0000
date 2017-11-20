@@ -5,7 +5,9 @@
 <script src="//codecloud.cdn.speedyrails.net/sites/59bac7db6e6f644f22ba0000/text/javascript/1484859750000/hammer.min.js"></script>
 
 <style>
-    
+    .mapplic-pin{
+        
+    }
 </style>
 <div id="mapplic" class="mapplic"></div>
 
