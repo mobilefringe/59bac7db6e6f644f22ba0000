@@ -6,7 +6,7 @@
 
 <style>
     .mapplic-pin{
-        background-color: transparent!important;    
+        /*background-color: transparent!important;    */
     }
     .mapplic-clickable:not(g), g.mapplic-clickable > * {
     	opacity: 0.4;
