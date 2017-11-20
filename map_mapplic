@@ -20,6 +20,7 @@
     .mapplic-clickable:not(g):hover,
     g.mapplic-clickable:hover > * {
     	opacity: 1;
+    	fill: #a366d4;
     }
     
     /* active elements */
