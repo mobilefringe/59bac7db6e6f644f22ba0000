@@ -140,7 +140,7 @@
         console.log(mall_json);
         var map = $('#mapplic').mapplic({
         	source: mall_json,
-        	height: 600,
+        	height: 900,
         	landmark : true,
         	mapfill:true,
         	minimap: true,
