@@ -171,6 +171,7 @@
         console.log("map",map);
         var self = map.data('mapplic');
         console.log("self", self);
+         var location = self.getLocationData('stores_x5F_1_x5F_36');
     
         show_content();
         $(window).resize();
