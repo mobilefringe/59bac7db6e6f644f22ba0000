@@ -167,7 +167,7 @@
     		location.lng = pos.coords.longitude;
     		self.updateLocation('pos');
     	});
-    
+        console.log(svg.getBoundingClientRect());
         console.log("map",map);
         var self = map.data('mapplic');
         console.log("self", self);
