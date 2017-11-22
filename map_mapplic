@@ -167,7 +167,7 @@
     		location.lng = pos.coords.longitude;
     		self.updateLocation('pos');
     	});
-    	var svg = document.getElementsByTagName("svg");
+    	var svg =$("svg");
     	console.log(svg);
         console.log(svg.getBoundingClientRect());
         console.log("map",map);
