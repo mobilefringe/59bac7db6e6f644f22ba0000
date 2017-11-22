@@ -168,7 +168,7 @@
     		self.updateLocation('pos');
     	});
     	var svg = document.getElementsByTagName("svg");
-    	console.log(svg)
+    	console.log(svg);
         console.log(svg.getBoundingClientRect());
         console.log("map",map);
         var self = map.data('mapplic');
