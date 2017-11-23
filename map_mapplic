@@ -184,6 +184,10 @@
         loadMallDataCached(renderPage);
         show_content();
         $(window).resize();
+        
+        setTimeout(function(){
+            
+        },1000)
     });
         
     
