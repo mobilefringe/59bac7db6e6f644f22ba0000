@@ -169,7 +169,6 @@
     	});
     	$("svg").find("g").click(function(){
 
-            // your jquery code here
             
         });
         console.log("map",map);
