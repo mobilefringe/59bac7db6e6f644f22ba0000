@@ -162,7 +162,44 @@
         show_content();
         $(window).resize();
     });
-        
+    
+    $(window).load(function(e){
+        // Map ready
+			map.on('mapready', function(e, self) {
+				console.log('Map is ready!')
+			});
+
+			// Location opened
+			map.on('locationopened', function(e, location) {
+				// location grants full access to the location
+				console.log(location.title + ' opened.');
+			});
+
+			// Location closed
+			map.on('locationclosed', function(e) {
+				console.log('Location closed.');
+			});
+
+			// Level switched
+			map.on('levelswitched', function(e, level) {
+				console.log('Switched to ' + level + ' level.');
+			});
+
+			// Position changed
+			map.on('positionchanged', function(e, self) {
+				// self grants direct access to the map object
+				//console.log('Pan or zoom performed, current scale: ' + self.scale);
+			});
+
+        	map.on('locationopened', function(e, location) {
+            	// location grants full access to the location
+            	console.log(location.el ,' opened.');
+            	 console.log(e);
+            	 
+            	 var current_location = location.el[0].getBBox();
+            	 console.log(current_location);
+            });
+    })
     
 </script>
 <!--//www.mallmaverick.com/system/site_images/photos/000/034/436/original/Northpark_-_Map_-_Floor_1_-_Mapplic_Test_1.svg?1510930761-->
