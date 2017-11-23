@@ -147,7 +147,7 @@
             	maxscale: 5,
             	skin: 'mapplic-dark'
             });
-            console.log($("mapplic svg"));
+            console.log(map);
         	// Map ready
 			map.on('mapready', function(e, self) {
 				console.log('Map is ready!')
