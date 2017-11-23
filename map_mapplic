@@ -47,14 +47,14 @@
                 return ( n.z_coordinate == 2);
             });
             
-            console.log(floor1_stores,floor2_stores);
+            // console.log(floor1_stores,floor2_stores);
             var mall_json = {};
             var landmarks = {};
             mall_json.mapwidth = "1000";
             mall_json.mapheight = "1000";
             mall_json.categories=[]; 
             var store_cats = getStoreCategories();
-            console.log(store_cats);
+            // console.log(store_cats);
             $.each(store_cats, function(key,val){
                 var temp_val = {};
                 temp_val.id = val.id;
