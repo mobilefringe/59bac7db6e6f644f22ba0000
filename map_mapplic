@@ -170,6 +170,8 @@
         	// location grants full access to the location
         	console.log(location.el ,' opened.');
         	 console.log(e);
+        	 
+        	 var current_location = location.el
         });
     // 	$("svg").find("polygon").click(function(e){
     //         console.log(e);
