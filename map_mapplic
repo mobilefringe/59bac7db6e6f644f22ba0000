@@ -177,7 +177,8 @@
         
         $.each(floor1_stores, function(key,val){
             console.log(val.svgmap_region);
-            $("#"+val.svgmap_region)[0].getBBox();
+            var bbox = $("#"+val.svgmap_region)[0].getBBox();
+            console.log(bbox_)
         });
     // 	$("svg").find("polygon").click(function(e){
     //         console.log(e);
