@@ -171,7 +171,7 @@
         	console.log(location.el ,' opened.');
         	 console.log(e);
         	 
-        	 var current_location = location.el;
+        	 var current_location = location.elgetBBox();
         });
     // 	$("svg").find("polygon").click(function(e){
     //         console.log(e);
