@@ -155,15 +155,15 @@
 				console.log('Map is ready!')
 			});
 
-        	map.on('locationopened', function(e, location) {
+        	map.on('locationopened', function(e, loc) {
             	// location grants full access to the location
-            	console.log(location ,' opened.');
+            	console.log(loc ,' opened.');
             	 console.log(e);
             	 
-            	 var current_location = location.el[0].getBBox();
+            	 var current_location = loc.el[0].getBBox();
             	 console.log(current_location);
             	 var location.x = current_location.x;
-            	 var location.y = current_location.y;
+            	 location.y = current_location.y;
             	 self.updateLocation(location.id);
             });
             
