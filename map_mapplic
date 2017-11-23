@@ -191,6 +191,8 @@
                 }
                 
             });
+            var self = map.data('mapplic');
+            console.log(Self);
         },200);
     });
         
