@@ -167,7 +167,11 @@
     		location.lng = pos.coords.longitude;
     		self.updateLocation('pos');
     	});
-    	
+    	$("svg").find("g").click(function(){
+
+            // your jquery code here
+            
+        });
         console.log("map",map);
         var self = map.data('mapplic');
         console.log("self", self);
