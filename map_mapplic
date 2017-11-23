@@ -38,8 +38,6 @@
     $(document).ready(function(e){
         init(e);
         
-        loadMallDataCached(renderPage);
-    });
     
     function renderPage(){
         var stores = getStoresList();
