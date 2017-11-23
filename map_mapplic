@@ -173,7 +173,7 @@
     //     });
         $(".mapplic-clickable").click(function(e){
             
-        })
+        });
         console.log("map",map);
         var self = map.data('mapplic');
         console.log("self", self);
