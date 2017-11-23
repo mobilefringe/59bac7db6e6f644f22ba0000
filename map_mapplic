@@ -185,6 +185,7 @@
              $.each(floor1_stores, function(key,val){
                 
                 if(val.svgmap_region != null){
+                    console.log(val.svgmap_region);
                     var bbox = $("#"+val.svgmap_region)[0].getBBox();
                     console.log(bbox);
                 }
