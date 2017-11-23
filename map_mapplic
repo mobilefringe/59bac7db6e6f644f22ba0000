@@ -175,8 +175,8 @@
                 
                 var x_offset = (parseInt(current_location.width) / 2);
                 var y_offset = (parseInt(current_location.height) /2);
-                location.x = (current_location.x+ x_offset-50)/myWidth;
-                location.y = (current_location.y+ y_offset-50)/myHeight;
+                location.x = (current_location.x+ x_offset-90)/myWidth;
+                location.y = (current_location.y+ y_offset-40)/myHeight;
             	
             	console.log("new location",location.x + ", " + location.y);
                 
