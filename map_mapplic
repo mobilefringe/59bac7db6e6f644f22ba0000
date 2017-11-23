@@ -175,7 +175,6 @@
             // 	 console.log(map);
             });
             self = map.data('mapplic');
-            console.log(self);
            
         }
         
