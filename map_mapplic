@@ -168,6 +168,7 @@
             	 var self = map.data('mapplic');
 
             	 self.updateLocation(loc.id);
+            	 console.log(map);
             });
             
             // $.each(floor1_stores, function(key,val){
