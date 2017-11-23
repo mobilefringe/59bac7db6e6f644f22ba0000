@@ -178,13 +178,6 @@
 				//console.log('Pan or zoom performed, current scale: ' + self.scale);
 			});
 
-			// METHODS
-			// Getting mapplic object
-			var self = map.data('mapplic');
-
-			map.on('locationclosed', function(e) {
-				//console.log(self);
-			});
         	map.on('locationopened', function(e, location) {
             	// location grants full access to the location
             	console.log(location.el ,' opened.');
