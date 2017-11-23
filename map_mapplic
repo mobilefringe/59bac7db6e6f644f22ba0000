@@ -167,10 +167,13 @@
     		location.lng = pos.coords.longitude;
     		self.updateLocation('pos');
     	});
-    	$("svg").find("polygon").click(function(e){
-            console.log(e);
+    // 	$("svg").find("polygon").click(function(e){
+    //         console.log(e);
             
-        });
+    //     });
+        $(".mapplic-clickable").click(function(e){
+            
+        })
         console.log("map",map);
         var self = map.data('mapplic');
         console.log("self", self);
