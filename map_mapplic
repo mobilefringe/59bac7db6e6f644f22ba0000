@@ -157,7 +157,7 @@
 
         	map.on('locationopened', function(e, location) {
             	// location grants full access to the location
-            	console.log(location.el ,' opened.');
+            	console.log(location ,' opened.');
             	 console.log(e);
             	 
             	 var current_location = location.el[0].getBBox();
