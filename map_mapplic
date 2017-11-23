@@ -192,7 +192,7 @@
                 }
                 var locations = self.data.levels[val.z_coordinate].locations;
                 var this_location = $.grep(locations, function( n, i ) {
-                return ( n.z_coordinate == 1);
+                return ( n.id == 1);
             });
                 console.log();
             });
