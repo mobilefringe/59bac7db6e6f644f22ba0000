@@ -163,6 +163,9 @@
                 var bbox = $("#"+val.svgmap_region);//[0].getBBox();
                 console.log(bbox);
             });
+            map.on('mapready', function(e, self) {
+            	console.log('Map is ready!');
+            });
         // 	$("svg").find("polygon").click(function(e){
         //         console.log(e);
                 
