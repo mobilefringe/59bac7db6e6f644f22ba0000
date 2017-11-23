@@ -172,8 +172,12 @@
                 console.log(current_location);
                 var location = self.getLocationData(loc.id);
                 console.log("old location",location.x + ", " + location.y);
-                location.x = current_location.x/myWidth;
-                location.y = current_location.y/myHeight;
+                
+                var x_offset = (parseInt(current_location.width) / 2);
+                var y_offset = (parseInt(current_location.height) /2);
+                var mark = { xy: [coords["x"]    + x_offset-15, coords["y"]  + y_offset-20],
+                location.x = (current_location.x)/myWidth;
+                location.y = (current_location.y)/myHeight;
             	
             	console.log("new location",location.x + ", " + location.y);
                 
