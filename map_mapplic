@@ -162,7 +162,7 @@
             	 
             	 var current_location = location.el[0].getBBox();
             	 console.log(current_location);
-            	 
+            	 self.updateLocation('pos');
             });
             
             // $.each(floor1_stores, function(key,val){
