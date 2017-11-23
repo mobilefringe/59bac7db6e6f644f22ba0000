@@ -177,6 +177,9 @@
         console.log("location",location);
             
         }
+        $(".mapplic-clickable").click(function(e){
+                console.log(e);
+            });
         loadMallDataCached(renderPage);
         show_content();
         $(window).resize();
