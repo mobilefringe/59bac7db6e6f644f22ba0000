@@ -191,7 +191,7 @@
                     var bbox = $("#"+val.svgmap_region)[0].getBBox();
                     console.log(bbox);
                     
-                    var locations = self.data.levels[1].locations;
+                    var locations = self.data.levels[0].locations;
                     console.log(locations);
                     var this_location = $.grep(locations, function( n, i ) {
                         // console.log(n.id,  val.svgmap_region);
