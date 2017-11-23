@@ -151,9 +151,6 @@
         	// Map ready
 			map.on('mapready', function(e, self) {
 				console.log('Map is ready!')
-				// self grants direct access to the map object
-				// The map will be focused on the washing machine by default
-				//self.moveTo(0.67, 0.62, 3, 0);
 			});
 
 			// Location opened
