@@ -175,7 +175,7 @@
                 location.x = current_location.x/myWidth;
                 location.y = current_location.y/myHeight;
             	
-            	console.log("new location",,location.x + ", " + location.y);
+            	console.log("new location",location.x + ", " + location.y);
                 
             	self.updateLocation(location.id);
             // 	 console.log(map);
