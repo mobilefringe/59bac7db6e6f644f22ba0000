@@ -173,7 +173,7 @@
             console.log("self", self);
             var location = self.getLocationData('stores_x5F_1_x5F_36');
             console.log("location",location);
-            $(document).on('mapready', function(e, self) {
+            map.on('mapready', function(e, self) {
             	console.log('Map is ready!');
             });
         }
