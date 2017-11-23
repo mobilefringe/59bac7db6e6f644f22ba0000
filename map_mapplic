@@ -162,6 +162,7 @@
             	 
             	 var current_location = location.el[0].getBBox();
             	 console.log(current_location);
+            	 var location = current_location.c
             	 self.updateLocation(location.id);
             });
             
