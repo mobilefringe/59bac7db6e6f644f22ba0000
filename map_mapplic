@@ -192,7 +192,7 @@
                 }
                 
             });
-            console.log(self.data.levels.locations);
+            console.log(self.data.levels);
         },200);
     });
         
