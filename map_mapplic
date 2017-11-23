@@ -175,9 +175,7 @@
         console.log("self", self);
         var location = self.getLocationData('stores_x5F_1_x5F_36');
         console.log("location",location);
-            $(".mapplic-clickable").click(function(e){
-                console.log(e);
-            });
+            
         }
         loadMallDataCached(renderPage);
         show_content();
