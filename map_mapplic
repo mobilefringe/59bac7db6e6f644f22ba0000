@@ -167,7 +167,7 @@
     		location.lng = pos.coords.longitude;
     		self.updateLocation('pos');
     	});
-    	$("svg").find("g").click(function(){
+    	$("svg").find("polygon").click(function(){
 
             
         });
