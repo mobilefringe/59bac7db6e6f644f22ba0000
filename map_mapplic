@@ -168,7 +168,7 @@
     	
     	map.on('locationopened', function(e, location) {
         	// location grants full access to the location
-        	console.log(location.title + ' opened.');
+        	console.log(location + ' opened.');
         });
     // 	$("svg").find("polygon").click(function(e){
     //         console.log(e);
