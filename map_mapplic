@@ -164,6 +164,7 @@
     });
     
     $(window).load(function(e){
+        console.log(map)p
         // Map ready
 		map.on('mapready', function(e, self) {
 			console.log('Map is ready!')
