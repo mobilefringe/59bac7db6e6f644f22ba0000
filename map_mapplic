@@ -160,7 +160,7 @@
             	// location grants full access to the location
                 console.log(loc ,' opened.');
                 console.log(e);
-                self.hideLocation
+                self.hideLocation(loc.id);
                 var current_location = loc.el[0].getBBox();
                 console.log(current_location);
                 var location ="";
