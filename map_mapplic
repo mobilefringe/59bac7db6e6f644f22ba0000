@@ -149,7 +149,7 @@
             });
             console.log(map);
             console.log($("#mapplic").find("svg"));
-            console.log($("#mapplic svg"));
+            console.log($("svg"));
         	// Map ready
 			map.on('mapready', function(e, self) {
 				console.log('Map is ready!')
