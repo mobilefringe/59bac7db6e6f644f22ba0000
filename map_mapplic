@@ -190,7 +190,8 @@
                     var bbox = $("#"+val.svgmap_region)[0].getBBox();
                     console.log(bbox);
                 }
-                console.log(self.data.levels[val.z_coordinate].locations);
+                var locations = self.data.levels[val.z_coordinate].locations
+                console.log();
             });
             
         },2000);
