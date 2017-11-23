@@ -172,7 +172,7 @@
                 location.y = current_location.y;
             	 
                 var el = document.getElementById('svg4538'); 
-                console.log(el);
+                // console.log(el);
                 var myWidth = el.getBoundingClientRect().width;
                 var myHeight = el.getBoundingClientRect().height;
                 console.log(myWidth,myHeight);
