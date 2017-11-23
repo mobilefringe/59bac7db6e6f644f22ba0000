@@ -35,7 +35,7 @@
 <div id="mapplic" class="mapplic"></div>
 
 <script>
-var map =null;
+    var map = null;
     $(document).ready(function(e){
         init(e);
         
