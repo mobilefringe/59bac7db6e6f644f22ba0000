@@ -148,9 +148,7 @@
         	maxscale: 5,
         	skin: 'mapplic-dark'
         });
-        map.on('mapready', function(e, self) {
-        	console.log('Map is ready!');
-        });
+        
     	
     	map.on('locationopened', function(e, location) {
         	// location grants full access to the location
