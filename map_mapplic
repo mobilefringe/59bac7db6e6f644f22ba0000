@@ -155,7 +155,11 @@
 			map.on('mapready', function(e, self) {
 				console.log('Map is ready!')
 			});
-
+            var el = document.getElementById('svg4538'); 
+            // console.log(el);
+            var myWidth = el.getBoundingClientRect().width;
+            var myHeight = el.getBoundingClientRect().height;
+            console.log(myWidth,myHeight);
         	map.on('locationopened', function(e, loc) {
                 var self = map.data('mapplic');
                 
