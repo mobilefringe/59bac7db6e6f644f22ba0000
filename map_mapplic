@@ -172,6 +172,7 @@
         	 console.log(e);
         	 
         	 var current_location = location.el.getBBox();
+        	 console.log(current_location)l
         });
     // 	$("svg").find("polygon").click(function(e){
     //         console.log(e);
