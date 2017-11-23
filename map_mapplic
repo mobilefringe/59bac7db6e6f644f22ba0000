@@ -193,7 +193,7 @@
                 
             });
             console.log(self.data.levels[val.z_coordinate]);
-        },200);
+        },2000);
     });
         
     
