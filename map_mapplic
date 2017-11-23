@@ -187,7 +187,7 @@
                 var bbox = $("#"+val.svgmap_region)[0].getBBox();
                 console.log(bbox);
             });
-        },1000);
+        },1500);
     });
         
     
