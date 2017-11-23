@@ -183,7 +183,7 @@
         
         setTimeout(function(){
              $.each(floor1_stores, function(key,val){
-                console.log(val.svgmap_region);
+                
                 if(val.svgmap_region != null){
                     var bbox = $("#"+val.svgmap_region)[0].getBBox();
                     console.log(bbox);
