@@ -172,7 +172,7 @@
                 console.log(current_location);
                 var location = self.getLocationData(loc.id);
                 console.log(location);
-                location.x = current_location.x;
+                location.x = current_location.x/myWidth;
                 location.y = current_location.y;
             	 
                 
