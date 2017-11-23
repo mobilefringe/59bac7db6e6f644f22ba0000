@@ -38,7 +38,7 @@
     $(document).ready(function(e){
         init(e);
         var floor1_stores = null;
-        var self = null
+        var self = null;
         function renderPage(){
             var stores = getStoresList();
             floor1_stores= $.grep(stores, function( n, i ) {
