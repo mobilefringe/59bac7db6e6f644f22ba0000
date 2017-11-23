@@ -153,28 +153,6 @@
 				console.log('Map is ready!')
 			});
 
-			// Location opened
-			map.on('locationopened', function(e, location) {
-				// location grants full access to the location
-				console.log(location.title + ' opened.');
-			});
-
-			// Location closed
-			map.on('locationclosed', function(e) {
-				console.log('Location closed.');
-			});
-
-			// Level switched
-			map.on('levelswitched', function(e, level) {
-				console.log('Switched to ' + level + ' level.');
-			});
-
-			// Position changed
-			map.on('positionchanged', function(e, self) {
-				// self grants direct access to the map object
-				//console.log('Pan or zoom performed, current scale: ' + self.scale);
-			});
-
         	map.on('locationopened', function(e, location) {
             	// location grants full access to the location
             	console.log(location.el ,' opened.');
@@ -182,6 +160,7 @@
             	 
             	 var current_location = location.el[0].getBBox();
             	 console.log(current_location);
+            	 
             });
             
             // $.each(floor1_stores, function(key,val){
