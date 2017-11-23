@@ -173,7 +173,8 @@
             	 self.updateLocation(loc.id);
             // 	 console.log(map);
             });
-            
+            var self = map.data('mapplic');
+            console.log(self);
            
         }
         
