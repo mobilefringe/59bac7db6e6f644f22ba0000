@@ -164,7 +164,7 @@
             	 console.log(current_location);
             	 var location.x = current_location.x;
             	 location.y = current_location.y;
-            	 self.updateLocation(location.id);
+            	 self.updateLocation(loc.id);
             });
             
             // $.each(floor1_stores, function(key,val){
