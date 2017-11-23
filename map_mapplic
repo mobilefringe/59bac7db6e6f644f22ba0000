@@ -194,7 +194,7 @@
                     var locations = self.data.levels[0].locations;
                     console.log(locations);
                     var this_location = $.grep(locations, function( n, i ) {
-                        console.log(n.id);
+                        
                         return ( n.id.toString() == val.svgmap_region.toString());
                     });
                     console.log(this_location);
