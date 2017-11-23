@@ -174,7 +174,7 @@
                 var el = document.getElementById('svg4538'); 
                 console.log(el);
                 var mywidth = el.getBoundingClientRect().width;
-                
+                console.log(mywidth);
             	 self.updateLocation(location.id);
             // 	 console.log(map);
             });
