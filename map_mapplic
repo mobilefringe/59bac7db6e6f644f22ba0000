@@ -193,7 +193,7 @@
                 
             });
             var self = map.data('mapplic');
-                console.log(self);
+            console.log(self);
         },200);
     });
         
