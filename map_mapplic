@@ -159,12 +159,6 @@
             console.log("location",location);
             console.log("stores_x5F_1_x5F_36", $("#stores_x5F_1_x5F_36"));
         });
-        map.on('mapready', function(e, self) {
-            var location = self.getLocationData('pos');
-    		location.lat = pos.coords.latitude;
-    		location.lng = pos.coords.longitude;
-    		self.updateLocation('pos');
-    	});
     	
     	map.on('locationopened', function(e, location) {
         	// location grants full access to the location
