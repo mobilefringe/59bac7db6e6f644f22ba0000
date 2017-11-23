@@ -148,7 +148,7 @@
             	skin: 'mapplic-dark'
             });
             console.log(map);
-            console.log("#mapplic svg");
+            console.log($("#mapplic svg"));
         	// Map ready
 			map.on('mapready', function(e, self) {
 				console.log('Map is ready!')
