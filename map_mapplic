@@ -191,6 +191,9 @@
                     console.log(bbox);
                 }
                 var locations = self.data.levels[val.z_coordinate].locations;
+                var this_location = $.grep(stores, function( n, i ) {
+                return ( n.z_coordinate == 1);
+            });
                 console.log();
             });
             
