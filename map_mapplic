@@ -176,7 +176,7 @@
                 var myWidth = el.getBoundingClientRect().width;
                 var myHeight = el.getBoundingClientRect().height;
                 console.log(myWidth,myHeight);
-            	 self.updateLocation(location.id);
+            	self.updateLocation(location.id);
             // 	 console.log(map);
             });
             self = map.data('mapplic');
