@@ -176,7 +176,7 @@
         });
         
         $.each(floor1_stores, function(key,val){
-            console.log(e);
+            console.log(val.svg_region);
         });
     // 	$("svg").find("polygon").click(function(e){
     //         console.log(e);
