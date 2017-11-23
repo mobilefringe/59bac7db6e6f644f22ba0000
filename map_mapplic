@@ -159,10 +159,10 @@
         	map.on('locationopened', function(e, loc) {
                 var self = map.data('mapplic');
                  var el = document.getElementById('svg4538'); 
-            // console.log(el);
-            var myWidth = el.getBoundingClientRect().width;
-            var myHeight = el.getBoundingClientRect().height;
-            console.log(myWidth,myHeight);
+                // console.log(el);
+                var myWidth = el.getBoundingClientRect().width;
+                var myHeight = el.getBoundingClientRect().height;
+                console.log(myWidth,myHeight);
                 // console.log(self.getLocationData(loc.id));
             	// location grants full access to the location
                 console.log(loc ,' opened.');
