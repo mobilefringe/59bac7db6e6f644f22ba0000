@@ -159,7 +159,7 @@
         	map.on('locationopened', function(e, loc) {
                 var self = map.data('mapplic');
                 
-                console.log(self.getLocationData(loc.id));
+                // console.log(self.getLocationData(loc.id));
             	// location grants full access to the location
                 console.log(loc ,' opened.');
                 console.log(e);
