@@ -149,7 +149,7 @@
         	skin: 'mapplic-dark'
         });
         map.on('mapready', function(e, self) {
-        	console.log('Map is ready!')
+        	console.log('Map is ready!');
         });
     	
     	map.on('locationopened', function(e, location) {
