@@ -183,6 +183,7 @@
         $(window).resize();
         
         setTimeout(function(){
+            console.log(floor1_stores.length);
              $.each(floor1_stores, function(key,val){
                 
                 if(val.svgmap_region != null){
