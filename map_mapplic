@@ -171,7 +171,7 @@
                 location.x = current_location.x;
                 location.y = current_location.y;
             	 
-                
+                var el = document.getElementById('myelem'); var mywidth = el.getBoundingClientRect().width;
             	 self.updateLocation(location.id);
             // 	 console.log(map);
             });
