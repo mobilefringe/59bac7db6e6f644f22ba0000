@@ -165,7 +165,9 @@
             	 var location ="";
             	 location.x = current_location.x;
             	 location.y = current_location.y;
-            	 map.updateLocation(loc.id);
+            	 var self = map.data('mapplic');
+
+            	 self.updateLocation(loc.id);
             });
             
             // $.each(floor1_stores, function(key,val){
