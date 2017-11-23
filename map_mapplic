@@ -158,7 +158,7 @@
         	map.on('locationopened', function(e, loc) {
         	    var self = map.data('mapplic');
             	// location grants full access to the location
-            	console.log(loc ,' opened.');
+            	    console.log(loc ,' opened.');
             	 console.log(e);
             	 self.hideLocation
             	 var current_location = loc.el[0].getBBox();
