@@ -110,12 +110,12 @@
                     temp_val.y = val.y_coordinate/svg_height;
                     console.log(temp_val.title,temp_val.x, temp_val.y )
                     floor_1.locations.push(temp_val);
-                // }
-                // else {
-                //     return;
-                // }
-                
-            });
+                    // }
+                    // else {
+                    //     return;
+                    // }
+                    
+                    });
             
             mall_json.levels.push(floor_1);
             // need to add the following for each floor we want to configure.
