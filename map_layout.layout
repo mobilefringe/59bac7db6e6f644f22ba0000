@@ -65,24 +65,24 @@
 </head>
 
 <body>
-    <script>
-          window.fbAsyncInit = function() {
-            FB.init({
-              appId            : '1936995779887311',
-              autoLogAppEvents : true,
-              xfbml            : true,
-              version          : 'v2.11'
-            });
-          };
+    <!--<script>-->
+    <!--      window.fbAsyncInit = function() {-->
+    <!--        FB.init({-->
+    <!--          appId            : '1936995779887311',-->
+    <!--          autoLogAppEvents : true,-->
+    <!--          xfbml            : true,-->
+    <!--          version          : 'v2.11'-->
+    <!--        });-->
+    <!--      };-->
         
-          (function(d, s, id){
-             var js, fjs = d.getElementsByTagName(s)[0];
-             if (d.getElementById(id)) {return;}
-             js = d.createElement(s); js.id = id;
-             js.src = "https://connect.facebook.net/en_US/sdk.js";
-             fjs.parentNode.insertBefore(js, fjs);
-           }(document, 'script', 'facebook-jssdk'));
-    </script>
+    <!--      (function(d, s, id){-->
+    <!--         var js, fjs = d.getElementsByTagName(s)[0];-->
+    <!--         if (d.getElementById(id)) {return;}-->
+    <!--         js = d.createElement(s); js.id = id;-->
+    <!--         js.src = "https://connect.facebook.net/en_US/sdk.js";-->
+    <!--         fjs.parentNode.insertBefore(js, fjs);-->
+    <!--       }(document, 'script', 'facebook-jssdk'));-->
+    <!--</script>-->
     <header class="main_container main_nav">
         <div class="position_relative">
             <img src="//codecloud.cdn.speedyrails.net/sites/57f50a1b6e6f6426d2010000/image/png/1463501219000/open_menu.png" class="open_menu visible_phone" alt="open menu">
@@ -159,8 +159,8 @@
             })(this);
         </script>
     </div>
-    <div class="fb-customerchat" page_id="137431223685855" ref="" minimized="false">
-    </div>
+    <!--<div class="fb-customerchat" page_id="137431223685855" ref="" minimized="false">-->
+    <!--</div>-->
 </body>
 
 </html>
