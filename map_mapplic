@@ -80,7 +80,9 @@
             floor_1.show="true";
             floor_1.locations = [];
             
-            $("img").load(function() {
+            $("#original_svg").load(function() {
+                alert($(this).height());
+                alert($(this).width());
                 var svg_width = $("#original_svg").width();
             var svg_height = $("#original_svg").height();
             });
