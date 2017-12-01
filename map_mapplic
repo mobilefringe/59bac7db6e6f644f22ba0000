@@ -114,7 +114,9 @@
                     // else {
                     //     return;
                     // }
-                    
+                    if (max_y < val.y_coordinate) {
+                        max_y = val.y_coordinate;
+                    }
                     });
             
             mall_json.levels.push(floor_1);
