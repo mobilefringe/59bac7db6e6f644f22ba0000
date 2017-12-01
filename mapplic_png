@@ -81,6 +81,7 @@
                     temp_val.title= val.name;
                     temp_val.about = $.trim(val.description).substring(0, 200).split(" ").slice(0, -1).join(" ") + "...";
                     temp_val.category = val.categories[0];
+                    console.log(val.categories[0]);
                     temp_val.thumbnail = "";
                     temp_val.link = "/stores/"+val.slug;
                     temp_val.pin = "hidden";
