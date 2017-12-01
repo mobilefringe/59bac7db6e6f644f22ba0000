@@ -32,13 +32,9 @@
     }
 
 </style>
-<div style="position:relative; height:900px;">
-    <div id="mapplic" class="mapplic">
+<div id="mapplic" class="mapplic">
     
-    </div>
-    <img id="original_svg" src="//mallmaverick.com/system/properties/svgmaps/000/000/056/original/Northpark_-_Map_-_Nov-03-2017.svg?1509986633" class="" alt="" style="visibility:hidden; position:absolute; z-index:-1;top:0;left:0;">
 </div>
-
 
 <script>
     $(document).ready(function(e){
@@ -79,15 +75,7 @@
             floor_1.minimap = "//codecloud.cdn.speedyrails.net/sites/59bac7db6e6f644f22ba0000/image/jpeg/1510940237000/Northpark_-_Map_-_Floor_1_-_Mapplic_Test_1.jpg";
             floor_1.show="true";
             floor_1.locations = [];
-            var svg_width = null;
-            var svg_height = null;
-            $("img").load(function() {
-                svg_width = $(this).width();
-                svg_height = $(this).height();
-                // console.log($("#original_svg"));
-                console.log("width",svg_width,"height",svg_height)
-                var max_y = 0;
-                $.each(floor1_stores, function(key,val){
+            $.each(floor1_stores, function(key,val){
                 //for testing limiting the store numbers to this
                 // if(key < 10) {
                     var temp_val = {};
@@ -104,21 +92,16 @@
                     }
                     //get svg's wifth/height by checking the map
                     var svg_width = 1500;
-                    var svg_height = 1200;
+                    var svg_height = 1368;
                     
                     temp_val.x = val.x_coordinate/svg_width;
                     temp_val.y = val.y_coordinate/svg_height;
-                    console.log(temp_val.title,temp_val.x, temp_val.y )
                     floor_1.locations.push(temp_val);
-                    // }
-                    // else {
-                    //     return;
-                    // }
-                    if (max_y < val.y_coordinate) {
-                        max_y = val.y_coordinate;
-                    }
-                    });
-            console.log(max_y);
+                // }
+                // else {
+                //     return;
+                // }
+            });
             mall_json.levels.push(floor_1);
             // need to add the following for each floor we want to configure.
             var floor_2 ={};
@@ -205,9 +188,6 @@
             // 	 console.log(map);
             });
             self = map.data('mapplic');
-            });
-            
-            
            
         }
         
