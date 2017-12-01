@@ -79,8 +79,8 @@
             var svg_width = $("#original_svg").naturalWidth;
             var svg_height = $("#original_svg").naturalHeight;
             console.log($("#original_svg"));
-            console.log("width",,"height",svg_height)
-            $.each(floor1_stores,svg_width function(key,val){
+            console.log("width",svg_width,"height",svg_height)
+            $.each(floor1_stores, function(key,val){
                 //for testing limiting the store numbers to this
                 // if(key < 10) {
                     var temp_val = {};
