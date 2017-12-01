@@ -84,7 +84,7 @@
                 alert($(this).height());
                 alert($(this).width());
                 var svg_width = $("#original_svg").width();
-            var svg_height = $("#original_svg").height();
+                var svg_height = $("#original_svg").height();
             });
             console.log($("#original_svg"));
             console.log("width",svg_width,"height",svg_height)
