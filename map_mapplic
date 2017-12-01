@@ -86,7 +86,7 @@
                 svg_height = $(this).height();
                 // console.log($("#original_svg"));
                 console.log("width",svg_width,"height",svg_height)
-                var max_y
+                var max_y = 0;
                 $.each(floor1_stores, function(key,val){
                 //for testing limiting the store numbers to this
                 // if(key < 10) {
