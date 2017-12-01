@@ -75,7 +75,7 @@
             floor_1.locations = [];
             $.each(stores, function(key,val){
                 //for testing limiting the store numbers to this
-                // if(key < 10) {
+                if(key < 10) {
                     var temp_val = {};
                     temp_val.id = val.id;//svgmap_region;
                     temp_val.title= val.name;
