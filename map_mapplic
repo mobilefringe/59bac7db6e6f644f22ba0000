@@ -76,7 +76,9 @@
             floor_1.minimap = "//codecloud.cdn.speedyrails.net/sites/59bac7db6e6f644f22ba0000/image/jpeg/1510940237000/Northpark_-_Map_-_Floor_1_-_Mapplic_Test_1.jpg";
             floor_1.show="true";
             floor_1.locations = [];
-            $("#original_svg").width;
+            var svg_width = $("#original_svg").width;
+            var svg_height = $("#original_svg").width;
+            
             $.each(floor1_stores, function(key,val){
                 //for testing limiting the store numbers to this
                 // if(key < 10) {
@@ -93,8 +95,8 @@
                         temp_val.thumbnail=val.store_front_url_abs;
                     }
                     //get svg's wifth/height by checking the map
-                    var svg_width = 1500;
-                    var svg_height = 1368;
+                    // var svg_width = 1500;
+                    // var svg_height = 1368;
                     
                     temp_val.x = val.x_coordinate/svg_width;
                     temp_val.y = val.y_coordinate/svg_height;
