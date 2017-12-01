@@ -114,6 +114,7 @@
                 // else {
                 //     return;
                 // }
+                var arr = Object.keys( obj ).map(function ( key ) { return obj[key]; });
                 console.log(Math.max.apply(Math,floor_1.map(function(o){return o.y;})));
             });
             mall_json.levels.push(floor_1);
