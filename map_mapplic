@@ -80,7 +80,7 @@
             floor_1.show="true";
             floor_1.locations = [];
             var svg_width = null;
-             var svg_height = null;
+            var svg_height = null;
             $("#original_svg").load(function() {
                 alert($(this).height());
                 alert($(this).width());
