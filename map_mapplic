@@ -36,7 +36,7 @@
     <div id="mapplic" class="mapplic">
     
     </div>
-    <img id="original_svg" src="//mallmaverick.com/system/properties/svgmaps/000/000/056/original/Northpark_-_Map_-_Nov-03-2017.svg?1509986633" class="" alt="" style="visibility:hidden; position:absolute; z-index:-1;">
+    <img id="original_svg" src="//mallmaverick.com/system/properties/svgmaps/000/000/056/original/Northpark_-_Map_-_Nov-03-2017.svg?1509986633" class="" alt="" style="visibility:hidden; position:absolute; z-index:-1;top:0;left:0;">
 </div>
 
 
