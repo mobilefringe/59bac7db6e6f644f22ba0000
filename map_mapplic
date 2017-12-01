@@ -41,6 +41,8 @@
         init(e);
         var floor1_stores = null;
         var self = null;
+        var myWidth: 1500; =
+        var myHeight = 1500;
         function renderPage(){
             var stores = getStoresList();
             floor1_stores= $.grep(stores, function( n, i ) {
