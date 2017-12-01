@@ -114,8 +114,7 @@
                 // else {
                 //     return;
                 // }
-                var arr = Object.keys( floor_1 ).map(function ( y ) { return floor_1[y]; });
-                console.log(Math.max.apply( null, arr ));
+                
             });
             mall_json.levels.push(floor_1);
             // need to add the following for each floor we want to configure.
