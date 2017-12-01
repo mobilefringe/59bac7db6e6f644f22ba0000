@@ -86,6 +86,8 @@
                 alert($(this).width());
                 svg_width = $(this).width();
                 svg_height = $(this).height();
+                console.log($("#original_svg"));
+            console.log("width",svg_width,"height",svg_height)
             });
             
             $.each(floor1_stores, function(key,val){
