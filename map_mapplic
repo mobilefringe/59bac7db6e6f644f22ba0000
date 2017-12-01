@@ -41,7 +41,7 @@
 
 
 <script>
-    $(window).load(function(e){
+    $(document).ready(function(e){
         init(e);
         var floor1_stores = null;
         var self = null;
