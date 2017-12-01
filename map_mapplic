@@ -41,7 +41,7 @@
         init(e);
         var floor1_stores = null;
         var self = null;
-        var myWidth: 1500; =
+        var myWidth= 1500; 
         var myHeight = 1500;
         function renderPage(){
             var stores = getStoresList();
