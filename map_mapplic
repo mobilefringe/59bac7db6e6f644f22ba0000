@@ -32,7 +32,7 @@
     }
 
 </style>
-<div></div>
+<div style="position:relative"></div>
 <div id="mapplic" class="mapplic"></div>
 
 <script>
