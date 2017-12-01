@@ -77,7 +77,7 @@
             floor_1.show="true";
             floor_1.locations = [];
             var svg_width = $("#original_svg").width;
-            var svg_height = $("#original_svg").naturalHeight;
+            var svg_height = $("#original_svg").height;
             console.log($("#original_svg"));
             console.log("width",svg_width,"height",svg_height)
             $.each(floor1_stores, function(key,val){
