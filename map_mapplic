@@ -32,7 +32,10 @@
     }
 
 </style>
-<div id="mapplic" class="mapplic"></div>
+<div id="mapplic" class="mapplic">
+    
+</div>
+
 
 <script>
     $(document).ready(function(e){
