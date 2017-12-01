@@ -34,6 +34,7 @@
 </style>
 <div style="position:relative">
     <div id="mapplic" class="mapplic"></div>
+    <img src="//codecloud.cdn.speedyrails.net/sites/59bac7db6e6f644f22ba0000/image/jpeg/1510956613000/Northpark_-_Map_-_Floor_2_-_Mapplic_Test_1.jpg" class="" alt="">
 </div>
 <script>
     $(document).ready(function(e){
