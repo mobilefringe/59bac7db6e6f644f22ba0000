@@ -32,9 +32,9 @@
     }
 
 </style>
-<div style="position:relative"></div>
-<div id="mapplic" class="mapplic"></div>
-
+<div style="position:relative">
+    <div id="mapplic" class="mapplic"></div>
+</div>
 <script>
     $(document).ready(function(e){
         init(e);
