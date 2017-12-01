@@ -32,17 +32,13 @@
     }
 
 </style>
-<div id="mapplic" class="mapplic">
-    
-</div>
+<div id="mapplic" class="mapplic"></div>
 
 <script>
     $(document).ready(function(e){
         init(e);
         var floor1_stores = null;
         var self = null;
-        var myWidth= 1500; 
-        var myHeight = 1500;
         function renderPage(){
             var stores = getStoresList();
             floor1_stores= $.grep(stores, function( n, i ) {
@@ -87,13 +83,13 @@
                     temp_val.category = val.categories[1];
                     temp_val.thumbnail = "";
                     temp_val.link = "/stores/"+val.slug;
-                    temp_val.pin = "pin";
+                    temp_val.pin = "hidden";
                     temp_val.fill = "#";
                     if(val.store_front_url_abs.indexOf("missing") == -1){
                         temp_val.thumbnail=val.store_front_url_abs;
                     }
                     //get svg's wifth/height by checking the map
-                    var svg_width = 1500;
+                    var svg_width = 1545;
                     var svg_height = 1368;
                     
                     temp_val.x = val.x_coordinate/svg_width;
@@ -197,27 +193,27 @@
         show_content();
         $(window).resize();
         
-        setTimeout(function(){
-            console.log(floor1_stores.length);
-             $.each(floor1_stores, function(key,val){
+        // setTimeout(function(){
+        //     console.log(floor1_stores.length);
+        //      $.each(floor1_stores, function(key,val){
                 
-                if(val.svgmap_region != null){
-                    console.log(val.svgmap_region);
-                    var bbox = $("#"+val.svgmap_region)[0].getBBox();
-                    console.log(bbox);
+        //         if(val.svgmap_region != null){
+        //             console.log(val.svgmap_region);
+        //             var bbox = $("#"+val.svgmap_region)[0].getBBox();
+        //             console.log(bbox);
                     
-                    var locations = self.data.levels[0].locations;
-                    // console.log(locations);
-                    var this_location = $.grep(locations, function( n, i ) {
-                        if(n.id == null){n.id=""}
-                        return ( n.id.toString() == val.svgmap_region.toString());
-                    });
-                    console.log(this_location);
-                }
+        //             var locations = self.data.levels[0].locations;
+        //             // console.log(locations);
+        //             var this_location = $.grep(locations, function( n, i ) {
+        //                 if(n.id == null){n.id=""}
+        //                 return ( n.id.toString() == val.svgmap_region.toString());
+        //             });
+        //             console.log(this_location);
+        //         }
                 
-            });
+        //     });
             
-        },2000);
+        // },2000);
     });
         
     
