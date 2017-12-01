@@ -82,8 +82,6 @@
             var svg_width = null;
             var svg_height = null;
             $("img").load(function() {
-                alert($(this).height());
-                alert($(this).width());
                 svg_width = $(this).width();
                 svg_height = $(this).height();
                 console.log($("#original_svg"));
