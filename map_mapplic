@@ -78,7 +78,7 @@
             floor_1.locations = [];
             var svg_width = $("#original_svg").width;
             var svg_height = $("#original_svg").height;
-            
+            console.log(svg_width,svg_height)
             $.each(floor1_stores, function(key,val){
                 //for testing limiting the store numbers to this
                 // if(key < 10) {
