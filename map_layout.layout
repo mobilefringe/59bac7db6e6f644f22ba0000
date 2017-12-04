@@ -60,7 +60,7 @@
     
     <!-- Site data -->
     <script>
-        setEndPoint('https://mallmaverick.com/api/v4/yubasutter/all.json');
+        setEndPoint('https://mallmaverick.com/api/v4/northpark/all.json');
     </script>
 </head>
 
