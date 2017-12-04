@@ -1,0 +1,226 @@
+<link href="//codecloud.cdn.speedyrails.net/sites/59bac7db6e6f644f22ba0000/text/css/1510935230000/mapplic.css" rel="stylesheet">
+<link href="//codecloud.cdn.speedyrails.net/sites/59bac7db6e6f644f22ba0000/text/css/1485967426000/map.css" rel="stylesheet">
+<script type="text/javascript" src="//mallmaverick.cdn.speedyrails.net/javascripts/mapsvg/jquery.mousewheel.js"></script>
+<script src="//codecloud.cdn.speedyrails.net/sites/59bac7db6e6f644f22ba0000/text/javascript/1487363250000/mapplic.js"></script>
+<script src="//codecloud.cdn.speedyrails.net/sites/59bac7db6e6f644f22ba0000/text/javascript/1484859750000/hammer.min.js"></script>
+
+<style>
+    .mapplic-pin{
+        /*background-color: transparent!important;    */
+    }
+    /* INTERACTIVE ELEMENTS */
+    /* clickable elements */
+    .mapplic-clickable:not(g),
+    g.mapplic-clickable > * {
+    	opacity: 1;
+    	/*fill: #b7a6bd*/;
+    }
+    
+    /* hovered elements */
+    .mapplic-clickable:not(g):hover,
+    g.mapplic-clickable:hover > * {
+    	opacity: 1;
+    	fill: #be7bf4;
+    }
+    
+    /* active elements */
+    .mapplic-active,
+    a.mapplic-active > path,
+    g.mapplic-active > * {
+    	fill: #a366d4;
+    	opacity: 1.0 !important;
+    }
+
+</style>
+<div style="position:relative;height:900px;overflow:hidden;">
+    <div id="mapplic" class="mapplic"></div>
+    <img src="//www.mallmaverick.com/system/site_images/photos/000/034/516/original/Northpark_-_Map_-_Floor_1_-modifed_for_Mapplic.svg" class="" alt="" style="visibility:hidden;position:absolute;top:0;left:0;z-index:-1;">
+</div>
+<script>
+    $(document).ready(function(e){
+        init(e);
+        var floor1_stores = null;
+        var self = null;
+        function renderPage(){
+            var stores = getStoresList();
+            floor1_stores= $.grep(stores, function( n, i ) {
+                return ( n.z_coordinate == 1);
+            });
+            var floor2_stores= $.grep(stores, function( n, i ) {
+                return ( n.z_coordinate == 2);
+            });
+            
+            // console.log(floor1_stores,floor2_stores);
+            var mall_json = {};
+            var landmarks = {};
+            mall_json.mapwidth = "1000";
+            mall_json.mapheight = "1000";
+            mall_json.categories=[]; 
+            var store_cats = getStoreCategories();
+            // console.log(store_cats);
+            $.each(store_cats, function(key,val){
+                var temp_val = {};
+                temp_val.id = val.id;
+                temp_val.title= val.name;
+                temp_val.color= "#b7a6bd";
+                temp_val.show="true";
+                mall_json.categories.push(temp_val);
+            });
+            mall_json.levels=[]; 
+            // need to add the following for each floor we want to configure.
+            var floor_1 ={};
+            floor_1.id = "first-floor";
+            floor_1.title = "Floor 1";
+            floor_1.map = "//www.mallmaverick.com/system/site_images/photos/000/034/516/original/Northpark_-_Map_-_Floor_1_-modifed_for_Mapplic.svg";
+            floor_1.minimap = "//codecloud.cdn.speedyrails.net/sites/59bac7db6e6f644f22ba0000/image/jpeg/1510940237000/Northpark_-_Map_-_Floor_1_-_Mapplic_Test_1.jpg";
+            floor_1.show="true";
+            floor_1.locations = [];
+            $.each(floor1_stores, function(key,val){
+                //for testing limiting the store numbers to this
+                // if(key < 10) {
+                    var temp_val = {};
+                    temp_val.id = val.svgmap_region;
+                    temp_val.title= val.name;
+                    temp_val.about = $.trim(val.description).substring(0, 200).split(" ").slice(0, -1).join(" ") + "...";;
+                    temp_val.category = val.categories[1];
+                    temp_val.thumbnail = "";
+                    temp_val.link = "/stores/"+val.slug;
+                    temp_val.pin = "hidden";
+                    temp_val.fill = "#";
+                    if(val.store_front_url_abs.indexOf("missing") == -1){
+                        temp_val.thumbnail=val.store_front_url_abs;
+                    }
+                    //get svg's wifth/height by checking the map
+                    var svg_width = 1545;
+                    var svg_height = 1368;
+                    
+                    temp_val.x = val.x_coordinate/svg_width;
+                    temp_val.y = val.y_coordinate/svg_height;
+                    floor_1.locations.push(temp_val);
+                // }
+                // else {
+                //     return;
+                // }
+            });
+            mall_json.levels.push(floor_1);
+            // need to add the following for each floor we want to configure.
+            // var floor_2 ={};
+            // floor_2.id = "second-floor";
+            // floor_2.title = "Floor 2";
+            // floor_2.map = "//www.mallmaverick.com/system/site_images/photos/000/034/472/original/Northpark_-_Map_-_Floor_2_-_Mapplic_Test_1.svg";
+            // floor_2.minimap = "//codecloud.cdn.speedyrails.net/sites/59bac7db6e6f644f22ba0000/image/jpeg/1510956613000/Northpark_-_Map_-_Floor_2_-_Mapplic_Test_1.jpg";
+            // floor_2.locations = [];
+            // $.each(floor2_stores, function(key,val){
+            //     //for testing limiting the store numbers to this
+            //     // if(key > 10 && key < 20) {
+            //         var temp_val = {};
+            //         temp_val.id = val.svgmap_region;
+            //         temp_val.title= val.name;
+            //         temp_val.about = $.trim(val.description).substring(0, 200).split(" ").slice(0, -1).join(" ") + "...";;
+            //         temp_val.category = val.categories[1];
+            //         temp_val.thumbnail = "";
+            //         temp_val.link = "/stores/"+val.slug;
+            //         if(val.store_front_url_abs.indexOf("missing") == -1){
+            //             temp_val.thumbnail=val.store_front_url_abs;
+            //         }
+            //         //get svg's wifth/height by checking the map
+            //         var svg_width = 1545;
+            //         var svg_height = 1368;
+                    
+            //         temp_val.x = val.x_coordinate/svg_width;
+            //         temp_val.y = val.y_coordinate/svg_height;
+            //         floor_2.locations.push(temp_val);
+            //     // }
+            //     // else {
+            //     //     return;
+            //     // }
+            // });
+            
+            mall_json.levels.push(floor_2);
+            console.log(mall_json);
+            var map = $('#mapplic').mapplic({
+            	source: mall_json,
+            	height: 800,
+            	landmark : true,
+            	mapfill:true,
+            	minimap: true,
+            	sidebar: true,
+            	hovertip: true,
+            	developer: true,
+            	maxscale: 5,
+            	skin: 'mapplic-dark'
+            });
+            console.log(map);
+            console.log($("#mapplic").find("svg"));
+            console.log($("svg"));
+        	// Map ready
+			map.on('mapready', function(e, self) {
+				console.log('Map is ready!')
+			});
+           
+        	map.on('locationopened', function(e, loc) {
+                var self = map.data('mapplic');
+                console.log(self);
+                var el = document.getElementById('svg4538');
+                var myWidth = el.getBoundingClientRect().width;
+                var myHeight = el.getBoundingClientRect().height;
+                console.log(myWidth,myHeight);
+                // console.log(self.getLocationData(loc.id));
+            	// location grants full access to the location
+                console.log(loc ,' opened.');
+            //     console.log(e);
+                
+            //     var current_location = loc.el[0].getBBox();
+            //     console.log(current_location);
+            //     var location = self.getLocationData(loc.id);
+            //     console.log("old location",location.x + ", " + location.y);
+                
+            //     var x_offset = (parseInt(current_location.width) / 2);
+            //     var y_offset = (parseInt(current_location.height) /2);
+                
+            //     $("").append("#mapplic")
+            //     location.x = (current_location.x+ x_offset)/myWidth;
+            //     location.y = (current_location.y+ y_offset)/myHeight;
+            	
+            // 	console.log("new location",location.x + ", " + location.y);
+                
+            // 	self.updateLocation(location.id);
+            // 	 console.log(map);
+            });
+            self = map.data('mapplic');
+           
+        }
+        
+        loadMallDataCached(renderPage);
+        show_content();
+        $(window).resize();
+        
+        // setTimeout(function(){
+        //     console.log(floor1_stores.length);
+        //      $.each(floor1_stores, function(key,val){
+                
+        //         if(val.svgmap_region != null){
+        //             console.log(val.svgmap_region);
+        //             var bbox = $("#"+val.svgmap_region)[0].getBBox();
+        //             console.log(bbox);
+                    
+        //             var locations = self.data.levels[0].locations;
+        //             // console.log(locations);
+        //             var this_location = $.grep(locations, function( n, i ) {
+        //                 if(n.id == null){n.id=""}
+        //                 return ( n.id.toString() == val.svgmap_region.toString());
+        //             });
+        //             console.log(this_location);
+        //         }
+                
+        //     });
+            
+        // },2000);
+    });
+        
+    
+</script>
+<!--//www.mallmaverick.com/system/site_images/photos/000/034/436/original/Northpark_-_Map_-_Floor_1_-_Mapplic_Test_1.svg?1510930761-->
+<!--//www.mallmaverick.com/system/site_images/photos/000/034/472/original/Northpark_-_Map_-_Floor_2_-_Mapplic_Test_1.svg?1510955610-->
+<!--//www.mallmaverick.com/system/site_images/photos/000/034/516/original/Northpark_-_Map_-_Floor_1_-modifed_for_Mapplic.svg-->
+<!--//codecloud.cdn.speedyrails.net/sites/59bac7db6e6f644f22ba0000/application/json/1472253662000/mall.json-->
