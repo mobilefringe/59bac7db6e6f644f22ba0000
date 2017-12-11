@@ -148,7 +148,7 @@
             	minimap: true,
             	sidebar: false,
             	hovertip: false,
-            	developer: true,
+            	developer: false,
             	maxscale: 5,
             	skin: 'mapplic-dark'
             });
