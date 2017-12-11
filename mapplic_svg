@@ -146,7 +146,7 @@
             	landmark : true,
             	mapfill:true,
             	minimap: true,
-            	sidebar: true,
+            	sidebar: false,
             	hovertip: true,
             	developer: true,
             	maxscale: 5,
