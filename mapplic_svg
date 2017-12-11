@@ -46,9 +46,9 @@
             floor1_stores= $.grep(stores, function( n, i ) {
                 return ( n.z_coordinate == 1);
             });
-            // var floor2_stores= $.grep(stores, function( n, i ) {
-            //     return ( n.z_coordinate == 2);
-            // });
+            var floor2_stores= $.grep(stores, function( n, i ) {
+                return ( n.z_coordinate == 2);
+            });
             
             // console.log(floor1_stores,floor2_stores);
             var mall_json = {};
