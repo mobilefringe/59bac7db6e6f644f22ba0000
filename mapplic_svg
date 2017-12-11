@@ -189,7 +189,7 @@
             // 	console.log("new location",location.x + ", " + location.y);
                 
             	self.updateLocation(location.id);
-            	self.moveTo(location.x, location.y, 1, 30)
+            	self.moveTo(location.x, location.y, 1, 30);
             // 	 console.log(map);
             });
             self = map.data('mapplic');
