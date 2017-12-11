@@ -175,7 +175,7 @@
                 
             //     var current_location = loc.el[0].getBBox();
             //     console.log(current_location);
-            //     var location = self.getLocationData(loc.id);
+                var location = self.getLocationData(loc.id);
             //     console.log("old location",location.x + ", " + location.y);
                 
             //     var x_offset = (parseInt(current_location.width) / 2);
