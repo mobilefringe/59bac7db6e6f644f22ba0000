@@ -93,8 +93,8 @@
                     //     temp_val.thumbnail=val.store_front_url_abs;
                     // }
                     //get svg's wifth/height by checking the map
-                    var svg_width =  1500;//1545;
-                    var svg_height = 1500;//1368;
+                    var svg_width =  1545;
+                    var svg_height = 1368;
                     
                     temp_val.x = val.x_coordinate/svg_width;
                     temp_val.y = val.y_coordinate/svg_height;
