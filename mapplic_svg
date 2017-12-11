@@ -177,8 +177,8 @@
                 var location = self.getLocationData(loc.id);
                 console.log("old location",location.x + ", " + location.y);
                 
-                var x_offset = (parseInt(current_location.width) / 2);
-                var y_offset = (parseInt(current_location.height) /2);
+                // var x_offset = (parseInt(current_location.width) / 2);
+                // var y_offset = (parseInt(current_location.height) /2);
                 
                 // $("").append("#mapplic")
                 location.x = (current_location.x+ x_offset)/myWidth;
