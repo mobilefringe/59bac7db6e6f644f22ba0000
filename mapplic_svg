@@ -147,7 +147,7 @@
             	mapfill:true,
             	minimap: true,
             	sidebar: true,
-            	hovertip: false,
+            	hovertip: true,
             	developer: true,
             	maxscale: 5,
             	skin: 'mapplic-dark'
