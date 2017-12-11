@@ -121,7 +121,7 @@
                     temp_val.about = $.trim(val.description).substring(0, 200).split(" ").slice(0, -1).join(" ") + "...";;
                     temp_val.category = val.categories[1];
                     temp_val.thumbnail = "";
-                    temp_val.pin = "hidden"
+                    temp_val.pin = "hidden";
                     temp_val.link = "/stores/"+val.slug;
                     if(val.store_front_url_abs.indexOf("missing") == -1){
                         temp_val.thumbnail=val.store_front_url_abs;
