@@ -181,8 +181,8 @@
                 var y_offset = (parseInt(current_location.height) /2);
                 
                 // $("").append("#mapplic")
-                location.x = (current_location.x)/myWidth;
-                location.y = (current_location.y)/myHeight;
+                location.x = (current_location.x- x_offset)/myWidth;
+                location.y = (current_location.y+ y_offset)/myHeight;
             	
             	console.log("new location",location.x + ", " + location.y);
                 
