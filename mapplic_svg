@@ -171,6 +171,7 @@
             	// location grants full access to the location
                 console.log(loc ,' opened.');
                 console.log($(".mapplic-coordinates-x").text());
+                console.log($(".mapplic-coordinates-y").text());
                 
             //     var current_location = loc.el[0].getBBox();
             //     console.log(current_location);
