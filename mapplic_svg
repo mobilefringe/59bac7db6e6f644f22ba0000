@@ -172,21 +172,21 @@
                 console.log(loc ,' opened.');
             //     console.log(e);
                 
-            //     var current_location = loc.el[0].getBBox();
-            //     console.log(current_location);
-            //     var location = self.getLocationData(loc.id);
-            //     console.log("old location",location.x + ", " + location.y);
+                var current_location = loc.el[0].getBBox();
+                console.log(current_location);
+                var location = self.getLocationData(loc.id);
+                console.log("old location",location.x + ", " + location.y);
                 
-            //     var x_offset = (parseInt(current_location.width) / 2);
-            //     var y_offset = (parseInt(current_location.height) /2);
+                var x_offset = (parseInt(current_location.width) / 2);
+                var y_offset = (parseInt(current_location.height) /2);
                 
-            //     $("").append("#mapplic")
-            //     location.x = (current_location.x+ x_offset)/myWidth;
-            //     location.y = (current_location.y+ y_offset)/myHeight;
+                $("").append("#mapplic")
+                location.x = (current_location.x+ x_offset)/myWidth;
+                location.y = (current_location.y+ y_offset)/myHeight;
             	
-            // 	console.log("new location",location.x + ", " + location.y);
+            	console.log("new location",location.x + ", " + location.y);
                 
-            // 	self.updateLocation(location.id);
+            	self.updateLocation(location.id);
             // 	 console.log(map);
             });
             self = map.data('mapplic');
