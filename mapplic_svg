@@ -89,9 +89,9 @@
                     temp_val.pin = "hidden";
                     temp_val.action = "none";
                     temp_val.fill = "#";
-                    if(val.store_front_url_abs.indexOf("missing") == -1){
-                        temp_val.thumbnail=val.store_front_url_abs;
-                    }
+                    // if(val.store_front_url_abs.indexOf("missing") == -1){
+                    //     temp_val.thumbnail=val.store_front_url_abs;
+                    // }
                     //get svg's wifth/height by checking the map
                     var svg_width =  1500;//1545;
                     var svg_height = 1500;//1368;
