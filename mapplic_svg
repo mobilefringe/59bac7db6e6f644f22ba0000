@@ -138,7 +138,7 @@
                 // }
             });
             
-            // mall_json.levels.push(floor_2);
+            mall_json.levels.push(floor_2);
             console.log(mall_json);
             var map = $('#mapplic').mapplic({
             	source: mall_json,
