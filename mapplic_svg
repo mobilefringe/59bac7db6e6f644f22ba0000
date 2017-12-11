@@ -34,7 +34,7 @@
 </style>
 <div style="position:relative;height:900px;overflow:hidden;">
     <div id="mapplic" class="mapplic"></div>
-    <img src="//www.mallmaverick.com/system/site_images/photos/000/034/436/original/Northpark_-_Map_-_Floor_1_-_Mapplic_Test_1.svg?1510930761" class="" alt="" style="visibility:hidden;position:absolute;top:0;left:0;z-index:-1;">
+    <img src="//www.mallmaverick.com/system/site_images/photos/000/034/516/original/Northpark_-_Map_-_Floor_1_-modifed_for_Mapplic.svg" class="" alt="" style="visibility:hidden;position:absolute;top:0;left:0;z-index:-1;">
 </div>
 <script>
     $(document).ready(function(e){
