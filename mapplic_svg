@@ -185,7 +185,7 @@
             //     location.x = (current_location.x+ x_offset)/myWidth;
             //     location.y = (current_location.y+ y_offset)/myHeight;
             	location.x = parseFloat($(".mapplic-coordinates-x").text());
-                location.y = (current_location.y+ y_offset)/myHeight;
+                location.y =  parseFloat($(".mapplic-coordinates-x").text());
             // 	console.log("new location",location.x + ", " + location.y);
                 
             // 	self.updateLocation(location.id);
